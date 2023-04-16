@@ -1,0 +1,21 @@
+title: linux
+lang: ko
+email: infohojin@naver.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://linux.jiny.dev"
+twitter_username: infohojin
+github_username:  infohojin@gmail.com
+
+source: src
+destination: docs
+
+github_url: https://github.com/jinydev/linux
+
+sass:
+  load_paths:
+    - _sass
+    - ../node_modules/bootstrap/scss
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

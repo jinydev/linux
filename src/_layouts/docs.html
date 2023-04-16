@@ -1,0 +1,25 @@
+---
+layout: bootstrap
+---
+    
+<div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+    <aside class="bd-sidebar scrollBar">
+        <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">학습목차</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- 네비게이션 -->
+            {% include nav.html %}
+        </div>
+        </div>
+    </aside>
+
+    <main class="bd-main order-1">
+        {{content}}
+    
+        {% include bookmark.html %}
+    </main>
+</div>
