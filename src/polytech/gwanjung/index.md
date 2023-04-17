@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: asdasdasd
 ---
 
 # Gwanjung Report
