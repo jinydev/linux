@@ -45,17 +45,17 @@ layout: home
 
 - 시분할 시스템
 >   시분할 시스템 : 여러 사용자들이 한 대의 컴퓨터를 동시에 사용할 수 있게 하는 시스템<br>
-    ![timesharing](./timesharing.jpg)<br>
+    ![timesharing](./img/timesharing.jpeg)<br>
     CPU를 시간단위로 분할하여 여러 프로세스를 동시에 실행하도록 함<br>
     컴퓨터 자원의 활용도를 높이고, 사용자 간의 대기 시간을 줄여줌<br><br>
     다중 사용자 환경 구현 : 여러 사용자가 동시에 시스템을 사용할 수 있는 환경<br>
     각 사용자에게 독립된 프로세스와 자원을 할당 => 서로 영향을 주지 않도록 해야 함<br><br>
     대화형 컴퓨팅 : 사용자의 입력에 대하여 컴퓨터에서 바로 결과를 출력<br>
-    ![CLI](./CLI.jpg)<br>
+    ![CLI](./img/CLI.jpeg)<br>
     이후 리눅스, MS-DOS, 윈도우 등 다양한 컴퓨팅 환경의 기초가 됨<br><br>
     최초의 시분할 시스템 : MIT의 CTSS (Compatible Time-Sharing System, 1960년대 초)<br><br>
     MULTICS : (Multiplexed Information and Computing Service, AT&T 벨 연구소)<br>
-    ![multics](./multics.jpg)<br>
+    ![multics](./img/multics.png)<br>
     다중 사용자 환경에서 안정성, 보안성 등을 강화하기 위해 개발<br>
     => UNIX 운영체제의 개발에 큰 영향을 미침<br><br>
     시분할 시스템의 의의 : 개인용 컴퓨터와 서버 등 컴퓨터를 다양한 용도로 구분, 현재의 컴퓨팅 환경을 구축<br>
@@ -66,13 +66,13 @@ layout: home
 
 - UNIX의 등장
 >   UNIX : 켄 톰슨과 데니스 리치가 개발(1969, 벨 연구소)<br>
-    ![unix](./unix.jpg)<br>
+    ![unix](./img/unix.jpeg)<br>
     어셈블리 언어로 개발된 메인프레임용 운영체제<br>
     PDP-7 컴퓨터를 위해 개발 => 다양한 시스템으로 이식되어 대중화<br>
     이식성(portability) : 다양한 하드웨어와 소프트웨어 환경에서도 동작<br>
     다양한 분야에서 사용, 인터넷 등장으로 중요성 극대화<br><br>
     오픈소스 운동 기반 : 매우 높은 효율성과 매우 비싼 이용 비용으로 인해 다른 OS 출시의 효시가 되었고, 큰 영향을 주었음.<br>
-    ![gnu](./gnu.jpg)<br>
+    ![gnu](./img/gnu.jpeg)<br>
     1983년 GNU 프로젝트 등이 대표 적이며, 특히 90년대에 출시된 LINUX는 가장 대표적인 오픈소스 운동의 결과물이라 할 수 있다. <br>
 
 ---
@@ -83,11 +83,11 @@ layout: home
 ---
 - MS-DOS
 > MS-DOS 운영체제 : PC 시대의 개막, 1980년대<br> 
-    ![msdos](./msdos.jpg)<br> 
+    ![msdos](./img/msdos.png)<br> 
     개인용 컴퓨터의 보급 : 대형 기업/연구기관 : 대형 메인프레임 컴퓨터/미니컴퓨터 => 개인/소규모 기업 : PC<br> 
     MS-DOS 운영체제 : 개인용 컴퓨터를 위해 개발된 운영체제<br> 
     주로 IBM PC 호환 컴퓨터에서 사용<br>
-    ![cli2](./cli2.jpg)<br> 
+    ![cli2](./img/cli2.jpeg)<br> 
     CLI(명령줄 인터페이스, Command Line Interface) :  사용자가 직접 명령어를 입력해 컴퓨터를 제어하는 방식<br>
 
 ---
@@ -95,9 +95,9 @@ layout: home
 ---
 - Macintosh
 >   Macintosh 운영체제 : 1984, Apple<br> 
-    ![apple](./apple.jpg)<br> 
+    ![apple](./img/apple.png)<br> 
     GUI(그래픽 사용자 인터페이스) : 텍스트 기반 인터페이스 -> 그래픽 기반 인터페이스<br> 
     사용자들의 컴퓨터 접근성 키움 => 컴퓨터 사용자 인터페이스의 표준화<br> 
 
 ---
-# [2부에서 계속](/historyOS/0417_historyOfOS)
+# [2부에서 계속](/0417_historyOfOS)
