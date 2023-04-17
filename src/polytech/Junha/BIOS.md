@@ -45,7 +45,7 @@ Complementary Metal-Oxide-Semiconductor의 약자로 BIOS가 사용하는 설정
 
 저장 매체의 가장 앞 부분에 존재(MBR:Master Boot Record)
 
-- 하드 디스크의 첫 번째 섹터는 부팅 가능한 유일한 영역
+- 하드 디스크의 첫 번째 섹터는 부팅 가능한 유일한 영역.
 
 ![BootLoader](C:\Users\JUNHA\poly\linux_junha\src\polytech\Junha\BIOS_IMAGES\BootLoader.png)
 
