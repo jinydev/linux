@@ -37,11 +37,15 @@
    ->  C로 제작되고 오픈소스로 모두에게 공개될 수 있는 UNIX 시스템을 만들기 위해 
          GNU is Not Unix 라는 **GNU 프로젝트**
 
-2. 리누스는 최대한 확장 가능하도록 설계하려는 목표가 있었습니다. 즉 사용자에게 제어권이 있으며, 어떠한 인터페이스에도 종속되지 않도록 개발하려는 의지가 있었다고 하네요.
+2. 리눅스는 최대한 확장 가능하도록 설계하려는 목표가 있었습니다. 즉 사용자에게 제어권이 있으며, 어떠한 인터페이스에도 종속되지 않도록 개발하려는 의지가 있었다고 하네요.
 
    무료 오픈소스와 확장성을 지향하는 프로그램, 가볍고 빠르다는 이점에 힘입어 폭발적인 인기를 끌게되고 현재까지도 인기있는 os로 명맥을 유지하고 있습니다.
 
-![image-20230418082248456](C:\Users\DA\AppData\Roaming\Typora\typora-user-images\image-20230418082248456.png)
+   <img src = https://velog.velcdn.com/images%2Fsoryeongk%2Fpost%2F358065f9-38a7-461c-ba26-c3891a92b106%2Fimage.png />
+
+   ![리눅스 쉘이란?](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdkIzO43DnQipTQcadutBq_DGZg_gwdQ8XL9b731_PelGURbFKlCuysdyoYK6r1IdgOho&usqp=CAU)
+
+
 
 
 
