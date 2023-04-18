@@ -1,3 +1,6 @@
+[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-%23EA4AAA)](https://github.com/sponsors/jinydev)
+
+
 # 개발자를 위한 리눅스
 개발자라면 Linux 운영 체제를 함께 배우는 것이 좀더 나은 개발경험과 환경을 구축하는데 도움이 됩니다. 또한, 컴퓨팅 환경을 더 잘 제어하려는 개발자에게 매력적인 운영체제입니다.
 
