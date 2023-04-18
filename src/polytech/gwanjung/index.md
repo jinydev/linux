@@ -1,5 +1,5 @@
 ---
-layout: 2360340004_김관중
+layout: home
 ---
 
 # Gwanjung Report
