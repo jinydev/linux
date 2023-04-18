@@ -137,3 +137,20 @@ github repository 주소를 복사 붙여넣기 하게 되면 SourceTree에서 �
   - 바로 커밋해주는게 싫다면 git revert -n [커밋]
 ![revert](https://user-images.githubusercontent.com/91362374/232537886-11b60f2c-2d1f-4cd7-b884-85c280de4a5d.png)
 
+- 스태시 (임시저장)
+    - 스태시: 로컬에서 작업한 소스 내용을 임시로 다른 곳에 저장, 간직해 놓는 기능이라고 볼 수 있습니다.
+    - 활용하는 상황:
+        - git에서 프로젝트를 받아서 개발을 하는데 현재 작업 중인 브런치가 아니라
+새로 브런치를 따서 작업을 해야 하거나
+A라는 브런치에 작업했어야 하는데 
+모르고 B라는 브런치에 작업한 경우
+        - 현재 작업하고 있는 내용이 있는데 급하게 요청 온 내용이 있어서 
+현재 내용을 임시로 저장해놓고 급하게 요청 온 건만 올리고(push) 싶을 때
+현재 작업하고 있는 소스 내용을  옮겨야 하는데요. 그럴 경우 현재 
+작업한 소스 내용을 임시로 저장해놓고 새로 브런치를 만들거나 이동한 후에 
+옮길 브런치에 적용을 하면 됩니다.
+
+![stashstart](https://user-images.githubusercontent.com/91362374/232640945-cb146108-7a5b-4877-9810-f668e971a688.png)
+![stashfile](https://user-images.githubusercontent.com/91362374/232641028-440f7bc1-871d-4a1f-a487-5b18631347a2.png)
+![stashresult](https://user-images.githubusercontent.com/91362374/232641061-1aa66986-06fc-4b77-a4e7-920b9981eefd.png)
+
