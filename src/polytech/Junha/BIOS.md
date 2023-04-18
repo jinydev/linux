@@ -13,14 +13,14 @@ layout: home
 - 넓은 의미로는 하드웨어와 가장 낮은 수준에서 입출력을 담당하는 프로그램
 - 바이오스 포스트(POST) 과정의 첫 단계
     
-    ![Boot](C:\Users\JUNHA\poly\linux_junha\src\polytech\Junha\BIOS_IMAGES\Boot.png)
+    ![Boot](.\BIOS_IMAGES\Boot.png)
     
 
 ### 부팅
 
 PC가 켜진 후에 OS가 실행되기 전까지 수행되는 일련의 작업 과정
 
-![Boot](C:\Users\JUNHA\poly\linux_junha\src\polytech\Junha\BIOS_IMAGES\Boot2.png)
+![Boot](.\BIOS_IMAGES\Boot2.png)
 
 ROM에 있는 BIOS 로드 → BIOS가 부팅 순서대로 부트로더들을  로드 → 선택한 디바이스의 부트로더 로드 → 커널을 메모리에 로드하고 OS를 읽기
 
@@ -31,11 +31,11 @@ Complementary Metal-Oxide-Semiconductor의 약자로 BIOS가 사용하는 설정
 - BIOS가 컴퓨터의 하드웨어 구성 및 부팅 설정 정보가 저장되어 있는 CMOS 메모리에 접근하여 정보 사용
 - 64 ~128바이트의 용량으로 **비휘발성** 메모리로 구성 → 전원이 꺼져도 저장된 설정 정보가 유지
 
-![CMOS](C:\Users\JUNHA\poly\linux_junha\src\polytech\Junha\BIOS_IMAGES\CMOS.png)
+![CMOS](.\BIOS_IMAGES\CMOS.png)
 
-![CMOS](C:\Users\JUNHA\poly\linux_junha\src\polytech\Junha\BIOS_IMAGES\CMOS2.png)
+![CMOS](.\BIOS_IMAGES\CMOS2.png)
 
-![CMOS](C:\Users\JUNHA\poly\linux_junha\src\polytech\Junha\BIOS_IMAGES\CMOS3.png)
+![CMOS](.\BIOS_IMAGES\CMOS3.png)
 
 ### 부트로더
 
@@ -47,13 +47,13 @@ Complementary Metal-Oxide-Semiconductor의 약자로 BIOS가 사용하는 설정
 
 - 하드 디스크의 첫 번째 섹터는 부팅 가능한 유일한 영역.
 
-![BootLoader](C:\Users\JUNHA\poly\linux_junha\src\polytech\Junha\BIOS_IMAGES\BootLoader.png)
+![BootLoader](.\BIOS_IMAGES\BootLoader.png)
 
 ---
 
 ## 정리
 
-![BIOS](C:\Users\JUNHA\poly\linux_junha\src\polytech\Junha\BIOS_IMAGES\BIOS.png)
+![BIOS](.\BIOS_IMAGES\BIOS.png)
 
 1. **POST**(Power-On Self-Test) 진행: BiOS는 시스템이 부팅될 때 하드웨어를 초기화하면서 하드웨어 구성 요소의 상태 및 설정을 확인(CMOS)
     1. 하드웨어의 오작동이 있다면 경고메시지 출력
