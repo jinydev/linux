@@ -51,6 +51,10 @@
 
 # Unix vs Linux
 
+
+
+<img src = https://user-images.githubusercontent.com/69034766/103987739-51104400-51d0-11eb-87d4-caa01cea7495.png />
+
 ![image-20230418082622289](C:\Users\DA\AppData\Roaming\Typora\typora-user-images\image-20230418082622289.png)
 
 ![image-20230418082639730](C:\Users\DA\AppData\Roaming\Typora\typora-user-images\image-20230418082639730.png)
