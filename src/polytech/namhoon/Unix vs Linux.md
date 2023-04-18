@@ -1,5 +1,6 @@
-<img src =https://t1.daumcdn.net/cafeattach/1YmK3/1f9f293ef580f388dfb02a57569b0f0ef0f2a8df width = "500px"/>
-
+---
+layout : home
+---
 
 
 # Unix
