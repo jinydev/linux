@@ -1,3 +1,9 @@
+---
+layout : home
+---
+
+# JuYeon Report
+
 # WSL(Windows Subsystem for Linux)
 
 ![wsl 이미지](https://xeppetto.github.io/images/WSLnDocker/20210312-what-is-WSL/wsl_zp_logo.jpg)
