@@ -21,7 +21,7 @@ comment: true
     - ex) bin - 명령어 관리 계정 / deamon - 시스템 데몬 계정 / adm - 시스템 로그 관련 계정
 3. 일반 사용자 계정: 시스템을 사용하는 그 외에 모든 계정
     - 관리자 외에 서버에 직접적으로 로그인 필요한 → 개발자, 엔지니어, 협력회사 직원 등이 사용할 수 있는 계정
-    ![Untitled](.\images\Day3\Untitled.png)
+    ![Untitled](./images/Day3/Untitled.png)
 
 ### 사용자 목록 확인
 
@@ -29,9 +29,9 @@ comment: true
 
 - 각각의 의미
 
-![Untitled](.\images\Day3\Untitled 1.png)
+![Untitled](./images/Day3/Untitled 1.png)
 
-![Untitled](.\images\Day3\Untitled 2.png)
+![Untitled](./images/Day3/Untitled 2.png)
 
 ### 사용자 명령어
 
@@ -45,7 +45,7 @@ comment: true
 
 ### 그룹 목록 확인
 
-![Untitled](.\images\Day3\Untitled 3.png)
+![Untitled](./images/Day3/Untitled 3.png)
 
 - `~/etc/group` 동일하게 열어서 확인할 수 있음.
 - 그룹이름 : 비밀번호 : 그룹 ID :  그룹에 속한 사용자 이름 순으로 되어있음.
