@@ -36,7 +36,7 @@ layout: su, su -, sudo명령어
 ### su와 su-의 차이
 - su 명령어는 현재 계정의 환경변수들을 유지한 채, 대상 계정으로 전환한다.
 - 반면에 su - 명령어는 다른 사용자의 계정으로 전환하고 환경변수까지 그 계정의 상태로 완전히 전환한다.
-![su](./src/polytech/jeongmin/img/su.png)
+
 
 ## sudo(Superuser Do) 명령어
 - 일시적으로 다른 사용자(일반적으로 root) 권한으로 명령을 실행할 수 있도록 해주는 명령어
@@ -50,7 +50,7 @@ layout: su, su -, sudo명령어
 - sudo -i : root 계정으로 로그인 | "/root"로 디렉토리 변경(root 쉘 실행) | root 계정의 패스워드 필요
 - 즉, 전환된 사용자로 로그인한 것처럼 해당 사용자의 환경설정을 가져옵니다. 
 
-![sudo](./src/polytech/jeongmin/img/sudo.png)
+
 ## 결론 : su와 su - 명령어는 다른 사용자로 전환하는 것에 초점을 둔 반면, sudo는 명령어를 root 권한으로 실행
 
 ## whoami 
