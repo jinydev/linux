@@ -1,10 +1,8 @@
 ---
 layout home
 ---
-# Report Jieun
+# Index
 
-# 리눅스의 활용(서버용vs데스크탑용)
-[about vm](./course.md)
+* 2023-04-17 [about linux](./course.md)
 
-
-[about vm](./about_vm.md)
+* 2023-04-18 [about vm](./about_vm.md)
