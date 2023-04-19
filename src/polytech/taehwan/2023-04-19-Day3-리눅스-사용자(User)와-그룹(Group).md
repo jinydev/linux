@@ -29,9 +29,9 @@ comment: true
 
 - 각각의 의미
 
-![Untitled](./images/Day3/Untitled 1.png)
+![Untitled](./images/Day3/Untitled%201.png)
 
-![Untitled](./images/Day3/Untitled 2.png)
+![Untitled](./images/Day3/Untitled%202.png)
 
 ### 사용자 명령어
 
@@ -45,7 +45,7 @@ comment: true
 
 ### 그룹 목록 확인
 
-![Untitled](./images/Day3/Untitled 3.png)
+![Untitled](./images/Day3/Untitled%203.png)
 
 - `~/etc/group` 동일하게 열어서 확인할 수 있음.
 - 그룹이름 : 비밀번호 : 그룹 ID :  그룹에 속한 사용자 이름 순으로 되어있음.
