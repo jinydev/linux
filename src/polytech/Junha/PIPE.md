@@ -4,14 +4,6 @@ layout: home
 
 # 리눅스 파이프
 
-Audience: Personal
-Illustrations: No
-Publish date: 2023년 4월 19일
-Status: In Progress
-Type of content: Linux
-Writer: Realman
-상위 항목: https://www.notion.so/8766dd751a7a42c3924bc7f1a44fb0a2
-
 ## 파이프
 
 두 개 이상의 프로세스 간 통신을 가능하게하는 기능. 
@@ -20,11 +12,11 @@ Writer: Realman
 
 입출력 스트림
 
-[입출력스트림](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9972043E5AFA5A4C1A)
+![입출력스트림](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9972043E5AFA5A4C1A)
 
 파이프(‘`|`’)를 통해 이전의 명령어의 결과를 다음 명령어의 입력값으로 사용
 
-[파이프 생성](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F99041C365AFA5A4C11)
+![파이프 생성](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F99041C365AFA5A4C11)
 
 ### 파이프 특징
 
