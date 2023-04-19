@@ -4,6 +4,6 @@ layout: home
 
 # YOONKI Report
 
-31
+# 운영체제의 역사1 (2023-04-17-history-Of-OS)
 
-15
+# 운영체제의 역사2 (2023-04-18-history-Of-OS2)
