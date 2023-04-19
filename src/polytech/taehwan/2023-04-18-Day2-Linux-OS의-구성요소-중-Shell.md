@@ -13,7 +13,7 @@ categories: 일일과제
 - 우리가 사용하는 프로그램은 일반적으로 바이너리 형태의 명령어 집합체이며, 컴퓨터는 기본적으로 바이너리 형태의 정보들을 읽어들인다. 따라서 관리나자 사용자가 컴퓨터에 일정한 명령을 내리기 위해서는 매개체로서의 특정한 인터페이스가 필요했고 이런 역할을 하도록 하는 것이 쉘이다.
 - 쉘을 사용하는 것은 윈도우의 '명령 프롬프트'에서 명령을 실행하는 것과 유사하지만 리눅스의 쉘은 훨씬 강력한 기능을 제공한다.
 
-![1](.\images\Day1\Untitled.png)
+![Untitled](./images/Day2/Untitled.png)
 
 ## 2. 쉘의 기능
 
@@ -34,11 +34,11 @@ categories: 일일과제
 
 ### bourne 쉘 계열의 쉘
 
-![Untitled](.\images\Day1\Untitled 1.png)
+![Untitled](./images/Day2/Untitled 1.png)
 
 ### C 쉘 계열의 쉘
 
-![Untitled](.\images\Day1\Untitled 2.png)
+![Untitled](./images/Day2/Untitled 2.png)
 
 ## 4. 사용 중인 쉘(Shell) 알아보기
 
@@ -46,7 +46,7 @@ categories: 일일과제
 - /etc/shells 파일을 열어 보면 현재 사용할 수 있는 쉘들의 경로가 설정되어 있다.
     - `cat /etc/shells`
         
-        ![Untitled](.\images\Day1\Untitled 3.png)
+        ![Untitled](./images/Day2/Untitled 3.png)
         
     
 
@@ -60,10 +60,10 @@ categories: 일일과제
 
 말그대로 로그인 쉘이 아닌 쉘이다. logout 명령이 아닌 **exit** 명령으로 쉘을 종료한다. GUI 환경(그래픽 모드)에서 터미널을 띄우면 수행되는 쉘이 비 로그인 쉘이다. 또한 다른 사용자 계정으로 전환하는 **su username** 명령으로 수행되는 서브 쉘도 비 로그인 쉘이다.
 
-![Untitled](.\images\Day1\Untitled 4.png)
+![Untitled](./images/Day2/Untitled 4.png)
 
 ### 서브 쉘
 
 현재 쉘 안에서 실행되는 쉘이다. 현재 쉘의 자식 프로세스로 실행된다. **exit** 명령으로 서브 쉘을 종료하고 부모 쉘로 돌아간다. 서브 쉘은 부모 쉘의 **환경 변수**를 전달받아 공통적으로 사용할 수 있다. 예를 들어 현재 쉘에서 **sh** 명령으로 **bourne 쉘**을 실행할 수 있는데, 이렇게 실행된 쉘을 **서브 쉘**이라고 한다.
 
-![Untitled](.\images\Day1\Untitled 5.png)
+![Untitled](./images/Day2/Untitled 5.png)
