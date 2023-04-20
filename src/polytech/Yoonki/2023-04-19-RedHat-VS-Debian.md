@@ -8,13 +8,13 @@ title:  "레드햇과 데비안 계열 리눅스의 차이"
 ## 예시
 ---
 ### 레드햇 계열 리눅스
->   ![레드햇.png](./img/레드햇.png)
+>   ![redhat.png](./img/redhat.png)
 
     Red Hat Enterprise Linux (RHEL), CentOS, Fedora, Rocky 등
 ---
 ### 데비안 계열 리눅스
 
->   ![데비안.jpeg](./img/데비안.jpeg)
+>   ![debian.jpeg](./img/debianjpeg)
 
     Debian, Ubuntu, Linux Mint 등
 ---
