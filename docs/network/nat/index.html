@@ -14,14 +14,14 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="linux" />
 <meta property="og:locale" content="ko" />
-<link rel="canonical" href="https://linux.jiny.dev/network/domain.html" />
-<meta property="og:url" content="https://linux.jiny.dev/network/domain.html" />
+<link rel="canonical" href="https://linux.jiny.dev/network/nat/" />
+<meta property="og:url" content="https://linux.jiny.dev/network/nat/" />
 <meta property="og:site_name" content="linux" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="linux" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"https://linux.jiny.dev/network/domain.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"https://linux.jiny.dev/network/nat/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -581,26 +581,117 @@
 
     <main class="bd-main order-1">
         <div class="bd-content ps-lg-2">
-    <h1 id="도메인">도메인</h1>
-<p>도메인 이름(Domain name)은 인터넷상에서 컴퓨터, 네트워크, 서비스 등을 식별하는 이름입니다. 도메인 이름은 호스트 이름과 도메인 이름 서버(DNS)의 계층적인 구조를 통해 인터넷상에서 고유하게 식별됩니다.</p>
+    <h1 id="nat-network-address-translation">NAT (Network Address Translation)</h1>
 
-<h2 id="도메인-이름">도메인 이름</h2>
-<p>도메인 이름은 일반적으로 영문, 숫자, 하이픈 등으로 이루어져 있으며, 최상위 도메인(Top-Level Domain, TLD)은 .com, .org, .net, .edu, .gov 등이 있습니다. 그리고 그 아래로 서브 도메인(Sub-domain)이 붙어 전체적인 도메인 이름이 형성됩니다. 예를 들어, www.example.com이라는 도메인 이름에서 .com은 최상위 도메인, example은 서브 도메인, www는 호스트 이름을 나타냅니다.</p>
+<h2 id="네트워크-주소-변환">네트워크 주소 변환</h2>
+<hr />
+<p>IP 패킷에 있는 출발지 및 목적지의 IP 주소를 바꿔 재기록 하면서 네트워크 트래픽을 주고 받게 하는 기술</p>
 
-<h2 id="인터넷">인터넷</h2>
-<p>도메인 이름은 DNS 서비스를 통해 IP 주소와 매핑되어 사용됩니다. 이를 통해 사용자는 도메인 이름을 입력하여 인터넷상에서 웹 사이트, 이메일 서버, 네트워크 등을 식별하고 접속할 수 있습니다.</p>
+<p><img src="../img/image-20230324183801487.png" alt="image-20230324183801487" /></p>
 
-<h2 id="사례">사례</h2>
-<p>도메인 이름(domain name) 또는 주소는 jiny.dev와 같은 형식으로 표기</p>
+<h2 id="장점">장점</h2>
+<hr />
+
+<h3 id="ip-주소-절약">IP 주소 절약</h3>
+<p>하나의 공인 IP를 사용하여 여러대의 호스트가 인터넷에 접속할 수 있다.</p>
 
 <ul>
-  <li>Ex) 호스트 이름이 www이고 도메인 이름이 jiny.dev이라면</li>
+  <li>예) 집에 외부 IP 하나만 있고, 내부의 많은 기기들이 내부 IP를 사용하여 인터넷 통신할 수 있다.</li>
 </ul>
 
-<p>​    전체 이름(FQDN, Fully Qualified Domain Name)은 www.jiny.dev 이 됨</p>
+<h3 id="보안">보안</h3>
+<p>NAT 동작 특성상 내부의 IP를 숨길 수 있다.</p>
 
 <ul>
-  <li>같은 회사(도메인)에서 www.jiny.dev이라는 호스트(컴퓨터)는 유일</li>
+  <li>예) 라우터를 통해서 나가는 내부 ip는 외부에 노출이 되지 않기 때문에, 안쪽의 ip로 직접 공격할 수 없다.</li>
+</ul>
+
+<h2 id="port-forwarding">Port Forwarding</h2>
+<hr />
+<p><a href="https://ko.wikipedia.org/wiki/컴퓨터_네트워크">컴퓨터 네트워크</a>에서 <a href="https://ko.wikipedia.org/wiki/네트워크_패킷">패킷</a>이 <a href="https://ko.wikipedia.org/wiki/라우터">라우터</a>나 <a href="https://ko.wikipedia.org/wiki/방화벽_(네트워킹)">방화벽</a>과 같은 네트워크 게이트웨이를 가로지르는 동안 하나의 <a href="https://ko.wikipedia.org/wiki/IP_주소">IP </a><a href="https://ko.wikipedia.org/wiki/IP_주소">주소</a>와 <a href="https://ko.wikipedia.org/wiki/포트_번호">포트 번호</a> 결합의 통신 요청을 다른 곳으로 넘겨주는 <a href="https://ko.wikipedia.org/wiki/네트워크_주소_변환">네트워크 주소 변환</a>(NAT)의 응용</p>
+
+<ul>
+  <li>
+    <p>이 기법은 게이트웨이(외부망)의 반대쪽에 위치한 보호/내부망에 상주하는 호스트에 대한 서비스를 생성하기 위해 흔히 사용</p>
+  </li>
+  <li>
+    <p>통신하는 목적지 IP 주소와 포트 번호를 내부 호스트에 다시 매핑함으로써 이루어진다.</p>
+  </li>
+</ul>
+
+<p><img src="../img/image-20230324183932043.png" alt="image-20230324183932043" /></p>
+
+<p><img src="../img/image-20230324183945741.png" alt="image-20230324183945741" /></p>
+
+<h3 id="port-forwarding실습">port forwarding실습</h3>
+<blockquote>
+  <p>VMWare Player</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>HOST OS에서 가상 머신 OS로 접속하는 것은 너무 쉽다.</p>
+  </li>
+  <li>
+    <p>내 옆사람의 컴퓨터의 가상머신에 접속해 보자.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Googling</p>
+  <ul>
+    <li>VMWare player Port forwarding</li>
+    <li>VMWare player network manager download</li>
+    <li>https://www.tobias-hartmann.net/2018/12/download-vmnetcfg-exe-fuer-vmware-workstation-15-x-player/</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>
+    <p>https://togll.tistory.com/26</p>
+  </li>
+  <li>
+    <p>https://renesys.tistory.com/144</p>
+  </li>
+</ul>
+
+<h2 id="네트워크-인터페이스nic-디바이스-명명-규칙">네트워크 인터페이스(NIC) 디바이스 명명 규칙</h2>
+<hr />
+
+<p><img src="../img/image-20230324184102345.png" alt="image-20230324184102345" /></p>
+
+<h3 id="명명-규칙을-만든-이유">명명 규칙을 만든 이유</h3>
+
+<ul>
+  <li>
+    <p>여러 개의 네트워크 카드를 동시에 사용하는 일이 많아 지면서 체계화된 명명 규칙 필요.</p>
+  </li>
+  <li>
+    <p>통신방법에 따른 분류, 슬롯 종류에 따른 분류</p>
+  </li>
+  <li>
+    <p>이전엔 eth0,eth1, 이런식으로 명명</p>
+  </li>
+  <li>
+    <p>OS의 Systemd에 의해 결정</p>
+  </li>
+</ul>
+
+<h3 id="디바이스명-명명-규칙">디바이스명 명명 규칙</h3>
+
+<ul>
+  <li>앞의 두자리 ‘en’의 경우 인터페이스 타입을 뜻합니다.
+    <ul>
+      <li>en – 이더넷</li>
+      <li>wl - 무선 LAN</li>
+      <li>ww - 무선 WAN</li>
+    </ul>
+  </li>
+  <li>슬롯별 설정
+    <ul>
+      <li>s33은 BIOS에서 PCI express 핫 플러그 슬롯 인덱스 번호(여기서는 33)를 제공할때 사용됩니다.</li>
+    </ul>
+  </li>
 </ul>
 
 
@@ -688,6 +779,7 @@
           <ul class="list-unstyled">
             <li class="mb-2"><a href="https://php.jiny.dev">PHP</a></li>
             <li class="mb-2"><a href="https://javascript.jiny.dev">Javascript</a></li>
+            <li class="mb-2"><a href="https://mysql.jiny.dev">Mysql</a></li>
           </ul>
         </div>
         <div class="col-6 col-lg-2 mb-3">

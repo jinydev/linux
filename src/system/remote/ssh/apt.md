@@ -2,38 +2,55 @@
 layout: home
 ---
 
-# SSH 설치하기
+# 우분투 에서 OpenSSH 설치하기
 
-## 01.방화벽 설정
 
-### 01.1 포트 접속 허용
+## 방화벽 설정
+ssh를 접속하기 위해서는 방화벽을 허용해 주어야 합니다. 우분투에서 기본적으로 사용되는 방화벽은 iptables이나 ufw입니다. 만약 방화벽이 설치되어 있지 않다면, 방화벽을 설치하고 활성화해야 합니다.  
 
-22번 포트로 ssh를 접속하기 위해서는 방화벽을 허용해 주어야 합니다.
+ 다음과 같이 `22`번 포트를 허용합니다.
 
+```bash
+sudo ufw allow 22
 ```
-$sudo ufw allow 22
+
+또는
+```bash
+sudo ufw allow ssh
 ```
 
-포트 접속을  허용하였다면 방화벽을 다시 로드 합니다.
+포트 접속을 허용하였다면 방화벽을 다시 로드 합니다.
 
 ```
 $ ufw reload
 ```
+ufw 방화벽이 활성화되었으며, SSH 포트(기본값은 22번)를 열어 다른 컴퓨터나 디바이스에서 우분투 시스템에 SSH로 연결할 수 있습니다
+
+
+"Firewall not enabled (skipping reload)" 메시지는 방화벽이 활성화되어 있지 않기 때문에 방화벽을 다시로드하지 않겠다는 의미입니다. 
+
+방화벽을 활성화합니다.
+```bash
+sudo ufw enable
+```
+
+만일 방화벽이 설치되어 있지 않다면 다음과 같이 ufw 패키지를 설치합니다.
+```bash
+sudo apt-get install ufw
+```
 
 
 
-### 01.2 포트 포워딩 설정
-
-VirtualBox와 같은 가상환경을 사용하는 경우 추가로 포트 포워딩 설정이 필요 합니다. VirtualBox에서 [장치]>[네트워크]>[네트워크설정] 을 클릭합니다.
+## 포트 포워딩 설정
+`VirtualBox`와 같은 가상환경을 사용하는 경우 추가로 포트 포워딩 설정이 필요 합니다.  
+VirtualBox에서 [장치]>[네트워크]>[네트워크설정] 을 클릭합니다.
 
 ![image-20210103114955773](../img/image-20210103114955773.png)
-
 
 
 네트워크 설정창이 표시됩니다. 중간에 있는 [고급] 화살표 버튼을 클릭하여 설정을 확장합니다. 
 
 ![image-20210103115108011](../img/image-20210103115108011.png)
-
 
 
 [포트 포워딩]을 선택합니다. 오른쪽에 있는 [+] 버튼을 선택합니다.
@@ -45,61 +62,46 @@ VirtualBox와 같은 가상환경을 사용하는 경우 추가로 포트 포워
 ![image-20210103115350679](../img/image-20210103115350679.png)
 
 
+## OpenSSH 설치하기
+SSH로 서버에 접속을 하기 위해서는 `openssh` 서버를 설치해 주어야 합니다.
 
-## 02.OpenSSH 설치하기
+설치전 `update`를 통하여 패키지의 목록을 갱신합니다.
 
-SSH로 서버에 접속을 하기 위해서는 openssh 서버를 설치해 주어야 합니다.
-
-
-
-### 02.1 준비작업
-
-update는 새로운 버젼의 패키지들이 있는지 확인을 합니다.
-
-```
-$ sudo apt update
+```bash
+sudo apt update
 ```
 
-갱신 최신 패키지 목록을 통하여 각각의 패키지들의 버젼을 업그레이드 해 줍니다.
+각각의 패키지들을 최신의 버젼으로 업그레이드 해 줍니다.
 
+```bash
+sudo apt upgrade
 ```
-$ sudo apt upgrade
-```
-
-
 
 > update는 패키지의 목록을 갱신하는 것이고, upgrade는 갱신된 목록에 따라 설치된 패키지를 업그레이드 하는 동작입니다.
 
 
 
-### 02.2 SSH 재설치
-
+### SSH 재설치
 만일 기존에 SSH서버가 설치가 되었다면, 충돌을 방지하기 위해서 완전삭제(purge) 합니다.
 
-```
-$ sudo apt purge openssh-server
-```
-
-
-
-openssh-server를  설치 합니다.
-
-```
-$ sudo apt install openssh-server
+```bash
+sudo apt purge openssh-server
 ```
 
+`openssh-server`를 설치 합니다.
 
+```bash
+sudo apt install -y openssh-server 
+```
 
-### 02.3 재시작
+### 재시작
 
 SSH 서버를 **완전** 재시작 해 준다.
 
+```bash
+sudo service ssh --full-restart
+sudo service ssh restart
 ```
-$ sudo service ssh --full-restart
-$ sudo service ssh restart
-```
-
-
 
 또는 
 
@@ -108,12 +110,9 @@ $sudo systemctl restart ssh
 ```
 
 
+## 방화벽 허용
 
-
-
-### 02.4 방화벽 허용
-
-만일 WSL 과 같은 환경에서 실행하는 경우 windows defender가 실행이 됩니다.  방화벽을 허용해 줍니다.
+만일 WSL 과 같은 환경에서 실행하는 경우 windows defender가 실행이 됩니다. 방화벽을 허용해 줍니다.
 
 ![image-20210102164212303](../img/image-20210102164212303.png)
 
