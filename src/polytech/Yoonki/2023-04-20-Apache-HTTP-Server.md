@@ -4,7 +4,7 @@
 
 ---
 
-![apache.png](/img/apache.png)
+![apache.png](./img/apache.png)
 
 아파치 HTTP 서버(Apache HTTP Server)는 가장 널리 사용되는 오픈소스 웹 서버 소프트웨어 중 하나입니다. 1995년에 처음 개발되어서 이후로 지속적인 개발과 업데이트가 이루어져 왔습니다.
 
