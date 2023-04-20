@@ -2,7 +2,6 @@
 layout: home
 ---
 
-# Ubuntu VS Rocky
 
 # VMWARE vs VIRTUAL BOX 
 
