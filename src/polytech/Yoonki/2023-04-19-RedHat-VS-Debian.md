@@ -14,7 +14,7 @@ title:  "레드햇과 데비안 계열 리눅스의 차이"
 ---
 ### 데비안 계열 리눅스
 
->   ![debian.jpeg](./img/debianjpeg)
+>   ![debian.jpeg](./img/debian.jpeg)
 
     Debian, Ubuntu, Linux Mint 등
 ---
