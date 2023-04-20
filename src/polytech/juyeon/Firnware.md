@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 # Firmware
 
 ## 펌웨어란?

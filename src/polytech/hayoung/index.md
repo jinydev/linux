@@ -3,5 +3,5 @@ layout: home
 ---
 
 # Hayoung Report
-[ 20230417 - about hosting service](./aboutHostingservice)
-[ 20230418 - about JAM stack](./aboutJAMstack)
+* [ 20230417 - about hosting service](./about-hosting-service)
+* [ 20230418 - about JAM stack](./aboutJAMstack)

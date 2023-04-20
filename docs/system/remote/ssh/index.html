@@ -585,23 +585,15 @@
 <p>telnet과 동일한 역할을 히는 프로그램으로 보안이 강화된 방식으로 접속하는 방법입니다.</p>
 
 <h2 id="ssh란">SSH란?</h2>
-<p>시큐어 셸은 네트워크 상의 다른 컴퓨터에 로그인하거나 원격 시스템에서 명령을 실행하고 다른 시스템으로 파일을 복사할 수 있도록 해 주는 응용 프로그램 또는 그 프로토콜을 가리킨다.</p>
-<blockquote>
-  <p>정리과제 : SSH란</p>
-</blockquote>
+<p>시큐어 셸은 네트워크 상의 다른 컴퓨터에 <code class="language-plaintext highlighter-rouge">로그인</code>하거나 원격 시스템에서 명령을 실행하고 다른 시스템으로 파일을 복사할 수 있도록 해 주는 응용 프로그램 또는 그 <code class="language-plaintext highlighter-rouge">프로토콜</code>을 가리킨다.</p>
 
 <h2 id="ssh-설치하기">ssh 설치하기</h2>
-<blockquote>
-  <p>https://codechacha.com/ko/ubuntu-install-openssh/</p>
-</blockquote>
-
-<p>ssh를 통하여 서버에 접속을 하기 위해서는 별도의 ssh 서비스 서버 프로그램을 설치해 주셔야 합니다.
+<p>ssh를 통하여 서버에 접속을 하기 위해서는 별도의 <code class="language-plaintext highlighter-rouge">ssh 서비스</code> 서버 프로그램을 설치해 주셔야 합니다.
 ssh 서버를 구축하기 위해서는 2단계 작업이 필요 합니다.</p>
 
 <ul>
-  <li><a href="setup">방화벽 허용하기</a></li>
-  <li><a href="setup">ssh 패키지 설치하기</a></li>
-  <li><a href="setup">root로 접속 허용하기</a></li>
+  <li><a href="apt">apt</a>로 명령으로 우분투 리눅스에 설치하기</li>
+  <li><a href="yum">yum</a>로 명령으로 로키 리눅스에 설치하기</li>
 </ul>
 
 <h3 id="ssh-설치여부-확인하기">ssh 설치여부 확인하기</h3>
@@ -624,7 +616,7 @@ hojin@hojin-VirtualBox:~<span class="err">$</span>
 <h3 id="ssh-서버-설치">ssh 서버 설치</h3>
 <p><code class="language-plaintext highlighter-rouge">apt</code> 명령어를 사용하여 패키지를 설치합니다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$sudo apt-get install ssh
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$sudo apt-get install openssh-server
 </code></pre></div></div>
 
 <p>설치된 sshd가 실행중인지 확인을 합니다.</p>
@@ -761,6 +753,7 @@ VirtualBox 메뉴에서 <code class="language-plaintext highlighter-rouge">장�
           <ul class="list-unstyled">
             <li class="mb-2"><a href="https://php.jiny.dev">PHP</a></li>
             <li class="mb-2"><a href="https://javascript.jiny.dev">Javascript</a></li>
+            <li class="mb-2"><a href="https://mysql.jiny.dev">Mysql</a></li>
           </ul>
         </div>
         <div class="col-6 col-lg-2 mb-3">

@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 # 리눅스 배포판 소개
 
 [https://commons.wikimedia.org/wiki/File:Linux_Distribution_Timeline.svg](https://commons.wikimedia.org/wiki/File:Linux_Distribution_Timeline.svg)
