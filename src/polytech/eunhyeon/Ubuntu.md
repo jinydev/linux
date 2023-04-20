@@ -25,7 +25,7 @@ exit
 whoami      -- 현재 사용자를 확인
 
 ```
-![sudo](./su.PNG)
+![sudo](./images/su.PNG)
 
 `sudo`(superuser do)명령어 : 현재 계정에서 root 권한을 이용하여 명령어를 실행
  
@@ -47,7 +47,7 @@ sudo -s
 - i옵션은 /root 디렉토리로 이동
 
 /etc/sudoers파일에 지정된 사용자면 sudo명령을 사용   
-![사용자권한](./권한설정.PNG)
+![사용자권한](./images/권한설정.PNG)
 ```vim
 #User privilege specification   
 root    ALL=(ALL:ALL) ALL   
