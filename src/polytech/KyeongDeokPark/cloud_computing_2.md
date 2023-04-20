@@ -67,3 +67,8 @@
     - **클라우드 사업자가 시스템 구축 (ex: AWS)**
 - **`hybrid cloud`**
     - **private, public, community 서비스들과 on-primise 시스템을 연계시켜 활용**
+
+---
+## 참고 문헌
+[Amazon AWS 백서 및 기술 안내서](
+https://aws.amazon.com/ko/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc&awsf.whitepapers-content-type=*all&awsf.whitepapers-global-methodology=*all&awsf.whitepapers-tech-category=*all&awsf.whitepapers-industries=*all&awsf.whitepapers-business-category=*all)
