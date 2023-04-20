@@ -384,10 +384,12 @@ gui환경의 작업을 원하는 경우에는 vnc를 이용할 수 있습니다.
 * [방화벽](/network/firewall)
 * [ACL](/network/acl)
 
-### 06-4.포트 포워딩 [NAT 설정](/network/net)
+### 06-4.포트 포워딩 [NAT 설정](/network/nat)
 리눅스에서 NAT(Network Address Translation)는 프라이빗 네트워크 주소를 퍼블릭 네트워크 주소로 변환하여 인터넷 접속을 가능하게 하는 기술입니다.  
-- [net](/network/net)
-- [Port Forwarding](/network/net)
+- [net](/network/nat)
+- [포트 포워딩](/network/nat)
+  * [virtualBox](/network/nat/virtualbox)
+  * [vmware](/network/nat/vmware)
 
 
 ### 리눅스 네트워크 설정
@@ -464,7 +466,7 @@ Linux에서 gcc를 설치하여 c언어 프로그램을 작성해 보는 연습�
 
 ### 09-4.도메인 네임 서비스
 Linux 서버의 DNS는 도메인 이름을 IP 주소로 변환하여 네트워크의 리소스를 찾고 연결하는 서비스입니다.  
-* [dns란?](/demon/dns) : 자동으로 IP 할당하기
+* [dns란?](/demon/dns)
 * [dns 수정 및 설정](/demon/dns/setting)
 
 ### 09-5.메일 관련 데몬

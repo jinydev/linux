@@ -1,4 +1,8 @@
-# hosting service 
+---
+layout: home
+---
+
+# Hosting service 
 
 
 ---

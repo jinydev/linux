@@ -1,4 +1,8 @@
-#JAM stack
+---
+layout: home
+---
+
+# JAM stack
 
 ---
 
