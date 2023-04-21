@@ -9,7 +9,7 @@ layout home
 
 * 2023-04-18 [비밀번호 명령어](./about_passwd.md)
 
-
+* 2023-04-19 [데몬의 개념](./about_daemon.md)
 
 
 
