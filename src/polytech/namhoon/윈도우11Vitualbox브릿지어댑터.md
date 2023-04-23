@@ -2,13 +2,17 @@
 layout : home
 ---
 
-# 리눅스 원격접속
+# 윈도우11 Virtualbox 어댑터 브릿지 설정
 
 
 
-## SSH
+## Virtualbox 어댑터 브릿지가 안돼요  ㅠ
 
-### 1. 텔넷과 기능이 거의 같으며 다만 보안이 추가된 버전
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlgvrZ%2FbtrzL9V6iKP%2FtJHHD08LHKiQqCpswjGy4k%2Fimg.png)
+
+
+
+### 1. 원인을 찾아보자!  
 
 1) 서버와 클라이언트 사이의 데이터 송수신에서 암호화가 없어서 보안이 취약한 것
 2) OPENSSH를 사용하면 데이터 송수신 작업에서 암호화 되는 과정이 추가되어 통신이 된다.
