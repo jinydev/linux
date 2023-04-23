@@ -3,7 +3,7 @@
 layout : home
 ---
 
-# Ckm Report
+# Choi Kyeong Min Report
 # 리눅스와 압축
 
 ## **리눅스와 윈도우 파일 압축 방식**
