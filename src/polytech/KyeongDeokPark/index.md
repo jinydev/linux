@@ -12,8 +12,6 @@ layout: home
 ###### - [서비스 모델, 장단점](./cloud_computing_2.md)
 ###### - [관련 기술](./cloud_computing_3.md)
 
-#### CI/CD
+#### Devops
 ###### - [CI/CD란? - 기본 개념](./cicd_1.md)
-
-#### SSR, CSR
 ###### - [Proxy 서버와 Load Balancer](./proxy_loadbalancer_1.md.md)
