@@ -11,3 +11,4 @@ layout: home
 * 2023-04-20 : [링크아이노드](LINK)
 * 2023-04-21 : [TCP_IP](TCP_IP)
 * 2023-04-22 : [UBUNTU_5](UBUNTU_5)
+* 2023-04-24 : [FTP](FTP)
