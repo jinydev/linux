@@ -14,4 +14,9 @@ layout: home
 
 #### Devops
 ###### - [CI/CD란? - 기본 개념](./cicd_1.md)
-###### - [Proxy 서버와 Load Balancer](./proxy_loadbalancer_1.md.md)
+###### - [Proxy 서버와 Load Balancer](./proxy_loadbalancer_1.md)
+###### - [MSA(Micro Service Architecture)란?](./msa_1.md)
+
+#### 교재 정리
+###### - [리눅스 커맨드라인 완벽입문 12.VI 맛보기](./book_12.md)
+###### - [이것이 리눅스다 01.실습 환경 구축](./book_1.md)
