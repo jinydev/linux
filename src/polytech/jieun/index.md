@@ -15,3 +15,7 @@ layout home
 
 * 2023-04-24 [SSR과 CSR](./about_csr_ssr.md)
 
+* 2023-04-24 [SSR과 CSR](./about_ssh.md)
+
+---
+* 2023-04-25 [교재 요약 과제](./report_books.md)
