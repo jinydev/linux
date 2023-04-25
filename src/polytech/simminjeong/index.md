@@ -7,6 +7,7 @@
 - 230420 [Partition](./230420_partition.md)
 - 230421 [telnet과 ssh차이점](./230421_telnet_ssh.md)
 - 230424 [RunLevel](./230424_runlevel.md)
+- 230425 [ubuntu와 rocky](./230425_ubuntu_rocky.md)
 
 
 ## book 정리
