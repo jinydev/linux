@@ -1,3 +1,6 @@
+---
+layout home
+---
 # NAT 와 PORTFORWARDING
 
 ## NAT(Network Address Translation)
