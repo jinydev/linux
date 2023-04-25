@@ -9,4 +9,5 @@ layout: home
 - [ 20230420 - Day4-Scheduling](./(0420)ParkTaeHyeon_Report_4.0.md)
 - [ 20230421 - Day5-VNC](./(0421)ParkTaeHyeon_Report_5.0.md)
 - [ 20230424 - Day6-Rocky 마우스 빼기, Run Level](./(0424)ParkTaeHyeon_Report_6.0.md)
+- [ 20230425 - Day7-Java에 대하여](./(0425)ParkTaeHyeon_Report_7.0.md)
 <br>
