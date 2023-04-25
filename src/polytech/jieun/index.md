@@ -13,3 +13,5 @@ layout home
 
 * 2023-04-21 [NAT와 포트포워딩](./about_nat.md)
 
+* 2023-04-24 [SSR과 CSR](./about_csr_ssr.md)
+
