@@ -7,8 +7,13 @@
     <meta name="description" content="Jiny linux">
     <meta name="author" content="HojinLee">
 
-    <title>개발자를 위한 리눅스 - {{ page.description }}</title>
-    <meta name="title" content="개발자를 위한 리눅스 - {{ page.title }}" />
+    {%- if page.title -%}
+      <title>개발자를 위한 리눅스 - {{ page.title }}</title>
+      <meta name="title" content="개발자를 위한 리눅스 - {{ page.title }}" />
+    {%- else -%}
+      <title>개발자를 위한 리눅스</title>
+      <meta name="title" content="개발자를 위한 리눅스" />
+    {%- endif -%}    
 
     {% seo title=false %}
 
