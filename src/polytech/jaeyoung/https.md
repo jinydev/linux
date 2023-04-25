@@ -8,7 +8,7 @@ HTTP 서버는 기본 포트인 80번 포트에서 서비스 대기 중이며, �
 
 이러한 위험을 방지하기 위해 고안된 것이 바로 HTTPS이다.
 
-### **[HTTPS(HyperText Transfer Protocol over Secure Socket Layer)](https://coffeedeveloper.tistory.com/102#HTTPS-HyperText%--Transfer%--Protocol%--over%--Secure%--Socket%--Layer-)**
+### **HTTPS(HyperText Transfer Protocol over Secure Socket Layer)**
 
 HTTPS(HyperText Transfer Protocal Secure Socket) HTTPS는 HTTP에 S(Secure Socket)을 추가한 것이다. 기본 골격이나 사용 목적 등은 기존의 HTTP의 그것과 거의 동일하지만, 데이터를 송수신하는 과정에 '보안'요소가 추가된 것이 가장 큰 차이점이라 할 수 있다. 쉽게 말해 HTTPS를 사용하면 서버와 클라이언트 사이의 모든 통신 내용이 암호화된다는 것.
 
@@ -16,7 +16,7 @@ HTTPS(HyperText Transfer Protocal Secure Socket) HTTPS는 HTTP에 S(Secure Socke
 
 SSL(Secure Sockets Layer) 인증서는 클라이언트가 서버로 보내는 정보를 암호화한다. 이렇게 전송된 데이터는 중간에 탈취된다 할지라도 암호화되어 있기 때문에 해독이 불가하다.
 
-### **[HTTPS 사용 목적(HTTPS 사용 시 장점)](https://coffeedeveloper.tistory.com/102#HTTPS%--%EC%--%AC%EC%-A%A-%--%EB%AA%A-%EC%A-%---HTTPS%--%EC%--%AC%EC%-A%A-%--%EC%-B%-C%--%EC%-E%A-%EC%A-%---)**
+### **HTTPS 사용 목적(HTTPS 사용 시 장점)**
 
 HTTPS을 사용하는 이유는 크게 아래 두가지로 설명 가능하다.
 
