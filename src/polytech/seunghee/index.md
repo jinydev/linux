@@ -10,3 +10,4 @@ layout: home
 - 2023-04-20 : [허가권 정의 & 명령어 정리](permission)
 - 2023-04-21 : [SSH 정의 & 사용 예시](ssh)
 - 2023-04-24 : [주요 포트 번호 종류](wellknownport)
+- 2023-04-25 : [NAT VS 호스트 전용 네트워크](natvshost)
