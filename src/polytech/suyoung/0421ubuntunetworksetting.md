@@ -1,3 +1,6 @@
+---
+layout : home
+---
 # 0421금 발표과제
 
 # VirtualBox에서의 어댑터란?
