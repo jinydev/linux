@@ -4,6 +4,13 @@ layout: home
 
 # App을 Tomcat에 배포하기
 
+## Tomcat Docuemtn Root
+설치된 톰켓의 코드 배포 위치는 다음과 같습니다.
+
+* Ubuntu : `/var/lib/tomcat9/webapps/`
+* CentOS :  `/usr/share/tomcat9`
+
+
 ## App을 tomcat에서 deploy하는 방법
 * Tomcat admin 을 사용하여 deploy
 * 직접 app을 폴더에 넣어서 deploy
