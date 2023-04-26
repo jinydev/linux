@@ -11,5 +11,6 @@ layout: home
  - 2023-04-21 : [서브넷마스크](%EC%84%9C%EB%B8%8C%EB%84%B7%EB%A7%88%EC%8A%A4%ED%81%AC_0421.md)
  - 2023-04-24 : [Apache와Nginx](ApacheAndNginx)
  - 2023-04-25 : [서브넷팅이란?](%EC%84%9C%EB%B8%8C%EB%84%B7%ED%8C%85%EC%9D%B4%EB%9E%80.md)
+ - 2023-04-26 : [호스트란?](hosts.md) 
  - 책읽기과제  : [확장과인용](%ED%99%95%EC%9E%A5%EA%B3%BC%EC%9D%B8%EC%9A%A9.md)
  - 책읽기과제  : [필수개념과명령어](%ED%95%84%EC%88%98%EA%B0%9C%EB%85%90%EA%B3%BC%EB%AA%85%EB%A0%B9%EC%96%B4.md)
