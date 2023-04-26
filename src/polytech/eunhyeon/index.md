@@ -9,4 +9,5 @@ layout: home
 20230420 :  [마운트](Mount)   
 20230421 :  [방화벽](Firewalld)   
 20230424 :  [UFW](ufw)   
-20230425 :  [라우터](Router)
+20230425 :  [라우터](Router)   
+20230426 :  [SCP](SCP)
