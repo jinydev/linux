@@ -15,3 +15,4 @@ layout: home
 
 * 2023-04-24 [https](https)
 * 2023-04-25 [rdbms](rdbms)
+* 2023-04-26 [rootdomain](rootdomain)
