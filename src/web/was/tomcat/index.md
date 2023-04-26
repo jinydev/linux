@@ -49,18 +49,38 @@ Apache Tomcat은 초기 버전 이후로 많은 릴리스를 제공했으며 각
 Tomcat의 각 릴리스는 이전 릴리스를 기반으로 하며 Java 웹 응용 프로그램을 보다 쉽게 ​​개발하고 배포할 수 있도록 하는 새로운 기능과 개선 사항을 포함합니다. 개발자는 필요한 특징과 기능에 따라 필요에 가장 적합한 Tomcat 버전을 선택하고 필요에 따라 최신 버전으로 업그레이드할 수 있습니다.
 
 ## 톰켓 설치
+---
 리눅스에 톰켓을 설치합니다.
 
 ### 패키지로 tomcat9 설치하기
 apt 명령어를 통하여 패키지로 컴파일된 tomcat9을 설치합니다.
-* [tomcat9](tomcat9) with APT
+* [tomcat9 with APT](tomcat9-apt) 
+* [tomcat9 with Yum](tomcat9-yum)
 
-### tomcat10 설치
-공식사이트에서 최신의 tomcat10을 다운로드 받아 설치를 합니다.
-* [tomcat10](tomcat10)
+### 수동설치
+공식사이트에서 tomcat을 다운로드 받아 설치를 합니다.
+* [tomcat9 수동설치](tomcat9-src)
+* [tomcat10](tomcat10-src)
 
 ## 배포
 * [deploy](deploy)
+
+## server.xml
+Tomcat의 기본 설정 파일 중 하나인 server.xml 파일은 Tomcat 서버의 구성 정보를 저장합니다. server.xml 파일에는 Tomcat의 HTTP, HTTPS, AJP, JMX 등 다양한 서비스를 구성하는 데 필요한 정보가 포함됩니다.
+
+* CentOS에서 Tomcat 9를 사용하는 경우, server.xml 파일의 기본 위치는 /etc/tomcat/server.xml입니다.
+
+* Ubuntu에서 Tomcat 9를 사용하는 경우, server.xml 파일의 기본 위치는 /etc/tomcat9/server.xml입니다.
+
+위치가 다를 수 있으므로, 실제 server.xml 파일의 위치를 찾으려면 find 명령을 사용할 수 있습니다. 다음 명령을 사용하면 Tomcat 서버에서 server.xml 파일을 찾을 수 있습니다.
+
+```bash
+sudo find / -name server.xml 2>/dev/null
+```
+
+위 명령어를 실행하면, 시스템 전체에서 `server.xml` 파일을 찾아서 해당 파일의 경로를 보여줍니다.
+
+
 
 ## Was연동
 Tomcat과 Apache를 연결하여 Apache를 프런트 엔드 프록시 서버로 사용하여 정적 콘텐츠를 처리하고 동적 요청을 Tomcat에 전달함으로써 웹 애플리케이션의 성능과 확장성을 개선할 수 있습니다.
