@@ -14,6 +14,7 @@ layout: home
 
 #### Devops
 ###### - [CI/CD란? - 기본 개념](./cicd_1.md)
+###### - [CI/CD - 플랫폼 소개](./cicd_2.md)
 ###### - [Proxy 서버와 Load Balancer](./proxy_loadbalancer_1.md)
 ###### - [MSA(Micro Service Architecture)란?](./msa_1.md)
 
