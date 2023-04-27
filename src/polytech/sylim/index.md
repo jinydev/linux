@@ -12,3 +12,4 @@ layout: home
 - 230424 [systemctl 명령어](systemctl)
 - 230425 [도메인](domain)
 - 230426 [게이트웨이](gateway)
+- 230427 [쉘 스크립트 작동 원리](shell_script)
