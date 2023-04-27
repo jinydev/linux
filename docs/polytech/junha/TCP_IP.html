@@ -10,14 +10,14 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="linux" />
 <meta property="og:locale" content="ko" />
-<link rel="canonical" href="https://linux.jiny.dev/polytech/namhoon/Unix%20vs%20Linux.html" />
-<meta property="og:url" content="https://linux.jiny.dev/polytech/namhoon/Unix%20vs%20Linux.html" />
+<link rel="canonical" href="http://localhost:4000/polytech/junha/TCP_IP.html" />
+<meta property="og:url" content="http://localhost:4000/polytech/junha/TCP_IP.html" />
 <meta property="og:site_name" content="linux" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="linux" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"https://linux.jiny.dev/polytech/namhoon/Unix%20vs%20Linux.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"http://localhost:4000/polytech/junha/TCP_IP.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -577,115 +577,93 @@
 
     <main class="bd-main order-1">
         <div class="bd-content ps-lg-2">
-    <h1 id="unix">Unix</h1>
+    <h1 id="tcpip">TCP/IP</h1>
 
-<h3 id="why">why?</h3>
+<p><strong>정의</strong></p>
 
-<p>1) 컴퓨터가 발명된 이후로 한동안 한가지 프로그램만 실행 가능했음</p>
+<p>인터넷에서 데이터를 전송하는데 사용되는 프로토콜 스택</p>
 
-<p>2) 하나의 컴퓨터가 여러개의 프로그램을 실행하기 위해서 유닉스가 만들어짐
-   -&gt; 멀티태스킹 + 멀티 유저 지원</p>
+<h3 id="protocol">Protocol</h3>
 
-<p>3) 어셈블리어 -&gt; C언어</p>
+<p><img src="https://static.javatpoint.com/tutorial/computer-network/images/tcp-ip-model.png" alt="protocol" /></p>
 
-<p>어셈블리어 : 
-   초기의 유닉스는 <strong>어셈블리어</strong>로 제작되어 다른 기종에 이식하려면 그 기종에 맞게 어셈블리어로 다시 작성해야 하는, 기종간에 호환성이 없는 운영체제였습니다.</p>
+<ul>
+  <li>error-free를 위한 미리 정의된 의사 단계</li>
+  <li>OSI 7 layers (OSI reference model)
+    <ul>
+      <li>physical</li>
+      <li>Data link</li>
+      <li><strong>Network: - IP (Internet Protocol)</strong></li>
+      <li><strong>Transport - TCP(Transmission Control Protocol), UDP(User Datagram Protocol)</strong></li>
+      <li>Session</li>
+      <li>Presentation</li>
+      <li>Application</li>
+    </ul>
+  </li>
+</ul>
 
-<p>-&gt; C언어로 재작성되고 <strong>이식성과 호환성</strong></p>
+<p>즉, TCP/IP는 OSI 7계층의 3, 4 레이어의 TCP와 IP를 합쳐 부르는 말</p>
 
-<p><img src="https://velog.velcdn.com/images/yeonhee7935/post/7e4d0d85-11c1-4a45-b289-165a71aff791/image.jfif" alt="post-thumbnail" /></p>
+<p>TCP/IP를 사용하겠다는 것은 
+[1] IP 주소 체계를 따르고, 
+[2] IP 라우팅을 이용해 목적지에 도달하며,
+[3] TCP의 특성을 활용해 송신자와 수신자의 논리적 연결을 생성하고, 
+[4] 신뢰성을 유지하겠다는 의미</p>
 
-<h1 id="linux">Linux</h1>
+<h3 id="network-layer-3-layer">Network Layer (3 Layer)</h3>
 
-<h3 id="why-1">why?</h3>
+<ul>
+  <li>IP가 활용되는 부분으로, 한 Endpoint(사용자)가 다른 Endpoint(사용자)로 가고자 할 경우, 경로와 목적지를 찾아줌</li>
+  <li>위를 라우팅이라고 하며 대역이 다른 IP들이 목적지를 향해 제대로 찾아갈 수 있도록 돕는 역할</li>
+</ul>
+
+<h3 id="transport-layer-4-layer">Transport Layer (4 Layer)</h3>
+
+<ul>
+  <li>송신자와 수신자의 논리적 연결을 담당하는 부분으로, 신뢰성 있는 연결을 유지할 수 있도록 도와줌</li>
+  <li>Endpoint 간에 연결을 생성하고 데이터를 얼마나 보내고 받았는지, 제대로 받았는지 등을 확인</li>
+  <li>TCP와 UDP가 있다</li>
+</ul>
+
+<h3 id="tcp">TCP</h3>
+
+<p><strong>개요</strong></p>
+
+<p>TCP는 근거리 통신망이나 인트라넷, 인터넷에 연결된 컴퓨터에서 실행되는 프로그램간에 일련의 옥텟을 안정적으로, 순서대로, 에러 없이 교환할 수 있게 함</p>
+
+<p>IP가 패킷들의 관계를 이해하지 못하고 목적지를 찾아가는 것에 중점을 둔다면, TCP는 통신하고자 하는 양쪽 단말(Endpoint)이 통신할 준비가 되었는지, 데이터가 제대로 전송되었는지, 데이터가 가는 도중 변질되지는 않았는지, 수신자가 얼마나 받았고 빠진 부분은 없는지 등을 점검</p>
+
+<p>IP Header와 TCP Header를 제외한 TCP가 실을 수 있는 데이터 크기를 <strong>세그먼트</strong>라고 부름</p>
+
+<p><strong>TCP 작동 (3-way handshake)</strong></p>
 
 <ol>
-  <li>
-    <p>UNIX는 AT&amp;T회사의 벨 연구소에서 개발 -&gt; 유료화시도</p>
-
-    <p>-&gt;  C로 제작되고 오픈소스로 모두에게 공개될 수 있는 UNIX 시스템을 만들기 위해 
-      GNU is Not Unix 라는 <strong>GNU 프로젝트</strong></p>
-  </li>
-  <li>
-    <p>리눅스는 최대한 확장 가능하도록 설계하려는 목표가 있었습니다. 즉 사용자에게 제어권이 있으며, 어떠한 인터페이스에도 종속되지 않도록 개발하려는 의지가 있었다고 하네요.</p>
-
-    <p>무료 오픈소스와 확장성을 지향하는 프로그램, 가볍고 빠르다는 이점에 힘입어 폭발적인 인기를 끌게되고 현재까지도 인기있는 os로 명맥을 유지하고 있습니다.</p>
-
-    <p>&lt;img src = https://velog.velcdn.com/images%2Fsoryeongk%2Fpost%2F358065f9-38a7-461c-ba26-c3891a92b106%2Fimage.png /&gt;</p>
-
-    <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdkIzO43DnQipTQcadutBq_DGZg_gwdQ8XL9b731_PelGURbFKlCuysdyoYK6r1IdgOho&amp;usqp=CAU" alt="리눅스 쉘이란?" /></p>
-  </li>
+  <li>송신자가 수신자에게 SYN을 날려 통신이 가능한지 확인. Port가 열려 있어야함</li>
+  <li>수신자가 송신자로부터 SYN을 받고 SYN/ACK을 송신자에게 날려 통신할 준비가 되었음을 알림</li>
+  <li>송신자가 수신자의 SYN/ACK를 받고 ACK를 날려 전송 시작을 알림</li>
 </ol>
 
-<h1 id="unix-vs-linux">Unix vs Linux</h1>
+<p>*SYN, ACK: TCP Header의 요소</p>
 
-<p>&lt;img src = https://user-images.githubusercontent.com/69034766/103987739-51104400-51d0-11eb-87d4-caa01cea7495.png /&gt;</p>
+<p><strong>TCP 특징</strong></p>
 
-<p><img src="C:\Users\DA\AppData\Roaming\Typora\typora-user-images\image-20230418082622289.png" alt="image-20230418082622289" /></p>
-
-<p><img src="C:\Users\DA\AppData\Roaming\Typora\typora-user-images\image-20230418082639730.png" alt="image-20230418082639730" /></p>
-
-<h1 id="그럼-우리가-갈-금융권은">그럼 우리가 갈 금융권은?</h1>
-
-<h3 id="2017년도-금융정보화-추진-현황">‘2017년도 금융정보화 추진 현황’</h3>
-
-<p>&lt;img src = https://img.etnews.com/photonews/1810/1116290_20181007133534_248_0001.jpg /&gt;</p>
-
-<ol>
-  <li>국내 금융기관이 보유한 서버급 전산기기 운용체계 중 리눅스(28.8%)가 가장 많았다. 이어 유닉스(26.8%), 윈도(25.3%), NT(9.0%), 기타(10.0%)</li>
-  <li>증권사 중심으로 리눅스를 주전산 서버뿐 아니라 일반 업무용 서버에도 도입했다. 지난해 출범한  카카오뱅크도 리눅스 기반 핵심시스템을 가동하며 기존 금융권 시스템 구조를 깨버렸다.</li>
-  <li>메인프레임에서 유닉스로의 다운사이징이 유닉스에서 리눅스(U2L), 혹은 메인프레임에서 리눅스(M2L)로 이동하는 모양새다. 리눅스로의 전환은 <strong><u>오픈뱅킹, 클라우드 환경</u></strong>을 갖추기 위한 요소다. 리눅스 기반 x86서버에서는 오픈소스를 상대적으로 편리하게 활용할 수 있기 때문이다.</li>
-</ol>
-
-<p>​</p>
-
-<ol>
-  <li>
-    <p>최근 사례</p>
-
-    <p>-2022 KB은행 차세대(메인프레임 -&gt; 리눅스)</p>
-
-    <p>-2022 4분기 하나은행 차세대 시스템 ‘프로젝트 원’ 추진 예정</p>
-
-    <p>-케이뱅크 : 채널계, 정보계, 계정계 모두 리눅스로 전환 추진</p>
+<ul>
+  <li>흐름 제어
+    <ul>
+      <li>TCP Header내의 Window Size를 사용해 한번에 받고/보낼 수 있는 데이터의 양을 정함</li>
+      <li>window는 일정량의 데이터를 뜻하고, Window size는 수신자가 정함. 또한 상황에 따라 조절</li>
+      <li>수신자는 받은 데이터양을 확인하여 송신자에게 보냄 → Acknowledgment Number
+  수신자가 N번째의 데이터를 받았으면 Acknowledgment Number에 1을 추가하여 N+1을 보냄</li>
+      <li>위의 데이터 순서번호를 Sequence Number라고 부름</li>
+    </ul>
   </li>
-</ol>
-
-<h1 id="why-bank-chooses-linux">Why Bank chooses Linux?</h1>
-
-<p>from Coscom report by EY Consulting group</p>
-
-<ol>
-  <li>
-    <p>유닉스 서버 대비 70%의 비용으로 150%의 성능을 제공하고 있고 관련 소프트웨어 비용이 50%
- 절감되는 효과가 있다고 한다</p>
+  <li>혼잡 제어
+    <ul>
+      <li>데이터가 지나가는 네트워크 망의 혼잡또한 중요하다</li>
+      <li>Slow Start: 송신자는 연결 초기에 데이터 송출량을 낮게 잡고 보내면서 수신자의 수신을 확인하며 데이터 송출량을 조금씩 늘림</li>
+    </ul>
   </li>
-  <li>
-    <p>정확성과 안정성이 필수적인 은행, 증권 등 금융기관의 기대를 충족하는 것</p>
-  </li>
-  <li>
-    <p>2018년 가트너 CIO 보고서에 따르면 리 딩 그룹 CIO의 43%는 기업 차별화 전략으로 BI·analytics와 클라우드 서비스를 높게 평가
-    -&gt; 이 두 기술의 근간에는 리눅스가 자리</p>
-  </li>
-  <li>
-    <p><strong>해외 금융시장 진출</strong></p>
-
-    <ol>
-      <li>
-        <p>국내 금융기관들은 차세대 시스템 구축 과정에서 업무를 효율화·최적화하고 기술을 표준화했는데, 일부 기관들은 이를 솔루션화하고 해외 금융시장으로의 도약을 시도 but 실패
--&gt; 서버 및 소프트웨어 도입 및 유지보수 비용에 대한 부담이 적지 않았을 것</p>
-      </li>
-      <li>
-        <p>현지의 상황에 맞게 최 적화하고 클라우드 환경으로 서비스를 제공하는 모델 또한 하나의 옵션으로 검토될 것</p>
-      </li>
-    </ol>
-  </li>
-</ol>
-
-<h1 id="linux-vs-window">Linux VS Window</h1>
-
-<p><img src="C:\Users\DA\AppData\Roaming\Typora\typora-user-images\image-20230418081721014.png" alt="image-20230418081721014" /></p>
-
+</ul>
 
 
     <div style="padding-top: 50px;">
