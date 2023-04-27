@@ -46,10 +46,17 @@
 <loc>http://localhost:4000/polytech/junha/FTP.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/polytech/juyeon/Firnware.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/polytech/junha/IMAGE.html</loc>
+=======
+<loc>https://linux.jiny.dev/web/apache/tomcat/ajp.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/web/nginx/tomcat/ajp.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/polytech/minyoung/Index.html</loc>
@@ -67,16 +74,27 @@
 <loc>http://localhost:4000/polytech/junha/TOMCAT.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/polytech/namhoon/Unix,Linux.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/polytech/namhoon/WSL%EB%AA%85%EB%A0%B9%EC%96%B4.html</loc>
+=======
+<loc>https://linux.jiny.dev/system/package/apt.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/polytech/hayoung/about-hosting-service.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/polytech/hayoung/aboutJAMstack.html</loc>
+=======
+<loc>https://linux.jiny.dev/system/remote/ssh/apt.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/web/nginx/apt.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/polytech/sylim/about_Unix.html</loc>
@@ -97,19 +115,36 @@
 <loc>http://localhost:4000/network/acl.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/system/disk/add.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/network/ip/address.html</loc>
+=======
+<loc>https://linux.jiny.dev/command/cal.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/web/apache/tomcat/ajp.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/web/nginx/tomcat/ajp.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/system/schedule/algorism.html</loc>
+=======
+<loc>https://linux.jiny.dev/shell/cal.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/command/cat.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/network/restart/centos.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/prologue/os/distribution/centos.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/prologue/android.html</loc>
@@ -124,10 +159,17 @@
 <loc>http://localhost:4000/prologue/application.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/web/nginx/apt.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/dev/java/8/apt.html</loc>
+=======
+<loc>https://linux.jiny.dev/prologue/cli.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/start/logout/cli.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/web/apache/apt.html</loc>
@@ -139,16 +181,27 @@
 <loc>http://localhost:4000/system/package/apt.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/system/remote/ssh/apt.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/command/arch.html</loc>
+=======
+<loc>https://linux.jiny.dev/setup/wsl/command.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/shell/args.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/start/auto.html</loc>
+=======
+<loc>https://linux.jiny.dev/system/process/command.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/dev/php/compile.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/prologue/os/bios.html</loc>
@@ -157,10 +210,17 @@
 <loc>http://localhost:4000/command/cal.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/shell/cal.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/command/shell/cal.html</loc>
+=======
+<loc>https://linux.jiny.dev/web/apache/conf.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/web/nginx/conf.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/command/cat.html</loc>
@@ -175,6 +235,7 @@
 <loc>http://localhost:4000/dev/php/centos_php7.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/system/check.html</loc>
 </url>
 <url>
@@ -182,20 +243,34 @@
 </url>
 <url>
 <loc>http://localhost:4000/command/clear.html</loc>
+=======
+<loc>https://linux.jiny.dev/setup/virtual/vmware/create.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/setup/virtual/virtualbox/create.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/prologue/cli.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/start/logout/cli.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/database/mysql/client.html</loc>
+=======
+<loc>https://linux.jiny.dev/system/system/crontab.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/tools/curl.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/setup/cloud/cloud.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/command/cmp.html</loc>
 </url>
 <url>
@@ -203,6 +278,18 @@
 </url>
 <url>
 <loc>http://localhost:4000/setup/wsl/command.html</loc>
+=======
+<loc>https://linux.jiny.dev/command/date.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/database/client/dbeaver.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/process/demon.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/demon/demon.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/start/group/command.html</loc>
@@ -217,19 +304,33 @@
 <loc>http://localhost:4000/command/compress.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/web/nginx/conf.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/web/apache/conf.html</loc>
+=======
+<loc>https://linux.jiny.dev/setup/wsl/distribution.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/prologue/distribution.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/system/system/console.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/contribution.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/polytech/course.html</loc>
+=======
+<loc>https://linux.jiny.dev/server/domain.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/web/domain.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/command/cp.html</loc>
@@ -247,16 +348,27 @@
 <loc>http://localhost:4000/system/schedule/crontab.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/tools/curl.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/command/shell/date.html</loc>
+=======
+<loc>https://linux.jiny.dev/command/file.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/file/file.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/command/date.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/database/client/dbeaver.html</loc>
+=======
+<loc>https://linux.jiny.dev/network/firewall/firewall-cmd.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/demon/demon.html</loc>
@@ -313,16 +425,30 @@
 <loc>http://localhost:4000/command/file.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/system/file/file.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/command/find.html</loc>
+=======
+<loc>https://linux.jiny.dev/command/hostname.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/network/hostname.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/web/apache/tomcat/http.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/network/firewall/firewall-cmd.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/prologue/os/firmware.html</loc>
+=======
+<loc>https://linux.jiny.dev/network/icmp.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/shell/function.html</loc>
@@ -331,15 +457,20 @@
 <loc>http://localhost:4000/dev/gcc/g2plus.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/start/edit/gedit.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/tools/git.html</loc>
+=======
+<loc>https://linux.jiny.dev/system/monitor/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/polytech/jaeyoung/gitflow.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/polytech/jaeyoung/githubflow.html</loc>
 </url>
 <url>
@@ -356,11 +487,15 @@
 </url>
 <url>
 <loc>http://localhost:4000/start/logout/gui.html</loc>
+=======
+<loc>https://linux.jiny.dev/network/nat/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/command/gzip.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/start/out/halt.html</loc>
 </url>
 <url>
@@ -368,6 +503,48 @@
 </url>
 <url>
 <loc>http://localhost:4000/command/head.html</loc>
+=======
+<loc>https://linux.jiny.dev/dev/git/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/network/restart/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/network/ip/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/database/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/system/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/demon/dns/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/package/apt/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/network/firewall/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/network/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/network/domain/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/disk/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/database/mysql/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/compile/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/database/client/heidisql.html</loc>
@@ -376,6 +553,7 @@
 <loc>http://localhost:4000/dev/gcc/helloworld.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/command/history.html</loc>
 </url>
 <url>
@@ -383,6 +561,15 @@
 </url>
 <url>
 <loc>http://localhost:4000/polytech/minyoung/hosting.html</loc>
+=======
+<loc>https://linux.jiny.dev/system/boot/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/tools/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/demon/ftp/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/network/hostname.html</loc>
@@ -391,12 +578,17 @@
 <loc>http://localhost:4000/command/hostname.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/web/nginx/tomcat/http.html</loc>
+=======
+<loc>https://linux.jiny.dev/database/mariadb/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/web/apache/tomcat/http.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/network/icmp.html</loc>
 </url>
 <url>
@@ -431,6 +623,42 @@
 </url>
 <url>
 <loc>http://localhost:4000/system/remote/vnc/</loc>
+=======
+<loc>https://linux.jiny.dev/system/backup/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/doker/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/remote/vnc/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/dev/gcc/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/package/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/web/apache/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/web/https/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/polytech/SeungHee/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/dev/python/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/polytech/suyoung/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/web/nginx/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/web/was/tomcat/connector/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/polytech/junha/</loc>
@@ -442,33 +670,56 @@
 <loc>http://localhost:4000/system/remote/winterm/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/dev/java/11/</loc>
+=======
+<loc>https://linux.jiny.dev/web/was/tomcat/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/dev/git/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/dev/gcc/</loc>
+=======
+<loc>https://linux.jiny.dev/project/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/prologue/iot/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/polytech/juyeon/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/system/disk/</loc>
+=======
+<loc>https://linux.jiny.dev/web/was/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/polytech/ckm/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/system/file/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/deploy/</loc>
+=======
+<loc>https://linux.jiny.dev/system/permit/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/setting/time/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/system/remote/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/polytech/namhoon/</loc>
 </url>
 <url>
@@ -500,12 +751,40 @@
 </url>
 <url>
 <loc>http://localhost:4000/demon/ftp/</loc>
+=======
+<loc>https://linux.jiny.dev/dev/php/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/web/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/system/system/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/dev/php/</loc>
+=======
+<loc>https://linux.jiny.dev/xwindow/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/command/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/schedule/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/demon/mail/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/demon/samba/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/prologue/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/demon/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/network/restart/</loc>
@@ -514,7 +793,20 @@
 <loc>http://localhost:4000/system/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/polytech/ParkTaeHyeon/</loc>
+=======
+<loc>https://linux.jiny.dev/dev/nodejs/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/start/logout/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/process/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/dev/java/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/database/</loc>
@@ -523,19 +815,31 @@
 <loc>http://localhost:4000/network/firewall/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/polytech/SeungHee/</loc>
+=======
+<loc>https://linux.jiny.dev/dev/java/eclipse/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/database/mysql/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/polytech/suyoung/</loc>
+=======
+<loc>https://linux.jiny.dev/start/login/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/tools/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/system/remote/putty/</loc>
+=======
+<loc>https://linux.jiny.dev/start/group/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/polytech/sylim/</loc>
@@ -550,13 +854,21 @@
 <loc>http://localhost:4000/polytech/taegeun/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/polytech/taehwan/</loc>
+=======
+<loc>https://linux.jiny.dev/system/remote/putty/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/polytech/yulim/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/web/apache/</loc>
+=======
+<loc>https://linux.jiny.dev/dev/java/8/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/polytech/</loc>
@@ -565,10 +877,17 @@
 <loc>http://localhost:4000/project/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/prologue/iot/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/prologue/os/centos/</loc>
+=======
+<loc>https://linux.jiny.dev/start/edit/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/remote/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/web/https/</loc>
@@ -580,15 +899,23 @@
 <loc>http://localhost:4000/dev/python/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/web/nginx/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/prologue/os/</loc>
+=======
+<loc>https://linux.jiny.dev/shell/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/remote/winterm/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/setup/wsl/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/start/</loc>
 </url>
 <url>
@@ -605,15 +932,40 @@
 </url>
 <url>
 <loc>http://localhost:4000/web/</loc>
+=======
+<loc>https://linux.jiny.dev/polytech/namhoon/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/xwindow/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/prologue/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/command/</loc>
+=======
+<loc>https://linux.jiny.dev/deploy/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/setup/virtual/vmware/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/start/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/remote/ssh/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/command/shell/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/command/command/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/setup/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/system/ip/</loc>
@@ -622,6 +974,7 @@
 <loc>http://localhost:4000/start/user/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/network/</loc>
 </url>
 <url>
@@ -641,6 +994,18 @@
 </url>
 <url>
 <loc>http://localhost:4000/demon/dns/</loc>
+=======
+<loc>https://linux.jiny.dev/cloud/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/app/zabbix/</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/setup/wsl/</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/server/</loc>
@@ -649,6 +1014,7 @@
 <loc>http://localhost:4000/network/ip/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/setup/bare/</loc>
 </url>
 <url>
@@ -659,6 +1025,18 @@
 </url>
 <url>
 <loc>http://localhost:4000/setup/cloud/aws/</loc>
+=======
+<loc>https://linux.jiny.dev/system/compile/install.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/doker/install.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/setup/wsl/install.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/setup/virtual/virtualbox/install.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/setup/cloud/azure/</loc>
@@ -673,10 +1051,17 @@
 <loc>http://localhost:4000/setup/cloud/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/system/permit/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/setup/docker/</loc>
+=======
+<loc>https://linux.jiny.dev/setup/ubuntu/iso.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/setup/iso.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/setup/hosting/</loc>
@@ -703,31 +1088,53 @@
 <loc>http://localhost:4000/command/command/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/setup/virtual/virtualbox/</loc>
+=======
+<loc>https://linux.jiny.dev/prologue/os/linux.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/polytech/minyoung/linux.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/setup/wsl/setup/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/start/group/</loc>
+=======
+<loc>https://linux.jiny.dev/list.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/cloud/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/setup/virtual/vmware/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
+=======
+<loc>https://linux.jiny.dev/start/user/list.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/start/edit/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/system/package/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/setup/virtual/</loc>
+=======
+<loc>https://linux.jiny.dev/start/login/log.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/monitor/log.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/shell/</loc>
@@ -862,10 +1269,17 @@
 <loc>http://localhost:4000/start/edit/nano.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/system/remote/netstat.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/web/nginx-yum.html</loc>
+=======
+<loc>https://linux.jiny.dev/system/process/run.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/setup/virtual/vmware/run.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/web/was/tomcat/connector/nginx.html</loc>
@@ -886,22 +1300,37 @@
 <loc>http://localhost:4000/dev/php/package.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/database/mariadb/package.html</loc>
+=======
+<loc>https://linux.jiny.dev/setup/hosting/server.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/system/monitor/packet.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/database/mysql/password.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/start/user/password.html</loc>
+=======
+<loc>https://linux.jiny.dev/demon/server.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/system/file/path.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/start/pipe.html</loc>
+=======
+<loc>https://linux.jiny.dev/database/mariadb/service.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/demon/service.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/dev/nodejs/pm2.html</loc>
@@ -910,10 +1339,17 @@
 <loc>http://localhost:4000/network/ip/port.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/database/postgresql.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/start/out/poweroff.html</loc>
+=======
+<loc>https://linux.jiny.dev/setup/virtual/vmware/setting.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/demon/dns/setting.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/start/user/practice.html</loc>
@@ -946,7 +1382,14 @@
 <loc>http://localhost:4000/tools/vscode/remote.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/command/rm.html</loc>
+=======
+<loc>https://linux.jiny.dev/start/root/sudo-centos.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/start/root/sudo.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/command/rmdir.html</loc>
@@ -985,7 +1428,14 @@
 <loc>http://localhost:4000/web/server.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/setup/hosting/server.html</loc>
+=======
+<loc>https://linux.jiny.dev/web/was/tomcat9-yum.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/web/was/tomcat/tomcat9.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/demon/server.html</loc>
@@ -1000,10 +1450,26 @@
 <loc>http://localhost:4000/database/mariadb/service.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/network/setting.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/demon/dns/setting.html</loc>
+=======
+<loc>https://linux.jiny.dev/demon/ftp/ubuntu-vsftp.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/network/restart/ubuntu.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/setup/virtual/virtualbox/ubuntu.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/network/firewall/ufw.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/command/uname.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/setup/virtual/vmware/setting.html</loc>
@@ -1087,15 +1553,23 @@
 <loc>http://localhost:4000/web/was/tomcat9-yum.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/web/was/tomcat/tomcat9.html</loc>
 </url>
 <url>
 <loc>http://localhost:4000/web/was/tomcat/tomcat9_src.html</loc>
+=======
+<loc>https://linux.jiny.dev/web/apache/yum.html</loc>
+</url>
+<url>
+<loc>https://linux.jiny.dev/dev/java/11/yum.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
 </url>
 <url>
 <loc>http://localhost:4000/command/touch.html</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/start/tty.html</loc>
 </url>
 <url>
@@ -1223,5 +1697,11 @@
 </url>
 <url>
 <loc>http://localhost:4000/polytech/namhoon/%EC%B1%85%EC%9A%94%EC%95%BD%EA%B3%BC%EC%A0%9C%EC%9D%B4%EA%B2%83%EC%9D%B4%EC%9A%B0%EB%B6%84%ED%88%AC%EB%A6%AC%EB%88%85%EC%8A%A4%EB%8B%A45%EC%9E%A5X%EC%9C%88%EB%8F%84%EC%9A%B0.html</loc>
+=======
+<loc>https://linux.jiny.dev/dev/java/8/yum.html</loc>
+>>>>>>> 2c1e72b68b4f33b747fe84cad9a7cd502c5302fb
+</url>
+<url>
+<loc>https://linux.jiny.dev/system/package/yum.html</loc>
 </url>
 </urlset>
