@@ -1,9 +1,12 @@
+---
+layout: home
+---
 ## hosts 파일이란?
 - 호스트 이름에 대응하는 IP 주소가 저장 되어 있어서 도메인 이름 시스템인 DNS에서 주소 정보를 제공받지 않고도 서버의 위치를 찾게 해주는 파일
 쉽게 풀어서 설명하자면
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FviEBv%2FbtqKwrfnPaw%2Fr0rcKUiKff0liHTyKiVqqk%2Fimg.png)
 
-라우저 화면을 열고 url으로 https://www.naver.com을 입력 했을 때 https://www.naver.com 이란 URL 에 해당하는 IP 주소를 DNS에 요청하고 DNS 에서 제공 받은 IP로 접속 하는 겁니다.
+브라우저 화면을 열고 url으로 https://www.naver.com을 입력 했을 때 https://www.naver.com 이란 URL 에 해당하는 IP 주소를 DNS에 요청하고 DNS 에서 제공 받은 IP로 접속 하는 겁니다.
 이 때 굳이 DNS 에서 도메인에 해당하는 IP를 찾지 않고도 주소를 찾을 수 있게 해주는 파일이 바로 hosts 입니다.
 위 사진은 호스트 파일을 문서 편집기로 열었을 때의 모습입니다.
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fmd7Xk%2FbtqKte2l5wE%2F7UCFAOtjrMekKvDNRY7PQ0%2Fimg.png)
