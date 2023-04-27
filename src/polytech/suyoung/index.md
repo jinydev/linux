@@ -13,7 +13,7 @@ layout : home
 ## 0424 호스트포트와 게스트포트 [./0424HOSTGUESTPORT]
 ## 0425 라우터와 NAT [./0425ROUTERNAT]
 ## 0426 아파치 [./0426APACHE]
-## 0427 
+## 0427 쉘과 커널 [./0427SHELLKERNEL]
 
 =======
 # Suyoung Report
