@@ -1,3 +1,8 @@
+---
+layout : home
+---
+# 폴리텍 광명융합원 정수영
+
 # 09. GIT BRANCH 0420목
 
 # BRANCH 정의
