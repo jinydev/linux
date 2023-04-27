@@ -1,5 +1,5 @@
 ---
-layout: 과제1
+layout: home
 ---
 
 ## 파일과 디렉토리 조작<br/>
