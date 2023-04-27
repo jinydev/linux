@@ -27,8 +27,11 @@ Nginx의 비동기 이벤트란 HTTP 요청이 수 천 개여도 정해진 수�
 
 ### Nginx 구동 방식
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FQRh8u%2FbtrsfWbzQPo%2FMRnkr4DxlZddNd08gukih0%2Fimg.png)\
-Nginx에서는 커넥션 생성 및 커넥션 제거, 그리고 새로운 요청을 처리하는 것을 이벤트라고 부른다. 이 이벤트들은 OS커널이 큐 형식으로 worker 프로세스에게 전달해주고, 이벤트가 큐에 담긴 상태에서 worker 프로세스가 처리할 때까지 비동기 방식으로 대기한다. 그리고 워커 프로세스는 하나의 스레드로 이벤트를 꺼내서 처리해 나간다. 이렇게 되면 워커 프로세스가 쉴틈없이 일하기 때문에 아파치 서버에서 요청이 없다면 방치되던 프로세스보다 서버 자원을 더 효율적으로 쓸 수 있게 되는 것이다.
+- Nginx는 하나의 Master Process와 N개의 고정된 Worker Process로 구성되어 있다.
+- Master Process의 주 역할은 설정 파일을 읽거나 검증하며 Worker Process를 관리하는 역할을 수행
+- Worker Process에서 요청에 대한 실질적인 처리를 수행한다.
+- Nginx는 비동기 이벤트 기반 모델을 통해서 Worker Process 간에 요청을 효율적으로 분산한다.
 
-그러나 네모 칸(큐)에 있는 요청(이벤트) 중 하나가 시간이 오래걸리는 작업(ex. Disk I/O)이면 어떻게 될까?
+- 그러나 네모 칸(큐)에 있는 요청(이벤트) 중 하나가 시간이 오래걸리는 작업(ex. Disk I/O)이면 어떻게 될까?
 
 그 뒤에 있는 이벤트는 요청을 처리하는 긴 시간동안 블로킹이 된다. 그래서 NGINX는 시간이 오래 걸리는 작업은 따로 수행하는 스레드 풀(Thread Pool)을 만들어놓고, 워커 프로세스는 지금 처리할 요청이 시간이 많이 걸릴 것 같다면 스레드 풀에 그 이벤트를 위임하고 큐 안에 있는 다른 이벤트를 처리하러 가게 된다.
