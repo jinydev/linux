@@ -1,6 +1,6 @@
 # 가상머신 네트워크
 
-![table.png](/img/table.png)
+![table.png](./img/table.png)
 
 ## Host-only
 
