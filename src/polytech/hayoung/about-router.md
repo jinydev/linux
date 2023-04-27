@@ -8,7 +8,7 @@
 
 ****라우팅 프로토콜의 종류****
 
-<img src = "https://file.notion.so/f/s/510bcfae-cef0-4236-8e5f-bc2e2c5a0278/img1.daumcdn.png?id=4e7f8746-b7f8-4f4a-a8f5-dc9a66aa6684&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682414912165&signature=W4mkPA9vb6NElEgtEjmsGfwFZLGKjcmryWBxBjQ4-QI&downloadName=img1.daumcdn.png">
+<img src = "https://file.notion.so/f/s/510bcfae-cef0-4236-8e5f-bc2e2c5a0278/img1.daumcdn.png?id=4e7f8746-b7f8-4f4a-a8f5-dc9a66aa6684&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660249487&signature=d5XE_em7froMLZt0ShGP6t6yzfDHinpjPs0EIUCMVEc&downloadName=img1.daumcdn.png">
 
 ### **Static Routing(정적 라우팅)**
 

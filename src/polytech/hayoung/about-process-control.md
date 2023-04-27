@@ -1,6 +1,6 @@
 1. 포그라운드와 백그라운드 처리
     
-    <img src = "https://file.notion.so/f/s/d4999fed-38a6-4d95-98a1-624949603048/img1.daumcdn.png?id=7288e450-ad48-48f7-935f-dca55c91993e&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682073742415&signature=vVlxveaS_9z_ulbblIUZKOX_-UVNQcGqYLxZmlnrwgs&downloadName=img1.daumcdn.png">
+    <img src = "https://file.notion.so/f/s/d4999fed-38a6-4d95-98a1-624949603048/img1.daumcdn.png?id=7288e450-ad48-48f7-935f-dca55c91993e&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660373800&signature=5VqRk6DK6YZYofkS7waj-MfV04K1UDUTmCqe0MK-97U&downloadName=img1.daumcdn.png">
     
     1. 포그라운드
         1. 사용자가 명령을 입력하고 실행 결과를 바로 확인할 수 있는 프로세스
@@ -14,16 +14,16 @@
         6. 백그라운드로 동작하는 프로세스는 kill 명령어를 사용하여 종료 가능
 2. 프로세스 스케줄러
     
-    <img src ="https://file.notion.so/f/s/eea8ac68-282d-4d9b-8bd4-f9334709827f/image.png?id=87857aff-85ef-4876-9a60-421333da8f77&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682073759029&signature=wTPwp_uxRnisylNnl34OEAFvzVvZC9ZZYDvLghpPNDk&downloadName=image.png">
+    <img src ="https://file.notion.so/f/s/eea8ac68-282d-4d9b-8bd4-f9334709827f/image.png?id=87857aff-85ef-4876-9a60-421333da8f77&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660393015&signature=xZLUaZ-qt82PN7tBO16v3H6RF3tfdMDUqj5vibPlS44&downloadName=image.png">
     
     1. 프로세스 스케줄러(Process Scheduler)는 CPU 자원을 여러 프로세스가 공유하면서 프로세스를 스케줄링하는 역할
     2. 스케줄링 방식에는 라운드 로빈(Round Robin), 우선순위(Priority), 멀티레벨 큐(Multi-Level Queue) 등이 있음
         
-        <img src="https://file.notion.so/f/s/578dfe40-57ef-4cd1-8466-f97b290f25cb/image.png?id=a4b06230-481e-46c3-938c-930c435d3995&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682073778459&signature=N_AIi6V9COphUGJ-KxzPi3LrBHqcJwalzmnOsqoa5tk&downloadName=image.png">
+        <img src="https://file.notion.so/f/s/578dfe40-57ef-4cd1-8466-f97b290f25cb/image.png?id=a4b06230-481e-46c3-938c-930c435d3995&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660414110&signature=6gcthivw2HAejxhfCLaA1gphsFb6duz1NN-OmGo7LZQ&downloadName=image.png">
         
-        <img src="https://file.notion.so/f/s/8af21792-7024-4703-b11a-f3711937a0d6/image.png?id=728bc2ec-fcac-4390-84a2-9b148efd0720&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682073793258&signature=ukgW-ky9mKX5M6PknFBrJsB1GDfyRkXgJsoyokuz7Vs&downloadName=image.png">
+        <img src="https://file.notion.so/f/s/8af21792-7024-4703-b11a-f3711937a0d6/image.png?id=728bc2ec-fcac-4390-84a2-9b148efd0720&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660424312&signature=MT8a7MkBx1kEWBCR5CIitI9MxB7OPAL_l4lXh4nQWzU&downloadName=image.png">
         
-        <img src="https://file.notion.so/f/s/c528175f-6f98-4663-927d-532784f70a82/image.png?id=0d5afa20-d8ff-46cb-82c0-e1ac2107be4e&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682073807990&signature=r-kf0zUp6o1xz0lOGSsxm9RQ3bOPSruV0UyIeJqa-7s&downloadName=image.png">
+        <img src="https://file.notion.so/f/s/c528175f-6f98-4663-927d-532784f70a82/image.png?id=0d5afa20-d8ff-46cb-82c0-e1ac2107be4e&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660433534&signature=U6weMfnnb0fFCRjl8wrJmXmVXWAN9enqrctWlO61b90&downloadName=image.png">
         
         - 운영체제는 스케줄링 큐에서 대기하는 각 프로세스들의 우선순위를 고려하여 자원을 배분
             - 스케줄링 큐: 프로세스들이 대기하는 공간 , 반드시 선입선출 방식은 아님

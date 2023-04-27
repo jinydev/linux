@@ -4,7 +4,7 @@
 
 ## Redirection이란?
 
-<img src ="https://file.notion.so/f/s/52c83eba-a25f-42f8-a51a-eee022254483/img1.daumcdn.png?id=63396bdf-193d-43ca-a03c-b02bef49b351&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1681965176503&signature=8uaLMr4_jvE-2ThHbzfR1vgQiBvR36REZGMa4uqsfFE&downloadName=img1.daumcdn.png">
+<img src ="https://file.notion.so/f/s/52c83eba-a25f-42f8-a51a-eee022254483/img1.daumcdn.png?id=a0b3eab3-6656-4061-b58f-6922526b35eb&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660298281&signature=VcMbspAf5BY_MXrpeod9ZmcgmZ8YoR_TE3lv8cUSVt8&downloadName=img1.daumcdn.png">
 
 - stdin 표준 입력
 - stdout 표준 출력
@@ -21,7 +21,7 @@
 ### 입출력 리다이렉션
 
 
-<img src ="https://file.notion.so/f/s/ea1b24ac-21b8-46e5-8373-7cda04a46aa9/%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%EC%85%98.jpg?id=67a1779f-57ef-4ea5-ae09-1d99d5cb6ea4&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1681965202081&signature=471N3GS674VqBLiepSkoSQd8fCxTgHYzUIRyX_2qhkc&downloadName=%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%EC%85%98.jpg">
+<img src ="https://file.notion.so/f/s/ea1b24ac-21b8-46e5-8373-7cda04a46aa9/%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%EC%85%98.jpg?id=895d5516-0abc-4724-945e-d9233d70aa33&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660314971&signature=FWUNXHy5dXOqAdturVal0sJBvlFax0f2omb0eDwz778&downloadName=%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%EC%85%98.jpg">
 
 | 리다이렉션 기호 | 방향 | 의미 |
 | --- | --- | --- |
@@ -35,11 +35,11 @@
 - cat 명령어: 원래 표준 입력인 키보드로부터 입력받은 내용을 표준 출력인 터미널로 보내는 명령어
 - 하지만 다음과 같이 cat > 파일명 실행하고 파일의 내용을 작성한 후, ctrl + C를 눌러 종료하면 키보드로부터 입력받은 내용을 파일로 떨어뜨림
 
-<img src ="https://file.notion.so/f/s/889876f3-e576-4b6a-ac2d-ea2b8e69efda/Untitled.png?id=6e19c399-fe98-4596-93ca-635dd7dfb8cd&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1681965220032&signature=PfSdI7aACF6iZF4-8DCxILa1ck8o4LGlr8mCHVxXtGg&downloadName=Untitled.png">
+<img src ="https://file.notion.so/f/s/889876f3-e576-4b6a-ac2d-ea2b8e69efda/Untitled.png?id=ed720c41-bc17-4cd1-a048-63dc5cc8e8e9&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660328086&signature=nx87QjMzthtgF2CaNJNlUAhoG5GPRTfICcR86HDAVHo&downloadName=Untitled.png">
 
-<img src ="https://file.notion.so/f/s/49ac2693-301f-498d-a779-dab46216caa3/Untitled.png?id=0ce700d7-4d8d-4a25-8e06-bd2e42ed8624&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1681965238753&signature=cgBtNh5oLP5-42WKddUDT8t4n2Fjd7rqqxeGdZUg3eE&downloadName=Untitled.png">
+<img src ="https://file.notion.so/f/s/49ac2693-301f-498d-a779-dab46216caa3/Untitled.png?id=0cbb1708-8a71-4107-aca8-0a628062b593&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660341948&signature=Y7LJmA5XMcUSNjBRtXvS4fp_eCeBvtlhuKDCBfwphCA&downloadName=Untitled.png">
 
-<img src ="https://file.notion.so/f/s/3783baea-44ea-499c-8c40-43314060821b/Untitled.png?id=cdde1558-8e50-41a4-826b-4cd5e3a07abb&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1681965247963&signature=Oq5TKtBST80rJg6-QuQVdkaxEMDX9kfPCT_ArANia18&downloadName=Untitled.png">
+<img src ="https://file.notion.so/f/s/3783baea-44ea-499c-8c40-43314060821b/Untitled.png?id=75549ea9-c52a-4f82-a13c-addd297e66a9&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660351058&signature=isjP8HMUOdkZNqelhnjntmSM_FyjfxXs7ZOBG6fT1Ls&downloadName=Untitled.png">
 
 ### 기타 리다이렉션 기호의 쓰임
 
