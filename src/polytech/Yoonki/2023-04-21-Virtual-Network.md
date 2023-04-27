@@ -1,6 +1,6 @@
 # 가상머신 네트워크
 
-![스크린샷 2023-04-24 오전 9.14.21.png](/img/표.png)
+![table.png](/img/table.png)
 
 ## Host-only
 
