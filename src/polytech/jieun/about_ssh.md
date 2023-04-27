@@ -45,7 +45,7 @@ SSH 인증절차엔 **비대칭키 알고리즘**이 사용되며 두 종류의
 
 - **public key**로 암호화한 내용은 **private key**로 복호화가 가능
 - **private key**로 암호화한 내용은 **public key**로 복호화가 가능
-- **public key**는 자신만 가지고 있는 단일 소유권이고 **public key**는 여러 사용자가 소유할 수 있는 분산 소유권
+- **private key**는 자신만 가지고 있는 단일 소유권이고 **public key**는 여러 사용자가 소유할 수 있는 분산 소유권
 - 공유된 **public key**로 암호화하여 단일 **private key**로 복호화
 - 만일 **private key**로 암호화할 경우, 여러 사용자로부터 복호화가 가능하기에 권장되지 않음
 
