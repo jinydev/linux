@@ -42,8 +42,10 @@ layout : home
 
    무료 오픈소스와 확장성을 지향하는 프로그램, 가볍고 빠르다는 이점에 힘입어 폭발적인 인기를 끌게되고 현재까지도 인기있는 os로 명맥을 유지하고 있습니다.
 
-   <img src = https://velog.velcdn.com/images%2Fsoryeongk%2Fpost%2F358065f9-38a7-461c-ba26-c3891a92b106%2Fimage.png />
+   ![post-thumbnail](https://velog.velcdn.com/images%2Fsoryeongk%2Fpost%2F358065f9-38a7-461c-ba26-c3891a92b106%2Fimage.png)
 
+   
+   
    ![리눅스 쉘이란?](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdkIzO43DnQipTQcadutBq_DGZg_gwdQ8XL9b731_PelGURbFKlCuysdyoYK6r1IdgOho&usqp=CAU)
 
 
@@ -52,13 +54,7 @@ layout : home
 
 # Unix vs Linux
 
-
-
-<img src = https://user-images.githubusercontent.com/69034766/103987739-51104400-51d0-11eb-87d4-caa01cea7495.png />
-
-![image-20230418082622289](C:\Users\DA\AppData\Roaming\Typora\typora-user-images\image-20230418082622289.png)
-
-![image-20230418082639730](C:\Users\DA\AppData\Roaming\Typora\typora-user-images\image-20230418082639730.png)
+![post-thumbnail](https://user-images.githubusercontent.com/69034766/103987739-51104400-51d0-11eb-87d4-caa01cea7495.png)
 
 
 
@@ -66,7 +62,9 @@ layout : home
 
 ### '2017년도 금융정보화 추진 현황'
 
-<img src = https://img.etnews.com/photonews/1810/1116290_20181007133534_248_0001.jpg />
+![post-thumbnail](https://img.etnews.com/photonews/1810/1116290_20181007133534_248_0001.jpg)
+
+
 
 
 
@@ -88,7 +86,7 @@ layout : home
 
 # Why Bank chooses Linux? 
 
-from Coscom report by EY Consulting group
+**from Coscom report by EY Consulting group**
 
  1. 유닉스 서버 대비 70%의 비용으로 150%의 성능을 제공하고 있고 관련 소프트웨어 비용이 50%
      절감되는 효과가 있다고 한다
@@ -105,7 +103,4 @@ from Coscom report by EY Consulting group
 
     2.  현지의 상황에 맞게 최 적화하고 클라우드 환경으로 서비스를 제공하는 모델 또한 하나의 옵션으로 검토될 것
 
-# Linux VS Window
-
-![image-20230418081721014](C:\Users\DA\AppData\Roaming\Typora\typora-user-images\image-20230418081721014.png)
 
