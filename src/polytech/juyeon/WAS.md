@@ -1,5 +1,5 @@
 ---
-layout home
+layout: home
 --- 
 
 # WAS(웹 어플리케이션 서버, Web Application Server)
