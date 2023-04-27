@@ -4,6 +4,7 @@ layout: home
 
 # Jaeyoung Report   
 
+<<<<<<< HEAD
 * 2023-04-17 [markdown](markdown)
 * 2023-04-18 [gitflow](gitflow)
 * 2023-04-19 [githubflow](githubflow)
@@ -13,6 +14,18 @@ layout: home
 * 2023-04-22 [permittion](permittion)
 * 2023-04-23 [harddisk](harddisk)
 
+=======
+* 2023-04-17 [markdown](markdown) => 발표
+
+* 2023-04-18 [gitflow](gitflow)
+* 2023-04-19 [githubflow](githubflow)
+* 2023-04-20 [gitlabflow](gitlabflow)
+* 2023-04-21 [domain](domain)
+
+* 2023-04-22 [permittion](permittion)
+* 2023-04-23 [harddisk](harddisk)
+
+>>>>>>> b244c11522191d64847e572b0a699b7256de8805
 * 2023-04-24 [https](https)
 * 2023-04-25 [rdbms](rdbms)
 * 2023-04-26 [rootdomain](rootdomain)

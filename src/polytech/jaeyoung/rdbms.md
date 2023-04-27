@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 layout : home
 ---
@@ -5,6 +6,8 @@ layout : home
 RDBMS
 ======================
 
+=======
+>>>>>>> b244c11522191d64847e572b0a699b7256de8805
 # RDBMS vs NoSQL
 
 ### **SQL vs NoSQL**
