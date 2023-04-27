@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 # Proxy 서버와 Loadbalancer
 
 ### 포워드 **프록시 (Proxy)**

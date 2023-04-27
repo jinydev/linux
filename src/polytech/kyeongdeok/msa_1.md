@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 # MSA(Micro Service Architecture)란?
 
 ## MSA(MircroService Architecture)

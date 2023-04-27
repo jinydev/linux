@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 # [CI/CD] 플랫폼
 
 # 젠킨스 (Jenkins)
