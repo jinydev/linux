@@ -1,3 +1,10 @@
+---
+layout : home
+---
+
+DNS 구조와 명명 규칙
+======================
+
 # DNS 구조와 명명 규칙
 
 # DNS 구조와 명명 규칙
@@ -12,7 +19,7 @@ Third.second.top.과 같은 형태로 표현하고 맨 뒤의 루트는 생략�
 
 www.naver.com의 경우 맨 뒤에 생략된 루트(.)를 시작으로 Top-LEVEL인 com, Second-LEVEL인 naver, Third-Level인 www와 같이 뒤에서 앞으로 해석된다.
 
-![Untitled](DNS%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%E1%84%8B%E1%85%AA%20%E1%84%86%E1%85%A7%E1%86%BC%E1%84%86%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%B2%E1%84%8E%E1%85%B5%E1%86%A8%20aef1e12293ae45008d1b1be437438832/Untitled.png)
+![Untitled](./image/img3-1.png)
 
 도메인 계층은 최대 128계층까지 구성할 수 있다.
 
@@ -32,11 +39,11 @@ DNS 서버는 사용자가 쿼리한 도메인에 대한 값을 직접 갖고 �
 
 루트 DNS는 전 세계에 13개가 있고, DNS 서버를 설치하면 루트 DNS의 IP 주소를 기록한 힌트(Hint) 파일을 가지고 있어 루트 DNS 관련 정보를 별도로 설정할 필요가 없다.
 
-![Untitled](DNS%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%E1%84%8B%E1%85%AA%20%E1%84%86%E1%85%A7%E1%86%BC%E1%84%86%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%B2%E1%84%8E%E1%85%B5%E1%86%A8%20aef1e12293ae45008d1b1be437438832/Untitled%201.png)
+![Untitled](./image/img3-2.png)
 
 윈도우 서버에 DNS 서비스를 활성화하면 DNS 서비스에 기본으로 저장되어 있는 루트 서버 리스트 정보를 확인할 수 있다.
 
-![Untitled](DNS%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%E1%84%8B%E1%85%AA%20%E1%84%86%E1%85%A7%E1%86%BC%E1%84%86%E1%85%A7%E1%86%BC%20%E1%84%80%E1%85%B2%E1%84%8E%E1%85%B5%E1%86%A8%20aef1e12293ae45008d1b1be437438832/Untitled%202.png)
+![Untitled](./image/img3-3.png)
 
 <aside>
 💡 Q. www.naver.com이라는 도메인을 인터넷 주소창에 입력했을 때 질의하는 과정은?
