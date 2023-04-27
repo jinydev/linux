@@ -9,7 +9,7 @@ layout: home
 - 쉘은 명령어 실행(`쉘 스크립트`, `쉘 함수`)시 커맨드라인 전달값(옵션과 인자)를 저장하고 있는 위치 매개 변수라는 변수 집합을 제공한다.
 - 쉘 자동 할당 위치 매개변수 이름 : 0, 1, … , 9
 
-![Untitled](Untitled 11 (1).png)
+![Untitled](./image/Untitled%2011%20(1).png)
 
 - 위치 매개변수 값 확인 : $0, $1, … , $9 $0에는 `스크립트의 이름이 전달`
 
@@ -17,16 +17,16 @@ layout: home
 
 - `$#` ⇒ 위치 매개 변수가 할당된 변수의 개수
 
-![Untitled](Untitled 11 (2).png)
+![Untitled](./image/Untitled%2011%20(1).png)
 
-![Untitled](Untitled 11 (3).png)
+![Untitled](./image/Untitled%2011%20(3).png)
 
 - `$@ $*` ⇒ 모든 매개변수 출력, @은 매개변수를 따로따로 취급함, 매개변수를 배열로 사용할 때 유용함
 - *은 모든 매개변수를 하나의 문자열로 결합하여 출력함.
 
-![Untitled](Untitled 11 (4).png)
+![Untitled](./image/Untitled%2011%20(4).png)
 
-![Untitled](Untitled 11 (5).png)
+![Untitled](./image/Untitled%2011%20(5).png)
 
 # Shift
 
@@ -39,7 +39,6 @@ layout: home
 - shift 명령어를 통해 출력된 값을 제거하고 왼쪽으로 한칸 이동
 - 위 과정을 반복하여 10개가 넘는 변수들을 출력
 
-![Untitled](Untitled 11 (6).png)
+![Untitled](./image/Untitled%2011%20(6).png)
 
-![Untitled](Untitled 11 (7).png)
-
+![Untitled](./image/Untitled%2011%20(7).png)
