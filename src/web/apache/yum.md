@@ -102,3 +102,10 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 자동실행을 등록하시면 재부팅후에서 아파치 웹서버가 자동실행 됩니다.
 
 이제 웹 브라우저를 열고, http://localhost 또는 서버의 IP 주소를 입력하여 아파치2 웹 페이지에 액세스할 수 있습니다. 웹 페이지가 표시되면, 아파치2가 성공적으로 설치되었다는 것을 의미합니다.
+
+## 방화벽에 HTTP 서비스 포트 추가
+
+```
+sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --reload
+```
