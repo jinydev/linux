@@ -3,12 +3,13 @@ layout: home
 typora-copy-images-to: ./img
 ---
 
-# tomcat9 수동설치
+# Tomcat9 수동설치
 공식사이트에서 tomcat9을 다운로드 받아 설치를 합니다.
 
 ## 다운로드 및 준비
 압축 파일은 임시 파일이므로 관리를 위해 /tmp/lib 폴더에 다운받는다
-```
+
+```bash
 $ cd /tmp/lib
 ```
 
