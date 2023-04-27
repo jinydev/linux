@@ -5,23 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Jiny linux">
-    <meta name="author" content="HojinLee">
-
-    <title>개발자를 위한 리눅스 - </title>
-    <meta name="title" content="개발자를 위한 리눅스 - " />
-
-    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <meta name="author" content="HojinLee"><title>개발자를 위한 리눅스</title>
+      <meta name="title" content="개발자를 위한 리눅스" /><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="linux" />
 <meta property="og:locale" content="ko" />
-<link rel="canonical" href="https://linux.jiny.dev/web/apache/yum.html" />
-<meta property="og:url" content="https://linux.jiny.dev/web/apache/yum.html" />
+<link rel="canonical" href="http://localhost:4000/web/apache/yum.html" />
+<meta property="og:url" content="http://localhost:4000/web/apache/yum.html" />
 <meta property="og:site_name" content="linux" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="linux" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"https://linux.jiny.dev/web/apache/yum.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"http://localhost:4000/web/apache/yum.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -672,6 +668,12 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 <p>자동실행을 등록하시면 재부팅후에서 아파치 웹서버가 자동실행 됩니다.</p>
 
 <p>이제 웹 브라우저를 열고, http://localhost 또는 서버의 IP 주소를 입력하여 아파치2 웹 페이지에 액세스할 수 있습니다. 웹 페이지가 표시되면, 아파치2가 성공적으로 설치되었다는 것을 의미합니다.</p>
+
+<h2 id="방화벽에-http-서비스-포트-추가">방화벽에 HTTP 서비스 포트 추가</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --reload
+</code></pre></div></div>
 
 
     <div style="padding-top: 50px;">
