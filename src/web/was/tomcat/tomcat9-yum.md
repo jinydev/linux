@@ -166,7 +166,8 @@ sudo firewall-cmd --reload
 ## Nginx와 연동
 nginx와 Tomcat을 연동하려면 nginx의 설정 파일에 Tomcat으로 전달할 요청을 정의해야 합니다.
 
-다음은 nginx와 Tomcat을 연동하기 위한 예시 설정 파일입니다. 아래 설정을 nginx의 설정 파일(/etc/nginx/nginx.conf)에 추가하시면 됩니다.
+다음은 nginx와 Tomcat을 연동하기 위한 예시 설정 파일입니다. 
+아래 설정을 nginx의 설정 파일(/etc/nginx/nginx.conf)에 추가하시면 됩니다.
 
 ```
 http {
