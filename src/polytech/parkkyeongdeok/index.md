@@ -11,6 +11,7 @@ layout: home
 ###### - [개요](./cloud_computing_1.md)
 ###### - [서비스 모델, 장단점](./cloud_computing_2.md)
 ###### - [관련 기술](./cloud_computing_3.md)
+###### - [amazon AWS 제공 주요 서비스](./cloud_computing_4.md)
 
 #### Devops
 ###### - [CI/CD란? - 기본 개념](./cicd_1.md)
