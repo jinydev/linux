@@ -1,5 +1,5 @@
 ---
-layout home
+layout: home
 ---
 
 # 가상머신
