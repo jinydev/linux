@@ -1,5 +1,5 @@
 ---
-layout:home
+layout: home
 ---
 
 # FTP Client FileZilla

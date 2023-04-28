@@ -1,5 +1,5 @@
 ---
-layout:home
+layout: home
 ---
 
 # Ubuntu와 Rockey 특징 및 차이점
