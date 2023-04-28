@@ -1,7 +1,6 @@
-# 링크와 아이노드
-
-Illustrations: No
-상위 항목: https://www.notion.so/f932e6d647534bbda38bb658ff60989b
+---
+layout: home
+---
 
 # 링크와 아이노드
 
