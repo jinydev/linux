@@ -1,5 +1,5 @@
 ---
-layout: home
+layout:home
 ---
 
 # 패키지 관리

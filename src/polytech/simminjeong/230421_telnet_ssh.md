@@ -1,5 +1,5 @@
 ---
-layout: home
+layout:home
 ---
 
 # 원격 터미널 접속 **Telnet**과 **ssh** 차이
