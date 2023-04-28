@@ -1,5 +1,5 @@
 ---
-layout: 하드디스크 관리와 사용자별 공간 할당
+layout: home
 ---
 
 # RAID 정의 및 개념
