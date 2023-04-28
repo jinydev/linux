@@ -3,9 +3,7 @@ layout: home
 typora-copy-images-to: ./img
 ---
 
-# Tomcat10 설치
-
-
+# Tomcat10 수동 설치
 
 ## 톰켓 설치
 Apache Tomcat 또는 Tomcat은 널리 알려지고 사용되는 Java 애플리케이션 서버입니다. Apache Software Foundation의 개발자 커뮤니티에서 개발 및 유지 관리하는 오픈 소스 웹 서버 및 서블릿 컨테이너입니다. 
