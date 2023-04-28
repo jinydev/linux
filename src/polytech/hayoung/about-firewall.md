@@ -1,3 +1,6 @@
+---
+layout: home
+---
 ## 방화벽이란?
 
 - 컴퓨팅에서 방화벽 또는 파이어월 firewall은 미리 정의된 보안 규칙에 기반하여 들어오고 나가는 모든 네트워크 트래픽을 모니터링하고 제어하는 보안 시스템을 의미
@@ -88,7 +91,7 @@
 
 ## 리눅스 firewalld
 
-<img src ="https://file.notion.so/f/s/11a644e0-7f1e-4732-9b52-c8b86e69a1d9/image.png?id=e1a48f0a-12b2-4f8c-af34-624a6ef52d8d&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682503290404&signature=aUMZ6LE8xJecKKaGjI6_OXqGqKKwXKAZrwMmiKlzCas&downloadName=image.png">
+<img src ="https://file.notion.so/f/s/11a644e0-7f1e-4732-9b52-c8b86e69a1d9/image.png?id=e1a48f0a-12b2-4f8c-af34-624a6ef52d8d&table=block&spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&expirationTimestamp=1682660479089&signature=_zPDk2Gl6PkOTEO2bSynwSscayBfJUwDO4wm8nCQMNU&downloadName=image.png">
 
 - **Kali** : 외부에서 침입을 시도하는 Hacker
 - **Firewalld** : 침입을 방어하기 위한 일종의 보안 장비(CenOS)
