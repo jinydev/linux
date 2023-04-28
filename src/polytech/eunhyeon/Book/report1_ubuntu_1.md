@@ -1,5 +1,5 @@
 ---
-layout: 과제2
+layout: home
 ---
 
 ## 이것이 우분투다<br/>
