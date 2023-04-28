@@ -1,3 +1,6 @@
+---
+layout: home
+---
 # amazon AWS 제공 주요 서비스
 
 ## ****AWS 서비스 개요****

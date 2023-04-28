@@ -1,3 +1,10 @@
+---
+layout : home
+---
+
+RDBMS vs NoSQL
+======================
+
 # RDBMS vs NoSQL
 
 ### **SQL vs NoSQL**
