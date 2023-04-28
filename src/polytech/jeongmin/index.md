@@ -11,3 +11,4 @@ layout: home
 - 2023-04-24 : curl
 - 2023-04-25 : JVM
 - 2023-04-26 : nslookup
+- 2023-04-27 : 삼바(SAMBA)
