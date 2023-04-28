@@ -50,7 +50,26 @@ layout home
 - 윈도우에서는 서비스, 리눅스에서는 데몬으로 불리지만 통용적으로 윈도우즈, 리눅스 둘 다 데몬으로 부름
 
 ⇒ 리눅스에서 백그라운드(background)에서 실행되는 프로그램을 의미합니다. 데몬은 사용자 인터페이스가 없으며, 시스템의 이벤트나 자원 사용을 모니터링하고, 이벤트에 따라 작업을 수행
+<<<<<<< HEAD
  
+=======
+   <br/><br/>
+## 데몬의 유형
+
+![243526455338FB9F27](https://user-images.githubusercontent.com/127702320/233516159-5e2bfea2-e054-419b-93b9-7b7088e568ce.png)
+
+- Standalone
+    - 시스템에 독자적으로 프로세스가 구동되어 서비스를 제공하는 데몬
+    - ex) 웹 서버(httpd) , DB 서버 (mysqld) , 센드 메일 서버(sendmail) 등.
+    - 메모리 상에 항상 구동되어 있다. => 그러므로 응답 속도가 빠름
+    - 실행 및 종료는 ' service Daemon-Name start/stop/restart ' 로 사용.
+   <br/><br/>
+- xinetd
+    - 'xinetd Deamon ' 은 일명 ' Super Daemon ' 이라고도 부르며 다른 데몬들의 상위에 존재
+    - 요청이 들어오면 xinetd 자신에 종속되어 있는 하위 Daemon 을 실행
+    - xinetd(부모) 자체는 standalone 방식 , xinetd 내부(자식) 는 xinetd 방식.
+    - 응답처리 속도가 standalone 에 비해 느리지만 요청이 들어오지 않을 때는 휴면 상태이므로 메모리를 차지 하지 않음.
+>>>>>>> d8c9d25b0c12d79be9c60427c14de6c135e6e118
 
    <br/><br/>
 ## 데몬의 예시
