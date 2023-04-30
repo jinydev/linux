@@ -44,7 +44,11 @@ layout : home
 - 업무 처리하는 비즈니스 로직수행
 - ex) Tomcat, Websphere, Weblogic, Jeus, JBoss, Resin 등..
 
+<<<<<<< HEAD
 <image src = "images/was image.png">
+=======
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5bf47c14-0c65-4371-858e-9f459a24dca4/Untitled.png)
+>>>>>>> 5d197891e9f091b4df4dfbe152750fce1ce28344
 
 ### ### WAS의 종류와 특징
 
@@ -81,7 +85,11 @@ layout : home
 
 ### 동작방식
 
+<<<<<<< HEAD
 <image src = "images/container image.png">
+=======
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f452f514-1d81-404d-a133-4d88368d8c48/Untitled.png)
+>>>>>>> 5d197891e9f091b4df4dfbe152750fce1ce28344
 
 1. 사용자(클라이언트)가 URL을 입력하면 HTTP Request가 Servlet Container로 전송.
 
