@@ -1,0 +1,1167 @@
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jiny linux">
+    <meta name="author" content="HojinLee"><title>개발자를 위한 리눅스</title>
+      <meta name="title" content="개발자를 위한 리눅스" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="linux" />
+<meta property="og:locale" content="ko" />
+<link rel="canonical" href="http://localhost:4000/polytech/jieun/report_books.html" />
+<meta property="og:url" content="http://localhost:4000/polytech/jieun/report_books.html" />
+<meta property="og:site_name" content="linux" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="linux" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"http://localhost:4000/polytech/jieun/report_books.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/docs.css" rel="stylesheet" />
+    <link href="/assets/css/highlight.css" rel="stylesheet" />
+
+    <style>
+      blockquote {
+        border-left: solid 5px #ffe69c;
+        padding: 5px 10px;
+        background-color: #fff3cd;
+      }
+    </style>
+
+    <style>
+      h1 a {
+        text-decoration: none;
+      }
+
+      h2 a {
+        text-decoration: none;
+      }
+
+      h3 a {
+        text-decoration: none;
+      }
+
+      h4 a {
+        text-decoration: none;
+      }
+
+      h5 a {
+        text-decoration: none;
+      }
+
+      h6 a {
+        text-decoration: none;
+      }
+
+      img {
+        width: 100%;
+        vertical-align:top
+      }
+
+      strong a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* 스크롤바 커스텀 */
+      /* 임의의 영역 생성 */
+      .scrollBar { 
+
+      }
+
+      /* 아래의 모든 코드는 영역::코드로 사용 */
+      .scrollBar::-webkit-scrollbar {
+          width: 7px;  /* 스크롤바의 너비 */
+      }
+
+      .scrollBar::-webkit-scrollbar-thumb {
+          height: 30%; /* 스크롤바의 길이 */
+          background: #cccccc; /* 스크롤바의 색상 */
+          
+          border-radius: 5px;
+      }
+
+      .scrollBar::-webkit-scrollbar-track {
+          background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+      }
+
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4VBPCT3CR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-R4VBPCT3CR');
+    </script>
+
+
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg bd-navbar sticky-top">
+    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+        
+        <div class="bd-navbar-toggle">
+            <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar"
+                aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+                    </path>
+                </svg>
+                <span class="d-none fs-6 pe-1">Browse</span>
+            </button>
+        </div>
+
+        <!-- 로고, 모바일시 가운데 정렬 -->
+        <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="jinydev">
+            Linux
+        </a>
+
+        <!-- 모바일 좌측메뉴 mobile-right -->
+        <!-- 모바일 우측버튼 -->
+<div class="d-flex">
+    <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+            <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+        </svg>
+    </button>
+</div>
+
+<!-- OffCanvas -->
+<div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+    <!-- OffCanver Header -->
+    <div class="offcanvas-header px-4 pb-0">
+        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">JinyDev</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"
+            data-bs-target="#bdNavbar">
+        </button>
+    </div>
+
+    <!-- OffCanver Body -->
+    <div class="offcanvas-body p-4 pt-0 p-lg-0">
+        <hr class="d-lg-none text-white-50">
+
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+            <!--
+            <li class="nav-item col-6 col-lg-auto">
+                <a class="nav-link py-2 px-0 px-lg-2 active" aria-current="true"
+                    href="/">AAA</a>
+            </li>
+            -->
+                 
+        </ul>
+        
+        <hr class="d-lg-none text-white-50">
+
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <li class="nav-item col-6 col-lg-auto">
+                <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/jinydev/linux" target="_blank"
+                    rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="navbar-nav-svg"
+                        viewBox="0 0 512 499.36" role="img">
+                        <title>GitHub</title>
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                        </path>
+                    </svg>
+                    <small class="d-lg-none ms-2">GitHub</small>
+                </a>
+            </li>
+
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                <hr class="d-lg-none my-2 text-white-50">
+            </li>
+
+            <li class="nav-item dropdown">
+                <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                    커리큘럼
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center justify-content-between active"
+                            aria-current="true" href="/polytech">
+                            광명폴리택
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a class="dropdown-item"
+                            href="/polytech">광명폴리택</a>
+                    </li>
+                    
+                </ul>
+            </li>
+        </ul>
+ 
+    </div>
+</div>
+
+    </nav>
+</header>
+
+    <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+    <aside class="bd-sidebar scrollBar">
+        <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">학습목차</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- 네비게이션 -->
+            <nav class="bd-links w-100 " id="bd-docs-nav" aria-label="Docs navigation">
+	<ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2 ">
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <a href="/prologue">
+          Linux란
+        </a>        
+      </strong>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        시작하기
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/setup" class="bd-links-link d-inline-block rounded">설치</a>
+        </li>
+        <li>
+          <a href="/start" class="bd-links-link d-inline-block rounded">기초사용법</a>
+        </li>
+        <li>
+          <a href="/system" class="bd-links-link d-inline-block rounded">시스템</a>
+        </li>
+        <li>
+          <a href="/command" class="bd-links-link d-inline-block rounded">명령어</a>
+        </li>
+        <li>
+          <a href="/tools" class="bd-links-link d-inline-block rounded">도구설정</a>
+        </li>
+        <li>
+          <a href="/shell" class="bd-links-link d-inline-block rounded">쉘</a>
+        </li>
+        <li>
+          <a href="/network" class="bd-links-link d-inline-block rounded">네트워크</a>
+        </li>
+        
+        
+    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        서버구축
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/demon" class="bd-links-link d-inline-block rounded">Demon</a>
+        </li>
+        <li>
+          <a href="/database" class="bd-links-link d-inline-block rounded">데이터베이스</a>
+        </li>
+        <li>
+          <a href="/web" class="bd-links-link d-inline-block rounded">웹서버</a>
+        </li>
+
+    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        개발환경
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/dev/php" class="bd-links-link d-inline-block rounded">PHP</a>
+        </li>
+        <li>
+          <a href="/dev/nodejs" class="bd-links-link d-inline-block rounded">NodeJs</a>
+        </li>
+        <li>
+          <a href="/dev/ruby" class="bd-links-link d-inline-block rounded">Ruby</a>
+        </li>
+        <li>
+          <a href="/dev/python" class="bd-links-link d-inline-block rounded">Python</a>
+        </li>
+        <li>
+          <a href="/dev/java" class="bd-links-link d-inline-block rounded">Java</a>
+        </li>
+        <li>
+          <a href="/dev/rust" class="bd-links-link d-inline-block rounded">Rust</a>
+        </li> 
+        <li>
+          <a href="/dev/go" class="bd-links-link d-inline-block rounded">Go</a>
+        </li>    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        도커 가상환경
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      
+        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <a href="/setup/cloud">
+          클라우드
+          </a>
+        </strong>
+      
+      
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/setup/cloud/naver" class="bd-links-link d-inline-block rounded">네이버</a>
+        </li>
+        <li>
+          <a href="/setup/cloud/aws" class="bd-links-link d-inline-block rounded">AWS</a>
+        </li>	
+        <li>
+          <a href="/setup/cloud/azure" class="bd-links-link d-inline-block rounded">Azure</a>
+        </li>	
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        응용서비스
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/app/zabbix" class="bd-links-link d-inline-block rounded">Zabbix</a>
+        </li>	
+      </ul>
+    </li>
+
+  <!--
+	<li class="bd-links-group py-2">
+		<strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+      커리큘럼
+		</strong>
+		<ul class="list-unstyled fw-normal pb-2 small">
+			<li>
+				<a href="/polytech" class="bd-links-link d-inline-block rounded">폴리택대학</a>
+			</li>	
+		</ul>
+  </li>
+-->
+
+
+    <!--
+    <li class="bd-links-group py-2">
+      
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true">
+            <use xlink:href="#book-half"></use>
+          </svg>
+        Getting started
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/getting-started/introduction/" class="bd-links-link d-inline-block rounded active" aria-current="page">Introduction</a></li>
+          <li><a href="/docs/5.3/getting-started/download/" class="bd-links-link d-inline-block rounded">Download</a></li>
+          <li><a href="/docs/5.3/getting-started/contents/" class="bd-links-link d-inline-block rounded">Contents</a></li>
+          <li><a href="/docs/5.3/getting-started/browsers-devices/" class="bd-links-link d-inline-block rounded">Browsers &amp; devices</a></li>
+          <li><a href="/docs/5.3/getting-started/javascript/" class="bd-links-link d-inline-block rounded">JavaScript</a></li>
+          <li><a href="/docs/5.3/getting-started/webpack/" class="bd-links-link d-inline-block rounded">Webpack</a></li>
+          <li><a href="/docs/5.3/getting-started/parcel/" class="bd-links-link d-inline-block rounded">Parcel</a></li>
+          <li><a href="/docs/5.3/getting-started/vite/" class="bd-links-link d-inline-block rounded">Vite</a></li>
+          <li><a href="/docs/5.3/getting-started/accessibility/" class="bd-links-link d-inline-block rounded">Accessibility</a></li>
+          <li><a href="/docs/5.3/getting-started/rfs/" class="bd-links-link d-inline-block rounded">RFS</a></li>
+          <li><a href="/docs/5.3/getting-started/rtl/" class="bd-links-link d-inline-block rounded">RTL</a></li>
+          <li><a href="/docs/5.3/getting-started/contribute/" class="bd-links-link d-inline-block rounded">Contribute</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-pink);" aria-hidden="true"><use xlink:href="#palette2"></use></svg>
+        Customize
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/customize/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/customize/sass/" class="bd-links-link d-inline-block rounded">Sass</a></li>
+          <li><a href="/docs/5.3/customize/options/" class="bd-links-link d-inline-block rounded">Options</a></li>
+          <li><a href="/docs/5.3/customize/color/" class="bd-links-link d-inline-block rounded">Color</a></li>
+          <li><a href="/docs/5.3/customize/color-modes/" class="bd-links-link d-inline-block rounded">Color modes</a></li>
+          <li><a href="/docs/5.3/customize/components/" class="bd-links-link d-inline-block rounded">Components</a></li>
+          <li><a href="/docs/5.3/customize/css-variables/" class="bd-links-link d-inline-block rounded">CSS variables</a></li>
+          <li><a href="/docs/5.3/customize/optimize/" class="bd-links-link d-inline-block rounded">Optimize</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-teal);" aria-hidden="true"><use xlink:href="#grid-fill"></use></svg>
+        Layout
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/layout/breakpoints/" class="bd-links-link d-inline-block rounded">Breakpoints</a></li>
+          <li><a href="/docs/5.3/layout/containers/" class="bd-links-link d-inline-block rounded">Containers</a></li>
+          <li><a href="/docs/5.3/layout/grid/" class="bd-links-link d-inline-block rounded">Grid</a></li>
+          <li><a href="/docs/5.3/layout/columns/" class="bd-links-link d-inline-block rounded">Columns</a></li>
+          <li><a href="/docs/5.3/layout/gutters/" class="bd-links-link d-inline-block rounded">Gutters</a></li>
+          <li><a href="/docs/5.3/layout/utilities/" class="bd-links-link d-inline-block rounded">Utilities</a></li>
+          <li><a href="/docs/5.3/layout/z-index/" class="bd-links-link d-inline-block rounded">Z-index</a></li>
+          <li><a href="/docs/5.3/layout/css-grid/" class="bd-links-link d-inline-block rounded">CSS Grid</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-gray);" aria-hidden="true"><use xlink:href="#file-earmark-richtext"></use></svg>
+        Content
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/content/reboot/" class="bd-links-link d-inline-block rounded">Reboot</a></li>
+          <li><a href="/docs/5.3/content/typography/" class="bd-links-link d-inline-block rounded">Typography</a></li>
+          <li><a href="/docs/5.3/content/images/" class="bd-links-link d-inline-block rounded">Images</a></li>
+          <li><a href="/docs/5.3/content/tables/" class="bd-links-link d-inline-block rounded">Tables</a></li>
+          <li><a href="/docs/5.3/content/figures/" class="bd-links-link d-inline-block rounded">Figures</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"><use xlink:href="#ui-radios"></use></svg>
+        Forms
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/forms/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/forms/form-control/" class="bd-links-link d-inline-block rounded">Form control</a></li>
+          <li><a href="/docs/5.3/forms/select/" class="bd-links-link d-inline-block rounded">Select</a></li>
+          <li><a href="/docs/5.3/forms/checks-radios/" class="bd-links-link d-inline-block rounded">Checks &amp; radios</a></li>
+          <li><a href="/docs/5.3/forms/range/" class="bd-links-link d-inline-block rounded">Range</a></li>
+          <li><a href="/docs/5.3/forms/input-group/" class="bd-links-link d-inline-block rounded">Input group</a></li>
+          <li><a href="/docs/5.3/forms/floating-labels/" class="bd-links-link d-inline-block rounded">Floating labels</a></li>
+          <li><a href="/docs/5.3/forms/layout/" class="bd-links-link d-inline-block rounded">Layout</a></li>
+          <li><a href="/docs/5.3/forms/validation/" class="bd-links-link d-inline-block rounded">Validation</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-cyan);" aria-hidden="true"><use xlink:href="#menu-button-wide-fill"></use></svg>
+        Components
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/components/accordion/" class="bd-links-link d-inline-block rounded">Accordion</a></li>
+          <li><a href="/docs/5.3/components/alerts/" class="bd-links-link d-inline-block rounded">Alerts</a></li>
+          <li><a href="/docs/5.3/components/badge/" class="bd-links-link d-inline-block rounded">Badge</a></li>
+          <li><a href="/docs/5.3/components/breadcrumb/" class="bd-links-link d-inline-block rounded">Breadcrumb</a></li>
+          <li><a href="/docs/5.3/components/buttons/" class="bd-links-link d-inline-block rounded">Buttons</a></li>
+          <li><a href="/docs/5.3/components/button-group/" class="bd-links-link d-inline-block rounded">Button group</a></li>
+          <li><a href="/docs/5.3/components/card/" class="bd-links-link d-inline-block rounded">Card</a></li>
+          <li><a href="/docs/5.3/components/carousel/" class="bd-links-link d-inline-block rounded">Carousel</a></li>
+          <li><a href="/docs/5.3/components/close-button/" class="bd-links-link d-inline-block rounded">Close button</a></li>
+          <li><a href="/docs/5.3/components/collapse/" class="bd-links-link d-inline-block rounded">Collapse</a></li>
+          <li><a href="/docs/5.3/components/dropdowns/" class="bd-links-link d-inline-block rounded">Dropdowns</a></li>
+          <li><a href="/docs/5.3/components/list-group/" class="bd-links-link d-inline-block rounded">List group</a></li>
+          <li><a href="/docs/5.3/components/modal/" class="bd-links-link d-inline-block rounded">Modal</a></li>
+          <li><a href="/docs/5.3/components/navbar/" class="bd-links-link d-inline-block rounded">Navbar</a></li>
+          <li><a href="/docs/5.3/components/navs-tabs/" class="bd-links-link d-inline-block rounded">Navs &amp; tabs</a></li>
+          <li><a href="/docs/5.3/components/offcanvas/" class="bd-links-link d-inline-block rounded">Offcanvas</a></li>
+          <li><a href="/docs/5.3/components/pagination/" class="bd-links-link d-inline-block rounded">Pagination</a></li>
+          <li><a href="/docs/5.3/components/placeholders/" class="bd-links-link d-inline-block rounded">Placeholders</a></li>
+          <li><a href="/docs/5.3/components/popovers/" class="bd-links-link d-inline-block rounded">Popovers</a></li>
+          <li><a href="/docs/5.3/components/progress/" class="bd-links-link d-inline-block rounded">Progress</a></li>
+          <li><a href="/docs/5.3/components/scrollspy/" class="bd-links-link d-inline-block rounded">Scrollspy</a></li>
+          <li><a href="/docs/5.3/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
+          <li><a href="/docs/5.3/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
+          <li><a href="/docs/5.3/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-orange);" aria-hidden="true"><use xlink:href="#magic"></use></svg>
+        Helpers
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/helpers/clearfix/" class="bd-links-link d-inline-block rounded">Clearfix</a></li>
+          <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">Color &amp; background</a></li>
+          <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">Colored links</a></li>
+          <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">Position</a></li>
+          <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">Ratio</a></li>
+          <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">Stacks</a></li>
+          <li><a href="/docs/5.3/helpers/stretched-link/" class="bd-links-link d-inline-block rounded">Stretched link</a></li>
+          <li><a href="/docs/5.3/helpers/text-truncation/" class="bd-links-link d-inline-block rounded">Text truncation</a></li>
+          <li><a href="/docs/5.3/helpers/vertical-rule/" class="bd-links-link d-inline-block rounded">Vertical rule</a></li>
+          <li><a href="/docs/5.3/helpers/visually-hidden/" class="bd-links-link d-inline-block rounded">Visually hidden</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-red);" aria-hidden="true"><use xlink:href="#braces-asterisk"></use></svg>
+        Utilities
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/utilities/api/" class="bd-links-link d-inline-block rounded">API</a></li>
+          <li><a href="/docs/5.3/utilities/background/" class="bd-links-link d-inline-block rounded">Background</a></li>
+          <li><a href="/docs/5.3/utilities/borders/" class="bd-links-link d-inline-block rounded">Borders</a></li>
+          <li><a href="/docs/5.3/utilities/colors/" class="bd-links-link d-inline-block rounded">Colors</a></li>
+          <li><a href="/docs/5.3/utilities/display/" class="bd-links-link d-inline-block rounded">Display</a></li>
+          <li><a href="/docs/5.3/utilities/flex/" class="bd-links-link d-inline-block rounded">Flex</a></li>
+          <li><a href="/docs/5.3/utilities/float/" class="bd-links-link d-inline-block rounded">Float</a></li>
+          <li><a href="/docs/5.3/utilities/interactions/" class="bd-links-link d-inline-block rounded">Interactions</a></li>
+          <li><a href="/docs/5.3/utilities/object-fit/" class="bd-links-link d-inline-block rounded">Object fit</a></li>
+          <li><a href="/docs/5.3/utilities/opacity/" class="bd-links-link d-inline-block rounded">Opacity</a></li>
+          <li><a href="/docs/5.3/utilities/overflow/" class="bd-links-link d-inline-block rounded">Overflow</a></li>
+          <li><a href="/docs/5.3/utilities/position/" class="bd-links-link d-inline-block rounded">Position</a></li>
+          <li><a href="/docs/5.3/utilities/shadows/" class="bd-links-link d-inline-block rounded">Shadows</a></li>
+          <li><a href="/docs/5.3/utilities/sizing/" class="bd-links-link d-inline-block rounded">Sizing</a></li>
+          <li><a href="/docs/5.3/utilities/spacing/" class="bd-links-link d-inline-block rounded">Spacing</a></li>
+          <li><a href="/docs/5.3/utilities/text/" class="bd-links-link d-inline-block rounded">Text</a></li>
+          <li><a href="/docs/5.3/utilities/vertical-align/" class="bd-links-link d-inline-block rounded">Vertical align</a></li>
+          <li><a href="/docs/5.3/utilities/visibility/" class="bd-links-link d-inline-block rounded">Visibility</a></li>
+          <li><a href="/docs/5.3/utilities/z-index/" class="bd-links-link d-inline-block rounded">Z-index</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"><use xlink:href="#tools"></use></svg>
+        Extend
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/extend/approach/" class="bd-links-link d-inline-block rounded">Approach</a></li>
+          <li><a href="/docs/5.3/extend/icons/" class="bd-links-link d-inline-block rounded">Icons</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
+        About
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/about/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/about/team/" class="bd-links-link d-inline-block rounded">Team</a></li>
+          <li><a href="/docs/5.3/about/brand/" class="bd-links-link d-inline-block rounded">Brand</a></li>
+          <li><a href="/docs/5.3/about/license/" class="bd-links-link d-inline-block rounded">License</a></li>
+          <li><a href="/docs/5.3/about/translations/" class="bd-links-link d-inline-block rounded">Translations</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-span-all mt-1 mb-3 mx-4 border-top"></li>
+    <li class="bd-links-span-all">
+      <a href="/docs/5.3/migration/" class="bd-links-link d-inline-block rounded small ">
+        Migration
+      </a>
+    </li>
+    -->
+	</ul>
+</nav>
+        </div>
+        </div>
+    </aside>
+
+    <main class="bd-main order-1">
+        <div class="bd-content ps-lg-2">
+    <h1 id="교재-읽기">교재 읽기!</h1>
+
+<h1 id="커맨드라인분석-21장-출력-포맷-지정">커맨드라인분석 (21장. 출력 포맷 지정)</h1>
+
+<h2 id="1-간단한-포맷-툴">1. 간단한 포맷 툴</h2>
+
+<h3 id="nl---줄-번호-매기기">nl - 줄 번호 매기기</h3>
+
+<p>단순히 줄 번호를 매기는 간단한 작업을 하는 툴. cat -n처럼 간단히 사용할 수 있다</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="n">nl</span> <span class="n">distros</span><span class="p">.</span><span class="n">txt</span> <span class="o">|</span> <span class="n">head</span>
+</code></pre></div></div>
+
+<ul>
+  <li>커맨드라인 인자나 표준입력으로 복수의 파일명도 허용한다</li>
+  <li>nl은 번호를 붙일 때 논리적 페이지(logical pages) 라는 개념을 제공한다. nl이 번호를 붙일 때 순서를 다시 처음부터 시작할 수 있도록 허용하는 것이다.
+  <br /><br /></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>테스트</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:::</td>
+      <td>논리적 페이지의 머리말 시작</td>
+    </tr>
+    <tr>
+      <td>::</td>
+      <td>논리적 페이지의 본문 시작</td>
+    </tr>
+    <tr>
+      <td>:</td>
+      <td>논리적 페이지의 꼬리말 시작</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>옵션</th>
+      <th>의미</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>b styLe</td>
+      <td>본문의 줄 번호에 스타일을 적용한다 style은 다음 중 하나를 사용할 수 있다. • a 모든줄에 번호를붙인다 • t 공백 줄이 아닌 경우에만 번호를 붙인다 기본값이다 • n 번호를 붙이지 는다 • pregexp 기본 정규 표현식과 일치하는 줄에만 번호를 붙인다</td>
+    </tr>
+    <tr>
+      <td>-f styLe</td>
+      <td>꼬리말의 줄 번호에 스타일을 적용한다 기본값은 n</td>
+    </tr>
+    <tr>
+      <td>-h styLe</td>
+      <td>머리말의 줄 번호에 스타일을 적용한다. 기본값은 n</td>
+    </tr>
+    <tr>
+      <td>-i number</td>
+      <td>페이지 번호의 증가량을 number로 설정한다 가본값은 1.</td>
+    </tr>
+    <tr>
+      <td>-n format</td>
+      <td>줄 번호 포맷을 설정한다 format은 다음 중 하나를 사용할 수 있다 • ln 0 없이. 왼쪽 정렬 • rn 0 없이. 오른쪽 정렬 기본값이다 • rz 0 포함. 오른쪽 정렬</td>
+    </tr>
+    <tr>
+      <td>-p</td>
+      <td>각 논리 페이지의 시작 부분에서 페이지 번호를 재설정 못하게 한다</td>
+    </tr>
+    <tr>
+      <td>-s string</td>
+      <td>string을 구분자로 만들기 위해 각 줄 호의 끝에 추가한다. 기본값은 탭 문자.</td>
+    </tr>
+    <tr>
+      <td>-v number</td>
+      <td>각 논리 페이지의 첫째 줄 번호를 number로 설정한다 기본값은 1.</td>
+    </tr>
+    <tr>
+      <td>-w width</td>
+      <td>width를 줄 호 필드의 너비로 설정한EK 기본값은 6</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fold---지정된-길이로-줄-나누기">fold - 지정된 길이로 줄 나누기</h3>
+
+<p>폴딩(folding)은 텍스트 행을 지정된 길이로 나누는 절차다. fold 도 다른 명령들차람, 하나 이상의 텍스트 파일이나 표준 입력을 허용한다. 간단한 텍스트 열을 fold에 보내면 어떻게 동작하는지  볼 수 있다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">echo</span> <span class="nv">"The quick brown for jumped over the lazy dog."</span> <span class="o">|</span> <span class="n">fold</span> <span class="o">-</span><span class="n">w</span> <span class="mi">12</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 실행결과</span>
+<span class="n">The</span> <span class="n">quick</span> 
+<span class="n">brown</span> <span class="n">fox</span> 
+<span class="n">jumped</span> <span class="n">over</span> 
+<span class="n">the</span> <span class="n">lazy</span> 
+<span class="n">dog</span><span class="p">.</span>
+</code></pre></div></div>
+
+<p><br /><br /></p>
+<h3 id="fmt---간단한-텍스트-포매터">fmt - 간단한 텍스트 포매터</h3>
+
+<p>fmt 프로그램도 텍스트를 자른다. 게다가 더 많은 것을 할 수 있다. 파일이나 표준 입력을 허용하고
+텍스트 열의 문장 포맷을 지정한다. 기본적으로, 공백 과 들여쓰기를 유지하면서 텍스트를 합치거나 채운다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="n">fmt</span> <span class="o">-</span><span class="n">w</span> <span class="mi">50</span> <span class="n">fmt</span><span class="o">-</span><span class="n">info</span><span class="p">.</span><span class="n">txt</span> <span class="o">|</span> <span class="n">head</span>
+</code></pre></div></div>
+<p><br /><br />
+<strong>fmt 옵션</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>옵션</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-c</td>
+      <td>crown margin 모드로 동작하게 한다. 이는 문단 첫 두 줄의 들여쓰기를 유지한다. 그 다음 줄부터는 두 번째 줄의 들여쓰기에 맞게 정렬된다.</td>
+    </tr>
+    <tr>
+      <td>-p string</td>
+      <td>string을 접두어로 줄을 시작하게 만든다. 그 이후에 string의 내용은 각 줄 앞에 붙여진다. 이 옵션은 소스 코드 주석을 구성하는 데 사용될 수 있다. 예를 들면, 어떤 프로그래밍 언어나 설정 파일은 # 문자를 주석 처리하는데 사용된다. 이를 위해 -p ‘#’ 옵션을 사용하면 주석으로 만들 수 있다.</td>
+    </tr>
+    <tr>
+      <td>-s</td>
+      <td>분할 모드, 이 모드에서는 각 줄은 지정된  “열 너비에 딱 맞게” 분할될 것이다. 짧은 줄은 너비를 채우기 위헤서 합쳐지 않을 것이다. 이 모드는 합쳐지길 원하지 않는 코드와 같은 텍스트를 구성할 때 유리하다</td>
+    </tr>
+    <tr>
+      <td>-u</td>
+      <td>간격을 균등하게 유지한다. 이는 전통적인 타자기 스타일의 텍스트를 구성하게 될 것이다. 이는 단어 사이의 하나의 공백, 문자 사이는 두 개의 공백으로 처리한다. 이 모드는 강제로 왼쪽과 오른쪽 여백을 정렬하는 양쪽 정렬을 제거하려고 할 경우에 유리하다</td>
+    </tr>
+    <tr>
+      <td>-w width</td>
+      <td>width 값을 기준으로 열을 구성한다. 기본값은 75자다.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /><br /></p>
+<h3 id="pr---인쇄용-텍스트-포맷-지정">pr - 인쇄용 텍스트 포맷 지정</h3>
+
+<p>pr 프로그램은 텍스트에 페이지 매기기 위해 텍스트를 인쇄할 때, 종종 각 페이지의 처음과 끝에 여백을 넣기 위해 여러 줄을 공백으로 출력 페이지를 구분하기 를 한다. 추가적  이 공백은 각 페이지에 머리말과 꼬리말을 삽입하기 위해 사용될 수 있다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- distros.txt 파일을 매우 짧은 페이지들로 구성</span>
+<span class="err">$</span> <span class="n">pr</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">15</span> <span class="o">-</span><span class="n">w</span> <span class="mi">65</span> <span class="n">distros</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div></div>
+
+<h3 id="printf---자료의-출력-및-포맷-지정">printf - 자료의 출력 및 포맷 지정</h3>
+
+<p>일반 텍스트 + 이스케이프 문자열(개행문자인 \n처럼) +변환 지정어(%기호로 시작하는 것)</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="n">printf</span> <span class="nv">"I formatted the string: %s</span><span class="se">\n</span><span class="nv">"</span> <span class="n">foo</span>
+<span class="c1">-- I formatted the strinf: foo</span>
+</code></pre></div></div>
+
+<p>주요 print 자료형지정자(옵션)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>지정자</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>d</td>
+      <td>부호를 가진 10진수 형태로 만든다</td>
+    </tr>
+    <tr>
+      <td>f</td>
+      <td>부호를 가진 10진수 형태로 만들고 출력한다.</td>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td>8진수형 태로 해보려고</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>문자열 형태로 만든다</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>소문자 a에서 f를 이용해서</td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>부호를 부동 소스점 수 형태로 만들고 출력한다</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /><br /></p>
+<h2 id="2-문서-포맷-시스템">2. 문서 포맷 시스템</h2>
+
+<p>이 장의 른 명령어들과 달리 . printf 명령어는 프라인에서 용도 도 않고(표준 입력 을 허
+용하지 않는 ， 커맨드라인의 흔한 로그램에서도 직접적으로 발견 지 대부분 스크립트에
+서 사용된다)． 그럼 왜 그것이 요한가? 왜냐하면 꽤 광범위하게 사용되기 때문이다.
+<br /><br /></p>
+<h3 id="roff-계열과-tex">roff 계열과 TEX</h3>
+
+<p>실무에서는 두 가지 계열의 문서 포매터가 가장 두드러졌다. nroff와 troff를 포함한 roff 프로그
+램 과 도널드 크누스의 TEX(“tek” 라고 발음) 조판 시스템 계열이다. 그리고 당연히 그 중간의
+아래로 내려온 “E”는 의 일부다.</p>
+
+<p>→ 복잡성과 대다수의 현 리눅스 배포판에는 기본적으로 설치되지 않기 때문에 다루지 않을 것
+<br /><br /></p>
+<h3 id="groff---문서-포맷-시스템">groff - 문서 포맷 시스템</h3>
+
+<p>문서 포맷 프로그램의 명령은 마크업 언어 사용을 통해 구성된 텍스
+트에 포함되어 였다. 현재 그와 유사한 절차를 가진 것은 웹 페이지다. 웹페이지는 일종의 텍스트
+편집기 를 사용하여 작성하고 나서 페이지 레이아웃을 술한 마크업 언어인 HTML을 사용하여 웹
+브라우저 에 의해 최종 구현된다.</p>
+
+<p>압축 풀기</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">apache</span> <span class="o">@</span><span class="n">zcat</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">ls</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="n">gz</span> <span class="o">|</span><span class="n">head</span>
+<span class="p">.</span> <span class="err">\</span><span class="nv">" DO NOT MODIFY THIS FILE ! It was generated by help2man 1. 35 .
+. TH LS "</span><span class="mi">1</span><span class="nv">" "</span><span class="n">April</span> <span class="mi">2008</span><span class="nv">" "</span><span class="n">GNU</span> <span class="n">coreutils</span> <span class="mi">6</span> <span class="p">.</span><span class="mi">10</span><span class="nv">" "</span><span class="k">User</span> <span class="n">Commands</span> <span class="nv">"
+.SH NAME
+ls </span><span class="se">\-</span><span class="nv"> list directory contents
+.SH SYNOPSIS
+.B ls
+[</span><span class="se">\f</span><span class="nv">IOPTION</span><span class="se">\f</span><span class="nv">R] ... [</span><span class="se">\f</span><span class="nv">IFILE</span><span class="se">\f</span><span class="nv">R] ...
+. SH DESCRIPTION
+.</span><span class="se">\"</span><span class="nv"> Add any additional description here
+. PP
+</span></code></pre></div></div>
+
+<p>groff 프로그램과 mandoc 매크로 패키지와 ASCII용 출력 드라이버 명시한 옵션</p>
+
+<p>→ 포스트스크립트 형식으로 출력</p>
+
+<ul>
+  <li>포스트스크립트는 사진 식자기와 유사한 장치에 인쇄 페이지 내용물을 기술하기 위해 사용되는 페이지 기술 언어</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">me</span><span class="o">@</span><span class="n">linuxbox</span> <span class="o">~</span><span class="p">]</span> <span class="err">$</span> <span class="n">zcat</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">manl</span><span class="o">/</span><span class="n">ls</span> <span class="p">.</span><span class="mi">1</span><span class="p">.</span> <span class="n">gz</span> <span class="n">I</span> <span class="n">groff</span> <span class="o">-</span><span class="n">mandoc</span> <span class="n">I</span> <span class="n">head</span>
+<span class="o">%!</span><span class="n">PS</span><span class="o">-</span><span class="n">Adobe</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span>
+<span class="o">%%</span><span class="n">Creator</span><span class="p">:</span> <span class="n">groff</span> <span class="k">version</span> <span class="mi">1</span><span class="p">.</span><span class="mi">18</span><span class="p">.</span><span class="mi">1</span>
+<span class="o">%%</span><span class="n">CreationDate</span><span class="p">:</span> <span class="n">Thu</span> <span class="n">Feb</span> <span class="mi">2</span> <span class="mi">13</span> <span class="p">:</span><span class="mi">44</span> <span class="p">:</span><span class="mi">37</span> <span class="mi">2012</span>
+<span class="o">%%</span><span class="n">DocumentNeededResources</span><span class="p">:</span> <span class="n">font</span> <span class="n">Times</span><span class="o">-</span><span class="n">Roman</span>
+<span class="o">%%+</span> <span class="n">font</span> <span class="n">Times</span><span class="o">-</span><span class="n">Bold</span>
+<span class="o">%%+</span> <span class="n">font</span> <span class="n">Times</span><span class="o">-</span><span class="n">Italic</span>
+<span class="o">%%</span><span class="n">DocumentSuppliedResources</span><span class="p">:</span> <span class="n">procset</span> <span class="n">grops</span> <span class="mi">1</span><span class="p">.</span><span class="mi">18</span> <span class="mi">1</span>
+<span class="o">%%</span><span class="n">Pages</span> <span class="p">:</span> <span class="mi">4</span>
+<span class="o">%%</span><span class="n">Page0rder</span><span class="p">:</span> <span class="n">Ascend</span>
+<span class="o">%%</span><span class="n">Orientation</span> <span class="p">:</span> <span class="n">Portrait</span>
+</code></pre></div></div>
+
+<aside>
+❓ fmt pr 처럼 간단한 포맷 툴들은 짧은 문서를 생성하는 스크립트에서 많이 사용하는 것을 발견할 수 였다. 반면 groff(와 친구들은)을 만드는 데 사용할 수 있다. 우리가 커맨드 라인을 사용하여 전문지를 전혀 작성하지 않을 지도 모르지만, 할 수 있다는 것을 알아두는 것이 좋다
+<br /><br /><br /><br />
+</aside>
+
+<h1 id="리눅스-프로그래밍-1-1-리눅스-기초">리눅스 프로그래밍 1-1. 리눅스 기초</h1>
+
+<h2 id="1-처음-시작하기">1. 처음 시작하기</h2>
+
+<p>리눅스는 기업이나 공공기관, 학교 동 정보 시스템 서비스를 제공하는 서버의
+운영체계로 많이 시용되는 소프트웨어이다. 리눅스 운영체계를 개인용 PC의 윈
+도우 운영체계를 대신하는 운영체계로 시용할- 수도 있다. 또한 스마트폰에서 많
+이 사용되는 안드로이드 운영체계에 기본 바탕은 리눅스로 구성되어 있다.
+<br /><br /></p>
+<h3 id="리눅스와-유닉스">리눅스와 유닉스</h3>
+
+<p>리눅스와 유닉스는 대용량 정보처리가 가능한 서버를 운영할 수 있는 대표적
+인 운영체계 중 하나이다.</p>
+
+<ul>
+  <li>
+    <p>운영체계(Operating System, OS)</p>
+
+    <p>컴퓨터의 하드웨어와 소프트웨어를 제어하여 사용자가 컴퓨터를
+  쓸수 있게 만들어 주는프로그램이다.</p>
+  </li>
+  <li>유닉스와 리눅스 비교
+    <ul>
+      <li>유닉스 → 중대형 서버 시스템에서 가장 많이 사용되는 OS</li>
+      <li>리눅스 → 1991년 리누스 토발즈가 중대형 기종에서만 작동하던 유닉스 운영체계를 PC에서도 작동할 수 있게 만듦</li>
+    </ul>
+  </li>
+  <li>리눅스 기능
+    <ul>
+      <li>오픈 소스, 어느 플랫폼에도 포팅이 가능하다</li>
+    </ul>
+  </li>
+  <li>커널 쉘 유틸리티 : 리눅스 운영체계는 커널, 쉘, 유틸리티 3부분으로 구분된다.
+    <ul>
+      <li>커널 (Kernel)
+  • 사용자가 작동시키는 어플리케이션과 하드웨어 사이에서의 조정자 역할을
+  한다
+  • 컴퓨터 운영체계 부분의 핵심이며 하드웨어에 따라 다른 버전이 존재하며 .
+  하드웨어 진화에 따라 같이 진화한다. (<a href="http://www.kernel.org/">http://www.kernel.org/</a>).</li>
+      <li>쉘 (Shell)
+  • 커널과 사용자간의 페이스로서 중간매개의 역할을담당한다.
+  • 명령어를 해석하고 명령과 관련된 유틸리티나 커널을 호출하고 실행 결과를 출력한다.
+  • Dos의 <a href="http://command.com/">command.com</a> 같이 기본제공 OS 명령어를수행하는곳이다.
+  • 윈도우에서 탐색기의 왼쪽 마우스 메뉴의 압축 기능과 같은 기본 명령이다.</li>
+      <li>유틸리티 Utility)
+  • 사용자가 시스템을 편하게 시용-하기 위한 용용 프로그램이다.
+  • 시용-자 입장에서는 Shell 과 유틸리티의 구분이 필요 없다.
+  • dir. ping. rype. 좀 더 편리하게 사용하기 위해 만들어서 제공하는 명령 시
+  스템이댜
+  • 윈도우에서 알집 등좀더 편리하게 만든압축프로그램을사용하는명령이다.
+<br /><br />
+        <h3 id="리눅스의-종류">리눅스의 종류</h3>
+      </li>
+    </ul>
+  </li>
+  <li>데스크탑(Desktop) 형식
+    <ul>
+      <li>일반 사용자 PC의 Windows 운영체 와 유사한 형식이댜</li>
+      <li>윈도우의 상용성에 웅하여 GNU 정신을 입각하여 태동하였댜(무료 윈도우)</li>
+      <li>서버의 용도로 시용할 수 있지만, 실제 서버 환경을 운영하는 데 윈도우 형태의 GUI가 불필요한서버 리소스를사용한다.</li>
+      <li>다양한 GUI 를 하는 경우 데스크탑 형식을 설치하여 서버로 사용할 수도있다.</li>
+    </ul>
+  </li>
+  <li>서버(Server) 형식
+    <ul>
+      <li>불필요한 윈도우 GUI 를 없애고. 서버용으로 적합하계 구성된 리눅스 형식이다</li>
+      <li>본 에서는 리눅스 령어 실습` 리눅스 쉘 프로그래밍을 익히기 에 적절한 형식인 서버 형식으로 실습을 진행한다.
+<br /><br />
+        <h3 id="2-서버로-접속하기">2. 서버로 접속하기</h3>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>설치한 리눅스는 서버 형식으로 대용량 정보 처리 및 다수의 사용자에게 정보 서비스를 제공하는 서
+버 용도로 이용하는 시스템이다. 서버는 개인용 PC 는 달리 직접 바로 옆에 두고 사용하는 경우보다는 서버실이나 인터넷 데이터 센터 (IDC) 에 원거리에 위치하고, 관리지는 이 서버를 원격 속하는 경우가 대부분이다. 이 서버에 접속하는 방법과 간단한 명령어를 활용해보겠다.
+<br /><br /></p>
+<h3 id="사용자-등록-패스워드-설정">사용자 등록, 패스워드 설정</h3>
+
+<ul>
+  <li>관리자(Root)와 일반 사용자
+    <ul>
+      <li>사용자 계정: 운영체계를 사용하는 시용자 계정이다</li>
+      <li>관리자 계정 : 운영체계에서 슈퍼 사용자(Super user), 운용 관리자(Adminstrator) 또는 루트 (Root) 는 시스템 관리자가 시스템 제어를 위한 별한 권한을 가지고 있는 시용자 계정이다.</li>
+    </ul>
+  </li>
+  <li>사용자(User 와 그룹(Group)
+    <ul>
+      <li>유닉스, 리눅스 시스템은 여러 사람이 사용하는 다중 시용자 운영체계이다.</li>
+      <li>시용자묶음의 그룹 개념이 존재한다.
+  • root 라는 사용자는 관리자 권한을 가진 용자임
+  • kopoct 라는 사용자를 관리자 그룹(root 그룹)에 포함시 키 면 root 그룹의
+  권한을공유할수있음.</li>
+      <li>사용자는 여러 개의 그룹에 포함될 수 있다.</li>
+      <li>현재의 시용자와 그룹을 알아보는 명령어는 id. groups 이다.</li>
+    </ul>
+  </li>
+  <li>사용자 및 그룹 관리
+    <ul>
+      <li>사용자 등록, 그룹 등록: adduser, addgroup</li>
+      <li>사용자 삭제, 그룹 삭제 : deluser, delgroup</li>
+      <li>자기의 권한에 맞는 사용자만 등록하거나 삭제할 수 있음</li>
+    </ul>
+  </li>
+  <li>패스워드 설정
+    <ul>
+      <li>
+        <p>명령어를 통해 패스워드를 입력하고, 권한에 때라 패스워드 설정이 가능하다</p>
+
+        <p>→ 일반사용자가 패스워드를 잊어버렸을 경우 root 권한으로 접속하여 변경 가능함</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /><br /></p>
+<h3 id="권한-획득-명령어-도움말">권한 획득, 명령어 도움말</h3>
+
+<ul>
+  <li>권한 획득
+    <ul>
+      <li>권한 획득을하는방법은다음두가지 방법이 있다.
+        <ul>
+          <li>다른 사용자로 재 로그인</li>
+          <li>잠시 다른 사용자의 권한을 얻어올 수 있는 법</li>
+        </ul>
+      </li>
+      <li>sudo : 쉘 명령어 라인에서 root의 권한을 잠시 사용한다. (sud o 명령은
+  sudo 등록이 되어 있는 경우에만 시용 가능)</li>
+      <li>su-userid : 잠시 른사용자의 권한으로 접속한다.</li>
+      <li>‘su-’ 명령은 ‘su- root’와 동일하다.</li>
+    </ul>
+  </li>
+  <li>명령어 도움말
+    <ul>
+      <li>man 명령: 명령어 도움말을 보여준다. (manual)
+  • 예) man adduser: adduse 라는 명령어를 설명함</li>
+      <li>리눅스유닉스명령은쉘상태에서 영문약자형식으로되어 있다.</li>
+      <li>특히 인자(argument) . 옵션 등을 알고자 할 때 유용한 명 령 어 이 댜
+<br /><br />
+        <h3 id="가상-터미널telnetssh">가상 터미널(telnet/ssh)</h3>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>리눅스 서버 에 직접 접속된 모니터는 콘솔 Console) 이라고 부르며, 원격지에서 서버로 접속하는 대표적인 방법은 telnet이나 ssh 서비스로 접속하는 방법이 있다.
+<br /><br /></p>
+<h3 id="프로그램-설치">프로그램 설치</h3>
+
+<ul>
+  <li>apt-get
+    <ul>
+      <li>우분투 리눅스 시스템에서 프로그램을 설치해 주는 명령어</li>
+      <li>apt-get 명령어는 root 계정으로 사용하여야함.</li>
+    </ul>
+  </li>
+  <li>~ sudo
+    <ul>
+      <li>일반 시용자가 잠시 Root 권한을 시용하고자 하는 명령어</li>
+    </ul>
+  </li>
+  <li>사용 사례
+    <ul>
+      <li>sudo ape-get update: Root 권한으로 ape-get 이라는 명령어를 update라는 옵션울 가지고 실행. 설치할 수 있는 프로그램 리스트를 인터넷을 통하여 새로 받는 명령이다.</li>
+    </ul>
+  </li>
+  <li>가상터미널
+    <ul>
+      <li>전용서버(가상머신[VM] 서버)를사용하기 위한 원격지 프로그램으로 ssh, telnet 등이 있다.</li>
+      <li>telnet: 서 버의 네트워크를 통하여 원격으로 접속하는 방식 규약(프로토콜)</li>
+      <li>ssh: telnet 과 동일한 역할을 히는 프로그램으로 보안이 강화된 방식으로 접속을 함.
+<br /><br />
+        <h3 id="ssh-설치-및-설정">ssh 설치 및 설정</h3>
+      </li>
+    </ul>
+  </li>
+  <li>ssh 설치
+    <ul>
+      <li>서버에 ssh 프로그램 패키지를 다음 명령어로 설치함. 
+  —-&gt; sudo apt-get install ssh</li>
+    </ul>
+  </li>
+  <li>telnet 설치
+    <ul>
+      <li>서버에 xintd, telnet 프로그램 패키지를 설치함.</li>
+      <li>a) xinetd 설치
+        <ul>
+          <li>inet 는 네트워크 서 스 데몬으로 ln 을 사용하기 위한 필수 요소입니다</li>
+          <li>sudo apt-get install xinetd 명령으로 설치</li>
+        </ul>
+      </li>
+      <li>b) telnet 설치
+        <ul>
+          <li>telnetd는 텔넷 서 비스 데몬으로 telnet을 서용하기 위한 필수 요소임</li>
+          <li>sudo apt-get insraJI telnetd 명령으로 설치</li>
+        </ul>
+      </li>
+      <li>c) xinetd 설정
+        <ul>
+          <li>xinetd 설정 파일에 telnet 이 동작하도록 설정</li>
+          <li>다음 명령어로 설정 파일올 편집기(에디터)로 편깁 : vi /etc/xinetd.conf</li>
+          <li>아래 내용을 편집하는 파일 하단에 추가함. 저장후파일을닫음.</li>
+        </ul>
+
+        <p><img src="https://user-images.githubusercontent.com/127702320/234425711-7a67a672-76ba-4294-ac3a-3048ddbbd33b.png" alt="ssh" /></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+    <div style="padding-top: 50px;">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3321560028329475"
+       crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-fb+5w+4e-db+86"
+            data-ad-client="ca-pub-3321560028329475"
+            data-ad-slot="6043271504"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>  
+</div>
+
+    
+        <div class="bd-toc mt-3 mb-5 my-lg-0 ps-xl-3 mb-lg-5 text-body-secondary">
+  
+  <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button"
+    data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+    서브목차
+    <svg class="bi d-md-none ms-2" aria-hidden="true">
+      <use xlink:href="#chevron-expand"></use>
+    </svg>
+  </button>
+
+  <strong class="d-none d-md-block h6 my-2">서브목차</strong>
+  <hr class="d-none d-md-block my-2">
+  <div class="collapse bd-toc-collapse" id="tocContents">
+    <nav id="TableOfContents">
+      <!--
+      <ul>
+        <li><a href="#quick-start">Quick start</a></li>
+        <li><a href="#cdn-links">CDN links</a></li>
+        <li><a href="#next-steps">Next steps</a></li>
+        <li><a href="#js-components">JS components</a></li>
+        <li><a href="#important-globals">Important globals</a>
+          <ul>
+            <li><a href="#html5-doctype">HTML5 doctype</a></li>
+            <li><a href="#responsive-meta-tag">Responsive meta tag</a></li>
+            <li><a href="#box-sizing">Box-sizing</a></li>
+            <li><a href="#reboot">Reboot</a></li>
+          </ul>
+        </li>
+        <li><a href="#community">Community</a></li>
+      </ul>
+      -->
+    </nav>
+  </div>
+</div>
+    </main>
+</div>
+
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+    <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+
+      <div class="row">
+
+        <div class="col-lg-3 mb-3">
+          <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="/" >
+
+            <span class="fs-5">JinyDev</span>
+          </a>
+          <ul class="list-unstyled small">
+            <li class="mb-2">지니와 함께 다양한 ICT 기술을 학습합니다.</li>
+            <li class="mb-2">Code licensed MIT</li>
+            <li class="mb-2">Currently v0.0.1</li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>FrontEnd</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://html.jiny.dev">HTML</a></li>
+            <li class="mb-2"><a href="https://css.jiny.dev">CSS</a></li>
+            
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Language</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://php.jiny.dev">PHP</a></li>
+            <li class="mb-2"><a href="https://javascript.jiny.dev">Javascript</a></li>
+            <li class="mb-2"><a href="https://mysql.jiny.dev">Mysql</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>DevOps</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://linux.jiny.dev">Linux</a></li>
+            <li class="mb-2"><a href="https://window.jiny.dev">Windows</a></li>
+            <li class="mb-2"><a href="/">Mac</a></li>
+          </ul>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://git.jiny.dev">Git</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Hardware</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://arduino.jiny.dev">Arduino</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  </body>
+</html>
