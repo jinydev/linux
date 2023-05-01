@@ -1,6 +1,3 @@
----
-layout: home
----
 # 아파치 HTTP 서버
 
 # **아파치 HTTP 서버란?**

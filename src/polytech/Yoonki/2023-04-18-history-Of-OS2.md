@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: post
 title:  "운영체제의 역사"
 ---
 
