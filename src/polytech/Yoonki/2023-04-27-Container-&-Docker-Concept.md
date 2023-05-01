@@ -76,4 +76,4 @@ layout: home
     - 컨테이너 실행 중 생성하는 파일이나 변경사항 기록
     - 기존 이미지 레이어(immutable) : 영향 X
 
-# 실용편에서 계속
+# [기초편에서 계속](2023-04-28Container-&-Docker-basic)
