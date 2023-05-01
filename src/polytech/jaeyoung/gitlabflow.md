@@ -2,7 +2,7 @@
 layout : home
 ---
 
-GIT-FLOW 전략
+GITLAB-FLOW 전략
 ======================
 
 ## **GitLab Flow**
