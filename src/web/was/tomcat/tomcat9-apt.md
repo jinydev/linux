@@ -3,7 +3,7 @@ layout: home
 typora-copy-images-to: ./img
 ---
 
-# Tomcat9
+# Tomcat9 설치 with APT
 이 릴리스에서는 Java Servlet API 4.0 및 JSP 2.3에 대한 지원이 도입되었습니다. 또한 HTTP/2 및 JAAS(Java Authentication and Authorization Service)에 대한 지원도 포함되었습니다.
 
 ## 준비사항
@@ -69,7 +69,7 @@ Rules updated (v6)
 서비스 명령을 통하여 톰켓을 실행합니다.
 
 ```bash
-sudo service tomcat9start
+sudo service tomcat9 start
 ```
 > 명령이 인식이 안되는 경우 systemctl을 활성화 한후에, 다시 실행합니다.
 
@@ -77,7 +77,6 @@ sudo service tomcat9start
 ```bash
 sudo service tomcat stop
 ```
-
 
 상태확인
 ```bash
