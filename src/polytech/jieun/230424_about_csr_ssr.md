@@ -1,5 +1,5 @@
 ---
-layout home
+layout: home
 ---
 # SSR 과 CSR
 

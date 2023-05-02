@@ -591,7 +591,7 @@
 </ol>
 
 <h3 id="비-unix-계열-운영체제">비-Unix 계열 운영체제</h3>
-<h4 id="대표적인-예시--windows-ios-android-chrome-os-등">대표적인 예시 : Windows, iOS, Android, Chrome OS 등</h4>
+<h4 id="대표적인-예시--windows">대표적인 예시 : Windows</h4>
 <h4 id="특징-1">특징</h4>
 <ol>
   <li><code class="language-plaintext highlighter-rouge">GUI(Graphical User Interface)</code>를 중심으로 개발되어 사용이 보다 직관적</li>
@@ -604,6 +604,7 @@
 <ul>
   <li>맥 OS는 Unix 계열 운영체제로, 터미널 환경에서 작업하기 용이</li>
   <li>Windows OS는 명령 프롬프트와 PowerShell을 통해 명령어 기반 작업이 가능하지만, Unix 계열 운영체제에 비해 명령어 기반 작업이 제한적</li>
+  <li>참고) 윈도우 환경에서 git bash를 사용하면 단점을 보완할 수 있다.</li>
 </ul>
 
 <h3 id="2-개발-툴">2. 개발 툴</h3>
@@ -614,7 +615,7 @@
 
 <h3 id="3-오픈-소스">3. 오픈 소스</h3>
 <ul>
-  <li>맥 OS는 대부분 오픈소스 기반으로 개발되어 있으며, 개발자들이 운영체제의 내부를 자유롭게 접근 및 수정 가능하다.</li>
+  <li>맥 OS는 초기엔 대부분 오픈소스 기반으로 개발되어 있지만, 개발자들이 접근 및 수정할 수는 없다.</li>
   <li>Windows OS는 전반적으로 오픈소스 지향성이 낮다. 일부 오픈소스 프로젝트는 존재하지만, 대개 비오픈소스로 개발되었다.</li>
 </ul>
 
@@ -624,7 +625,7 @@
   <li>Windows OS는 다양한 하드웨어와 소프트웨어와 호환되기 때문에, Windows 운영체제가 설치된 컴퓨터라면 개발 가능</li>
 </ul>
 
-<h3 id="5-개발-환경">5. 개발 환경</h3>
+<h3 id="5-커뮤니티">5. 커뮤니티</h3>
 <ul>
   <li>맥 OS는 개발자들 사이에서 많은 커뮤니티가 존재하는데, 특히 iOS 및 macOS 앱 개발 커뮤니티 활발하게 운영중</li>
   <li>Windows OS는 많은 개발자들이 사용하지만, 맥 OS에 비해 커뮤니티가 다소 약했다. 그러나 Microsoft는 최근 GitHub를 인수하여 오픈소스 커뮤니티와의 상호작용을 늘리는 등 점점 성장하고 있다.</li>
@@ -633,8 +634,10 @@
 <h2 id="ios-vs-android">ios vs android</h2>
 <h3 id="1-개발-환경">1. 개발 환경</h3>
 <ul>
-  <li>iOS는 Objective-C와 Swift 등의 언어로 개발할 수 있으며, Xcode라는 IDE를 사용한다. Xcode는 애플에서 개발된 공식 IDE로, iOS 앱 개발을 위한 도구들을 제공한다.(macOS에서만 개발 가능)</li>
+  <li>iOS는 Objective-C(C언어)와 Swift 등의 언어로 개발할 수 있으며, Xcode라는 IDE를 사용한다. Xcode는 애플에서 개발된 공식 IDE로, iOS 앱 개발을 위한 도구들을 제공한다.(macOS에서만 개발 가능)</li>
   <li>안드로이드는 자바와 코틀린 등의 언어로 개발할 수 있으며, 안드로이드 스튜디오라는 통합 개발 환경(IDE)을 사용한다. 안드로이드 스튜디오는 구글에서 개발된 안드로이드 앱 개발을 위한 공식 IDE로, 안드로이드 SDK, 디버깅 도구, 에뮬레이터 등을 제공한다.</li>
+  <li>참고) Objective-C는 C언어 기반의 언어이다. Swift는 C언어로 개발하는 불편함을 해결하고자 등장했지만 여전히 Objective-C 또한 많이 사용하고 있다.
+-&gt; C언어로 개발하는 것이 더 섬세하며 좋은 어플리케이션을 만들 수 있기 때문이다.</li>
 </ul>
 
 <h3 id="2-api와-프레임워크">2. API와 프레임워크</h3>
