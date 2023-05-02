@@ -2,6 +2,7 @@
 layout: home
 ---
 
+ No newline at end of file
 # Donghak Report
 
 ## Daily Report
