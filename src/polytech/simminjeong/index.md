@@ -5,8 +5,10 @@ layout: home
 # simminjeong Report
 
 ## 일일과제
-- 230417 [Opensource](./230417_opensource)
-- 230418 [fetch와 pull의 차이](./230418_fetch_vs_pull)
+
+- 230417 [Opensource](./230417_opensource) => 발표
+- 230418 [fetch와 pull의 차이](./230418_fetch_vs_pull) =>발표
+
 - 230419 [패스워드 복잡도 설정](./230419_passwd_complexity)
 - 230420 [Partition](./230420_partition)
 - 230421 [telnet과 ssh차이점](./230421_telnet_ssh)

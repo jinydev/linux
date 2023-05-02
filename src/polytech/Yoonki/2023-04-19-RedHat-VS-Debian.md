@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: home
 title:  "레드햇과 데비안 계열 리눅스의 차이"
 ---
 
