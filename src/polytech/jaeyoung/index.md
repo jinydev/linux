@@ -18,3 +18,7 @@ layout: home
 * 2023-04-25 [rdbms](rdbms)
 * 2023-04-26 [rootdomain](rootdomain)
 * 2023-04-27 [githubproject](githubproject)
+* 2023-04-28 [merge](merge)
+
+* 2023-04-29 [commandfor](commandfor)
+* 2023-04-29 [firewall](firewall)
