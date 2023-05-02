@@ -1,3 +1,6 @@
+---
+layout: home
+---
 # 가상머신 네트워크
 
 ![table.png](./img/table.png)

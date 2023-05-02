@@ -1,5 +1,5 @@
 ---
-layout home
+layout: home
 ---
 # NAT 와 PORTFORWARDING
 

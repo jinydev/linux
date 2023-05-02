@@ -1,5 +1,5 @@
 ---
-layout home
+layout: home
 ---
 
 # 비밀번호 명령어 
