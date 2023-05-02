@@ -1,3 +1,6 @@
+---
+layout: home
+---
 # 링크와 아이노드
 
 Illustrations: No

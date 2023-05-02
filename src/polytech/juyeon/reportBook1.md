@@ -1,5 +1,5 @@
 ---
-layout home
+layout: home
 --- 
 
 # 리눅스 프로그래밍

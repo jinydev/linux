@@ -20,7 +20,7 @@ layout: home
 * [이동학](donghak)
 * [이승희](seunghee)
 * [이정민](jeongmin)
-* [임서영]()
+* [임서영](sylim)
 * [임지은](jieun)
 * [정주연](juyeon)
 * [최경민](ckm)

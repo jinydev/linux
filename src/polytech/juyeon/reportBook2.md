@@ -1,5 +1,5 @@
 ---
-layout home
+layout: home
 --- 
 
 # 리눅스_커맨드라인_완벽입문_23
