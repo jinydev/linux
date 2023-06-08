@@ -1,6 +1,10 @@
-#Redirection
+---
+layout: home
+---
+# Redirection
 
----# 과제 Redirection
+---
+# 과제 Redirection
 
 ## Redirection이란?
 

@@ -1,5 +1,5 @@
 ---
-layout : home
+layout: home
 ---
 # 폴리텍 광명융합원 정수영
 

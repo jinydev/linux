@@ -10,14 +10,14 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="linux" />
 <meta property="og:locale" content="ko" />
-<link rel="canonical" href="http://localhost:4000/database/mysql/setup.html" />
-<meta property="og:url" content="http://localhost:4000/database/mysql/setup.html" />
+<link rel="canonical" href="https://linux.jiny.dev/database/mysql/workbench.html" />
+<meta property="og:url" content="https://linux.jiny.dev/database/mysql/workbench.html" />
 <meta property="og:site_name" content="linux" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="linux" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"http://localhost:4000/database/mysql/setup.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"https://linux.jiny.dev/database/mysql/workbench.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -225,6 +225,38 @@
 	<ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2 ">
     <li class="bd-links-group py-2">
       <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        개발자를 위한 리눅스
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li><a href="#">01.리눅스 소개</a></li>
+        <li><a href="#">02.리눅스 설치</a></li>
+        <li><a href="#">03.기초 사용법</a></li>
+        <li><a href="#">04.리눅스 시스템</a></li>
+        <li><a href="#">05.기본 명령어</a></li>
+        <li><a href="#">06.네트워크</a></li>
+        <li><a href="#">07.도구설정</a></li>
+        <li><a href="#">08.셀 프로그래밍</a></li>
+        <li><a href="#">09.서비스와 데몬</a></li>
+        <li><a href="#">10.웹 서비스</a></li>
+        <li><a href="#">11.데이터베이스</a></li>
+        <li><a href="#">12.개발환경 및 세팅</a></li>
+        <li><a href="#">13.x-window</a></li>
+        <li><a href="#">14.시스템관리</a></li>
+        <li><a href="#">15.클라우드</a></li>
+        <li><a href="#">16.도커</a></li>
+        <li><a href="#">17.마이크로서비스</a></li>
+        <li><a href="#">19.배포</a></li>
+        <li><a href="#">20.분산서버</a></li>
+        <li><a href="#">21.데이터베이스</a></li>
+        <li><a href="#">22.장애복구</a></li>
+        <li><a href="#">23.보완</a></li>
+        <li><a href="#">24.시스템관리</a></li>
+      </ul>
+    </li>
+    
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
         <a href="/prologue">
           Linux란
         </a>        
@@ -351,19 +383,20 @@
         </li>	
       </ul>
     </li>
+    -->
 
-  <!--
-	<li class="bd-links-group py-2">
-		<strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-      커리큘럼
-		</strong>
-		<ul class="list-unstyled fw-normal pb-2 small">
-			<li>
-				<a href="/polytech" class="bd-links-link d-inline-block rounded">폴리택대학</a>
-			</li>	
-		</ul>
-  </li>
--->
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        커리큘럼
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/polytech" class="bd-links-link d-inline-block rounded">폴리택대학</a>
+        </li>	
+      </ul>
+    </li>
+    -->
 
 
     <!--
@@ -577,119 +610,14 @@
 
     <main class="bd-main order-1">
         <div class="bd-content ps-lg-2">
-    <h1 id="mysql-설치">Mysql 설치</h1>
-<p>리눅스 서버에 Mysql 데이터베이스를 설치합니다.</p>
-
-<h2 id="리포지터리-확인-및-등록">리포지터리 확인 및 등록</h2>
-
-<p>오라클 mysql 사이트에 접속하여 설치를 위한 레포지터리를 확인합니다.</p>
-
-<p>시스템에 mysql을 설치할 수 있도록 리포지터리 주소를 등록합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum localinstall 주소
-</code></pre></div></div>
+    <h1 id="workbench">WorkBench</h1>
+<p><code class="language-plaintext highlighter-rouge">MysqlWorkBench</code>는 GUI 방식으로 mysql 데이터베이스에 접속을 관리하는 클리이언트 입니다.</p>
 
 <h2 id="설치하기">설치하기</h2>
 
-<h2 id="환경설정">환경설정</h2>
-<p>mysql 환경을 설정합니다. 설정은 <code class="language-plaintext highlighter-rouge">/etc/my.cnf</code> 파일에 위치합니다. 
-vi 에디터를 이용하여 정보를 수정합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/my.cnf
-</code></pre></div></div>
-
-<p>다음과 같이 설정을 추가합니다.</p>
-<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[client]</span>
-<span class="py">default-character-set</span> <span class="p">=</span> <span class="s">utf8mb4</span>
-
-<span class="nn">[mysql]</span>
-<span class="py">default-character-set</span> <span class="p">=</span> <span class="s">utf8mb4</span>
-
-<span class="nn">[mysqldump]</span>
-<span class="py">default-character-set</span> <span class="p">=</span> <span class="s">utf8mb4</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">[mysqld]</code> 서버쪽 설정 하단에 추가합니다.</p>
-<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">skip-character-set-client-handshake</span>
-<span class="py">init_connect</span> <span class="p">=</span> <span class="s">"SET collation_connection = utf8mb4_unicode_ci"</span>
-<span class="py">init_connect</span> <span class="p">=</span> <span class="s">"SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci"</span>
-
-<span class="py">character-set-server</span> <span class="p">=</span> <span class="s">utf8mb4</span>
-<span class="py">collation-server</span> <span class="p">=</span> <span class="s">utf8mb4_unicode_ci</span>
-</code></pre></div></div>
-<blockquote>
-  <p>UTF8는 기본적으로 3바이트나, 이모티콘 등도 같이 표현하기 위하여 4바이트 타입의 UTF8 형식으로 설정합니다.</p>
-</blockquote>
-
-<h2 id="실행-및-중지">실행 및 중지</h2>
-<p>Mysql 데이터베이스는 항상 실행되고 있는 데몬(demon)과 같은 성격을 가집니다. 이를 위해서 서비스를 통하여 실행을 해 주는 것이 좋습니다.</p>
-
-<p>시작하기</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl start mysqld
-</code></pre></div></div>
-<blockquote>
-  <p>서비스 실행이름이 <code class="language-plaintext highlighter-rouge">mysql</code>이 아닌 끝에 <code class="language-plaintext highlighter-rouge">d</code>가 붙은 <code class="language-plaintext highlighter-rouge">mysqld</code>입니다. <code class="language-plaintext highlighter-rouge">d</code>는 demon을 의미합니다.</p>
-</blockquote>
-
-<p>서버가 잘 실행이 되고 있는지 프로세스를 확인합니다.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps -ef | grep mysql
-</code></pre></div></div>
-
-<h2 id="접속하기">접속하기</h2>
-<p>mysql은 보안을 위하여 <code class="language-plaintext highlighter-rouge">임시 비밀번호</code> 설정되어 있습니다. 임시 비밀번호는 <code class="language-plaintext highlighter-rouge">/var/log/mysqld.log</code> 안에 숨겨져서 기록이 되어 있습니다.</p>
-
-<p><code class="language-plaintext highlighter-rouge">grep</code> 명령어를 통하여 <code class="language-plaintext highlighter-rouge">temporary password</code>를 찾아 봅니다.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep `temporary password` /var/log/mysqld.log
-</code></pre></div></div>
-
-<p>이후에는 보안 설정을 위하여 비밀번호와 접속 권환을 변경해 주어야 합니다.</p>
 <ul>
-  <li><a href="/database/mysql/password">패스워드 설정</a></li>
+  <li><a href="/database/client/mysqlworkbench">워크벤치 설치하기</a></li>
 </ul>
-
-<p>mysql 콘솔 클라이언트 통하여 데이터베이스에 접속을 해보도록 합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -u root -p
-</code></pre></div></div>
-
-<p>콘솔에서 데이터베이스를 조작하기 위해서는 sql 문법 학습이 필요로 합니다.</p>
-<ul>
-  <li><a href="https://database.jiny.dev/sql">sql 문법 학습하기</a></li>
-</ul>
-
-<h2 id="테스트-데이터베이스-만들기">테스트 데이터베이스 만들기</h2>
-
-<p>스키마 목록 확인하기</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>show databases;
-</code></pre></div></div>
-
-<p>새로운 스키마 생성하기</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE DATABASE 스키마명;
-</code></pre></div></div>
-<blockquote>
-  <p>데이터베이스 문자셋을 같이 설정할때는 다음과 같이 합니다.</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE DATABASE 스키마명 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-</code></pre></div>  </div>
-</blockquote>
-
-<p>스키마 접속권한 유저 생성 및 권환 부여</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE USER '사용자명'@'%' IDENTIFIED WITH mysql_native_password BY 'xxx';
-GRANT ALL PRIVILEGES ON *.* TO '사용자명'@'%' WITH GRANT OPTION;
-</code></pre></div></div>
-<blockquote>
-  <p>모든 IP접속에 허용을 할때에는 <code class="language-plaintext highlighter-rouge">%</code>로 지정합니다.
-권한은 <code class="language-plaintext highlighter-rouge">스키마.테이블</code>로 설정합니다. 만일, <code class="language-plaintext highlighter-rouge">*.*</code>로 설정하게 되면 모든 스키마와 모든 테이블에 대해서 권한을 부여하게 됩니다.</p>
-</blockquote>
-
-<p>패스워드 변경하기</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER USER 사용자명 IDENTIFIED WITH mysql_native_password BY 'yyyy';
-</code></pre></div></div>
-
-<p>Max-Connections 설정</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>show variables like '%max_connection%';
-set global max_connections=100;
-</code></pre></div></div>
-
 
 
     <div style="padding-top: 50px;">
