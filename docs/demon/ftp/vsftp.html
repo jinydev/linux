@@ -225,33 +225,49 @@
 	<ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2 ">
     <li class="bd-links-group py-2">
       <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-        개발자를 위한 리눅스
+        리눅스
       </strong>
       <ul class="list-unstyled fw-normal pb-2 small">
-        <li><a href="#">01.리눅스 소개</a></li>
-        <li><a href="#">02.리눅스 설치</a></li>
-        <li><a href="#">03.기초 사용법</a></li>
-        <li><a href="#">04.리눅스 시스템</a></li>
-        <li><a href="#">05.기본 명령어</a></li>
-        <li><a href="#">06.네트워크</a></li>
-        <li><a href="#">07.도구설정</a></li>
-        <li><a href="#">08.셀 프로그래밍</a></li>
-        <li><a href="#">09.서비스와 데몬</a></li>
-        <li><a href="#">10.웹 서비스</a></li>
-        <li><a href="#">11.데이터베이스</a></li>
-        <li><a href="#">12.개발환경 및 세팅</a></li>
-        <li><a href="#">13.x-window</a></li>
-        <li><a href="#">14.시스템관리</a></li>
-        <li><a href="#">15.클라우드</a></li>
-        <li><a href="#">16.도커</a></li>
-        <li><a href="#">17.마이크로서비스</a></li>
-        <li><a href="#">19.배포</a></li>
-        <li><a href="#">20.분산서버</a></li>
-        <li><a href="#">21.데이터베이스</a></li>
-        <li><a href="#">22.장애복구</a></li>
-        <li><a href="#">23.보완</a></li>
-        <li><a href="#">24.시스템관리</a></li>
-      </ul>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">리눅스 소개</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">리눅스 설치</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">기초 사용법</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">리눅스 시스템</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">기본 명령어</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">네트워크</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">도구설정</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">셀 프로그래밍</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">x-window</a></li>
+      </ul> 
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        서버설정
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li><a href="#" class="bd-links-link d-inline-block rounded">서비스와 데몬</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">웹 서비스</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">데이터베이스</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">개발환경 및 세팅</a></li>
+      </ul> 
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        운영관리
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li><a href="#" class="bd-links-link d-inline-block rounded">시스템관리</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">클라우드</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">도커</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">마이크로서비스</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">배포</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">분산서버</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">데이터베이스</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">장애복구</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">보완</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">시스템관리</a></li>
+      </ul> 
     </li>
     
     <!--
@@ -610,13 +626,121 @@
 
     <main class="bd-main order-1">
         <div class="bd-content ps-lg-2">
-    <h1 id="vsftp">vsFtp</h1>
+    <h1 id="vsftp">vsFTP</h1>
+<p>vsftpd(매우 안전한 FTP 데몬)는 Linux 및 Unix 계열 시스템을 위한 가볍고 안전하며 빠른 FTP 서버 소프트웨어입니다. 보안 기능과 단순성으로 유명하여 FTP 서버 설치에 널리 사용됩니다.</p>
 
-<p><img src="./img/슬라이드36.PNG" alt="슬라이드36" /></p>
+<h2 id="vsftpd의-몇-가지-주요-기능">vsftpd의 몇 가지 주요 기능</h2>
 
-<p><img src="./img/슬라이드37.PNG" alt="슬라이드37" /></p>
+<ul>
+  <li>
+    <p>보안: vsftpd는 보안을 염두에 두고 설계되었으며 chroot 감옥, IP 기반 액세스 제한, SSL/TLS 암호화 및 일반적인 FTP 취약성으로부터 보호하는 데 도움이 되는 강력한 구성 옵션 세트와 같은 기능을 포함합니다.</p>
+  </li>
+  <li>
+    <p>성능: vsftpd는 고성능에 최적화되어 있으며 많은 수의 동시 연결을 처리할 수 있어 트래픽이 많은 환경에서 사용하기에 적합합니다.</p>
+  </li>
+  <li>
+    <p>손쉬운 구성: vsftpd는 구성하기 쉽고 사용자가 필요에 따라 FTP 서버를 설정하고 사용자 지정하는 데 도움이 되는 포괄적인 문서 세트와 함께 제공됩니다.</p>
+  </li>
+  <li>
+    <p>호환성: vsftpd는 Linux, FreeBSD 및 Solaris를 포함한 대부분의 Unix 계열 운영 체제와 호환됩니다.</p>
+  </li>
+</ul>
 
-<p><img src="./img/슬라이드38.PNG" alt="슬라이드38" /></p>
+<p>전반적으로 vsftpd는 엔터프라이즈 환경, 웹 호스팅 서비스 및 안전한 파일 전송이 필요한 기타 시나리오에서 널리 사용되는 안정적이고 안전한 FTP 서버입니다.</p>
+
+<h2 id="설치하기">설치하기</h2>
+<p>우분에 <code class="language-plaintext highlighter-rouge">vsftpd</code> 패키지를 설치합니다.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>vsftpd –y
+</code></pre></div></div>
+
+<h2 id="anonymous">anonymous</h2>
+<p>익명 사용자의 접속 및 파일 업로드를 허용하도록 설정하기.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> /etc/vsftpd.conf
+</code></pre></div></div>
+<p>vi 에디터로 <code class="language-plaintext highlighter-rouge">/etc/vsftpd.conf</code> 파일 열기, anonymous 계정의 권한 변경</p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">anonymous_enable</span><span class="p">=</span><span class="s">YES #25</span>
+<span class="py">write_enable</span><span class="p">=</span><span class="s">YES # 31</span>
+<span class="py">anon_upload_enable</span><span class="p">=</span><span class="s">YES # 40</span>
+<span class="py">anon_mkdir_write_enable</span><span class="p">=</span><span class="s">YES # 44</span>
+</code></pre></div></div>
+
+<p>한글폴더 폴기 허용</p>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">utf8_filesystem</span><span class="p">=</span><span class="s">YES</span>
+</code></pre></div></div>
+
+<h3 id="패시브-모드">패시브 모드</h3>
+<p>기본적으로 <code class="language-plaintext highlighter-rouge">vsftpd</code>는 데이터 전송에 <code class="language-plaintext highlighter-rouge">패시브</code> 모드를 사용합니다. 클라이언트가 수동 모드를 사용하도록 구성되지 않은 경우 서버와의 데이터 연결을 설정할 수 없어 파일 목록이 표시되지 않을 수 있습니다. 수동 모드를 사용하도록 클라이언트를 구성하거나 vsftpd 구성 파일(/etc/vsftpd.conf)에 다음 줄을 추가하여 vsftpd에서 활성 모드를 활성화할 수 있습니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">pasv_enable</span><span class="o">=</span>NO
+</code></pre></div></div>
+
+<h3 id="익명-폴더">익명 폴더</h3>
+<p>anonymous로 접속되는 기본 디렉터리는 <code class="language-plaintext highlighter-rouge">/srv/ftp</code> 
+이 디렉터리 안에 <code class="language-plaintext highlighter-rouge">pub 디렉터리</code>를 만들고 모든 사용자의 <code class="language-plaintext highlighter-rouge">읽기</code>, <code class="language-plaintext highlighter-rouge">쓰기</code> 권한 허용합니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /srv/ftp
+<span class="nb">mkdir </span>pub
+<span class="nb">chmod </span>777 pub
+</code></pre></div></div>
+
+<h3 id="재시작">재시작</h3>
+<p>변경된 설정을 적용하기 위하여 vsftpd 데몬을 재시작 합니다.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl restart vsftpd
+<span class="nb">sudo </span>systemctl <span class="nb">enable </span>vsftpd
+</code></pre></div></div>
+
+<p>vsftpd 데몬이 정상적으로 실행되고 있는지 확인합니다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl status vsftpd 
+</code></pre></div></div>
+
+<h2 id="방화벽-허용">방화벽 허용</h2>
+<p>외부에서 FTP 서버에 접근하도록 방화벽 포트를 허용합니다.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ufw allow ftp
+<span class="nb">sudo </span>ufw reload
+</code></pre></div></div>
+
+<blockquote>
+  <p>문제가 계속 발생시 : 원활한 외부 접속을 허용하기 위해 systemctl stop ufw 명령으로 잠시 방화벽을 끔</p>
+</blockquote>
+
+<h2 id="접속-주소-확인">접속 주소 확인</h2>
+<p><code class="language-plaintext highlighter-rouge">ifconfig</code> 명령으로 서버의 IP 주소 확인</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>poly@poly-VirtualBox:/srv/ftp<span class="nv">$ </span>ifconfig
+enp0s3: <span class="nv">flags</span><span class="o">=</span>4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::7cac:debc:82dc:b444  prefixlen 64  scopeid 0x20&lt;<span class="nb">link</span><span class="o">&gt;</span>
+        ether 08:00:27:17:48:bc  txqueuelen 1000  <span class="o">(</span>Ethernet<span class="o">)</span>
+        RX packets 56675  bytes 85372089 <span class="o">(</span>85.3 MB<span class="o">)</span>
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4359  bytes 296103 <span class="o">(</span>296.1 KB<span class="o">)</span>
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: <span class="nv">flags</span><span class="o">=</span>4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 192.168.56.114  netmask 255.255.255.0  broadcast 192.168.56.255
+        inet6 fe80::6fee:caa9:42b4:a0e2  prefixlen 64  scopeid 0x20&lt;<span class="nb">link</span><span class="o">&gt;</span>
+        ether 08:00:27:85:76:27  txqueuelen 1000  <span class="o">(</span>Ethernet<span class="o">)</span>
+        RX packets 690  bytes 58667 <span class="o">(</span>58.6 KB<span class="o">)</span>
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 557  bytes 75170 <span class="o">(</span>75.1 KB<span class="o">)</span>
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: <span class="nv">flags</span><span class="o">=</span>73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 1000  <span class="o">(</span>Local Loopback<span class="o">)</span>
+        RX packets 203  bytes 19696 <span class="o">(</span>19.6 KB<span class="o">)</span>
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 203  bytes 19696 <span class="o">(</span>19.6 KB<span class="o">)</span>
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+</code></pre></div></div>
+
+<p>호스트 전용 어뎁터로 연결된 <code class="language-plaintext highlighter-rouge">192.168.56.114</code>를 확인할 수 있습니다.</p>
+
+<h2 id="클라이언트-접속">클라이언트 접속</h2>
 
 <p><img src="./img/슬라이드39.PNG" alt="슬라이드39" /></p>
 
@@ -627,6 +751,47 @@
 <p><img src="./img/슬라이드42.PNG" alt="슬라이드42" /></p>
 
 <p><img src="./img/슬라이드43.PNG" alt="슬라이드43" /></p>
+
+<h2 id="계정별-접속">계정별 접속</h2>
+<p>특정 계정을 사용하여 vsftpd에 대한 액세스를 허용하려면 다음 단계를 수행해야 합니다.</p>
+
+<ul>
+  <li>FTP 서버에 액세스하는 데 사용할 새 시스템 사용자 계정을 만듭니다. “adduser” 명령을 사용하여 새 사용자를 만들 수 있습니다. 예를 들면 다음과 같습니다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>adduser ftpuser
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">passwd</code> 명령을 사용하여 새 사용자 계정의 암호를 설정합니다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>passwd ftpuser
+</code></pre></div></div>
+
+<ul>
+  <li>인증에 로컬 사용자 계정을 사용하도록 vsftpd를 구성합니다. 이는 vsftpd 구성 파일(/etc/vsftpd.conf)에 다음 줄을 추가하여 수행할 수 있습니다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">local_enable</span><span class="o">=</span>YES
+</code></pre></div></div>
+
+<ul>
+  <li>선택적으로 사용자를 자신의 홈 디렉토리로 chroot하도록 vsftpd를 구성할 수도 있습니다. 이렇게 하면 FTP 서버에 대한 액세스가 자신의 홈 디렉토리로만 제한됩니다. 이는 vsftpd 구성 파일에 다음 줄을 추가하여 수행할 수 있습니다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">chroot_local_user</span><span class="o">=</span>YES
+<span class="nv">allow_writeable_chroot</span><span class="o">=</span>YES
+</code></pre></div></div>
+
+<ul>
+  <li>vsftpd 서비스를 다시 시작하여 변경 사항을 적용합니다.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl restart vsftpd
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>이 단계를 완료한 후 새 사용자 계정과 설정한 암호를 사용하여 vsftpd 서버에 연결할 수 있어야 하며 사용자는 홈 디렉토리로 제한됩니다(chrooting이 활성화된 경우).</p>
 
 
     <div style="padding-top: 50px;">

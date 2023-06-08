@@ -225,33 +225,49 @@
 	<ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2 ">
     <li class="bd-links-group py-2">
       <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-        개발자를 위한 리눅스
+        리눅스
       </strong>
       <ul class="list-unstyled fw-normal pb-2 small">
-        <li><a href="#">01.리눅스 소개</a></li>
-        <li><a href="#">02.리눅스 설치</a></li>
-        <li><a href="#">03.기초 사용법</a></li>
-        <li><a href="#">04.리눅스 시스템</a></li>
-        <li><a href="#">05.기본 명령어</a></li>
-        <li><a href="#">06.네트워크</a></li>
-        <li><a href="#">07.도구설정</a></li>
-        <li><a href="#">08.셀 프로그래밍</a></li>
-        <li><a href="#">09.서비스와 데몬</a></li>
-        <li><a href="#">10.웹 서비스</a></li>
-        <li><a href="#">11.데이터베이스</a></li>
-        <li><a href="#">12.개발환경 및 세팅</a></li>
-        <li><a href="#">13.x-window</a></li>
-        <li><a href="#">14.시스템관리</a></li>
-        <li><a href="#">15.클라우드</a></li>
-        <li><a href="#">16.도커</a></li>
-        <li><a href="#">17.마이크로서비스</a></li>
-        <li><a href="#">19.배포</a></li>
-        <li><a href="#">20.분산서버</a></li>
-        <li><a href="#">21.데이터베이스</a></li>
-        <li><a href="#">22.장애복구</a></li>
-        <li><a href="#">23.보완</a></li>
-        <li><a href="#">24.시스템관리</a></li>
-      </ul>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">리눅스 소개</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">리눅스 설치</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">기초 사용법</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">리눅스 시스템</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">기본 명령어</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">네트워크</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">도구설정</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">셀 프로그래밍</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">x-window</a></li>
+      </ul> 
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        서버설정
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li><a href="#" class="bd-links-link d-inline-block rounded">서비스와 데몬</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">웹 서비스</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">데이터베이스</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">개발환경 및 세팅</a></li>
+      </ul> 
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        운영관리
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li><a href="#" class="bd-links-link d-inline-block rounded">시스템관리</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">클라우드</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">도커</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">마이크로서비스</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">배포</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">분산서버</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">데이터베이스</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">장애복구</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">보완</a></li>
+        <li><a href="#" class="bd-links-link d-inline-block rounded">시스템관리</a></li>
+      </ul> 
     </li>
     
     <!--
@@ -657,6 +673,11 @@
 <h2 id="was-서버의-종류">was 서버의 종류</h2>
 <p>대표적인 WAS 서버로는 Apache Tomcat, JBoss, IBM WebSphere, Oracle WebLogic, Microsoft IIS 등이 있습니다.</p>
 
+<ul>
+  <li><a href="tomcat">tomcat</a></li>
+  <li><a href="weblogic">weblogic</a></li>
+</ul>
+
 <h3 id="아파치-톰켓">아파치 톰켓</h3>
 <p>Apache Tomcat은 웹 애플리케이션 배포 및 관리를 위한 플랫폼을 제공하는 오픈 소스 Java 기반 웹 애플리케이션 서버입니다. Java Servlet, JSP(JavaServer Pages) 및 EL(Java Expression Language) 기술을 지원하도록 설계되었으며 Java 웹 애플리케이션 개발 및 배포에 널리 사용됩니다.</p>
 
@@ -680,22 +701,6 @@
 
 <p>Apache Tomcat은 웹 애플리케이션을 배포하고 관리하기 위한 플랫폼을 제공하는 오픈 소스 Java 기반 웹 애플리케이션 서버입니다. Java Servlet 및 JSP 기술을 지원하고 가볍고 사용하기 쉬우며 모듈성, 보안, 관리 및 모니터링 도구를 제공합니다.</p>
 
-<h3 id="oracle-weblogic">Oracle WebLogic</h3>
-<p>Oracle WebLogic은 엔터프라이즈 애플리케이션을 개발, 배포 및 관리하기 위한 플랫폼을 제공하는 Java 기반 애플리케이션 서버입니다. 분산 컴퓨팅 환경에서 대규모 미션 크리티컬 애플리케이션의 배포를 지원하도록 설계되었습니다.</p>
-
-<p>Oracle WebLogic의 몇 가지 주요 기능은 다음과 같습니다.</p>
-
-<ul>
-  <li>Java EE(Enterprise Edition) 지원 - Oracle WebLogic은 엔터프라이즈 애플리케이션 개발을 위한 표준화된 API(Application Programming Interfaces) 세트를 포함하는 Java EE 사양의 최신 버전을 지원합니다.</li>
-  <li>고가용성 - Oracle WebLogic은 클러스터링, 로드 밸런싱 및 페일오버와 같은 기능을 통해 고가용성과 확장성을 제공하도록 설계되었습니다.</li>
-  <li>관리 및 모니터링 - Oracle WebLogic은 웹 기반 콘솔 및 명령줄 인터페이스를 포함하여 애플리케이션을 관리 및 모니터링하기 위한 포괄적인 도구 세트를 제공합니다.</li>
-  <li>보안 - Oracle WebLogic은 SSL(Secure Sockets Layer) 암호화, 사용자 인증 및 승인, 다양한 보안 프로토콜 지원과 같은 고급 보안 기능을 제공합니다.</li>
-  <li>다른 Oracle 제품과의 통합 - Oracle WebLogic은 Oracle Database 및 Oracle Fusion Middleware와 같은 다른 Oracle 제품과 통합되어 포괄적인 엔터프라이즈 애플리케이션 플랫폼을 제공합니다.</li>
-</ul>
-
-<p>Oracle WebLogic은 소기업에서 대기업에 이르기까지 모든 규모의 조직에서 전자 상거래 시스템, 고객 관계 관리(CRM) 애플리케이션 및 재무 시스템과 같은 광범위한 애플리케이션을 개발하고 배포하는 데 사용됩니다.</p>
-
-<p>Oracle WebLogic은 엔터프라이즈 애플리케이션을 개발, 배포 및 관리하기 위한 플랫폼을 제공하는 Java 기반 애플리케이션 서버입니다. 최신 Java EE 사양을 지원하고 고가용성과 확장성을 제공하며 관리, 모니터링 및 보안을 위한 도구를 포함합니다.</p>
 
 
     <div style="padding-top: 50px;">
