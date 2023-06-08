@@ -225,6 +225,38 @@
 	<ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2 ">
     <li class="bd-links-group py-2">
       <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        개발자를 위한 리눅스
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li><a href="#">01.리눅스 소개</a></li>
+        <li><a href="#">02.리눅스 설치</a></li>
+        <li><a href="#">03.기초 사용법</a></li>
+        <li><a href="#">04.리눅스 시스템</a></li>
+        <li><a href="#">05.기본 명령어</a></li>
+        <li><a href="#">06.네트워크</a></li>
+        <li><a href="#">07.도구설정</a></li>
+        <li><a href="#">08.셀 프로그래밍</a></li>
+        <li><a href="#">09.서비스와 데몬</a></li>
+        <li><a href="#">10.웹 서비스</a></li>
+        <li><a href="#">11.데이터베이스</a></li>
+        <li><a href="#">12.개발환경 및 세팅</a></li>
+        <li><a href="#">13.x-window</a></li>
+        <li><a href="#">14.시스템관리</a></li>
+        <li><a href="#">15.클라우드</a></li>
+        <li><a href="#">16.도커</a></li>
+        <li><a href="#">17.마이크로서비스</a></li>
+        <li><a href="#">19.배포</a></li>
+        <li><a href="#">20.분산서버</a></li>
+        <li><a href="#">21.데이터베이스</a></li>
+        <li><a href="#">22.장애복구</a></li>
+        <li><a href="#">23.보완</a></li>
+        <li><a href="#">24.시스템관리</a></li>
+      </ul>
+    </li>
+    
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
         <a href="/prologue">
           Linux란
         </a>        
@@ -351,19 +383,20 @@
         </li>	
       </ul>
     </li>
+    -->
 
-  <!--
-	<li class="bd-links-group py-2">
-		<strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-      커리큘럼
-		</strong>
-		<ul class="list-unstyled fw-normal pb-2 small">
-			<li>
-				<a href="/polytech" class="bd-links-link d-inline-block rounded">폴리택대학</a>
-			</li>	
-		</ul>
-  </li>
--->
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        커리큘럼
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/polytech" class="bd-links-link d-inline-block rounded">폴리택대학</a>
+        </li>	
+      </ul>
+    </li>
+    -->
 
 
     <!--
@@ -583,20 +616,24 @@
 <h2 id="시스템-측정">시스템 측정</h2>
 <p>리눅스 운영체제에서 시스템 측정(System monitoring)은 시스템 자원(CPU, 메모리, 디스크 등)의 사용률과 성능, 네트워크 연결 상태 등의 정보를 지속적으로 수집하여 분석하는 작업을 말합니다. 시스템 측정을 통해 시스템의 안정성, 성능, 문제점 등을 파악하여 문제점을 해결하고 최적화된 시스템 운영을 할 수 있습니다.</p>
 
-<p>대표적인 시스템 측정 도구로는 top, vmstat, iostat, netstat, sar 등이 있습니다.</p>
 <ul>
-  <li>top : 현재 CPU에 수행되고 있는 프로세스 상황을 CPU 자원을 많이 사용하는 순서대로 보여줌</li>
-  <li>vmstat</li>
-  <li>iostat</li>
-  <li>netstat</li>
-  <li>sar</li>
+  <li><a href="top">top</a> : 현재 CPU에 수행되고 있는 프로세스 상황을 CPU 자원을 많이 사용하는 순서대로 보여줌</li>
+  <li><a href="vmstat">vmstat</a> : Linux vmstat 명령은 프로세스, 메모리, 페이징, 블록 IO 및 CPU 활동을 포함한 가상 메모리 통계를 표시합니다.</li>
+  <li><a href="iostat">iostat</a> : Linux의 iostat 명령은 시스템 입/출력(I/O) 사용 및 장치 활용 통계를 모니터링하는 데 사용됩니다.</li>
+  <li>
+    <p><a href="netstat">netstat</a> : Linux netstat 명령은 네트워크 연결, 라우팅 테이블 및 네트워크 인터페이스 통계에 대한 정보를 표시하는 데 사용됩니다.</p>
+  </li>
+  <li>
+    <p><a href="uptime">uptime</a> : Linux uptime 명령은 시스템 실행 시간, 현재 로그인한 사용자 수, 지난 1분, 5분, 15분 동안의 시스템 로드 평균을 표시합니다.</p>
+  </li>
+  <li><a href="sar">sar</a> : sar 명령은 일정 기간 동안 CPU 사용량, 메모리 사용량, 디스크 I/O 작업, 네트워크 통계 등과 같은 시스템 활동 정보를 수집, 보고 및 분석하는 데 사용됩니다. 성능 문제를 진단 및 해결하고 시스템 리소스 활용을 최적화하는 데 사용할 수 있습니다.</li>
 </ul>
 
 <h2 id="시스템-상태-확인하기">시스템 상태 확인하기</h2>
 <ul>
   <li>fsck : 파일 시스템 오류 확인</li>
   <li>du : 디스크 사용량 출력</li>
-  <li>df</li>
+  <li>df :</li>
 </ul>
 
 

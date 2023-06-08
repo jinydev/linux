@@ -1,0 +1,885 @@
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jiny linux">
+    <meta name="author" content="HojinLee"><title>개발자를 위한 리눅스</title>
+      <meta name="title" content="개발자를 위한 리눅스" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="linux" />
+<meta property="og:locale" content="ko" />
+<link rel="canonical" href="https://linux.jiny.dev/polytech/hayoung/about-firewall.html" />
+<meta property="og:url" content="https://linux.jiny.dev/polytech/hayoung/about-firewall.html" />
+<meta property="og:site_name" content="linux" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="linux" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"https://linux.jiny.dev/polytech/hayoung/about-firewall.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/docs.css" rel="stylesheet" />
+    <link href="/assets/css/highlight.css" rel="stylesheet" />
+
+    <style>
+      blockquote {
+        border-left: solid 5px #ffe69c;
+        padding: 5px 10px;
+        background-color: #fff3cd;
+      }
+    </style>
+
+    <style>
+      h1 a {
+        text-decoration: none;
+      }
+
+      h2 a {
+        text-decoration: none;
+      }
+
+      h3 a {
+        text-decoration: none;
+      }
+
+      h4 a {
+        text-decoration: none;
+      }
+
+      h5 a {
+        text-decoration: none;
+      }
+
+      h6 a {
+        text-decoration: none;
+      }
+
+      img {
+        width: 100%;
+        vertical-align:top
+      }
+
+      strong a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* 스크롤바 커스텀 */
+      /* 임의의 영역 생성 */
+      .scrollBar { 
+
+      }
+
+      /* 아래의 모든 코드는 영역::코드로 사용 */
+      .scrollBar::-webkit-scrollbar {
+          width: 7px;  /* 스크롤바의 너비 */
+      }
+
+      .scrollBar::-webkit-scrollbar-thumb {
+          height: 30%; /* 스크롤바의 길이 */
+          background: #cccccc; /* 스크롤바의 색상 */
+          
+          border-radius: 5px;
+      }
+
+      .scrollBar::-webkit-scrollbar-track {
+          background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+      }
+
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4VBPCT3CR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-R4VBPCT3CR');
+    </script>
+
+
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg bd-navbar sticky-top">
+    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+        
+        <div class="bd-navbar-toggle">
+            <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar"
+                aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+                    </path>
+                </svg>
+                <span class="d-none fs-6 pe-1">Browse</span>
+            </button>
+        </div>
+
+        <!-- 로고, 모바일시 가운데 정렬 -->
+        <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="jinydev">
+            Linux
+        </a>
+
+        <!-- 모바일 좌측메뉴 mobile-right -->
+        <!-- 모바일 우측버튼 -->
+<div class="d-flex">
+    <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+            <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+        </svg>
+    </button>
+</div>
+
+<!-- OffCanvas -->
+<div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+    <!-- OffCanver Header -->
+    <div class="offcanvas-header px-4 pb-0">
+        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">JinyDev</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"
+            data-bs-target="#bdNavbar">
+        </button>
+    </div>
+
+    <!-- OffCanver Body -->
+    <div class="offcanvas-body p-4 pt-0 p-lg-0">
+        <hr class="d-lg-none text-white-50">
+
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+            <!--
+            <li class="nav-item col-6 col-lg-auto">
+                <a class="nav-link py-2 px-0 px-lg-2 active" aria-current="true"
+                    href="/">AAA</a>
+            </li>
+            -->
+                 
+        </ul>
+        
+        <hr class="d-lg-none text-white-50">
+
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <li class="nav-item col-6 col-lg-auto">
+                <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/jinydev/linux" target="_blank"
+                    rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="navbar-nav-svg"
+                        viewBox="0 0 512 499.36" role="img">
+                        <title>GitHub</title>
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                        </path>
+                    </svg>
+                    <small class="d-lg-none ms-2">GitHub</small>
+                </a>
+            </li>
+
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                <hr class="d-lg-none my-2 text-white-50">
+            </li>
+
+            <li class="nav-item dropdown">
+                <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                    커리큘럼
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center justify-content-between active"
+                            aria-current="true" href="/polytech">
+                            광명폴리택
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a class="dropdown-item"
+                            href="/polytech">광명폴리택</a>
+                    </li>
+                    
+                </ul>
+            </li>
+        </ul>
+ 
+    </div>
+</div>
+
+    </nav>
+</header>
+
+    <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+    <aside class="bd-sidebar scrollBar">
+        <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">학습목차</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- 네비게이션 -->
+            <nav class="bd-links w-100 " id="bd-docs-nav" aria-label="Docs navigation">
+	<ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2 ">
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        개발자를 위한 리눅스
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li><a href="#">01.리눅스 소개</a></li>
+        <li><a href="#">02.리눅스 설치</a></li>
+        <li><a href="#">03.기초 사용법</a></li>
+        <li><a href="#">04.리눅스 시스템</a></li>
+        <li><a href="#">05.기본 명령어</a></li>
+        <li><a href="#">06.네트워크</a></li>
+        <li><a href="#">07.도구설정</a></li>
+        <li><a href="#">08.셀 프로그래밍</a></li>
+        <li><a href="#">09.서비스와 데몬</a></li>
+        <li><a href="#">10.웹 서비스</a></li>
+        <li><a href="#">11.데이터베이스</a></li>
+        <li><a href="#">12.개발환경 및 세팅</a></li>
+        <li><a href="#">13.x-window</a></li>
+        <li><a href="#">14.시스템관리</a></li>
+        <li><a href="#">15.클라우드</a></li>
+        <li><a href="#">16.도커</a></li>
+        <li><a href="#">17.마이크로서비스</a></li>
+        <li><a href="#">19.배포</a></li>
+        <li><a href="#">20.분산서버</a></li>
+        <li><a href="#">21.데이터베이스</a></li>
+        <li><a href="#">22.장애복구</a></li>
+        <li><a href="#">23.보완</a></li>
+        <li><a href="#">24.시스템관리</a></li>
+      </ul>
+    </li>
+    
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <a href="/prologue">
+          Linux란
+        </a>        
+      </strong>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        시작하기
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/setup" class="bd-links-link d-inline-block rounded">설치</a>
+        </li>
+        <li>
+          <a href="/start" class="bd-links-link d-inline-block rounded">기초사용법</a>
+        </li>
+        <li>
+          <a href="/system" class="bd-links-link d-inline-block rounded">시스템</a>
+        </li>
+        <li>
+          <a href="/command" class="bd-links-link d-inline-block rounded">명령어</a>
+        </li>
+        <li>
+          <a href="/tools" class="bd-links-link d-inline-block rounded">도구설정</a>
+        </li>
+        <li>
+          <a href="/shell" class="bd-links-link d-inline-block rounded">쉘</a>
+        </li>
+        <li>
+          <a href="/network" class="bd-links-link d-inline-block rounded">네트워크</a>
+        </li>
+        
+        
+    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        서버구축
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/demon" class="bd-links-link d-inline-block rounded">Demon</a>
+        </li>
+        <li>
+          <a href="/database" class="bd-links-link d-inline-block rounded">데이터베이스</a>
+        </li>
+        <li>
+          <a href="/web" class="bd-links-link d-inline-block rounded">웹서버</a>
+        </li>
+
+    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        개발환경
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/dev/php" class="bd-links-link d-inline-block rounded">PHP</a>
+        </li>
+        <li>
+          <a href="/dev/nodejs" class="bd-links-link d-inline-block rounded">NodeJs</a>
+        </li>
+        <li>
+          <a href="/dev/ruby" class="bd-links-link d-inline-block rounded">Ruby</a>
+        </li>
+        <li>
+          <a href="/dev/python" class="bd-links-link d-inline-block rounded">Python</a>
+        </li>
+        <li>
+          <a href="/dev/java" class="bd-links-link d-inline-block rounded">Java</a>
+        </li>
+        <li>
+          <a href="/dev/rust" class="bd-links-link d-inline-block rounded">Rust</a>
+        </li> 
+        <li>
+          <a href="/dev/go" class="bd-links-link d-inline-block rounded">Go</a>
+        </li>    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        도커 가상환경
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      
+        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <a href="/setup/cloud">
+          클라우드
+          </a>
+        </strong>
+      
+      
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/setup/cloud/naver" class="bd-links-link d-inline-block rounded">네이버</a>
+        </li>
+        <li>
+          <a href="/setup/cloud/aws" class="bd-links-link d-inline-block rounded">AWS</a>
+        </li>	
+        <li>
+          <a href="/setup/cloud/azure" class="bd-links-link d-inline-block rounded">Azure</a>
+        </li>	
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        응용서비스
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/app/zabbix" class="bd-links-link d-inline-block rounded">Zabbix</a>
+        </li>	
+      </ul>
+    </li>
+    -->
+
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        커리큘럼
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/polytech" class="bd-links-link d-inline-block rounded">폴리택대학</a>
+        </li>	
+      </ul>
+    </li>
+    -->
+
+
+    <!--
+    <li class="bd-links-group py-2">
+      
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true">
+            <use xlink:href="#book-half"></use>
+          </svg>
+        Getting started
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/getting-started/introduction/" class="bd-links-link d-inline-block rounded active" aria-current="page">Introduction</a></li>
+          <li><a href="/docs/5.3/getting-started/download/" class="bd-links-link d-inline-block rounded">Download</a></li>
+          <li><a href="/docs/5.3/getting-started/contents/" class="bd-links-link d-inline-block rounded">Contents</a></li>
+          <li><a href="/docs/5.3/getting-started/browsers-devices/" class="bd-links-link d-inline-block rounded">Browsers &amp; devices</a></li>
+          <li><a href="/docs/5.3/getting-started/javascript/" class="bd-links-link d-inline-block rounded">JavaScript</a></li>
+          <li><a href="/docs/5.3/getting-started/webpack/" class="bd-links-link d-inline-block rounded">Webpack</a></li>
+          <li><a href="/docs/5.3/getting-started/parcel/" class="bd-links-link d-inline-block rounded">Parcel</a></li>
+          <li><a href="/docs/5.3/getting-started/vite/" class="bd-links-link d-inline-block rounded">Vite</a></li>
+          <li><a href="/docs/5.3/getting-started/accessibility/" class="bd-links-link d-inline-block rounded">Accessibility</a></li>
+          <li><a href="/docs/5.3/getting-started/rfs/" class="bd-links-link d-inline-block rounded">RFS</a></li>
+          <li><a href="/docs/5.3/getting-started/rtl/" class="bd-links-link d-inline-block rounded">RTL</a></li>
+          <li><a href="/docs/5.3/getting-started/contribute/" class="bd-links-link d-inline-block rounded">Contribute</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-pink);" aria-hidden="true"><use xlink:href="#palette2"></use></svg>
+        Customize
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/customize/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/customize/sass/" class="bd-links-link d-inline-block rounded">Sass</a></li>
+          <li><a href="/docs/5.3/customize/options/" class="bd-links-link d-inline-block rounded">Options</a></li>
+          <li><a href="/docs/5.3/customize/color/" class="bd-links-link d-inline-block rounded">Color</a></li>
+          <li><a href="/docs/5.3/customize/color-modes/" class="bd-links-link d-inline-block rounded">Color modes</a></li>
+          <li><a href="/docs/5.3/customize/components/" class="bd-links-link d-inline-block rounded">Components</a></li>
+          <li><a href="/docs/5.3/customize/css-variables/" class="bd-links-link d-inline-block rounded">CSS variables</a></li>
+          <li><a href="/docs/5.3/customize/optimize/" class="bd-links-link d-inline-block rounded">Optimize</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-teal);" aria-hidden="true"><use xlink:href="#grid-fill"></use></svg>
+        Layout
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/layout/breakpoints/" class="bd-links-link d-inline-block rounded">Breakpoints</a></li>
+          <li><a href="/docs/5.3/layout/containers/" class="bd-links-link d-inline-block rounded">Containers</a></li>
+          <li><a href="/docs/5.3/layout/grid/" class="bd-links-link d-inline-block rounded">Grid</a></li>
+          <li><a href="/docs/5.3/layout/columns/" class="bd-links-link d-inline-block rounded">Columns</a></li>
+          <li><a href="/docs/5.3/layout/gutters/" class="bd-links-link d-inline-block rounded">Gutters</a></li>
+          <li><a href="/docs/5.3/layout/utilities/" class="bd-links-link d-inline-block rounded">Utilities</a></li>
+          <li><a href="/docs/5.3/layout/z-index/" class="bd-links-link d-inline-block rounded">Z-index</a></li>
+          <li><a href="/docs/5.3/layout/css-grid/" class="bd-links-link d-inline-block rounded">CSS Grid</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-gray);" aria-hidden="true"><use xlink:href="#file-earmark-richtext"></use></svg>
+        Content
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/content/reboot/" class="bd-links-link d-inline-block rounded">Reboot</a></li>
+          <li><a href="/docs/5.3/content/typography/" class="bd-links-link d-inline-block rounded">Typography</a></li>
+          <li><a href="/docs/5.3/content/images/" class="bd-links-link d-inline-block rounded">Images</a></li>
+          <li><a href="/docs/5.3/content/tables/" class="bd-links-link d-inline-block rounded">Tables</a></li>
+          <li><a href="/docs/5.3/content/figures/" class="bd-links-link d-inline-block rounded">Figures</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"><use xlink:href="#ui-radios"></use></svg>
+        Forms
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/forms/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/forms/form-control/" class="bd-links-link d-inline-block rounded">Form control</a></li>
+          <li><a href="/docs/5.3/forms/select/" class="bd-links-link d-inline-block rounded">Select</a></li>
+          <li><a href="/docs/5.3/forms/checks-radios/" class="bd-links-link d-inline-block rounded">Checks &amp; radios</a></li>
+          <li><a href="/docs/5.3/forms/range/" class="bd-links-link d-inline-block rounded">Range</a></li>
+          <li><a href="/docs/5.3/forms/input-group/" class="bd-links-link d-inline-block rounded">Input group</a></li>
+          <li><a href="/docs/5.3/forms/floating-labels/" class="bd-links-link d-inline-block rounded">Floating labels</a></li>
+          <li><a href="/docs/5.3/forms/layout/" class="bd-links-link d-inline-block rounded">Layout</a></li>
+          <li><a href="/docs/5.3/forms/validation/" class="bd-links-link d-inline-block rounded">Validation</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-cyan);" aria-hidden="true"><use xlink:href="#menu-button-wide-fill"></use></svg>
+        Components
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/components/accordion/" class="bd-links-link d-inline-block rounded">Accordion</a></li>
+          <li><a href="/docs/5.3/components/alerts/" class="bd-links-link d-inline-block rounded">Alerts</a></li>
+          <li><a href="/docs/5.3/components/badge/" class="bd-links-link d-inline-block rounded">Badge</a></li>
+          <li><a href="/docs/5.3/components/breadcrumb/" class="bd-links-link d-inline-block rounded">Breadcrumb</a></li>
+          <li><a href="/docs/5.3/components/buttons/" class="bd-links-link d-inline-block rounded">Buttons</a></li>
+          <li><a href="/docs/5.3/components/button-group/" class="bd-links-link d-inline-block rounded">Button group</a></li>
+          <li><a href="/docs/5.3/components/card/" class="bd-links-link d-inline-block rounded">Card</a></li>
+          <li><a href="/docs/5.3/components/carousel/" class="bd-links-link d-inline-block rounded">Carousel</a></li>
+          <li><a href="/docs/5.3/components/close-button/" class="bd-links-link d-inline-block rounded">Close button</a></li>
+          <li><a href="/docs/5.3/components/collapse/" class="bd-links-link d-inline-block rounded">Collapse</a></li>
+          <li><a href="/docs/5.3/components/dropdowns/" class="bd-links-link d-inline-block rounded">Dropdowns</a></li>
+          <li><a href="/docs/5.3/components/list-group/" class="bd-links-link d-inline-block rounded">List group</a></li>
+          <li><a href="/docs/5.3/components/modal/" class="bd-links-link d-inline-block rounded">Modal</a></li>
+          <li><a href="/docs/5.3/components/navbar/" class="bd-links-link d-inline-block rounded">Navbar</a></li>
+          <li><a href="/docs/5.3/components/navs-tabs/" class="bd-links-link d-inline-block rounded">Navs &amp; tabs</a></li>
+          <li><a href="/docs/5.3/components/offcanvas/" class="bd-links-link d-inline-block rounded">Offcanvas</a></li>
+          <li><a href="/docs/5.3/components/pagination/" class="bd-links-link d-inline-block rounded">Pagination</a></li>
+          <li><a href="/docs/5.3/components/placeholders/" class="bd-links-link d-inline-block rounded">Placeholders</a></li>
+          <li><a href="/docs/5.3/components/popovers/" class="bd-links-link d-inline-block rounded">Popovers</a></li>
+          <li><a href="/docs/5.3/components/progress/" class="bd-links-link d-inline-block rounded">Progress</a></li>
+          <li><a href="/docs/5.3/components/scrollspy/" class="bd-links-link d-inline-block rounded">Scrollspy</a></li>
+          <li><a href="/docs/5.3/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
+          <li><a href="/docs/5.3/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
+          <li><a href="/docs/5.3/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-orange);" aria-hidden="true"><use xlink:href="#magic"></use></svg>
+        Helpers
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/helpers/clearfix/" class="bd-links-link d-inline-block rounded">Clearfix</a></li>
+          <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">Color &amp; background</a></li>
+          <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">Colored links</a></li>
+          <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">Position</a></li>
+          <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">Ratio</a></li>
+          <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">Stacks</a></li>
+          <li><a href="/docs/5.3/helpers/stretched-link/" class="bd-links-link d-inline-block rounded">Stretched link</a></li>
+          <li><a href="/docs/5.3/helpers/text-truncation/" class="bd-links-link d-inline-block rounded">Text truncation</a></li>
+          <li><a href="/docs/5.3/helpers/vertical-rule/" class="bd-links-link d-inline-block rounded">Vertical rule</a></li>
+          <li><a href="/docs/5.3/helpers/visually-hidden/" class="bd-links-link d-inline-block rounded">Visually hidden</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-red);" aria-hidden="true"><use xlink:href="#braces-asterisk"></use></svg>
+        Utilities
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/utilities/api/" class="bd-links-link d-inline-block rounded">API</a></li>
+          <li><a href="/docs/5.3/utilities/background/" class="bd-links-link d-inline-block rounded">Background</a></li>
+          <li><a href="/docs/5.3/utilities/borders/" class="bd-links-link d-inline-block rounded">Borders</a></li>
+          <li><a href="/docs/5.3/utilities/colors/" class="bd-links-link d-inline-block rounded">Colors</a></li>
+          <li><a href="/docs/5.3/utilities/display/" class="bd-links-link d-inline-block rounded">Display</a></li>
+          <li><a href="/docs/5.3/utilities/flex/" class="bd-links-link d-inline-block rounded">Flex</a></li>
+          <li><a href="/docs/5.3/utilities/float/" class="bd-links-link d-inline-block rounded">Float</a></li>
+          <li><a href="/docs/5.3/utilities/interactions/" class="bd-links-link d-inline-block rounded">Interactions</a></li>
+          <li><a href="/docs/5.3/utilities/object-fit/" class="bd-links-link d-inline-block rounded">Object fit</a></li>
+          <li><a href="/docs/5.3/utilities/opacity/" class="bd-links-link d-inline-block rounded">Opacity</a></li>
+          <li><a href="/docs/5.3/utilities/overflow/" class="bd-links-link d-inline-block rounded">Overflow</a></li>
+          <li><a href="/docs/5.3/utilities/position/" class="bd-links-link d-inline-block rounded">Position</a></li>
+          <li><a href="/docs/5.3/utilities/shadows/" class="bd-links-link d-inline-block rounded">Shadows</a></li>
+          <li><a href="/docs/5.3/utilities/sizing/" class="bd-links-link d-inline-block rounded">Sizing</a></li>
+          <li><a href="/docs/5.3/utilities/spacing/" class="bd-links-link d-inline-block rounded">Spacing</a></li>
+          <li><a href="/docs/5.3/utilities/text/" class="bd-links-link d-inline-block rounded">Text</a></li>
+          <li><a href="/docs/5.3/utilities/vertical-align/" class="bd-links-link d-inline-block rounded">Vertical align</a></li>
+          <li><a href="/docs/5.3/utilities/visibility/" class="bd-links-link d-inline-block rounded">Visibility</a></li>
+          <li><a href="/docs/5.3/utilities/z-index/" class="bd-links-link d-inline-block rounded">Z-index</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"><use xlink:href="#tools"></use></svg>
+        Extend
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/extend/approach/" class="bd-links-link d-inline-block rounded">Approach</a></li>
+          <li><a href="/docs/5.3/extend/icons/" class="bd-links-link d-inline-block rounded">Icons</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
+        About
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/about/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/about/team/" class="bd-links-link d-inline-block rounded">Team</a></li>
+          <li><a href="/docs/5.3/about/brand/" class="bd-links-link d-inline-block rounded">Brand</a></li>
+          <li><a href="/docs/5.3/about/license/" class="bd-links-link d-inline-block rounded">License</a></li>
+          <li><a href="/docs/5.3/about/translations/" class="bd-links-link d-inline-block rounded">Translations</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-span-all mt-1 mb-3 mx-4 border-top"></li>
+    <li class="bd-links-span-all">
+      <a href="/docs/5.3/migration/" class="bd-links-link d-inline-block rounded small ">
+        Migration
+      </a>
+    </li>
+    -->
+	</ul>
+</nav>
+        </div>
+        </div>
+    </aside>
+
+    <main class="bd-main order-1">
+        <div class="bd-content ps-lg-2">
+    <h2 id="방화벽이란">방화벽이란?</h2>
+
+<ul>
+  <li>컴퓨팅에서 방화벽 또는 파이어월 firewall은 미리 정의된 보안 규칙에 기반하여 들어오고 나가는 모든 네트워크 트래픽을 모니터링하고 제어하는 보안 시스템을 의미</li>
+  <li>일반적으로 방화벽은 신뢰할 수 있는 네트워크와 신뢰할 수 없는 네트워크 사이에 장벽을 설정</li>
+  <li>주요 목표는 내부 네트워크 또는 장치와 인터넷에서 들어오는 외부 트래픽 사이에 장벽을 만드는 것
+    <ul>
+      <li>일반적으로 내부와 외부 네트워크의 경계 지점에 위치</li>
+      <li>내부 네트워크를 안전하고 신뢰하다고 가정, 외부 네트워크는 안전하지 않고 신뢰하기 어렵다는 가정 하에 정책과 규칙을 적용</li>
+      <li>들어오고 나가는 패킷에 대해 지정된 정책과 규칙을 사용해 두 가지의 반응, 허용과 거절이라는 행동을 통해 모든 패킷을 통제</li>
+    </ul>
+  </li>
+  <li>네트워크 방화벽은 트래픽을 필터링하여 이러한 일부 위협을 차단하고 무단 액세스를 방지하여 네트워크 보안을 제공하는 사이버 보안 도구</li>
+</ul>
+
+<h3 id="firewalld-방화벽">Firewalld 방화벽</h3>
+
+<ul>
+  <li>CentOS7부터 이전의 Iptables를 대체해 새롭게 선보인 패킷 필터링 방화벽 프로그램</li>
+  <li>설정에 대한 변경을 언제든지 할 수 있고, 변경 사항을 저장할 필요 없이 즉시 적용하기 때문에 이전 방화벽이 정적 (static)인 방면 Firewalld는 동적(Dynamic) 방화벽인 점이 차이점</li>
+</ul>
+
+<h2 id="방화벽의-작동-방법">방화벽의 작동 방법</h2>
+
+<ul>
+  <li>외부 트래픽은 장치의 진입점(포트)를 통해서만 사설 네트워크에 도달할 수 있음</li>
+  <li>일반적으로 방화벽 설정을 통해 트래픽을 보호하는 곳, 액세스 제어 목록이라고 하는 정의된 규칙 또는 일련의 규칙을 기반으로 데이터 패킷을 허용하거나 차단</li>
+  <li>이러한 규칙은 IP 주소, 도메인 이름, 포트, 프로토콜, 프로그램 및 또는 키워드를 기반으로도 설정할 수 있음</li>
+</ul>
+
+<hr />
+
+<h2 id="방화벽-유형-구현-방법에-따른">방화벽 유형 (구현 방법에 따른)</h2>
+
+<ul>
+  <li>소프트웨어 방화벽</li>
+  <li>하드웨어 방화벽</li>
+  <li>클라우드 기반 방화벽</li>
+</ul>
+
+<h2 id="소프트웨어-방화벽">소프트웨어 방화벽</h2>
+
+<ul>
+  <li>자치에 설치</li>
+  <li>전체 네트워크가 아닌 개별 장치만 보호</li>
+  <li>개별 네트워크 엔드 포인트를 격리하려는 경우 유용</li>
+  <li>개인에게는 좋지만 기업 네트워크에는 적합하지 않음</li>
+  <li>수많은 개별 방화벽 유지는 어렵고 시간이 오래 걸림</li>
+  <li>윈도우 방화벽, 우분투 방화벽, 윈도우 10 방화벽 등</li>
+</ul>
+
+<h2 id="하드웨어-방화벽">하드웨어 방화벽</h2>
+
+<ul>
+  <li>공유기와 유사한 물리적 기구</li>
+  <li>네트워크에 도달하기 전에 데이터 패킷을 검사</li>
+  <li>시스템 내 공격에 취약, 일부는 여러 동시 연결을 처리할 수 없음</li>
+</ul>
+
+<h2 id="클라우드-기반-방화벽">클라우드 기반 방화벽</h2>
+
+<ul>
+  <li>프록시 서버로 설정되는 클라우드 서버를 사용</li>
+  <li>더 많은 용량을 추가, 비즈니스를 확장하려는 회사에 적합</li>
+  <li>소프트웨어 또는 하드웨어 방화벽을 사용하는 것보다 트래픽 부하를 관리하기 쉬움</li>
+</ul>
+
+<h2 id="다양한-필터링-유형">다양한 필터링 유형</h2>
+
+<h3 id="패킷-필터링-방화벽">패킷 필터링 방화벽</h3>
+
+<ul>
+  <li>공유기를 통과하는 데이터 패킷을 확인</li>
+  <li>패킷 필터링 방화벽은 내용을 검사하기 위해 패킷을 열지 않지만 발신자와 수신자의 IP 주소, 패킷 유형, 포트번호 및 기타 표면 수준 정보를 확인</li>
+</ul>
+
+<h3 id="서킷-레벨-게이트웨이">서킷 레벨 게이트웨이</h3>
+
+<p>-</p>
+
+<ul>
+  <li>패킷 필터링 방화벽과 마찬가지로 게이트웨이에서 패킷의 내용을 확인하지 않고 솟만 확인</li>
+  <li>패킷이 통과하려면 TCP(전송제어프로토콜) 핸드 셰이크에서 승인한 적법한 소스에서 가져와야 함</li>
+  <li>보안을 보장하기에 충분하지 않음
+    <ul>
+      <li>패킷이 TCP 연결에서 오는 경우에도 멀웨어를 숨기고 있을 수 있기 때문</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="상태-추적-기반-방화벽">상태 추적 기반 방화벽</h3>
+
+<ul>
+  <li>패킷 필터링 / 서킷 레벨 방화벽을 결합</li>
+  <li>패킷을 필터링하고 적법한 소스(TCP 핸드 셰이크) 에서 왔는지 확인, 더 나은 사이버 보안을 보장</li>
+  <li>더 많은 기능이 있기 때문에 더 높은 수준의 컴퓨팅 성능이 필요</li>
+</ul>
+
+<h3 id="애플리케이션-수준-게이트웨이-또는-프록시-방화벽">애플리케이션 수준 게이트웨이 또는 프록시 방화벽</h3>
+
+<ul>
+  <li>애플리케이션 계층에서 작동</li>
+  <li>내부 네트워크와 트래픽 소스 간의 트래픽을 확인</li>
+  <li>트래픽을 먼저 프록시 서버(또는 다른 클라우드 기반 솔루션)을 통해 전달하여 수신 데이터 패킷을 검사한 다음 네트워크로 전달하도록 허용</li>
+  <li>프록시 방화벽은 데이터 패킷과 TCP 핸드셰이크를 모두 확인하기 때문에 상태 추적 기반 방화벽과 다소 유사</li>
+  <li>프록시 방화벽이 패킷의 목적에 대해 요청, 패킷의 내용을 확인하고 DPI (Deep Layer Packet Inspection)를 수행</li>
+  <li>트래픽 소스에서 네트워크를 분리하여 네트워크의 익명성을 보호, 추가 보호 계층을 제공</li>
+  <li>더 나은 방어선을 제공하지만 패킷을 검사하는 데 시간이 오래 걸리므로 연결 속도가 느려질 수 있음</li>
+</ul>
+
+<h3 id="차세대-방화벽">차세대 방화벽</h3>
+
+<ul>
+  <li>명확한 설명 존재 X</li>
+</ul>
+
+<hr />
+
+<h2 id="리눅스-firewalld">리눅스 firewalld</h2>
+
+<p><img src="https://file.notion.so/f/s/11a644e0-7f1e-4732-9b52-c8b86e69a1d9/image.png?id=e1a48f0a-12b2-4f8c-af34-624a6ef52d8d&amp;table=block&amp;spaceId=f7f5a27f-fb49-4dd8-8a47-1d1cb5901c61&amp;expirationTimestamp=1682660479089&amp;signature=_zPDk2Gl6PkOTEO2bSynwSscayBfJUwDO4wm8nCQMNU&amp;downloadName=image.png" /></p>
+
+<ul>
+  <li><strong>Kali</strong> : 외부에서 침입을 시도하는 Hacker</li>
+  <li><strong>Firewalld</strong> : 침입을 방어하기 위한 일종의 보안 장비(CenOS)</li>
+  <li><strong>Windows Server</strong> : 사용자</li>
+  <li><strong>Zone</strong>
+    <ul>
+      <li>방화벽에는 기본적으로 Zone이라는 개념이 존재</li>
+      <li>Zone은 서버의 용도에 맞게 미리 정의된 네트워크 보안 레벨을 의미</li>
+      <li>아무 설정도 하지 않았다면 기본적으로 public Zone을 사용</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="etc-유용한-명령어">ETC 유용한 명령어</h2>
+
+<p><strong>firewall-cmd –state</strong></p>
+
+<p>방화벽 상태 확인</p>
+
+<p><strong>firewall-cmd –get-zones</strong></p>
+
+<p>모든 Zone 출력</p>
+
+<p><strong>firewall-cmd –get-default-zone</strong></p>
+
+<p>현재 적용된 Zone 출력</p>
+
+<p><strong>firewall-cmd –list-all</strong></p>
+
+<p>사용 가능한 서비스/포트 출력</p>
+
+<p><strong>firewall-cmd –reload</strong></p>
+
+<p>방화벽 리로드</p>
+
+
+    <div style="padding-top: 50px;">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3321560028329475"
+       crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-fb+5w+4e-db+86"
+            data-ad-client="ca-pub-3321560028329475"
+            data-ad-slot="6043271504"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>  
+</div>
+
+    
+        <div class="bd-toc mt-3 mb-5 my-lg-0 ps-xl-3 mb-lg-5 text-body-secondary">
+  
+  <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button"
+    data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+    서브목차
+    <svg class="bi d-md-none ms-2" aria-hidden="true">
+      <use xlink:href="#chevron-expand"></use>
+    </svg>
+  </button>
+
+  <strong class="d-none d-md-block h6 my-2">서브목차</strong>
+  <hr class="d-none d-md-block my-2">
+  <div class="collapse bd-toc-collapse" id="tocContents">
+    <nav id="TableOfContents">
+      <!--
+      <ul>
+        <li><a href="#quick-start">Quick start</a></li>
+        <li><a href="#cdn-links">CDN links</a></li>
+        <li><a href="#next-steps">Next steps</a></li>
+        <li><a href="#js-components">JS components</a></li>
+        <li><a href="#important-globals">Important globals</a>
+          <ul>
+            <li><a href="#html5-doctype">HTML5 doctype</a></li>
+            <li><a href="#responsive-meta-tag">Responsive meta tag</a></li>
+            <li><a href="#box-sizing">Box-sizing</a></li>
+            <li><a href="#reboot">Reboot</a></li>
+          </ul>
+        </li>
+        <li><a href="#community">Community</a></li>
+      </ul>
+      -->
+    </nav>
+  </div>
+</div>
+    </main>
+</div>
+
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+    <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+
+      <div class="row">
+
+        <div class="col-lg-3 mb-3">
+          <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="/" >
+
+            <span class="fs-5">JinyDev</span>
+          </a>
+          <ul class="list-unstyled small">
+            <li class="mb-2">지니와 함께 다양한 ICT 기술을 학습합니다.</li>
+            <li class="mb-2">Code licensed MIT</li>
+            <li class="mb-2">Currently v0.0.1</li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>FrontEnd</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://html.jiny.dev">HTML</a></li>
+            <li class="mb-2"><a href="https://css.jiny.dev">CSS</a></li>
+            
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Language</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://php.jiny.dev">PHP</a></li>
+            <li class="mb-2"><a href="https://javascript.jiny.dev">Javascript</a></li>
+            <li class="mb-2"><a href="https://mysql.jiny.dev">Mysql</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>DevOps</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://linux.jiny.dev">Linux</a></li>
+            <li class="mb-2"><a href="https://window.jiny.dev">Windows</a></li>
+            <li class="mb-2"><a href="/">Mac</a></li>
+          </ul>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://git.jiny.dev">Git</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Hardware</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://arduino.jiny.dev">Arduino</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  </body>
+</html>

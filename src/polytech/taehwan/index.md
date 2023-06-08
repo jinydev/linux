@@ -16,7 +16,6 @@ layout: home
         - (node.js의 npm이나 python의 pip나 homebrew의 brew와 같은 것)
     - 설치파일 확장자 .deb
     - 북한 붉은별os (linux 배포판)
-    
 
 ### 우분투 리눅스(Ubuntu Linux)
 

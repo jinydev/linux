@@ -1,0 +1,1202 @@
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jiny linux">
+    <meta name="author" content="HojinLee"><title>개발자를 위한 리눅스</title>
+      <meta name="title" content="개발자를 위한 리눅스" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="linux" />
+<meta property="og:locale" content="ko" />
+<link rel="canonical" href="https://linux.jiny.dev/polytech/namhoon/WSL%EB%AA%85%EB%A0%B9%EC%96%B4.html" />
+<meta property="og:url" content="https://linux.jiny.dev/polytech/namhoon/WSL%EB%AA%85%EB%A0%B9%EC%96%B4.html" />
+<meta property="og:site_name" content="linux" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="linux" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"https://linux.jiny.dev/polytech/namhoon/WSL%EB%AA%85%EB%A0%B9%EC%96%B4.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/docs.css" rel="stylesheet" />
+    <link href="/assets/css/highlight.css" rel="stylesheet" />
+
+    <style>
+      blockquote {
+        border-left: solid 5px #ffe69c;
+        padding: 5px 10px;
+        background-color: #fff3cd;
+      }
+    </style>
+
+    <style>
+      h1 a {
+        text-decoration: none;
+      }
+
+      h2 a {
+        text-decoration: none;
+      }
+
+      h3 a {
+        text-decoration: none;
+      }
+
+      h4 a {
+        text-decoration: none;
+      }
+
+      h5 a {
+        text-decoration: none;
+      }
+
+      h6 a {
+        text-decoration: none;
+      }
+
+      img {
+        width: 100%;
+        vertical-align:top
+      }
+
+      strong a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* 스크롤바 커스텀 */
+      /* 임의의 영역 생성 */
+      .scrollBar { 
+
+      }
+
+      /* 아래의 모든 코드는 영역::코드로 사용 */
+      .scrollBar::-webkit-scrollbar {
+          width: 7px;  /* 스크롤바의 너비 */
+      }
+
+      .scrollBar::-webkit-scrollbar-thumb {
+          height: 30%; /* 스크롤바의 길이 */
+          background: #cccccc; /* 스크롤바의 색상 */
+          
+          border-radius: 5px;
+      }
+
+      .scrollBar::-webkit-scrollbar-track {
+          background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+      }
+
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4VBPCT3CR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-R4VBPCT3CR');
+    </script>
+
+
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg bd-navbar sticky-top">
+    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+        
+        <div class="bd-navbar-toggle">
+            <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar"
+                aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+                    </path>
+                </svg>
+                <span class="d-none fs-6 pe-1">Browse</span>
+            </button>
+        </div>
+
+        <!-- 로고, 모바일시 가운데 정렬 -->
+        <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="jinydev">
+            Linux
+        </a>
+
+        <!-- 모바일 좌측메뉴 mobile-right -->
+        <!-- 모바일 우측버튼 -->
+<div class="d-flex">
+    <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+            <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+        </svg>
+    </button>
+</div>
+
+<!-- OffCanvas -->
+<div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+    <!-- OffCanver Header -->
+    <div class="offcanvas-header px-4 pb-0">
+        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">JinyDev</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"
+            data-bs-target="#bdNavbar">
+        </button>
+    </div>
+
+    <!-- OffCanver Body -->
+    <div class="offcanvas-body p-4 pt-0 p-lg-0">
+        <hr class="d-lg-none text-white-50">
+
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+            <!--
+            <li class="nav-item col-6 col-lg-auto">
+                <a class="nav-link py-2 px-0 px-lg-2 active" aria-current="true"
+                    href="/">AAA</a>
+            </li>
+            -->
+                 
+        </ul>
+        
+        <hr class="d-lg-none text-white-50">
+
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <li class="nav-item col-6 col-lg-auto">
+                <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/jinydev/linux" target="_blank"
+                    rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="navbar-nav-svg"
+                        viewBox="0 0 512 499.36" role="img">
+                        <title>GitHub</title>
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                        </path>
+                    </svg>
+                    <small class="d-lg-none ms-2">GitHub</small>
+                </a>
+            </li>
+
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                <hr class="d-lg-none my-2 text-white-50">
+            </li>
+
+            <li class="nav-item dropdown">
+                <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                    커리큘럼
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center justify-content-between active"
+                            aria-current="true" href="/polytech">
+                            광명폴리택
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a class="dropdown-item"
+                            href="/polytech">광명폴리택</a>
+                    </li>
+                    
+                </ul>
+            </li>
+        </ul>
+ 
+    </div>
+</div>
+
+    </nav>
+</header>
+
+    <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+    <aside class="bd-sidebar scrollBar">
+        <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">학습목차</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- 네비게이션 -->
+            <nav class="bd-links w-100 " id="bd-docs-nav" aria-label="Docs navigation">
+	<ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2 ">
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        개발자를 위한 리눅스
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li><a href="#">01.리눅스 소개</a></li>
+        <li><a href="#">02.리눅스 설치</a></li>
+        <li><a href="#">03.기초 사용법</a></li>
+        <li><a href="#">04.리눅스 시스템</a></li>
+        <li><a href="#">05.기본 명령어</a></li>
+        <li><a href="#">06.네트워크</a></li>
+        <li><a href="#">07.도구설정</a></li>
+        <li><a href="#">08.셀 프로그래밍</a></li>
+        <li><a href="#">09.서비스와 데몬</a></li>
+        <li><a href="#">10.웹 서비스</a></li>
+        <li><a href="#">11.데이터베이스</a></li>
+        <li><a href="#">12.개발환경 및 세팅</a></li>
+        <li><a href="#">13.x-window</a></li>
+        <li><a href="#">14.시스템관리</a></li>
+        <li><a href="#">15.클라우드</a></li>
+        <li><a href="#">16.도커</a></li>
+        <li><a href="#">17.마이크로서비스</a></li>
+        <li><a href="#">19.배포</a></li>
+        <li><a href="#">20.분산서버</a></li>
+        <li><a href="#">21.데이터베이스</a></li>
+        <li><a href="#">22.장애복구</a></li>
+        <li><a href="#">23.보완</a></li>
+        <li><a href="#">24.시스템관리</a></li>
+      </ul>
+    </li>
+    
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <a href="/prologue">
+          Linux란
+        </a>        
+      </strong>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        시작하기
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/setup" class="bd-links-link d-inline-block rounded">설치</a>
+        </li>
+        <li>
+          <a href="/start" class="bd-links-link d-inline-block rounded">기초사용법</a>
+        </li>
+        <li>
+          <a href="/system" class="bd-links-link d-inline-block rounded">시스템</a>
+        </li>
+        <li>
+          <a href="/command" class="bd-links-link d-inline-block rounded">명령어</a>
+        </li>
+        <li>
+          <a href="/tools" class="bd-links-link d-inline-block rounded">도구설정</a>
+        </li>
+        <li>
+          <a href="/shell" class="bd-links-link d-inline-block rounded">쉘</a>
+        </li>
+        <li>
+          <a href="/network" class="bd-links-link d-inline-block rounded">네트워크</a>
+        </li>
+        
+        
+    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        서버구축
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/demon" class="bd-links-link d-inline-block rounded">Demon</a>
+        </li>
+        <li>
+          <a href="/database" class="bd-links-link d-inline-block rounded">데이터베이스</a>
+        </li>
+        <li>
+          <a href="/web" class="bd-links-link d-inline-block rounded">웹서버</a>
+        </li>
+
+    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        개발환경
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/dev/php" class="bd-links-link d-inline-block rounded">PHP</a>
+        </li>
+        <li>
+          <a href="/dev/nodejs" class="bd-links-link d-inline-block rounded">NodeJs</a>
+        </li>
+        <li>
+          <a href="/dev/ruby" class="bd-links-link d-inline-block rounded">Ruby</a>
+        </li>
+        <li>
+          <a href="/dev/python" class="bd-links-link d-inline-block rounded">Python</a>
+        </li>
+        <li>
+          <a href="/dev/java" class="bd-links-link d-inline-block rounded">Java</a>
+        </li>
+        <li>
+          <a href="/dev/rust" class="bd-links-link d-inline-block rounded">Rust</a>
+        </li> 
+        <li>
+          <a href="/dev/go" class="bd-links-link d-inline-block rounded">Go</a>
+        </li>    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        도커 가상환경
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      
+        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <a href="/setup/cloud">
+          클라우드
+          </a>
+        </strong>
+      
+      
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/setup/cloud/naver" class="bd-links-link d-inline-block rounded">네이버</a>
+        </li>
+        <li>
+          <a href="/setup/cloud/aws" class="bd-links-link d-inline-block rounded">AWS</a>
+        </li>	
+        <li>
+          <a href="/setup/cloud/azure" class="bd-links-link d-inline-block rounded">Azure</a>
+        </li>	
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        응용서비스
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/app/zabbix" class="bd-links-link d-inline-block rounded">Zabbix</a>
+        </li>	
+      </ul>
+    </li>
+    -->
+
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        커리큘럼
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/polytech" class="bd-links-link d-inline-block rounded">폴리택대학</a>
+        </li>	
+      </ul>
+    </li>
+    -->
+
+
+    <!--
+    <li class="bd-links-group py-2">
+      
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true">
+            <use xlink:href="#book-half"></use>
+          </svg>
+        Getting started
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/getting-started/introduction/" class="bd-links-link d-inline-block rounded active" aria-current="page">Introduction</a></li>
+          <li><a href="/docs/5.3/getting-started/download/" class="bd-links-link d-inline-block rounded">Download</a></li>
+          <li><a href="/docs/5.3/getting-started/contents/" class="bd-links-link d-inline-block rounded">Contents</a></li>
+          <li><a href="/docs/5.3/getting-started/browsers-devices/" class="bd-links-link d-inline-block rounded">Browsers &amp; devices</a></li>
+          <li><a href="/docs/5.3/getting-started/javascript/" class="bd-links-link d-inline-block rounded">JavaScript</a></li>
+          <li><a href="/docs/5.3/getting-started/webpack/" class="bd-links-link d-inline-block rounded">Webpack</a></li>
+          <li><a href="/docs/5.3/getting-started/parcel/" class="bd-links-link d-inline-block rounded">Parcel</a></li>
+          <li><a href="/docs/5.3/getting-started/vite/" class="bd-links-link d-inline-block rounded">Vite</a></li>
+          <li><a href="/docs/5.3/getting-started/accessibility/" class="bd-links-link d-inline-block rounded">Accessibility</a></li>
+          <li><a href="/docs/5.3/getting-started/rfs/" class="bd-links-link d-inline-block rounded">RFS</a></li>
+          <li><a href="/docs/5.3/getting-started/rtl/" class="bd-links-link d-inline-block rounded">RTL</a></li>
+          <li><a href="/docs/5.3/getting-started/contribute/" class="bd-links-link d-inline-block rounded">Contribute</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-pink);" aria-hidden="true"><use xlink:href="#palette2"></use></svg>
+        Customize
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/customize/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/customize/sass/" class="bd-links-link d-inline-block rounded">Sass</a></li>
+          <li><a href="/docs/5.3/customize/options/" class="bd-links-link d-inline-block rounded">Options</a></li>
+          <li><a href="/docs/5.3/customize/color/" class="bd-links-link d-inline-block rounded">Color</a></li>
+          <li><a href="/docs/5.3/customize/color-modes/" class="bd-links-link d-inline-block rounded">Color modes</a></li>
+          <li><a href="/docs/5.3/customize/components/" class="bd-links-link d-inline-block rounded">Components</a></li>
+          <li><a href="/docs/5.3/customize/css-variables/" class="bd-links-link d-inline-block rounded">CSS variables</a></li>
+          <li><a href="/docs/5.3/customize/optimize/" class="bd-links-link d-inline-block rounded">Optimize</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-teal);" aria-hidden="true"><use xlink:href="#grid-fill"></use></svg>
+        Layout
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/layout/breakpoints/" class="bd-links-link d-inline-block rounded">Breakpoints</a></li>
+          <li><a href="/docs/5.3/layout/containers/" class="bd-links-link d-inline-block rounded">Containers</a></li>
+          <li><a href="/docs/5.3/layout/grid/" class="bd-links-link d-inline-block rounded">Grid</a></li>
+          <li><a href="/docs/5.3/layout/columns/" class="bd-links-link d-inline-block rounded">Columns</a></li>
+          <li><a href="/docs/5.3/layout/gutters/" class="bd-links-link d-inline-block rounded">Gutters</a></li>
+          <li><a href="/docs/5.3/layout/utilities/" class="bd-links-link d-inline-block rounded">Utilities</a></li>
+          <li><a href="/docs/5.3/layout/z-index/" class="bd-links-link d-inline-block rounded">Z-index</a></li>
+          <li><a href="/docs/5.3/layout/css-grid/" class="bd-links-link d-inline-block rounded">CSS Grid</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-gray);" aria-hidden="true"><use xlink:href="#file-earmark-richtext"></use></svg>
+        Content
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/content/reboot/" class="bd-links-link d-inline-block rounded">Reboot</a></li>
+          <li><a href="/docs/5.3/content/typography/" class="bd-links-link d-inline-block rounded">Typography</a></li>
+          <li><a href="/docs/5.3/content/images/" class="bd-links-link d-inline-block rounded">Images</a></li>
+          <li><a href="/docs/5.3/content/tables/" class="bd-links-link d-inline-block rounded">Tables</a></li>
+          <li><a href="/docs/5.3/content/figures/" class="bd-links-link d-inline-block rounded">Figures</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"><use xlink:href="#ui-radios"></use></svg>
+        Forms
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/forms/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/forms/form-control/" class="bd-links-link d-inline-block rounded">Form control</a></li>
+          <li><a href="/docs/5.3/forms/select/" class="bd-links-link d-inline-block rounded">Select</a></li>
+          <li><a href="/docs/5.3/forms/checks-radios/" class="bd-links-link d-inline-block rounded">Checks &amp; radios</a></li>
+          <li><a href="/docs/5.3/forms/range/" class="bd-links-link d-inline-block rounded">Range</a></li>
+          <li><a href="/docs/5.3/forms/input-group/" class="bd-links-link d-inline-block rounded">Input group</a></li>
+          <li><a href="/docs/5.3/forms/floating-labels/" class="bd-links-link d-inline-block rounded">Floating labels</a></li>
+          <li><a href="/docs/5.3/forms/layout/" class="bd-links-link d-inline-block rounded">Layout</a></li>
+          <li><a href="/docs/5.3/forms/validation/" class="bd-links-link d-inline-block rounded">Validation</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-cyan);" aria-hidden="true"><use xlink:href="#menu-button-wide-fill"></use></svg>
+        Components
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/components/accordion/" class="bd-links-link d-inline-block rounded">Accordion</a></li>
+          <li><a href="/docs/5.3/components/alerts/" class="bd-links-link d-inline-block rounded">Alerts</a></li>
+          <li><a href="/docs/5.3/components/badge/" class="bd-links-link d-inline-block rounded">Badge</a></li>
+          <li><a href="/docs/5.3/components/breadcrumb/" class="bd-links-link d-inline-block rounded">Breadcrumb</a></li>
+          <li><a href="/docs/5.3/components/buttons/" class="bd-links-link d-inline-block rounded">Buttons</a></li>
+          <li><a href="/docs/5.3/components/button-group/" class="bd-links-link d-inline-block rounded">Button group</a></li>
+          <li><a href="/docs/5.3/components/card/" class="bd-links-link d-inline-block rounded">Card</a></li>
+          <li><a href="/docs/5.3/components/carousel/" class="bd-links-link d-inline-block rounded">Carousel</a></li>
+          <li><a href="/docs/5.3/components/close-button/" class="bd-links-link d-inline-block rounded">Close button</a></li>
+          <li><a href="/docs/5.3/components/collapse/" class="bd-links-link d-inline-block rounded">Collapse</a></li>
+          <li><a href="/docs/5.3/components/dropdowns/" class="bd-links-link d-inline-block rounded">Dropdowns</a></li>
+          <li><a href="/docs/5.3/components/list-group/" class="bd-links-link d-inline-block rounded">List group</a></li>
+          <li><a href="/docs/5.3/components/modal/" class="bd-links-link d-inline-block rounded">Modal</a></li>
+          <li><a href="/docs/5.3/components/navbar/" class="bd-links-link d-inline-block rounded">Navbar</a></li>
+          <li><a href="/docs/5.3/components/navs-tabs/" class="bd-links-link d-inline-block rounded">Navs &amp; tabs</a></li>
+          <li><a href="/docs/5.3/components/offcanvas/" class="bd-links-link d-inline-block rounded">Offcanvas</a></li>
+          <li><a href="/docs/5.3/components/pagination/" class="bd-links-link d-inline-block rounded">Pagination</a></li>
+          <li><a href="/docs/5.3/components/placeholders/" class="bd-links-link d-inline-block rounded">Placeholders</a></li>
+          <li><a href="/docs/5.3/components/popovers/" class="bd-links-link d-inline-block rounded">Popovers</a></li>
+          <li><a href="/docs/5.3/components/progress/" class="bd-links-link d-inline-block rounded">Progress</a></li>
+          <li><a href="/docs/5.3/components/scrollspy/" class="bd-links-link d-inline-block rounded">Scrollspy</a></li>
+          <li><a href="/docs/5.3/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
+          <li><a href="/docs/5.3/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
+          <li><a href="/docs/5.3/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-orange);" aria-hidden="true"><use xlink:href="#magic"></use></svg>
+        Helpers
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/helpers/clearfix/" class="bd-links-link d-inline-block rounded">Clearfix</a></li>
+          <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">Color &amp; background</a></li>
+          <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">Colored links</a></li>
+          <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">Position</a></li>
+          <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">Ratio</a></li>
+          <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">Stacks</a></li>
+          <li><a href="/docs/5.3/helpers/stretched-link/" class="bd-links-link d-inline-block rounded">Stretched link</a></li>
+          <li><a href="/docs/5.3/helpers/text-truncation/" class="bd-links-link d-inline-block rounded">Text truncation</a></li>
+          <li><a href="/docs/5.3/helpers/vertical-rule/" class="bd-links-link d-inline-block rounded">Vertical rule</a></li>
+          <li><a href="/docs/5.3/helpers/visually-hidden/" class="bd-links-link d-inline-block rounded">Visually hidden</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-red);" aria-hidden="true"><use xlink:href="#braces-asterisk"></use></svg>
+        Utilities
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/utilities/api/" class="bd-links-link d-inline-block rounded">API</a></li>
+          <li><a href="/docs/5.3/utilities/background/" class="bd-links-link d-inline-block rounded">Background</a></li>
+          <li><a href="/docs/5.3/utilities/borders/" class="bd-links-link d-inline-block rounded">Borders</a></li>
+          <li><a href="/docs/5.3/utilities/colors/" class="bd-links-link d-inline-block rounded">Colors</a></li>
+          <li><a href="/docs/5.3/utilities/display/" class="bd-links-link d-inline-block rounded">Display</a></li>
+          <li><a href="/docs/5.3/utilities/flex/" class="bd-links-link d-inline-block rounded">Flex</a></li>
+          <li><a href="/docs/5.3/utilities/float/" class="bd-links-link d-inline-block rounded">Float</a></li>
+          <li><a href="/docs/5.3/utilities/interactions/" class="bd-links-link d-inline-block rounded">Interactions</a></li>
+          <li><a href="/docs/5.3/utilities/object-fit/" class="bd-links-link d-inline-block rounded">Object fit</a></li>
+          <li><a href="/docs/5.3/utilities/opacity/" class="bd-links-link d-inline-block rounded">Opacity</a></li>
+          <li><a href="/docs/5.3/utilities/overflow/" class="bd-links-link d-inline-block rounded">Overflow</a></li>
+          <li><a href="/docs/5.3/utilities/position/" class="bd-links-link d-inline-block rounded">Position</a></li>
+          <li><a href="/docs/5.3/utilities/shadows/" class="bd-links-link d-inline-block rounded">Shadows</a></li>
+          <li><a href="/docs/5.3/utilities/sizing/" class="bd-links-link d-inline-block rounded">Sizing</a></li>
+          <li><a href="/docs/5.3/utilities/spacing/" class="bd-links-link d-inline-block rounded">Spacing</a></li>
+          <li><a href="/docs/5.3/utilities/text/" class="bd-links-link d-inline-block rounded">Text</a></li>
+          <li><a href="/docs/5.3/utilities/vertical-align/" class="bd-links-link d-inline-block rounded">Vertical align</a></li>
+          <li><a href="/docs/5.3/utilities/visibility/" class="bd-links-link d-inline-block rounded">Visibility</a></li>
+          <li><a href="/docs/5.3/utilities/z-index/" class="bd-links-link d-inline-block rounded">Z-index</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"><use xlink:href="#tools"></use></svg>
+        Extend
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/extend/approach/" class="bd-links-link d-inline-block rounded">Approach</a></li>
+          <li><a href="/docs/5.3/extend/icons/" class="bd-links-link d-inline-block rounded">Icons</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
+        About
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/about/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/about/team/" class="bd-links-link d-inline-block rounded">Team</a></li>
+          <li><a href="/docs/5.3/about/brand/" class="bd-links-link d-inline-block rounded">Brand</a></li>
+          <li><a href="/docs/5.3/about/license/" class="bd-links-link d-inline-block rounded">License</a></li>
+          <li><a href="/docs/5.3/about/translations/" class="bd-links-link d-inline-block rounded">Translations</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-span-all mt-1 mb-3 mx-4 border-top"></li>
+    <li class="bd-links-span-all">
+      <a href="/docs/5.3/migration/" class="bd-links-link d-inline-block rounded small ">
+        Migration
+      </a>
+    </li>
+    -->
+	</ul>
+</nav>
+        </div>
+        </div>
+    </aside>
+
+    <main class="bd-main order-1">
+        <div class="bd-content ps-lg-2">
+    <h1 id="wsl이란">WSL이란?</h1>
+
+<ol>
+  <li>
+    <p>정의 : Linux용 Windows  하위 시스템(Windows Subsystem for Linux)</p>
+  </li>
+  <li>
+    <p>예전에는 윈도우에서 리눅스를 사용하려면 Virtual Machine과 같은 도구(Virtual Box, VMware 등)을 이용하여 환경을 구성하거나 듀얼 부팅 설정을 해야 했다. (라떼는 말이야..)</p>
+
+    <p>그러나 <strong>WSL을 이용하면 듀얼부팅이나 VM과 같은 느린 환경이 아니라 윈도우에서 리눅스 환경처럼 Powershell을 Bash 처럼 사용하고, Linux 명령어(sed, awk, vim, apt 등)를 사용할 수 있으며 Linux 커널조차 이용할 수 있다. (그것도 매우 빠른 부팅속도와 적은 메모리를 사용하면서 말이다!)</strong></p>
+  </li>
+</ol>
+
+<h1 id="wsl1-vs-wsl2">WSL1 vs WSL2</h1>
+
+<p><img src="https://user-images.githubusercontent.com/37948906/117979025-71623200-b36d-11eb-9b8d-cc3204dc878a.png" alt="" /></p>
+
+<p>WSL1에서는 windows의 NT Kernel 위에 WSL을 올리고 리눅스용 어플리케이션을 돌렸다면, WSL2에서는 Hypervisor 위에 윈도우 NT 커널과 리눅스 커널을 각각 올리는 방식이다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/37948906/117979981-7378c080-b36e-11eb-84c2-5c624ea68e41.png" alt="" /></p>
+
+<p>WSL2는 Linux커널을 직접 사용하기 때문에 파일 시스템 성능이 올라가고 리눅스 시스템 호출 호환성이 대폭 증가했다.</p>
+
+<h1 id="wsl-명령어-from-ms">WSL 명령어 from MS</h1>
+
+<h2 id="설치">설치</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--install</span><span class="w">
+</span></code></pre></div></div>
+
+<p>WSL 및 Linux의 기본 Ubuntu 배포판을 설치합니다. <a href="https://learn.microsoft.com/ko-kr/windows/wsl/install">자세한 정보를 알아보세요</a>. 이 명령을 사용하여 <code class="language-plaintext highlighter-rouge">wsl --install &lt;Distribution Name&gt;</code>을(를) 실행하여 추가 Linux 배포를 설치할 수도 있습니다. 유효한 배포 이름 목록을 보려면 <code class="language-plaintext highlighter-rouge">wsl --list --online</code>을(를) 실행합니다.</p>
+
+<p>표시되는 옵션은 다음과 같습니다.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--distribution</code>: 설치할 Linux 배포를 지정합니다. <code class="language-plaintext highlighter-rouge">wsl --list --online</code>을(를) 실행하여 사용 가능한 배포를 찾을 수 있습니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">--no-launch</code>: Linux 배포를 설치하지만 자동으로 시작하지는 않습니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">--web-download</code>: Microsoft Store를 사용하는 대신 온라인 원본에서 설치합니다.</li>
+</ul>
+
+<p>WSL이 설치되지 않은 경우 옵션은 다음과 같습니다.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--inbox</code>: Microsoft Store를 사용하는 대신 Windows 구성 요소를 사용하여 WSL을 설치합니다. <em>(WSL 업데이트는 스토어를 통해 사용 가능으로 푸시되는 대신 Windows 업데이트를 통해 수신됩니다.)</em></li>
+  <li><code class="language-plaintext highlighter-rouge">--enable-wsl1</code>: Microsoft Store 버전의 WSL을 설치하는 동안 “Linux용 Windows 하위 시스템” 선택적 구성 요소를 사용하도록 설정하여 WSL 1을 사용하도록 합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">--no-distribution</code>: WSL을 설치할 때 배포를 설치하지 마세요.</li>
+</ul>
+
+<p>참고</p>
+
+<p>Windows 10 또는 이전 버전에서 WSL을 실행하는 경우 배포를 지정하기 위해 명령에 플래그 <code class="language-plaintext highlighter-rouge">--install</code> 를 <code class="language-plaintext highlighter-rouge">wsl --instal -d &lt;distribution name&gt;</code>포함 <code class="language-plaintext highlighter-rouge">-d</code> 해야 할 수 있습니다.</p>
+
+<h2 id="사용-가능한-linux-배포판-나열">사용 가능한 Linux 배포판 나열</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--list</span><span class="w"> </span><span class="nt">--online</span><span class="w">
+</span></code></pre></div></div>
+
+<p>온라인 스토어를 통해 받을 수 있는 Linux 배포판 목록을 참조하세요. 이 명령은 <code class="language-plaintext highlighter-rouge">wsl -l -o</code>으로 입력할 수도 있습니다.</p>
+
+<h2 id="설치된-linux-배포판-나열">설치된 Linux 배포판 나열</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--list</span><span class="w"> </span><span class="nt">--verbose</span><span class="w">
+</span></code></pre></div></div>
+
+<p>상태(배포판이 실행 중인지 또는 중지되었는지 여부) 및 배포판을 실행하는 WSL 버전(WSL 1 또는 WSL 2)을 포함하여 Windows 머신에 설치된 Linux 배포 목록을 참조하세요. <a href="https://learn.microsoft.com/ko-kr/windows/wsl/compare-versions">WSL 1과 WSL 2를 비교</a>해 보세요. 이 명령은 <code class="language-plaintext highlighter-rouge">wsl -l -v</code>로 입력할 수도 있습니다. list 명령과 함께 사용할 수 있는 추가 옵션으로는 모든 배포판을 나열하는 <code class="language-plaintext highlighter-rouge">--all</code>, 현재 실행 중인 배포판만 나열하는 <code class="language-plaintext highlighter-rouge">--running</code>, 배포판 이름만 표시하는 <code class="language-plaintext highlighter-rouge">--quiet</code>가 있습니다.</p>
+
+<h2 id="wsl-버전을-1에서-2로-설정">WSL 버전을 1에서 2로 설정</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--set-version</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">distribution</span><span class="w"> </span><span class="nx">name</span><span class="err">&gt;</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">versionNumber</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Linux 배포판이 실행 중인 WSL 버전(1 또는 2)을 지정하려면 <code class="language-plaintext highlighter-rouge">&lt;distribution name&gt;</code>을 배포판 이름으로 바꾸고 <code class="language-plaintext highlighter-rouge">&lt;versionNumber&gt;</code>를 1 또는 2로 바꿉니다. <a href="https://learn.microsoft.com/ko-kr/windows/wsl/compare-versions">WSL 1과 WSL 2를 비교</a>해 보세요.</p>
+
+<h2 id="기본-wsl-버전-설정">기본 WSL 버전 설정</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--set-default-version</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">Version</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>WSL 1 또는 WSL 2의 기본 버전을 설정하려면 <code class="language-plaintext highlighter-rouge">&lt;Version&gt;</code>을 숫자 1 또는 2로 바꿔서 새 Linux 배포판 설치의 설치 기본값으로 사용할 WSL 버전을 표시합니다. 예: <code class="language-plaintext highlighter-rouge">wsl --set-default-version 2</code>. <a href="https://learn.microsoft.com/ko-kr/windows/wsl/compare-versions">WSL 1과 WSL 2를 비교</a>해 보세요.</p>
+
+<h2 id="기본-linux-배포판-설정">기본 Linux 배포판 설정</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--set-default</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">Distribution</span><span class="w"> </span><span class="nx">Name</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>WSL 명령에서 실행에 사용할 기본 Linux 배포판을 설정하려면 <code class="language-plaintext highlighter-rouge">&lt;Distribution Name&gt;</code>을 기본 Linux 배포판의 이름으로 바꿉니다.</p>
+
+<h2 id="디렉터리를-홈으로-변경">디렉터리를 홈으로 변경</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nx">~</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">~</code>는 wsl과 함께 사용하여 사용자의 홈 디렉터리에서 시작할 수 있습니다. WSL 명령 프롬프트 내 디렉터리에서 홈으로 다시 이동하기 위해 <code class="language-plaintext highlighter-rouge">cd ~</code> 명령을 사용할 수 있습니다.</p>
+
+<h2 id="powershell-또는-cmd에서-특정-linux-배포판-실행">PowerShell 또는 CMD에서 특정 Linux 배포판 실행</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--distribution</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">Distribution</span><span class="w"> </span><span class="nx">Name</span><span class="err">&gt;</span><span class="w"> </span><span class="nt">--user</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">User</span><span class="w"> </span><span class="nx">Name</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>특정 사용자로 특정 Linux 배포판을 실행하려면 <code class="language-plaintext highlighter-rouge">&lt;Distribution Name&gt;</code>을 기본 Linux 배포판의 이름(즉, Debian)으로 바꾸고 <code class="language-plaintext highlighter-rouge">&lt;User Name&gt;</code>을 기존 사용자의 이름(예: 루트)으로 바꿉니다. 해당 사용자가 WSL 배포판에 없는 경우 오류가 발생합니다. 현재 사용자 이름을 출력하려면 <code class="language-plaintext highlighter-rouge">whoami</code> 명령을 사용합니다.</p>
+
+<h2 id="wsl-업데이트">WSL 업데이트</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--update</span><span class="w">
+</span></code></pre></div></div>
+
+<p>WSL 버전을 최신 버전으로 업데이트합니다. 표시되는 옵션은 다음과 같습니다.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--web-download</code>: Microsoft Store가 아닌 GitHub에서 최신 업데이트를 다운로드합니다.</li>
+</ul>
+
+<h2 id="wsl-상태-확인">WSL 상태 확인</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--status</span><span class="w">
+</span></code></pre></div></div>
+
+<p>기본 배포판 유형, 기본 배포판 및 커널 버전과 같은 WSL 구성에 대한 일반 정보를 참조하세요.</p>
+
+<h2 id="wsl-버전-확인">WSL 버전 확인</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+</span></code></pre></div></div>
+
+<p>WSL 및 해당 구성 요소에 대한 버전 정보를 확인합니다.</p>
+
+<h2 id="help-명령">Help 명령</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--help</span><span class="w">
+</span></code></pre></div></div>
+
+<p>WSL에서 사용할 수 있는 옵션 및 명령 목록을 참조하세요.</p>
+
+<h2 id="특정-사용자로-실행">특정 사용자로 실행</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">-u</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">Username</span><span class="err">&gt;</span><span class="se">`,</span><span class="w"> </span><span class="se">`w</span><span class="nx">sl</span><span class="w"> </span><span class="nt">--user</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">Username</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>WSL을 지정된 사용자로 실행하려면 <code class="language-plaintext highlighter-rouge">&lt;Username&gt;</code>를 WSL 배포에 있는 사용자의 이름으로 바꿉니다.</p>
+
+<h2 id="배포의-기본-사용자-변경">배포의 기본 사용자 변경</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">&lt;</span><span class="n">DistributionName</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="nt">--default-user</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">Username</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>배포 로그인에 대한 기본 사용자를 변경합니다. 사용자가 기본 사용자가 될 수 있도록 배포 내에 이미 있어야 합니다.</p>
+
+<p>예를 들어 <code class="language-plaintext highlighter-rouge">ubuntu config --default-user johndoe</code>는 Ubuntu 배포에 대한 기본 사용자를 “johndoe” 사용자로 변경합니다.</p>
+
+<p>참고</p>
+
+<p>배포 이름을 확인하는 데 문제가 있는 경우 <code class="language-plaintext highlighter-rouge">wsl -l</code> 명령을 사용합니다.</p>
+
+<p>경고</p>
+
+<p>가져온 배포에는 실행 가능한 시작 관리자가 없기 때문에 이 명령은 작동하지 않습니다. 대신 <code class="language-plaintext highlighter-rouge">/etc/wsl.conf</code> 파일을 사용하여 가져온 배포의 기본 사용자를 변경할 수 있습니다. <a href="https://learn.microsoft.com/ko-kr/windows/wsl/wsl-config#user-settings">고급 설정 구성</a> 문서의 자동 탑재 옵션을 참조하세요.</p>
+
+<h2 id="shutdown">Shutdown</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--shutdown</span><span class="w">
+</span></code></pre></div></div>
+
+<p>실행 중인 모든 배포판과 WSL 2 경량 유틸리티 가상 머신을 즉시 종료합니다. 이 명령은 <a href="https://learn.microsoft.com/ko-kr/windows/wsl/disk-space">메모리 사용 제한 변경</a> 또는 <a href="https://learn.microsoft.com/ko-kr/windows/wsl/manage#">.wslconfig 파일 변경</a>처럼 WSL 2 가상 머신 환경을 다시 시작해야 하는 인스턴스에서 필요할 수 있습니다.</p>
+
+<h2 id="종료">종료</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--terminate</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">Distribution</span><span class="w"> </span><span class="nx">Name</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>지정된 배포판을 종료하거나 실행을 중지하려면 <code class="language-plaintext highlighter-rouge">&lt;Distribution Name&gt;</code>을 대상 배포판의 이름으로 바꿉니다.</p>
+
+<h2 id="배포-가져오기-및-내보내기">배포 가져오기 및 내보내기</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--export</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">Distribution</span><span class="w"> </span><span class="nx">Name</span><span class="err">&gt;</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">FileName</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--import</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">Distribution</span><span class="w"> </span><span class="nx">Name</span><span class="err">&gt;</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">InstallLocation</span><span class="err">&gt;</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">FileName</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>지정된 tar 파일을 새 배포로 가져오고 내보냅니다. 파일 이름은 표준 입력을 위한 것입니다. 표시되는 옵션은 다음과 같습니다.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--vhd</code>: 가져오기/내보내기 배포 지정은 tar 파일이 아닌 .vhdx 파일이어야 합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">--version</code>: 가져오기 전용의 경우, 배포를 WSL 1 또는 WSL 2 배포로 가져올지 여부를 지정합니다.</li>
+</ul>
+
+<h2 id="배포-위치로-가져오기">배포 위치로 가져오기</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--import-in-place</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">Distribution</span><span class="w"> </span><span class="nx">Name</span><span class="err">&gt;</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">FileName</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>지정된 .vhdx 파일을 새 배포로 가져옵니다. 가상 하드 디스크는 ext4 파일 시스템 형식으로 포맷되어야 합니다.</p>
+
+<h2 id="linux-배포판-등록-취소-또는-제거">Linux 배포판 등록 취소 또는 제거</h2>
+
+<p>Linux 배포는 Microsoft Store를 통해 설치할 수 있지만 이를 통해 제거할 수는 없습니다.</p>
+
+<p>WSL 배포를 등록 취소하고 제거하려면 다음을 수행합니다.</p>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--unregister</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">DistributionName</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;DistributionName&gt;</code>를 대상 Linux 배포의 이름으로 바꾸면 WSL에서 해당 배포를 등록 취소하여 다시 설치하거나 정리할 수 있습니다. <strong>주의:</strong> 등록이 취소되면 해당 배포와 관련된 모든 데이터, 설정 및 소프트웨어가 영구적으로 손실됩니다. 스토어에서 다시 설치하면 배포의 새 복사본이 설치됩니다. 예를 들어 <code class="language-plaintext highlighter-rouge">wsl --unregister Ubuntu</code>는 WSL에서 사용할 수 있는 배포에서 Ubuntu를 제거합니다. <code class="language-plaintext highlighter-rouge">wsl --list</code>를 실행하면 더 이상 나열되지 않습니다.</p>
+
+<p>다른 스토어 애플리케이션과 마찬가지로 Windows 머신에서 Linux 배포판 앱을 제거할 수도 있습니다. 다시 설치하려면 Microsoft Store에서 해당 배포를 찾아 “시작”을 선택합니다.</p>
+
+<h2 id="디스크-또는-디바이스-탑재">디스크 또는 디바이스 탑재</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--mount</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">DiskPath</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;DiskPath&gt;</code>를 디스크가 있는 디렉터리\파일 경로로 바꿔서 모든 WSL2 배포판에 물리적 디스크를 연결하고 탑재합니다. <a href="https://learn.microsoft.com/ko-kr/windows/wsl/wsl2-mount-disk">WSL 2에 Linux 디스크 탑재</a>를 참조하세요. 다음 옵션을 사용할 수 있습니다.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--vhd</code>: <code class="language-plaintext highlighter-rouge">&lt;Disk&gt;</code>(이)가 가상 하드 디스크를 참조하도록 지정합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">--name</code>: 탑재 지점에 대한 사용자 지정 이름을 사용하여 디스크를 탑재합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">--bare</code>: WSL2에 디스크를 연결하지만 탑재하지는 않습니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">--type &lt;Filesystem&gt;</code>: 디스크를 탑재할 때 사용되는 파일 시스템 유형입니다. 지정하지 않으면 기본값은 ext4입니다. 이 명령은 <code class="language-plaintext highlighter-rouge">wsl --mount -t &lt;Filesystem&gt;</code>으로 입력할 수도 있습니다. <code class="language-plaintext highlighter-rouge">blkid &lt;BlockDevice&gt;</code> 명령을 사용하여 파일 시스템 형식을 검색할 수 있습니다(예: <code class="language-plaintext highlighter-rouge">blkid &lt;dev/sdb1&gt;</code>).</li>
+  <li><code class="language-plaintext highlighter-rouge">--partition &lt;Partition Number&gt;</code>: 탑재할 파티션의 인덱스 번호입니다. 지정하지 않으면 전체 디스크가 기본값입니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">--options &lt;MountOptions&gt;</code>: 디스크를 탑재할 때 포함할 수 있는 몇 가지 파일 시스템 관련 옵션이 있습니다. <code class="language-plaintext highlighter-rouge">wsl --mount -o "data-ordered"</code> 또는 <code class="language-plaintext highlighter-rouge">wsl --mount -o "data=writeback</code> 같은 <a href="https://www.kernel.org/doc/Documentation/filesystems/ext4.txt">ext4 탑재 옵션</a>을 예로 들 수 있습니다. 그러나 현재는 파일 시스템 관련 옵션만 지원됩니다. <code class="language-plaintext highlighter-rouge">ro</code>, <code class="language-plaintext highlighter-rouge">rw</code> 또는 <code class="language-plaintext highlighter-rouge">noatime</code>과 같은 일반 옵션은 지원되지 않습니다.</li>
+</ul>
+
+<p>참고</p>
+
+<p>wsl.exe(64비트 도구)에 액세스하기 위해 32비트 프로세스를 실행하는 경우 <code class="language-plaintext highlighter-rouge">C:\Windows\Sysnative\wsl.exe --command</code>와 같은 방식으로 이 명령을 실행해야 할 수도 있습니다.</p>
+
+<h2 id="디스크-분리">디스크 분리</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wsl</span><span class="w"> </span><span class="nt">--unmount</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">DiskPath</span><span class="err">&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>디스크 경로에 지정된 디스크를 분리합니다. 디스크 경로가 지정되지 않은 경우, 이 명령은 탑재된 모든 디스크를 장착 해제하여 분리합니다.</p>
+
+<h2 id="사용되지-않은-wsl-명령">사용되지 않은 WSL 명령</h2>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wslconfig.exe</span><span class="w"> </span><span class="p">[</span><span class="n">Argument</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="n">Options</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bash</span><span class="w"> </span><span class="p">[</span><span class="n">Options</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>PowerShell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lxrun</span><span class="w"> </span><span class="nx">/</span><span class="p">[</span><span class="n">Argument</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>이러한 명령은 WSL과 함께 설치된 Linux 배포판을 구성하는 원래 wsl 구문이지만 <code class="language-plaintext highlighter-rouge">wsl</code> 또는 <code class="language-plaintext highlighter-rouge">wsl.exe</code> 명령 구문으로 대체되었습니다.</p>
+
+<h1 id="wsl-명령어-from-powershell--wsl-help">WSL 명령어 from powershell  wsl –help</h1>
+
+<p>사용량: wsl.exe [Argument] [Options…] [CommandLine]</p>
+
+<p>Linux 바이너리를 실행하기 위한 인수:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  명령줄이 제공되지 않으면 wsl.exe가 기본 셸을 시작합니다.
+
+--exec, -e &lt;CommandLine&gt;
+    기본 Linux 셸을 사용하지 않고 지정된 명령을 실행합니다.
+
+--shell-type &lt;Type&gt;
+    제공된 셸 유형으로 지정된 명령을 실행합니다.
+
+    유형:
+        standard
+            기본 Linux 셸을 사용하여 지정된 명령을 실행합니다.
+
+        login
+            기본 Linux 셸을 로그인 셸로 사용하여 지정된 명령을 실행합니다.
+
+        none
+            기본 Linux 셸을 사용하지 않고 지정된 명령을 실행합니다.
+
+--
+    나머지 명령줄을 있는 그대로 전달합니다.
+</code></pre></div></div>
+
+<p>옵션:
+    –cd <Directory>
+        지정된 디렉터리를 현재 작업 디렉터리로 설정합니다.
+        ~가 사용되면 Linux 사용자의 홈 경로가 사용됩니다. 경로가
+        / 문자로 시작되면 절대 Linux 경로로 해석됩니다.
+              그렇지 않으면 값은 절대 Windows 경로여야 합니다.</Directory></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--distribution, -d &lt;Distro&gt;
+    지정된 배포를 실행합니다.
+
+--user, -u &lt;UserName&gt;
+    지정된 사용자로 실행합니다.
+
+--system
+    시스템 배포용 셸을 시작합니다.
+</code></pre></div></div>
+
+<p>Linux용 Windows 하위 시스템 관리에 대한 인수:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--help
+    사용 정보를 표시합니다.
+
+--debug-shell
+    진단 목적을 위해 WSL2 디버그 셸을 엽니다.
+
+ --event-viewer
+    Windows 이벤트 뷰어의 애플리케이션 뷰를 엽니다.
+
+--install [Distro] [Options...]
+    Linux 배포용 Windows 하위 시스템을 설치합니다.
+     유효한 배포 목록을 보려면 'wsl.exe --list --online'을 사용하세요.
+
+    옵션:
+        --no-launch, -n
+            설치 후 배포를 시작하지 마세요.
+
+        --web-download
+            Microsoft Store 대신 인터넷에서 배포를 다운로드하세요.
+
+--mount &lt;Disk&gt;
+    모든 WSL 2 배포에 물리적 또는 가상 디스크를 연결하고 탑재합니다.
+
+    옵션:
+        --vhd
+            &lt;Disk&gt;가 가상 하드 디스크를 참조하도록 지정합니다.
+
+        --bare
+            디스크를 WSL2에 연결하되 탑재하지는 마세요.
+
+        --name &lt;Name&gt;
+            탑재 지점에 대한 사용자 지정 이름을 사용하여 디스크를 탑재합니다.
+
+        --type &lt;Type&gt;
+            지정되지 않은 경우 디스크를 탑재할 때 사용할 파일 시스템은 기본적으로 ext4입니다.
+
+        --options &lt;Options&gt;
+            추가 탑재 옵션.
+
+        --partition &lt;Index&gt;
+            탑재할 파티션의 인덱스를 지정하지 않으면 기본적으로 전체 디스크가 됩니다.
+
+--release-notes
+    웹 브라우저를 열어 WSL 릴리스 노트 페이지를 봅니다.
+
+--set-default-version &lt;Version&gt;
+    새 배포의 기본 설치 버전을 변경합니다.
+
+--shutdown
+    실행 중인 모든 배포와 WSL 2
+    경량 유틸리티 가상 머신을 즉시 종료합니다.
+
+--status
+    Linux용 Windows 하위 시스템의 상태를 표시합니다.
+
+--unmount [Disk]
+    모든 WSL2 배포에서 디스크를 탑재 해제하고 분리합니다.
+    인수 없이 호출되는 경우 모든 디스크를 탑재 해제하고 분리합니다.
+
+--update
+    Linux용 Windows 하위 시스템 패키지를 업데이트합니다.
+
+    옵션:
+        --web-download
+            Microsoft Store 대신 인터넷에서 업데이트를 다운로드합니다.
+
+        --pre-release
+            가능한 경우 사전 릴리스 버전을 다운로드합니다. --web-download를 의미합니다.
+
+--version, -v
+    버전 정보를 표시합니다.
+</code></pre></div></div>
+
+<p>Linux용 Windows 하위 시스템에서 배포를 관리하기 위한 인수:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--export &lt;Distro&gt; &lt;FileName&gt; [Options]
+    배포를 tar 파일로 내보냅니다.
+    파일 이름은 - 표준 출력일 수 있습니다.
+
+    옵션:
+        --vhd
+            배포를 .vhdx 파일로 내보내도록 지정합니다.
+
+--import &lt;Distro&gt; &lt;InstallLocation&gt; &lt;FileName&gt; [Options]
+    지정된 tar 파일을 새 배포로 가져옵니다.
+    파일 이름은 표준 입력의 경우 -일 수 있습니다.
+
+    옵션:
+        --version &lt;Version&gt;
+            새 배포에 사용할 버전을 지정합니다.
+
+        --vhd
+            제공된 파일이 tar 파일이 아닌 .vhdx 파일임을 지정합니다.
+            이 작업은 지정된 설치 위치에 .vhdx 파일의 복사본을 만듭니다.
+
+--import-in-place &lt;Distro&gt; &lt;FileName&gt;
+    지정된 .vhdx 파일을 새 배포로 가져옵니다.
+    이 가상 하드 디스크는 ext4 파일 시스템 유형으로 포맷해야 합니다.
+
+--list, -l [Options]
+    배포를 나열합니다.
+
+    옵션:
+        --all
+            현재 설치 중이거나 제거 중인 배포를 포함하여
+            모든 배포를 나열합니다.
+
+        --running
+            현재 실행 중인 배포만 나열합니다.
+
+        --quiet, -q
+            배포 이름만 표시합니다.
+
+        --verbose, -v
+            모든 배포에 대한 자세한 정보를 표시합니다.
+
+        --online, -o
+            'wsl.exe --install'을 사용하여 설치할 수 있는 배포 목록을 표시합니다.
+
+--set-default, -s &lt;Distro&gt;
+    배포를 기본값으로 설정합니다.
+
+ --set-version&lt;Distro&gt; &lt;Version&gt;
+    지정된 배포의 버전을 변경합니다.
+
+--terminate, -t &lt;Distro&gt;
+    지정된 배포를 종료합니다.
+
+--unregister &lt;Distro&gt;
+    배포를 등록 취소하고 루트 파일 시스템을 삭제합니다.
+</code></pre></div></div>
+
+
+
+    <div style="padding-top: 50px;">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3321560028329475"
+       crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-fb+5w+4e-db+86"
+            data-ad-client="ca-pub-3321560028329475"
+            data-ad-slot="6043271504"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>  
+</div>
+
+    
+        <div class="bd-toc mt-3 mb-5 my-lg-0 ps-xl-3 mb-lg-5 text-body-secondary">
+  
+  <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button"
+    data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+    서브목차
+    <svg class="bi d-md-none ms-2" aria-hidden="true">
+      <use xlink:href="#chevron-expand"></use>
+    </svg>
+  </button>
+
+  <strong class="d-none d-md-block h6 my-2">서브목차</strong>
+  <hr class="d-none d-md-block my-2">
+  <div class="collapse bd-toc-collapse" id="tocContents">
+    <nav id="TableOfContents">
+      <!--
+      <ul>
+        <li><a href="#quick-start">Quick start</a></li>
+        <li><a href="#cdn-links">CDN links</a></li>
+        <li><a href="#next-steps">Next steps</a></li>
+        <li><a href="#js-components">JS components</a></li>
+        <li><a href="#important-globals">Important globals</a>
+          <ul>
+            <li><a href="#html5-doctype">HTML5 doctype</a></li>
+            <li><a href="#responsive-meta-tag">Responsive meta tag</a></li>
+            <li><a href="#box-sizing">Box-sizing</a></li>
+            <li><a href="#reboot">Reboot</a></li>
+          </ul>
+        </li>
+        <li><a href="#community">Community</a></li>
+      </ul>
+      -->
+    </nav>
+  </div>
+</div>
+    </main>
+</div>
+
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+    <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+
+      <div class="row">
+
+        <div class="col-lg-3 mb-3">
+          <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="/" >
+
+            <span class="fs-5">JinyDev</span>
+          </a>
+          <ul class="list-unstyled small">
+            <li class="mb-2">지니와 함께 다양한 ICT 기술을 학습합니다.</li>
+            <li class="mb-2">Code licensed MIT</li>
+            <li class="mb-2">Currently v0.0.1</li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>FrontEnd</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://html.jiny.dev">HTML</a></li>
+            <li class="mb-2"><a href="https://css.jiny.dev">CSS</a></li>
+            
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Language</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://php.jiny.dev">PHP</a></li>
+            <li class="mb-2"><a href="https://javascript.jiny.dev">Javascript</a></li>
+            <li class="mb-2"><a href="https://mysql.jiny.dev">Mysql</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>DevOps</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://linux.jiny.dev">Linux</a></li>
+            <li class="mb-2"><a href="https://window.jiny.dev">Windows</a></li>
+            <li class="mb-2"><a href="/">Mac</a></li>
+          </ul>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://git.jiny.dev">Git</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Hardware</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://arduino.jiny.dev">Arduino</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  </body>
+</html>

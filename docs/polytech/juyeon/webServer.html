@@ -1,0 +1,801 @@
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jiny linux">
+    <meta name="author" content="HojinLee"><title>개발자를 위한 리눅스</title>
+      <meta name="title" content="개발자를 위한 리눅스" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="linux" />
+<meta property="og:locale" content="ko" />
+<link rel="canonical" href="https://linux.jiny.dev/polytech/juyeon/webServer.html" />
+<meta property="og:url" content="https://linux.jiny.dev/polytech/juyeon/webServer.html" />
+<meta property="og:site_name" content="linux" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="linux" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"linux","url":"https://linux.jiny.dev/polytech/juyeon/webServer.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/css/docs.css" rel="stylesheet" />
+    <link href="/assets/css/highlight.css" rel="stylesheet" />
+
+    <style>
+      blockquote {
+        border-left: solid 5px #ffe69c;
+        padding: 5px 10px;
+        background-color: #fff3cd;
+      }
+    </style>
+
+    <style>
+      h1 a {
+        text-decoration: none;
+      }
+
+      h2 a {
+        text-decoration: none;
+      }
+
+      h3 a {
+        text-decoration: none;
+      }
+
+      h4 a {
+        text-decoration: none;
+      }
+
+      h5 a {
+        text-decoration: none;
+      }
+
+      h6 a {
+        text-decoration: none;
+      }
+
+      img {
+        width: 100%;
+        vertical-align:top
+      }
+
+      strong a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* 스크롤바 커스텀 */
+      /* 임의의 영역 생성 */
+      .scrollBar { 
+
+      }
+
+      /* 아래의 모든 코드는 영역::코드로 사용 */
+      .scrollBar::-webkit-scrollbar {
+          width: 7px;  /* 스크롤바의 너비 */
+      }
+
+      .scrollBar::-webkit-scrollbar-thumb {
+          height: 30%; /* 스크롤바의 길이 */
+          background: #cccccc; /* 스크롤바의 색상 */
+          
+          border-radius: 5px;
+      }
+
+      .scrollBar::-webkit-scrollbar-track {
+          background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+      }
+
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4VBPCT3CR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-R4VBPCT3CR');
+    </script>
+
+
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg bd-navbar sticky-top">
+    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+        
+        <div class="bd-navbar-toggle">
+            <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar"
+                aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+                    </path>
+                </svg>
+                <span class="d-none fs-6 pe-1">Browse</span>
+            </button>
+        </div>
+
+        <!-- 로고, 모바일시 가운데 정렬 -->
+        <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="jinydev">
+            Linux
+        </a>
+
+        <!-- 모바일 좌측메뉴 mobile-right -->
+        <!-- 모바일 우측버튼 -->
+<div class="d-flex">
+    <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+            <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+        </svg>
+    </button>
+</div>
+
+<!-- OffCanvas -->
+<div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+    <!-- OffCanver Header -->
+    <div class="offcanvas-header px-4 pb-0">
+        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">JinyDev</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"
+            data-bs-target="#bdNavbar">
+        </button>
+    </div>
+
+    <!-- OffCanver Body -->
+    <div class="offcanvas-body p-4 pt-0 p-lg-0">
+        <hr class="d-lg-none text-white-50">
+
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+            <!--
+            <li class="nav-item col-6 col-lg-auto">
+                <a class="nav-link py-2 px-0 px-lg-2 active" aria-current="true"
+                    href="/">AAA</a>
+            </li>
+            -->
+                 
+        </ul>
+        
+        <hr class="d-lg-none text-white-50">
+
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <li class="nav-item col-6 col-lg-auto">
+                <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/jinydev/linux" target="_blank"
+                    rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="navbar-nav-svg"
+                        viewBox="0 0 512 499.36" role="img">
+                        <title>GitHub</title>
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                        </path>
+                    </svg>
+                    <small class="d-lg-none ms-2">GitHub</small>
+                </a>
+            </li>
+
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                <hr class="d-lg-none my-2 text-white-50">
+            </li>
+
+            <li class="nav-item dropdown">
+                <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                    커리큘럼
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center justify-content-between active"
+                            aria-current="true" href="/polytech">
+                            광명폴리택
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a class="dropdown-item"
+                            href="/polytech">광명폴리택</a>
+                    </li>
+                    
+                </ul>
+            </li>
+        </ul>
+ 
+    </div>
+</div>
+
+    </nav>
+</header>
+
+    <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+    <aside class="bd-sidebar scrollBar">
+        <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">학습목차</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- 네비게이션 -->
+            <nav class="bd-links w-100 " id="bd-docs-nav" aria-label="Docs navigation">
+	<ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2 ">
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        개발자를 위한 리눅스
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li><a href="#">01.리눅스 소개</a></li>
+        <li><a href="#">02.리눅스 설치</a></li>
+        <li><a href="#">03.기초 사용법</a></li>
+        <li><a href="#">04.리눅스 시스템</a></li>
+        <li><a href="#">05.기본 명령어</a></li>
+        <li><a href="#">06.네트워크</a></li>
+        <li><a href="#">07.도구설정</a></li>
+        <li><a href="#">08.셀 프로그래밍</a></li>
+        <li><a href="#">09.서비스와 데몬</a></li>
+        <li><a href="#">10.웹 서비스</a></li>
+        <li><a href="#">11.데이터베이스</a></li>
+        <li><a href="#">12.개발환경 및 세팅</a></li>
+        <li><a href="#">13.x-window</a></li>
+        <li><a href="#">14.시스템관리</a></li>
+        <li><a href="#">15.클라우드</a></li>
+        <li><a href="#">16.도커</a></li>
+        <li><a href="#">17.마이크로서비스</a></li>
+        <li><a href="#">19.배포</a></li>
+        <li><a href="#">20.분산서버</a></li>
+        <li><a href="#">21.데이터베이스</a></li>
+        <li><a href="#">22.장애복구</a></li>
+        <li><a href="#">23.보완</a></li>
+        <li><a href="#">24.시스템관리</a></li>
+      </ul>
+    </li>
+    
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        <a href="/prologue">
+          Linux란
+        </a>        
+      </strong>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        시작하기
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/setup" class="bd-links-link d-inline-block rounded">설치</a>
+        </li>
+        <li>
+          <a href="/start" class="bd-links-link d-inline-block rounded">기초사용법</a>
+        </li>
+        <li>
+          <a href="/system" class="bd-links-link d-inline-block rounded">시스템</a>
+        </li>
+        <li>
+          <a href="/command" class="bd-links-link d-inline-block rounded">명령어</a>
+        </li>
+        <li>
+          <a href="/tools" class="bd-links-link d-inline-block rounded">도구설정</a>
+        </li>
+        <li>
+          <a href="/shell" class="bd-links-link d-inline-block rounded">쉘</a>
+        </li>
+        <li>
+          <a href="/network" class="bd-links-link d-inline-block rounded">네트워크</a>
+        </li>
+        
+        
+    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        서버구축
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/demon" class="bd-links-link d-inline-block rounded">Demon</a>
+        </li>
+        <li>
+          <a href="/database" class="bd-links-link d-inline-block rounded">데이터베이스</a>
+        </li>
+        <li>
+          <a href="/web" class="bd-links-link d-inline-block rounded">웹서버</a>
+        </li>
+
+    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        개발환경
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/dev/php" class="bd-links-link d-inline-block rounded">PHP</a>
+        </li>
+        <li>
+          <a href="/dev/nodejs" class="bd-links-link d-inline-block rounded">NodeJs</a>
+        </li>
+        <li>
+          <a href="/dev/ruby" class="bd-links-link d-inline-block rounded">Ruby</a>
+        </li>
+        <li>
+          <a href="/dev/python" class="bd-links-link d-inline-block rounded">Python</a>
+        </li>
+        <li>
+          <a href="/dev/java" class="bd-links-link d-inline-block rounded">Java</a>
+        </li>
+        <li>
+          <a href="/dev/rust" class="bd-links-link d-inline-block rounded">Rust</a>
+        </li> 
+        <li>
+          <a href="/dev/go" class="bd-links-link d-inline-block rounded">Go</a>
+        </li>    
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        도커 가상환경
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      
+        <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <a href="/setup/cloud">
+          클라우드
+          </a>
+        </strong>
+      
+      
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/setup/cloud/naver" class="bd-links-link d-inline-block rounded">네이버</a>
+        </li>
+        <li>
+          <a href="/setup/cloud/aws" class="bd-links-link d-inline-block rounded">AWS</a>
+        </li>	
+        <li>
+          <a href="/setup/cloud/azure" class="bd-links-link d-inline-block rounded">Azure</a>
+        </li>	
+      </ul>
+    </li>
+
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        응용서비스
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/app/zabbix" class="bd-links-link d-inline-block rounded">Zabbix</a>
+        </li>	
+      </ul>
+    </li>
+    -->
+
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        커리큘럼
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/polytech" class="bd-links-link d-inline-block rounded">폴리택대학</a>
+        </li>	
+      </ul>
+    </li>
+    -->
+
+
+    <!--
+    <li class="bd-links-group py-2">
+      
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true">
+            <use xlink:href="#book-half"></use>
+          </svg>
+        Getting started
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/getting-started/introduction/" class="bd-links-link d-inline-block rounded active" aria-current="page">Introduction</a></li>
+          <li><a href="/docs/5.3/getting-started/download/" class="bd-links-link d-inline-block rounded">Download</a></li>
+          <li><a href="/docs/5.3/getting-started/contents/" class="bd-links-link d-inline-block rounded">Contents</a></li>
+          <li><a href="/docs/5.3/getting-started/browsers-devices/" class="bd-links-link d-inline-block rounded">Browsers &amp; devices</a></li>
+          <li><a href="/docs/5.3/getting-started/javascript/" class="bd-links-link d-inline-block rounded">JavaScript</a></li>
+          <li><a href="/docs/5.3/getting-started/webpack/" class="bd-links-link d-inline-block rounded">Webpack</a></li>
+          <li><a href="/docs/5.3/getting-started/parcel/" class="bd-links-link d-inline-block rounded">Parcel</a></li>
+          <li><a href="/docs/5.3/getting-started/vite/" class="bd-links-link d-inline-block rounded">Vite</a></li>
+          <li><a href="/docs/5.3/getting-started/accessibility/" class="bd-links-link d-inline-block rounded">Accessibility</a></li>
+          <li><a href="/docs/5.3/getting-started/rfs/" class="bd-links-link d-inline-block rounded">RFS</a></li>
+          <li><a href="/docs/5.3/getting-started/rtl/" class="bd-links-link d-inline-block rounded">RTL</a></li>
+          <li><a href="/docs/5.3/getting-started/contribute/" class="bd-links-link d-inline-block rounded">Contribute</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-pink);" aria-hidden="true"><use xlink:href="#palette2"></use></svg>
+        Customize
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/customize/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/customize/sass/" class="bd-links-link d-inline-block rounded">Sass</a></li>
+          <li><a href="/docs/5.3/customize/options/" class="bd-links-link d-inline-block rounded">Options</a></li>
+          <li><a href="/docs/5.3/customize/color/" class="bd-links-link d-inline-block rounded">Color</a></li>
+          <li><a href="/docs/5.3/customize/color-modes/" class="bd-links-link d-inline-block rounded">Color modes</a></li>
+          <li><a href="/docs/5.3/customize/components/" class="bd-links-link d-inline-block rounded">Components</a></li>
+          <li><a href="/docs/5.3/customize/css-variables/" class="bd-links-link d-inline-block rounded">CSS variables</a></li>
+          <li><a href="/docs/5.3/customize/optimize/" class="bd-links-link d-inline-block rounded">Optimize</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-teal);" aria-hidden="true"><use xlink:href="#grid-fill"></use></svg>
+        Layout
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/layout/breakpoints/" class="bd-links-link d-inline-block rounded">Breakpoints</a></li>
+          <li><a href="/docs/5.3/layout/containers/" class="bd-links-link d-inline-block rounded">Containers</a></li>
+          <li><a href="/docs/5.3/layout/grid/" class="bd-links-link d-inline-block rounded">Grid</a></li>
+          <li><a href="/docs/5.3/layout/columns/" class="bd-links-link d-inline-block rounded">Columns</a></li>
+          <li><a href="/docs/5.3/layout/gutters/" class="bd-links-link d-inline-block rounded">Gutters</a></li>
+          <li><a href="/docs/5.3/layout/utilities/" class="bd-links-link d-inline-block rounded">Utilities</a></li>
+          <li><a href="/docs/5.3/layout/z-index/" class="bd-links-link d-inline-block rounded">Z-index</a></li>
+          <li><a href="/docs/5.3/layout/css-grid/" class="bd-links-link d-inline-block rounded">CSS Grid</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-gray);" aria-hidden="true"><use xlink:href="#file-earmark-richtext"></use></svg>
+        Content
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/content/reboot/" class="bd-links-link d-inline-block rounded">Reboot</a></li>
+          <li><a href="/docs/5.3/content/typography/" class="bd-links-link d-inline-block rounded">Typography</a></li>
+          <li><a href="/docs/5.3/content/images/" class="bd-links-link d-inline-block rounded">Images</a></li>
+          <li><a href="/docs/5.3/content/tables/" class="bd-links-link d-inline-block rounded">Tables</a></li>
+          <li><a href="/docs/5.3/content/figures/" class="bd-links-link d-inline-block rounded">Figures</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"><use xlink:href="#ui-radios"></use></svg>
+        Forms
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/forms/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/forms/form-control/" class="bd-links-link d-inline-block rounded">Form control</a></li>
+          <li><a href="/docs/5.3/forms/select/" class="bd-links-link d-inline-block rounded">Select</a></li>
+          <li><a href="/docs/5.3/forms/checks-radios/" class="bd-links-link d-inline-block rounded">Checks &amp; radios</a></li>
+          <li><a href="/docs/5.3/forms/range/" class="bd-links-link d-inline-block rounded">Range</a></li>
+          <li><a href="/docs/5.3/forms/input-group/" class="bd-links-link d-inline-block rounded">Input group</a></li>
+          <li><a href="/docs/5.3/forms/floating-labels/" class="bd-links-link d-inline-block rounded">Floating labels</a></li>
+          <li><a href="/docs/5.3/forms/layout/" class="bd-links-link d-inline-block rounded">Layout</a></li>
+          <li><a href="/docs/5.3/forms/validation/" class="bd-links-link d-inline-block rounded">Validation</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-cyan);" aria-hidden="true"><use xlink:href="#menu-button-wide-fill"></use></svg>
+        Components
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/components/accordion/" class="bd-links-link d-inline-block rounded">Accordion</a></li>
+          <li><a href="/docs/5.3/components/alerts/" class="bd-links-link d-inline-block rounded">Alerts</a></li>
+          <li><a href="/docs/5.3/components/badge/" class="bd-links-link d-inline-block rounded">Badge</a></li>
+          <li><a href="/docs/5.3/components/breadcrumb/" class="bd-links-link d-inline-block rounded">Breadcrumb</a></li>
+          <li><a href="/docs/5.3/components/buttons/" class="bd-links-link d-inline-block rounded">Buttons</a></li>
+          <li><a href="/docs/5.3/components/button-group/" class="bd-links-link d-inline-block rounded">Button group</a></li>
+          <li><a href="/docs/5.3/components/card/" class="bd-links-link d-inline-block rounded">Card</a></li>
+          <li><a href="/docs/5.3/components/carousel/" class="bd-links-link d-inline-block rounded">Carousel</a></li>
+          <li><a href="/docs/5.3/components/close-button/" class="bd-links-link d-inline-block rounded">Close button</a></li>
+          <li><a href="/docs/5.3/components/collapse/" class="bd-links-link d-inline-block rounded">Collapse</a></li>
+          <li><a href="/docs/5.3/components/dropdowns/" class="bd-links-link d-inline-block rounded">Dropdowns</a></li>
+          <li><a href="/docs/5.3/components/list-group/" class="bd-links-link d-inline-block rounded">List group</a></li>
+          <li><a href="/docs/5.3/components/modal/" class="bd-links-link d-inline-block rounded">Modal</a></li>
+          <li><a href="/docs/5.3/components/navbar/" class="bd-links-link d-inline-block rounded">Navbar</a></li>
+          <li><a href="/docs/5.3/components/navs-tabs/" class="bd-links-link d-inline-block rounded">Navs &amp; tabs</a></li>
+          <li><a href="/docs/5.3/components/offcanvas/" class="bd-links-link d-inline-block rounded">Offcanvas</a></li>
+          <li><a href="/docs/5.3/components/pagination/" class="bd-links-link d-inline-block rounded">Pagination</a></li>
+          <li><a href="/docs/5.3/components/placeholders/" class="bd-links-link d-inline-block rounded">Placeholders</a></li>
+          <li><a href="/docs/5.3/components/popovers/" class="bd-links-link d-inline-block rounded">Popovers</a></li>
+          <li><a href="/docs/5.3/components/progress/" class="bd-links-link d-inline-block rounded">Progress</a></li>
+          <li><a href="/docs/5.3/components/scrollspy/" class="bd-links-link d-inline-block rounded">Scrollspy</a></li>
+          <li><a href="/docs/5.3/components/spinners/" class="bd-links-link d-inline-block rounded">Spinners</a></li>
+          <li><a href="/docs/5.3/components/toasts/" class="bd-links-link d-inline-block rounded">Toasts</a></li>
+          <li><a href="/docs/5.3/components/tooltips/" class="bd-links-link d-inline-block rounded">Tooltips</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-orange);" aria-hidden="true"><use xlink:href="#magic"></use></svg>
+        Helpers
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/helpers/clearfix/" class="bd-links-link d-inline-block rounded">Clearfix</a></li>
+          <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">Color &amp; background</a></li>
+          <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">Colored links</a></li>
+          <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">Position</a></li>
+          <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">Ratio</a></li>
+          <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">Stacks</a></li>
+          <li><a href="/docs/5.3/helpers/stretched-link/" class="bd-links-link d-inline-block rounded">Stretched link</a></li>
+          <li><a href="/docs/5.3/helpers/text-truncation/" class="bd-links-link d-inline-block rounded">Text truncation</a></li>
+          <li><a href="/docs/5.3/helpers/vertical-rule/" class="bd-links-link d-inline-block rounded">Vertical rule</a></li>
+          <li><a href="/docs/5.3/helpers/visually-hidden/" class="bd-links-link d-inline-block rounded">Visually hidden</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-red);" aria-hidden="true"><use xlink:href="#braces-asterisk"></use></svg>
+        Utilities
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/utilities/api/" class="bd-links-link d-inline-block rounded">API</a></li>
+          <li><a href="/docs/5.3/utilities/background/" class="bd-links-link d-inline-block rounded">Background</a></li>
+          <li><a href="/docs/5.3/utilities/borders/" class="bd-links-link d-inline-block rounded">Borders</a></li>
+          <li><a href="/docs/5.3/utilities/colors/" class="bd-links-link d-inline-block rounded">Colors</a></li>
+          <li><a href="/docs/5.3/utilities/display/" class="bd-links-link d-inline-block rounded">Display</a></li>
+          <li><a href="/docs/5.3/utilities/flex/" class="bd-links-link d-inline-block rounded">Flex</a></li>
+          <li><a href="/docs/5.3/utilities/float/" class="bd-links-link d-inline-block rounded">Float</a></li>
+          <li><a href="/docs/5.3/utilities/interactions/" class="bd-links-link d-inline-block rounded">Interactions</a></li>
+          <li><a href="/docs/5.3/utilities/object-fit/" class="bd-links-link d-inline-block rounded">Object fit</a></li>
+          <li><a href="/docs/5.3/utilities/opacity/" class="bd-links-link d-inline-block rounded">Opacity</a></li>
+          <li><a href="/docs/5.3/utilities/overflow/" class="bd-links-link d-inline-block rounded">Overflow</a></li>
+          <li><a href="/docs/5.3/utilities/position/" class="bd-links-link d-inline-block rounded">Position</a></li>
+          <li><a href="/docs/5.3/utilities/shadows/" class="bd-links-link d-inline-block rounded">Shadows</a></li>
+          <li><a href="/docs/5.3/utilities/sizing/" class="bd-links-link d-inline-block rounded">Sizing</a></li>
+          <li><a href="/docs/5.3/utilities/spacing/" class="bd-links-link d-inline-block rounded">Spacing</a></li>
+          <li><a href="/docs/5.3/utilities/text/" class="bd-links-link d-inline-block rounded">Text</a></li>
+          <li><a href="/docs/5.3/utilities/vertical-align/" class="bd-links-link d-inline-block rounded">Vertical align</a></li>
+          <li><a href="/docs/5.3/utilities/visibility/" class="bd-links-link d-inline-block rounded">Visibility</a></li>
+          <li><a href="/docs/5.3/utilities/z-index/" class="bd-links-link d-inline-block rounded">Z-index</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"><use xlink:href="#tools"></use></svg>
+        Extend
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/extend/approach/" class="bd-links-link d-inline-block rounded">Approach</a></li>
+          <li><a href="/docs/5.3/extend/icons/" class="bd-links-link d-inline-block rounded">Icons</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+          <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
+        About
+      </strong>
+
+      <ul class="list-unstyled fw-normal pb-2 small">
+          <li><a href="/docs/5.3/about/overview/" class="bd-links-link d-inline-block rounded">Overview</a></li>
+          <li><a href="/docs/5.3/about/team/" class="bd-links-link d-inline-block rounded">Team</a></li>
+          <li><a href="/docs/5.3/about/brand/" class="bd-links-link d-inline-block rounded">Brand</a></li>
+          <li><a href="/docs/5.3/about/license/" class="bd-links-link d-inline-block rounded">License</a></li>
+          <li><a href="/docs/5.3/about/translations/" class="bd-links-link d-inline-block rounded">Translations</a></li>
+      </ul>
+    </li>
+    <li class="bd-links-span-all mt-1 mb-3 mx-4 border-top"></li>
+    <li class="bd-links-span-all">
+      <a href="/docs/5.3/migration/" class="bd-links-link d-inline-block rounded small ">
+        Migration
+      </a>
+    </li>
+    -->
+	</ul>
+</nav>
+        </div>
+        </div>
+    </aside>
+
+    <main class="bd-main order-1">
+        <div class="bd-content ps-lg-2">
+    <h1 id="web-server">Web Server</h1>
+
+<h2 id="-웹서버의-개념">🔶 웹서버의 개념</h2>
+<p><img src="data:image/png;base64,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" alt="웹서버" /></p>
+<ul>
+  <li>
+    <p>소프트웨어 측면: 웹서버는 HTTP와 같은 프로토콜을 통해 넘어온 클라이언트의 요청에 HTML과 같은 웹 페이지로 응답하는 소프트웨어</p>
+
+    <p>ex) nginx, apache</p>
+
+    <p>→ 이 소프트웨어들은 호스팅하고 있는 서버에서 웹페이지의 컴포넌트 파일들(정적 파일 등)에 어떻게 접근하는지를 관리</p>
+  </li>
+  <li>
+    <p>하드웨어 측면: nginx나 apache와 같은 소프트웨어가 실제로 동작하고, 웹페이지의 데이터를 실제로 저장하는 서버를 의미, 웹 서버는 인터넷에 연결되어 IP주소로 식별되고, 이 주소를 통해 클라이언트와 연결된다.
+<br /><br /><br /></p>
+  </li>
+</ul>
+
+<h2 id="-리눅스-웹서버">🔶 리눅스 웹서버</h2>
+
+<p>리눅스는 안정성과 보안성이 뛰어나며, <code class="language-plaintext highlighter-rouge">무료</code>로 사용이 가능하다는 장점이 있기 때문에 웹 서비스에 많이 사용</p>
+
+<p>리눅스에서 사용되는 대표적인 웹 서버 소프트웨어로는 Apache, Nginx
+<br /><br /><br /></p>
+
+<p><img src="data:image/png;base64,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" alt="아파치톰캣" /></p>
+<h2 id="-apache">🟡 Apache</h2>
+
+<p>아파치는 월드와이드 웹 서버용 소프트웨어 (HTTP 아파치 서버, HTTP 웹 서버)</p>
+
+<p>아파치는 다양한 기능을 제공</p>
+
+<p>예를 들어, 가상 호스팅(Virtual Hosting) 기능을 지원하여, 한 대의 서버에서 여러 도메인을 호스팅할 수 있음</p>
+
+<p>또한, 암호화 통신(SSL)을 지원하여, 웹 사이트의 보안을 강화 가능</p>
+
+<p>모듈 기능을 활용하여, 웹 서버의 기능을 확장할 수 있습니다. 예를 들어, 모듈을 추가하여 PHP, Python, Ruby 등의 스크립트 언어를 지원 가능</p>
+
+<p>아파치는 오픈 소스이기 때문에, 누구나 소스 코드를 다운로드하여 수정하고 개선할 수 있다. 이러한 개방성과 유연성으로 인해, 아파치는 전 세계적으로 널리 사용되는 웹 서버 중 하나
+<br /><br /><br /></p>
+
+<h2 id="-tomcat">🟡 Tomcat</h2>
+
+<p><strong>톰캣은 아파치 소프트웨어 재단의 어플리케이션 서버로서 , 자바 서블릿을 실시키고 jsp코드가 포함되어 있는 웹페이지를 만들어준다</strong></p>
+
+<p><strong>톰캣은 web_server에서 넘어온 동적인(서버가 데이터를 처리후생성) 페이지를 읽어들여 프로그래밍을 실행하고 그 결과를 다시 html으로 재구성하여 아파치에게 되돌려 준다. 톰켓은 자체적으로 보유하고 있는 내부 웹 서버와 함께 독립적으로 사용될 수도 있지만 아파치나 넷스케이프 엔터프라이지 서버, IIS등 다른 WEB_server와 함께 사용이 가능하고 , 톰켓을 실행시키기 위해서는 JRE1.1이상에 부합된 자바 RUN_TIME의 환경을 필요로</strong>
+<br /><br /><br /></p>
+
+<aside>
+📌 아파치와 톰캣은 모두 웹 서버 소프트웨어입니다. 하지만 아파치는 정적 콘텐츠(HTML 파일, 이미지 파일 등)를 제공하는데 특화된 웹 서버이며, 톰캣은 동적인 콘텐츠(JSP, 서블릿 등)를 처리하는데 특화된 웹 애플리케이션 서버
+
+따라서, 일반적으로 아파치와 톰캣은 연동해서 사용됩니다. 아파치가 정적인 콘텐츠를 처리하고, 동적인 콘텐츠는 톰캣에게 전달하여 처리하도록 합니다. 이를 위해 아파치와 톰캣은 AJP(아파치-톰캣 연동 프로토콜)를 사용하여 통신합니다.
+
+따라서, 아파치와 톰캣은 서로 보완적인 역할을 하며, 연동해서 사용함으로써 높은 성능과 안정성을 제공
+
+</aside>
+<p><br /><br /><br /></p>
+
+<h2 id="-nginx">🟡 nginx</h2>
+
+<p>엔진엑스(nginx)는 다양한 운영 체제에서 동작하는 오픈 소스 웹 서버 소프트웨어</p>
+
+<p>아파치와 마찬가지로 HTTP 서버로서 웹 서비스를 제공할 수 있으며, 프록시 서버, 로드 밸런서, 캐시 서버 등의 기능도 제공</p>
+
+<p>엔진엑스는 아파치와 비교하여 더 높은 성능과 안정성을 제공하는데 이는 다음과 같은 특징 때문</p>
+
+<ol>
+  <li>엔진엑스는 비동기 이벤트 기반 아키텍처를 사용합니다. 이는 쓰레드나 프로세스를 생성하지 않고도 많은 수의 연결을 처리할 수 있어서, 높은 동시 접속 처리 능력을 가집니다.</li>
+  <li>엔진엑스는 고성능 캐싱 기능을 가지고 있습니다. 이는 정적인 콘텐츠를 캐시하여 빠르게 제공할 수 있어서, 동적인 콘텐츠를 처리하는데에도 높은 성능을 발휘합니다.</li>
+  <li>엔진엑스는 모듈 기능을 활용하여 다양한 기능을 확장할 수 있습니다. 이러한 모듈은 다양한 프로토콜(WebSocket, RTMP 등)을 지원하거나, 보안 기능을 제공하기도 합니다.</li>
+  <li>엔진엑스는 아파치와 마찬가지로 오픈 소스이기 때문에, 누구나 소스 코드를 다운로드하여 수정하고 개선할 수 있습니다.</li>
+</ol>
+
+<p>따라서, 엔진엑스는 높은 성능과 안정성을 요구하는 대규모 웹 서비스에서 널리 사용되는 웹 서버 소프트웨어 중 하나</p>
+
+
+    <div style="padding-top: 50px;">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3321560028329475"
+       crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-fb+5w+4e-db+86"
+            data-ad-client="ca-pub-3321560028329475"
+            data-ad-slot="6043271504"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>  
+</div>
+
+    
+        <div class="bd-toc mt-3 mb-5 my-lg-0 ps-xl-3 mb-lg-5 text-body-secondary">
+  
+  <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button"
+    data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+    서브목차
+    <svg class="bi d-md-none ms-2" aria-hidden="true">
+      <use xlink:href="#chevron-expand"></use>
+    </svg>
+  </button>
+
+  <strong class="d-none d-md-block h6 my-2">서브목차</strong>
+  <hr class="d-none d-md-block my-2">
+  <div class="collapse bd-toc-collapse" id="tocContents">
+    <nav id="TableOfContents">
+      <!--
+      <ul>
+        <li><a href="#quick-start">Quick start</a></li>
+        <li><a href="#cdn-links">CDN links</a></li>
+        <li><a href="#next-steps">Next steps</a></li>
+        <li><a href="#js-components">JS components</a></li>
+        <li><a href="#important-globals">Important globals</a>
+          <ul>
+            <li><a href="#html5-doctype">HTML5 doctype</a></li>
+            <li><a href="#responsive-meta-tag">Responsive meta tag</a></li>
+            <li><a href="#box-sizing">Box-sizing</a></li>
+            <li><a href="#reboot">Reboot</a></li>
+          </ul>
+        </li>
+        <li><a href="#community">Community</a></li>
+      </ul>
+      -->
+    </nav>
+  </div>
+</div>
+    </main>
+</div>
+
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+    <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+
+      <div class="row">
+
+        <div class="col-lg-3 mb-3">
+          <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="/" >
+
+            <span class="fs-5">JinyDev</span>
+          </a>
+          <ul class="list-unstyled small">
+            <li class="mb-2">지니와 함께 다양한 ICT 기술을 학습합니다.</li>
+            <li class="mb-2">Code licensed MIT</li>
+            <li class="mb-2">Currently v0.0.1</li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>FrontEnd</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://html.jiny.dev">HTML</a></li>
+            <li class="mb-2"><a href="https://css.jiny.dev">CSS</a></li>
+            
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Language</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://php.jiny.dev">PHP</a></li>
+            <li class="mb-2"><a href="https://javascript.jiny.dev">Javascript</a></li>
+            <li class="mb-2"><a href="https://mysql.jiny.dev">Mysql</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>DevOps</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://linux.jiny.dev">Linux</a></li>
+            <li class="mb-2"><a href="https://window.jiny.dev">Windows</a></li>
+            <li class="mb-2"><a href="/">Mac</a></li>
+          </ul>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://git.jiny.dev">Git</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Hardware</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://arduino.jiny.dev">Arduino</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  </body>
+</html>

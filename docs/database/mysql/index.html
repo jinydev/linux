@@ -225,6 +225,38 @@
 	<ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2 ">
     <li class="bd-links-group py-2">
       <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        개발자를 위한 리눅스
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li><a href="#">01.리눅스 소개</a></li>
+        <li><a href="#">02.리눅스 설치</a></li>
+        <li><a href="#">03.기초 사용법</a></li>
+        <li><a href="#">04.리눅스 시스템</a></li>
+        <li><a href="#">05.기본 명령어</a></li>
+        <li><a href="#">06.네트워크</a></li>
+        <li><a href="#">07.도구설정</a></li>
+        <li><a href="#">08.셀 프로그래밍</a></li>
+        <li><a href="#">09.서비스와 데몬</a></li>
+        <li><a href="#">10.웹 서비스</a></li>
+        <li><a href="#">11.데이터베이스</a></li>
+        <li><a href="#">12.개발환경 및 세팅</a></li>
+        <li><a href="#">13.x-window</a></li>
+        <li><a href="#">14.시스템관리</a></li>
+        <li><a href="#">15.클라우드</a></li>
+        <li><a href="#">16.도커</a></li>
+        <li><a href="#">17.마이크로서비스</a></li>
+        <li><a href="#">19.배포</a></li>
+        <li><a href="#">20.분산서버</a></li>
+        <li><a href="#">21.데이터베이스</a></li>
+        <li><a href="#">22.장애복구</a></li>
+        <li><a href="#">23.보완</a></li>
+        <li><a href="#">24.시스템관리</a></li>
+      </ul>
+    </li>
+    
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
         <a href="/prologue">
           Linux란
         </a>        
@@ -351,19 +383,20 @@
         </li>	
       </ul>
     </li>
+    -->
 
-  <!--
-	<li class="bd-links-group py-2">
-		<strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
-      커리큘럼
-		</strong>
-		<ul class="list-unstyled fw-normal pb-2 small">
-			<li>
-				<a href="/polytech" class="bd-links-link d-inline-block rounded">폴리택대학</a>
-			</li>	
-		</ul>
-  </li>
--->
+    <!--
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        커리큘럼
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        <li>
+          <a href="/polytech" class="bd-links-link d-inline-block rounded">폴리택대학</a>
+        </li>	
+      </ul>
+    </li>
+    -->
 
 
     <!--
@@ -578,19 +611,54 @@
     <main class="bd-main order-1">
         <div class="bd-content ps-lg-2">
     <h1 id="mysql">Mysql</h1>
+<p>Mysql을 설치하고 접속하는 방법에 대해서 학습합니다.</p>
 
 <h2 id="mysql이란">Mysql이란</h2>
 
 <h2 id="설치">설치</h2>
+<p>래드햇 계열의 경우 <code class="language-plaintext highlighter-rouge">yum</code>을 통하여 mysql을 설치 가능합니다.</p>
+<ul>
+  <li><a href="/database/mysql/yum">yum 설치</a></li>
+</ul>
+
+<p>우부툰 계열의 경우 <code class="language-plaintext highlighter-rouge">apt</code>을 통하여 mysql을 설치 가능합니다.</p>
+<ul>
+  <li><a href="/database/mysql/apt">apt 설치</a></li>
+</ul>
+
+<h2 id="실행-및-재시작">실행 및 재시작</h2>
+<p>mysql을 설치한 후에는 별도로 명령을 입력하여 서버를 실행해 주어야 합니다. <code class="language-plaintext highlighter-rouge">service</code> 또는 <code class="language-plaintext highlighter-rouge">systemctl</code> 명령을 통하여 서비스 데모을 실행할 수 있습니다.</p>
 
 <ul>
-  <li><a href="/database/mysql/setup">서버설치</a></li>
+  <li><a href="service">서비스 실행</a></li>
 </ul>
 
 <h2 id="보완설정-및-접속">보완설정 및 접속</h2>
 <ul>
   <li><a href="/database/mysql/password">패스워드 설정</a></li>
-  <li><a href="/database/mysql/client">클라이언트 접속</a></li>
+</ul>
+
+<h3 id="외부접속-허용">외부접속 허용</h3>
+<p>Localhost 외의 외부 IP에서 mysql에 접속을 하기 위해서는 추가 환경설정을 변경해 주어야 합니다.</p>
+
+<h2 id="접속">접속</h2>
+<ul>
+  <li><a href="/database/mysql/client">콘솔 접속</a></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">MysqlWorkBench</code>는 GUI 방식으로 mysql 데이터베이스에 접속을 관리하는 클리이언트 입니다.</p>
+<ul>
+  <li><a href="/database/client/mysqlworkbench">workbench</a> 설치 및 실행하기</li>
+</ul>
+
+<p>DBEver는 mysql 말고도 다양한 데이터베이스에 접속하여 관리할 수 있습니다.</p>
+<ul>
+  <li><a href="/database/client/dbeaver">dbever</a> 설치 및 실행하기</li>
+</ul>
+
+<p>HeidiSQL은 윈도우용 mysql을 설치하면 같이 설치가 됩니다.</p>
+<ul>
+  <li><a href="/database/client/heidisql">HeidiSQL 설치하기</a></li>
 </ul>
 
 
