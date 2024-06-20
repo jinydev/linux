@@ -18,7 +18,10 @@ layout: home
 ###### - [CI/CD - 플랫폼 소개](./cicd_2)
 ###### - [Proxy 서버와 Load Balancer](./proxy_loadbalancer_1)
 ###### - [MSA(Micro Service Architecture)란?](./msa_1)
+###### - [미들웨어(Middleware)란?](./middleware_1)
 
 #### 교재 정리
 ###### - [리눅스 커맨드라인 완벽입문 12.VI 맛보기](./book_12)
 ###### - [이것이 리눅스다 01.실습 환경 구축](./book_1)
+###### - [리눅스 커맨드라인 완벽입문 26.하향식 설계](./book_26)
+###### - [이것이 리눅스다 08.원격지 시스템 관리하기](./book_8)
