@@ -19,6 +19,10 @@ layout: home
 
 [ 20230426 - service ](./230426_ftp)
 
+[ 20230427 - shell_script_debugging ](./230427_shell_script_debugging)
+
+[ 20230428 - round_robin_nameserver ](./230428_round_robin_nameserver)
+
 [ 우분투 리눅스 03. 리눅스 탐험 ](./book_explore_linux)
 
 [ 리눅스 프로그래밍 01. 리눅스 기초 ](./book_linux_basic)
