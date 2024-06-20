@@ -23,7 +23,11 @@ EX) 현재 디렉토리가 **"C:\Users\UserName"**일 때, **"C:\Program Files"*
 
 ../ 는 상위 경로 의미함 -> ../는 현재 폴더가 속한 폴더를 가리킴.
 
+<<<<<<< HEAD
+<image src = "images/yulim_image.png">
+=======
 <image src = "images/0.png">
+>>>>>>> 5d197891e9f091b4df4dfbe152750fce1ce28344
 
 여기서 **img src = "images/0.png"** 로 표시할 수 있는 이유는 현재 작업하고 이는 md의 위치와 이미지 파일을 가져오는 위치가 같기 때문에 가능하다.
 만약 yulim 하위에 있는 md가 아닌 예를 들어 minyoung 폴더에서 작업 중이라면 이미지를 불러오기 위해서는 **img src="../yulim/images/0.png"** 이렇게 표시해야 한다.
