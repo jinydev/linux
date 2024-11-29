@@ -3,6 +3,7 @@ layout: home
 ---
 
 # ParkTaeHyeon Report
+
 - [ 20230417 - Day1-Window의 역사](ParkTaeHyeon_Report_1.0) => 발표
 - [ 20230418 - Day2-Virtual Box VS VMWARE](./(0418)ParkTaeHyeon_Report_2.0) => 발표
 - [ 20230419 - Day3-Ubuntu VS Rocky](./(0419)ParkTaeHyeon_Report_3.0)
@@ -13,4 +14,4 @@ layout: home
 - [ 20230426 - Day8-CMD vs POWERSHELL vs WINDOW TERMINAL](./(0426)ParkTaeHyeon_Report_8.0)
 - [ 주말과제](./(%EC%A3%BC%EB%A7%90%EA%B3%BC%EC%A0%9C)%EB%A6%AC%EB%88%85%EC%8A%A4_%EC%BB%A4%EB%A7%A8%EB%93%9C%EB%9D%BC%EC%9D%B8_%EC%99%84%EB%B2%BD%EC%9E%85%EB%AC%B8)
 - [ 주말과제](./(%EC%A3%BC%EB%A7%90%EA%B3%BC%EC%A1%94)%EC%9D%B4%EA%B2%83%EC%9D%B4_%EB%A6%AC%EB%88%85%EC%8A%A4%EB%8B%A4_CentOS)
-<br>
+
