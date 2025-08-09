@@ -6,16 +6,42 @@ url: "https://linux.jiny.dev"
 twitter_username: infohojin
 github_username:  infohojin@gmail.com
 
+# GitHub Pages 배포를 위한 설정
 source: src
 destination: docs
 
 github_url: https://github.com/jinydev/linux
 
+# Jekyll 설정
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 플러그인 설정
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Sass 설정
 sass:
   load_paths:
     - _sass
     - ../node_modules/bootstrap/scss
 
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
+# GitHub Pages 호환성을 위한 설정
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .github/
+  - .git/
+  - README.md
+  - package.json
+  - package-lock.json
