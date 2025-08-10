@@ -4,16 +4,81 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Jiny linux">
-    <meta name="author" content="HojinLee">
+    
+    <!-- 기본 메타데이터 -->
+    {%- if page.description -%}
+      <meta name="description" content="{{ page.description }}">
+    {%- else -%}
+      <meta name="description" content="Jiny linux">
+    {%- endif -%}
+    
+    {%- if page.author -%}
+      <meta name="author" content="{{ page.author }}">
+    {%- else -%}
+      <meta name="author" content="HojinLee">
+    {%- endif -%}
 
+    <!-- 제목 설정 -->
     {%- if page.title -%}
-      <title>개발자를 위한 리눅스 - {{ page.title }}</title>
-      <meta name="title" content="개발자를 위한 리눅스 - {{ page.title }}" />
+      <title>{{ page.title }}</title>
+      <meta name="title" content="{{ page.title }}" />
     {%- else -%}
       <title>개발자를 위한 리눅스</title>
       <meta name="title" content="개발자를 위한 리눅스" />
     {%- endif -%}    
+
+    <!-- 키워드 설정 -->
+    {%- if page.keywords -%}
+      <meta name="keywords" content="{{ page.keywords }}">
+    {%- endif -%}
+
+    <!-- Open Graph 메타데이터 -->
+    {%- if page.og_title -%}
+      <meta property="og:title" content="{{ page.og_title }}">
+    {%- elsif page.title -%}
+      <meta property="og:title" content="{{ page.title }}">
+    {%- else -%}
+      <meta property="og:title" content="개발자를 위한 리눅스">
+    {%- endif -%}
+
+    {%- if page.og_description -%}
+      <meta property="og:description" content="{{ page.og_description }}">
+    {%- elsif page.description -%}
+      <meta property="og:description" content="{{ page.description }}">
+    {%- else -%}
+      <meta property="og:description" content="Jiny linux">
+    {%- endif -%}
+
+    {%- if page.og_type -%}
+      <meta property="og:type" content="{{ page.og_type }}">
+    {%- else -%}
+      <meta property="og:type" content="website">
+    {%- endif -%}
+
+    <meta property="og:locale" content="ko">
+    <meta property="og:site_name" content="linux">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+    <!-- Twitter 카드 메타데이터 -->
+    {%- if page.twitter_card -%}
+      <meta name="twitter:card" content="{{ page.twitter_card }}">
+    {%- else -%}
+      <meta name="twitter:card" content="summary">
+    {%- endif -%}
+
+    {%- if page.og_title -%}
+      <meta property="twitter:title" content="{{ page.og_title }}">
+    {%- elsif page.title -%}
+      <meta property="twitter:title" content="{{ page.title }}">
+    {%- else -%}
+      <meta property="twitter:title" content="개발자를 위한 리눅스">
+    {%- endif -%}
+
+    {%- if page.og_description -%}
+      <meta property="twitter:description" content="{{ page.og_description }}">
+    {%- elsif page.description -%}
+      <meta property="twitter:description" content="{{ page.description }}">
+    {%- endif -%}
 
     {% seo title=false %}
 

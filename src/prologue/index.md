@@ -1,5 +1,21 @@
 ---
 layout: home
+title: "리눅스 소개 - 운영체제 기초와 리눅스의 이해"
+description: "리눅스 운영체제 소개와 기초 개념. 운영체제의 정의와 역할, 리눅스의 탄생과 역사, 리눅스 운영체제 구조, 배포판 종류, 리눅스의 활용 분야를 학습합니다."
+keywords: "리눅스, Linux, 운영체제, 오픈소스, 커널, 셸, 유틸리티, 배포판, Ubuntu, CentOS"
+author: "리눅스 강의 개발팀"
+date: 2024-12-01
+last_modified_at: 2024-12-01
+categories: ["리눅스", "운영체제", "기초"]
+tags: ["리눅스", "Linux", "운영체제", "오픈소스", "커널", "셸", "유틸리티", "배포판", "Ubuntu", "CentOS"]
+og_title: "리눅스 소개 - 운영체제 기초와 리눅스의 이해"
+og_description: "리눅스 운영체제 소개와 기초 개념. 운영체제의 정의와 역할, 리눅스의 탄생과 역사를 학습합니다."
+og_type: "article"
+og_image: "/assets/images/linux-intro-og.jpg"
+twitter_card: "summary"
+twitter_title: "리눅스 소개 - 운영체제 기초와 리눅스의 이해"
+twitter_description: "리눅스 운영체제 소개와 기초 개념"
+canonical_url: "https://example.com/linux-introduction"
 ---
 
 # 리눅스
