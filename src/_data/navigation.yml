@@ -1,0 +1,482 @@
+main:
+- title: 01.리눅스와 소개
+  url: /01_intro/
+  subitems:
+  - title: 01.리눅스와 소개
+    url: /01_intro/
+  - title: 운영체제란?
+    url: /prologue/os
+  - title: bios
+    url: /prologue/os/bios
+  - title: firmware
+    url: /prologue/os/firmware
+  - title: 인터페이스
+    url: /prologue/os/interface
+  - title: 운영체제의 종류
+    url: /prologue/os/type
+  - title: 유닉스
+    url: /prologue/unix
+  - title: 솔라리스
+    url: /prologue/solaris
+  - title: 리눅스
+    url: /prologue/linux
+  - title: 오픈 소스 운영체제
+    url: /prologue/develop
+  - title: 리눅스의 종류
+    url: /prologue/distribution
+  - title: 오픈소스 라이센스
+    url: /prologue/opensource
+  - title: 리눅스 운영체제의 구조
+    url: /prologue
+  - title: 커널
+    url: /prologue/kernel
+  - title: cli
+    url: /prologue/cli
+  - title: x-window
+    url: /prologue/xwindow
+  - title: 리눅스의 활용
+    url: /prologue/application
+  - title: 라즈베리파이
+    url: /prologue/iot
+- title: 02.리눅스 설치
+  url: /02_setup/
+  subitems:
+  - title: 02.리눅스 설치
+    url: /02_setup/
+  - title: 설치
+    url: /setup
+  - title: iso이미지란
+    url: /setup/iso
+  - title: 인스톨러
+    url: /setup/installer
+  - title: Ubuntu
+    url: /setup/ubuntu
+  - title: CentOS
+    url: /setup/centos
+  - title: OracleLinux
+    url: /setup/oracle
+  - title: rocky
+    url: /setup/rocky
+  - title: wsl 배경
+    url: /setup/wsl
+  - title: wsl 시스템
+    url: /setup/wsl/system
+  - title: wsl 배포판
+    url: /setup/wsl/distribution
+  - title: wsl 설치 및 명령어
+    url: /setup/wsl/command
+  - title: 가상머신
+    url: /setup/virtual
+  - title: Virtualbox
+    url: /setup/virtual/virtualbox
+  - title: VMWare
+    url: /setup/virtual/vmware
+  - title: Bare-Metal
+    url: /setup/bare
+  - title: 멀티부팅
+    url: /setup/bare/multiboot
+  - title: 호스팅 서비스
+    url: /setup/hosting
+  - title: 서버호스팅
+    url: /setup/hosting/server
+  - title: 웹호스팅
+    url: /setup/hosting/web
+  - title: 클라우드
+    url: /setup/cloud
+  - title: 가상화란?
+    url: /setup/cloud/virtual
+- title: 03.기초 사용법
+  url: /03_basic/
+  subitems:
+  - title: 03.기초 사용법
+    url: /03_basic/
+  - title: 기초 사용법
+    url: /start
+  - title: 다중 사용자 시스템
+    url: /start/multi
+  - title: 사용자 자원 공유
+    url: /start/share
+  - title: 사용자 보안
+    url: /start/secure
+  - title: 효율성
+    url: /start/usefull
+  - title: 유지 보수
+    url: /start/maintance
+  - title: 사용자관리
+    url: /start/user
+  - title: 사용자 목록
+    url: /start/user/list
+  - title: 계정관리
+    url: /start/user/account
+  - title: 비밀번호 관리
+    url: /start/user/password
+  - title: 그룹관리
+    url: /start/group
+  - title: 그룹관리 명령어
+    url: /start/group/command
+  - title: 로그인 이란
+    url: /start/login
+  - title: 로그인 기록
+    url: /start/login/log
+  - title: 로그아웃
+    url: /start/logout
+  - title: x-window
+    url: /start/logout/gui
+  - title: 콘솔
+    url: /start/logout/cli
+  - title: TTY
+    url: /start/tty
+  - title: 최상위 관리자란?
+    url: /start/root
+  - title: sudo 관리자
+    url: /start/root/sudo
+  - title: su 권환획득
+    url: /start/root/su
+  - title: 에디터의 종류
+    url: /start/edit
+  - title: vi
+    url: /start/edit/vi
+  - title: nano
+    url: /start/edit/nano
+  - title: gedit
+    url: /start/edit/gedit
+  - title: 리눅스를 종료하는 방법
+    url: /start/out
+  - title: 리다이렉션이란
+    url: /start/redirection
+  - title: 파이프란
+    url: /start/pipe
+  - title: 자동 완성 기능
+    url: /start/auto
+  - title: 명령어 그룹핑
+    url: /start/grouping
+- title: 04.리눅스 시스템
+  url: /04_system/
+  subitems:
+  - title: 04.리눅스 시스템
+    url: /04_system/
+  - title: 리눅스 시스템
+    url: /system
+  - title: 부팅단계
+    url: /system/boot
+  - title: 파일시스템
+    url: /system/file
+  - title: 파일 시스템의 종류
+    url: /system/file/ext
+  - title: 파일이란?
+    url: /system/file/file
+  - title: 디렉터리란?
+    url: /system/file/directory
+  - title: 경로
+    url: /system/file/path
+  - title: 디스크 관리
+    url: /system/disk
+  - title: 디스크 추가
+    url: /system/disk/add
+  - title: 디스크 모니터링
+    url: /system/disk/monitor
+  - title: 소유권
+    url: /system/ownership
+  - title: 허가권
+    url: /system/permit
+  - title: 프로세스란?
+    url: /system/process
+  - title: 프로세스 제어
+    url: /system/process/run
+  - title: 프로세스 명령어
+    url: /system/process/command
+  - title: 서비스(데몬)
+    url: /demon
+  - title: 스케쥴이란
+    url: /system/schedule
+  - title: 스케쥴이란 알고리즘
+    url: /system/schedule/algorism
+  - title: crontab
+    url: /system/schedule/crontab
+  - title: inittab
+    url: /system/schedule/inittab
+  - title: 시스템체크
+    url: /system/check
+  - title: 타임존 설정
+    url: /system/setting/time
+  - title: 로케일
+    url: /system/setting/locale
+- title: 05.기본 명령어
+  url: /05_command/
+  subitems:
+  - title: 05.기본 명령어
+    url: /05_command/
+  - title: 컴파일이란
+    url: /system/compile
+  - title: 컴파일 설치
+    url: /system/compile/install
+  - title: 패키지 관리란?
+    url: /system/package
+  - title: DPKG와 APT
+    url: /system/package/apt
+  - title: rpm과 yum
+    url: /system/package/yum
+  - title: dnf
+    url: /system/package/dnf
+  - title: 원격 접속
+    url: /system/remote
+  - title: ssh
+    url: /system/remote/ssh
+  - title: telnet
+    url: /system/remote/telnet
+  - title: putty 설치
+    url: /system/remote/putty
+  - title: 윈도우터미널
+    url: /system/remote/winterm
+  - title: vnc
+    url: /system/remote/vnc
+  - title: 기본명령어
+    url: /command
+  - title: 명령어 히스토리
+    url: /command/history
+- title: 06.네트워크
+  url: /06_network/
+  subitems:
+  - title: 06.네트워크
+    url: /06_network/
+  - title: 네트워크
+    url: /network
+  - title: 네트워크 구성
+    url: /network/wire
+  - title: LAN
+    url: /network/hardware
+  - title: IP 주소
+    url: /network/ip
+  - title: 클래스
+    url: /network/ip/class
+  - title: 서브넷 마스크
+    url: /network/ip/mask
+  - title: 포트
+    url: /network/ip/port
+  - title: 소켓
+    url: /network/ip/soket
+  - title: 주소체계
+    url: /network/ip/address
+  - title: tcp/ip
+    url: /network/tcp
+  - title: 호스트 이름
+    url: /network/host
+  - title: 도메인
+    url: /network/domain
+  - title: 방화벽
+    url: /network/firewall
+  - title: ACL
+    url: /network/acl
+  - title: NAT 설정
+    url: /network/nat
+  - title: virtualBox
+    url: /network/nat/virtualbox
+  - title: vmware
+    url: /network/nat/vmware
+  - title: ip확인 및 설정
+    url: /system/ip
+- title: 07.도구설정
+  url: /07_tools/
+  subitems:
+  - title: 07.도구설정
+    url: /07_tools/
+  - title: curl
+    url: /tools/curl
+  - title: git 설치
+    url: /tools/git
+  - title: vscode 설치
+    url: /tools/vscode
+  - title: 원격연결
+    url: /tools/vscode/remote
+  - title: gcc
+    url: /dev/gcc
+  - title: gcc
+    url: /dev/gcc
+- title: 08.쉘 프로그래밍
+  url: /08_shell/
+  subitems:
+  - title: 08.쉘 프로그래밍
+    url: /08_shell/
+  - title: 리눅스 셀
+    url: /shell
+- title: 09.서버스와 데몬
+  url: /09_daemon/
+  subitems:
+  - title: 09.서버스와 데몬
+    url: /09_daemon/
+  - title: 서버스와 데몬
+    url: /demon
+  - title: 서버란?
+    url: /demon/server
+  - title: 데몬이란?
+    url: /demon/demon
+  - title: 서비스란?
+    url: /demon/service
+  - title: systemd란
+    url: /demon/systemd
+  - title: 런-레벨
+    url: /demon/runlevel
+  - title: systemctl
+    url: /demon/systemctl
+  - title: ftp
+    url: /demon/ftp
+  - title: Samba
+    url: /demon/samba
+  - title: dns란?
+    url: /demon/dns
+  - title: dns 수정 및 설정
+    url: /demon/dns/setting
+  - title: Mail
+    url: /demon/mail
+- title: 10.웹 서버스
+  url: /10_web/
+  subitems:
+  - title: 10.웹 서버스
+    url: /10_web/
+  - title: 웹서비스란?
+    url: /web/service
+  - title: Web Server의 역할
+    url: /web/server
+  - title: 아파치란
+    url: /web/apache
+  - title: apt로 설치하기
+    url: /web/apache/apt
+  - title: yum으로 설치하기
+    url: /web/apache/yum
+  - title: 아파치 설정
+    url: /web/apache/conf
+  - title: nginx란
+    url: /web/nginx
+  - title: apt로 설치하기
+    url: /web/nginx/apt
+  - title: yum로 설치하기
+    url: /web/nginx/yum
+  - title: nginx 설정
+    url: /web/nginx/conf
+  - title: https란
+    url: /web/https
+  - title: Let's Encription
+    url: /web/https/letsEncription
+  - title: was란
+    url: /web/was
+  - title: 톰켓서버
+    url: /web/was/tomcat
+  - title: java가 설치
+    url: /dev/java
+  - title: tomcat9
+    url: /web/was/tomcat/tomcat9
+  - title: tomcat10
+    url: /web/was/tomcat/tomcat10
+  - title: deploy
+    url: /web/was/tomcat/deploy
+  - title: connector
+    url: /web/was/tomcat/connector
+  - title: 아파치연동
+    url: /web/was/tomcat/connector/apache
+  - title: Nginx연동
+    url: /web/was/tomcat/connector/nginx
+- title: 11.데이터베이스 구축하기
+  url: /11_database/
+  subitems:
+  - title: 11.데이터베이스 구축하기
+    url: /11_database/
+  - title: 데이터베이스
+    url: /database
+  - title: sqlight
+    url: /database/sqlight
+  - title: mysql
+    url: /database/mysql
+  - title: 마리아db
+    url: /database/mariadb
+  - title: postgresql
+    url: /database/postgresql
+  - title: oracle
+    url: /database/oracle
+  - title: 몽고DB
+    url: /database/mongo
+  - title: redis
+    url: /database/redis
+- title: 12.개발환경 및 세팅
+  url: /12_dev_env/
+  subitems:
+  - title: 12.개발환경 및 세팅
+    url: /12_dev_env/
+  - title: php 개발하기
+    url: /dev/php
+  - title: nginx
+    url: /web/nginx
+  - title: php.jiny.dev
+    url: https://php.jiny.dev
+  - title: JAVA
+    url: /dev/java
+  - title: jsp 및 서블릿
+    url: /dev/java/jsp
+  - title: 이클립스 톰켓연동
+    url: /dev/java/eclipse
+  - title: NodeJS
+    url: /dev/nodejs
+  - title: Volta
+    url: /tools/volta
+  - title: 파이선 이란
+    url: /dev/python
+  - title: 파이선 설치
+    url: /dev/python/setup
+  - title: rust
+    url: /dev/rust
+  - title: go
+    url: /dev/go
+- title: 13.X-Window
+  url: /13_xwindow/
+  subitems:
+  - title: 13.X-Window
+    url: /13_xwindow/
+  - title: x-window란
+    url: /xwindow
+- title: 14.시스템 관리
+  url: /14_sys_admin/
+  subitems:
+  - title: 14.시스템 관리
+    url: /14_sys_admin/
+  - title: 시스템 측정 및 상태
+    url: /system/monitor
+  - title: 로그 파일과 시스템 모니터링
+    url: /system/monitor/log
+  - title: 패킷 분석 및 디버깅 도구의 사용 방법
+    url: /system/monitor/packet
+  - title: tar를 이용한 백업과 복구
+    url: /system/backup
+- title: 15.클라우드
+  url: /15_cloud/
+  subitems:
+  - title: 15.클라우드
+    url: /15_cloud/
+  - title: 클라우드
+    url: /cloud
+- title: 16.도커
+  url: /16_docker/
+  subitems:
+  - title: 16.도커
+    url: /16_docker/
+  - title: 도커 설치
+    url: /doker/install
+- title: 17.마이크로서비스
+  url: /17_microservice/
+- title: 18.쿠버네티스
+  url: /18_k8s/
+- title: 19.배포
+  url: /19_deploy/
+  subitems:
+  - title: 19.배포
+    url: /19_deploy/
+  - title: 코드 배포 및 테스트
+    url: /deploy
+- title: 20.웹서버 운영
+  url: /20_web_ops/
+- title: 21.데이터베이스
+  url: /21_db_ops/
+- title: 22.장애복구
+  url: /22_recovery/
+- title: 23.보완
+  url: /23_security/
+- title: 24.시스템 관리
+  url: /24_sys_mgmt/

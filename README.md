@@ -44,8 +44,10 @@ bundle install
 npm install
 
 # 로컬 서버 실행
-bundle exec jekyll serve
+bundle exec jekyll serve --port 4001
 ```
+
+접속: [http://localhost:4001](http://localhost:4001)
 
 ### 주의사항
 

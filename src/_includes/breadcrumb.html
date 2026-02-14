@@ -1,0 +1,26 @@
+<nav aria-label="breadcrumb" class="mt-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ " /" | relative_url }}">Home</a></li>
+        {% assign crumbs = page.url | split: '/' %}
+        {% assign current_path = "" %}
+        {% for crumb in crumbs offset: 1 %}
+        {% if crumb != "index.html" and crumb != "" %}
+        {% assign current_path = current_path | append: "/" | append: crumb %}
+        {% if forloop.last %}
+        <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+        {% else %}
+        {% assign crumb_title = crumb | replace: '_', ' ' | capitalize %}
+        {% comment %} Try to find title in navigation {% endcomment %}
+        {% for nav_item in site.data.navigation.main %}
+        {% assign nav_url_check = nav_item.url | remove: "/" %}
+        {% assign crumb_check = current_path | remove: "/" %}
+        {% if nav_url_check == crumb_check %}
+        {% assign crumb_title = nav_item.title %}
+        {% endif %}
+        {% endfor %}
+        <li class="breadcrumb-item"><a href="{{ current_path | append: '/' | relative_url }}">{{ crumb_title }}</a></li>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </ol>
+</nav>
