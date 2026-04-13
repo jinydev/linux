@@ -3,6 +3,10 @@ layout: home
 title: "7.4 소스 파일 컴파일 설치"
 ---
 
+[⬅️ 이전: 7.3 레드햇 계열 (RPM/DNF) 패키지 관리](../05_3_3_dnf/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 13.2 예약 및 정기구동 (cron) ➡️](../../05_4_cron/)
+
+![4 COMPILE 개념도](img/concept_architecture.svg)
+
 # 7.4 근본적인 설치 방식, 수동 컴파일(Compile)
 
 모든 프로그램은 개발자가 인간의 언어(C, Java 등)로 짠 코드를 기계가 알아들을 수 있는 언어(0과 1)로 번역해주는 과정을 거칩니다. 이 번역 작업을 스스로 수행하며 소프트웨어를 까는 행위를 **수동 컴파일 설치**라고 합니다.
@@ -60,3 +64,7 @@ gcc --version
 sudo apt update
 sudo apt install -y build-essential
 ```
+
+---
+
+[⬅️ 이전: 7.3 레드햇 계열 (RPM/DNF) 패키지 관리](../05_3_3_dnf/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 13.2 예약 및 정기구동 (cron) ➡️](../../05_4_cron/)

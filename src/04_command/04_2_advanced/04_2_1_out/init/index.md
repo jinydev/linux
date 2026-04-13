@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: halt](../halt/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: PowerOff ➡️](../poweroff/)
+
+![INIT 개념도](img/concept_architecture.svg)
+
 # init 종료
 `init` 명령은 시스템의 `런레벨`을 변경하거나, 시스템을 종료하거나, 다시 부팅할 때 사용됩니다.  
 
@@ -29,3 +33,7 @@ init 명령을 사용하여 시스템을 종료하거나 다시 부팅할 수도
 
 ## 런레벨 확인
 현재의 런레벨 번호를 확인하는 명령어는 `runlevel` 입니다. 이 명령어를 입력하면 현재 시스템의 런레벨 번호와 이전 런레벨 번호를 확인할 수 있습니다.
+
+---
+
+[⬅️ 이전: halt](../halt/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: PowerOff ➡️](../poweroff/)

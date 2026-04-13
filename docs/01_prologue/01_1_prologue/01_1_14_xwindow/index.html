@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="X Window System(X11)의 정의, 아키텍처, 데스크탑 환경, 원격 접속에 대한 포괄적인 가이드. 클라이언트-서버 아키텍처와 GNOME, KDE, Xfce 등 다양한 데스크탑 환경을 알아보세요."><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>X-Window System - 개발자를 위한 리눅스</title>
   <meta name="title" content="X-Window System - 개발자를 위한 리눅스" /><!-- 키워드 설정 --><meta name="keywords" content="X-Window, X11, GUI, 그래픽사용자인터페이스, 클라이언트-서버, GNOME, KDE, Xfce, 원격접속, 네트워크투명성"><!-- Open Graph 메타데이터 --><meta property="og:title" content="X-Window System - 개발자를 위한 리눅스"><meta property="og:description" content="X Window System(X11)의 정의, 아키텍처, 데스크탑 환경, 원격 접속에 대한 포괄적인 가이드"><meta property="og:type" content="article"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/01_prologue/01_1_prologue/01_1_14_xwindow/">
+  <meta property="og:url" content="https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_14_xwindow/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="X-Window System - 개발자를 위한 리눅스"><meta property="twitter:description" content="X Window System(X11)의 정의, 아키텍처, 데스크탑 환경, 원격 접속에 대한 포괄적인 가이드"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="X Window System(X11)의 정의, 아키텍처, 데스크탑 환경, 원격 접속에 대한 포괄적인 가이드. 클라이언트-서버 아키텍처와 GNOME, KDE, Xfce 등 다양한 데스크탑 환경을 알아보세요." />
 <meta property="og:description" content="X Window System(X11)의 정의, 아키텍처, 데스크탑 환경, 원격 접속에 대한 포괄적인 가이드. 클라이언트-서버 아키텍처와 GNOME, KDE, Xfce 등 다양한 데스크탑 환경을 알아보세요." />
-<link rel="canonical" href="http://localhost:4000/01_prologue/01_1_prologue/01_1_14_xwindow/" />
-<meta property="og:url" content="http://localhost:4000/01_prologue/01_1_prologue/01_1_14_xwindow/" />
+<link rel="canonical" href="https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_14_xwindow/" />
+<meta property="og:url" content="https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_14_xwindow/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="X-Window System - 개발자를 위한 리눅스" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"HojinLee"},"description":"X Window System(X11)의 정의, 아키텍처, 데스크탑 환경, 원격 접속에 대한 포괄적인 가이드. 클라이언트-서버 아키텍처와 GNOME, KDE, Xfce 등 다양한 데스크탑 환경을 알아보세요.","headline":"X-Window System - 개발자를 위한 리눅스","url":"http://localhost:4000/01_prologue/01_1_prologue/01_1_14_xwindow/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"HojinLee"},"description":"X Window System(X11)의 정의, 아키텍처, 데스크탑 환경, 원격 접속에 대한 포괄적인 가이드. 클라이언트-서버 아키텍처와 GNOME, KDE, Xfce 등 다양한 데스크탑 환경을 알아보세요.","headline":"X-Window System - 개발자를 위한 리눅스","url":"https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_14_xwindow/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1176,7 +1176,19 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="x-window">X-Window</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../01_1_13_unix/">⬅️ 이전: 유닉스(Unix)란 - 개발자를 위한 리눅스</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../01_1_1_android/">다음: 안드로이드 - 리눅스 기반 스마트폰 운영체제 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="14 XWINDOW 개념도" /></p>
+
+<h1 id="x-window">X-Window</h1>
 <p>X Window System, 일반적으로 <code class="language-plaintext highlighter-rouge">X</code> 또는 <code class="language-plaintext highlighter-rouge">X11</code>이라고도 불리는 것은 리눅스와 같은 유닉스 계열 운영체제에서 사용되는 윈도우 시스템입니다. X Window System은 사용자가 GUI(Graphical User Interface)를 통해 리눅스 시스템을 조작할 수 있도록 해줍니다.</p>
 
 <h2 id="아키텍처">아키텍처</h2>
@@ -1209,6 +1221,18 @@
   <li><strong>보안</strong>: SSH 터널링을 통한 안전한 원격 접속 지원</li>
   <li><strong>성능</strong>: 네트워크 환경에 따라 최적화된 그래픽 전송</li>
 </ul>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../01_1_13_unix/">⬅️ 이전: 유닉스(Unix)란 - 개발자를 위한 리눅스</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../01_1_1_android/">다음: 안드로이드 - 리눅스 기반 스마트폰 운영체제 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

@@ -2,14 +2,40 @@
 layout: home
 ---
 
-# 파일이란
+[⬅️ 이전: 파일 시스템의 종류](../03_2_3_ext/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 링크 ➡️](../03_2_5_link/)
 
+![4 FILE 개념도](img/concept_architecture.svg)
+
+# 파일이란
 
 ## 파일이란?
 컴퓨터 파일은 컴퓨터 등의 기기에서 의미가 있는 정보를 담는 논리적인 단위이다. 하드디스크, CD, DVD 등 저장매체에 대하여 추상화된 정보 단위이다. 운영체제는 파일 조작에 관련된 기능을 API로 제공한다. [위키백과]
 
 ### 파일의 종류
+
+## 1️⃣ 핵심 학습 가이드
   * [링크](/system/file/link)
+
+* [grep](/command/grep)  
+지정된 표현 형식이 전체에 있는지 찾아서 출력합니다.
+
+* [cmp](/command/cmp) : 두개의 파일을 비교하는 명령
+* [diff](/command/diff) : 두개의 파일의 차이를 보여줌
+
+
+## 2️⃣ 심화 및 연계 파트 1
+* [sort](/command/sort) : 파일 내용을 정렬 조건에 따라 정렬
+
+* [find](/command/find)
+
+* [tar](/command/tar)
+* [compress/uncompress](/command/compress)
+
+## 3️⃣ 심화 및 연계 파트 2
+* [gzip/unzip](/command/gzip)
+
+* [wc](/command/wc) : 파일의 문자수 세기
+
 
 ### 파일조작
 
@@ -37,9 +63,6 @@ layout: home
 
 파일 내 지정된 패턴이 있는지 찾아내기 위하여 파이프 필터(`|`) 와 `grep` 명령을 사용한다.
 
-* [grep](/command/grep)  
-지정된 표현 형식이 전체에 있는지 찾아서 출력합니다.
-
 ### 리다이렉션(Redirection)
 명령어의 결과를 다은 명령의 입력로 전환하여 사용
 
@@ -47,28 +70,17 @@ layout: home
 
 * 꺽쇠(`<`, `>`, `>>`) : 입력 또는 출력의 방향을 변경합니다.
 
-
 #### 파일비교
-* [cmp](/command/cmp) : 두개의 파일을 비교하는 명령
-* [diff](/command/diff) : 두개의 파일의 차이를 보여줌
-
-
 ### 파일 정렬
 파일의 내용을 기반으로 정렬합니다.
-
-* [sort](/command/sort) : 파일 내용을 정렬 조건에 따라 정렬
 
 ### 파일검색
 파일을 검색합니다.
 
-* [find](/command/find)
-
 ### 파일 압축
 여러개의 파일을 압축하여 하나의 파일로 보관합니다.
 
-* [tar](/command/tar)
-* [compress/uncompress](/command/compress)
-* [gzip/unzip](/command/gzip)
-
 ### 기타
-* [wc](/command/wc) : 파일의 문자수 세기
+---
+
+[⬅️ 이전: 파일 시스템의 종류](../03_2_3_ext/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 링크 ➡️](../03_2_5_link/)

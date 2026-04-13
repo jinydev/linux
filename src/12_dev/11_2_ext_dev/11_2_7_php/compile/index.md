@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: php 7.2 centos 설치](../centos_php7/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: PHP 컴포저 설치 ➡️](../composer/)
+
+![COMPILE 개념도](img/concept_architecture.svg)
+
 # PHP 컴파일 설치
 ---
 컴파일을 통하여 php를 설치 합니다.
@@ -57,3 +61,6 @@ $ ./configure \
 $ make && make test && make install
 ```
 
+---
+
+[⬅️ 이전: php 7.2 centos 설치](../centos_php7/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: PHP 컴포저 설치 ➡️](../composer/)

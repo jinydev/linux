@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: ACL](../06_1_7_acl/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: firewall-cmd ➡️](firewall-cmd/)
+
+![9 FIREWALL 개념도](img/concept_architecture.svg)
+
 # 방화벽 설정
 서버는 다양한 서비스들을 제공합니다. 제공되는 서비스를 구분하기 위하여 포트를 활용합니다. 
 
@@ -10,7 +14,6 @@ layout: home
 기본적으로 서버는 다양한 포트들을 개방해 놓고 있다. 일부는 권한이 없는 사람들이 포트를 통하여 접속을 하기도 한다.
 방화벽은 이러한 포트를 비활성화 하여 접속을 제한하거나, 허용할 수 있게 만드는 것이다.
 * 보안을 위하여 외부에 서비스를 제공할 때 필요한 포트만 열어주는 방식으로 사용할 것
-
 
 ## 방화벽 설정
 ---
@@ -34,8 +37,7 @@ $ gufw
 
 ### 실행
 
-![image-20230324183101920](./img/image-20230324183101920.png)
-
+<!-- Broken Image Removed: ./img/image-20230324183101920.png -->
 
 ## SeLinux 방화벽
 
@@ -64,3 +66,7 @@ grubby --update-kernel ALL --args selinux=0
 ```
 dnf install -y firewall-config
 ```
+
+---
+
+[⬅️ 이전: ACL](../06_1_7_acl/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: firewall-cmd ➡️](firewall-cmd/)

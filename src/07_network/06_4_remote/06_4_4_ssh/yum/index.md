@@ -3,6 +3,10 @@ layout: home
 title: "래드햇 계열에서 OpenSSH 설치하기"
 ---
 
+[⬅️ 이전: Virtualbox_ip](../virtualbox_ip/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: 텔렛 ➡️](../../06_4_5_telnet/)
+
+![YUM 개념도](img/concept_architecture.svg)
+
 # 래드햇 계열에서 OpenSSH 설치하기
 `yum` 명령어를 사용하여 OpenSSH 서버를 설치합니다.
 
@@ -19,3 +23,7 @@ yum install openssh-server
 
 *  macOS나 Linux 시스템에서는 터미널을 열고 ssh 명령어를 사용하여 연결할 수 있습니다. 
 * Windows 시스템에서는 PuTTY와 같은 SSH 클라이언트 프로그램을 사용할 수 있습니다.
+
+---
+
+[⬅️ 이전: Virtualbox_ip](../virtualbox_ip/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: 텔렛 ➡️](../../06_4_5_telnet/)

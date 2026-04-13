@@ -3,6 +3,10 @@ layout: home
 typora-copy-images-to: ./img
 ---
 
+[⬅️ 이전: Apt](../apt/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: Java8 ➡️](../../8/)
+
+![YUM 개념도](img/concept_architecture.svg)
+
 # Java11 (Yum)
 yum 패키지 관리자를 사용하여 Linux 시스템에 최신의 Java를 설치합니다.
 
@@ -36,6 +40,6 @@ OpenJDK Runtime Environment (Red_Hat-11.0.19.0.7-1.el9_1) (build 11.0.19+7-LTS)
 OpenJDK 64-Bit Server VM (Red_Hat-11.0.19.0.7-1.el9_1) (build 11.0.19+7-LTS, mixed mode, sharing)
 ```
 
+---
 
-
-
+[⬅️ 이전: Apt](../apt/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: Java8 ➡️](../../8/)

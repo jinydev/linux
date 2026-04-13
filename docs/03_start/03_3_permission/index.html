@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>6.2 파일 소유권(Ownership)</title>
   <meta name="title" content="6.2 파일 소유권(Ownership)" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="6.2 파일 소유권(Ownership)"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/03_start/03_3_permission/">
+  <meta property="og:url" content="https://linux.jiny.dev/03_start/03_3_permission/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="6.2 파일 소유권(Ownership)"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/03_start/03_3_permission/" />
-<meta property="og:url" content="http://localhost:4000/03_start/03_3_permission/" />
+<link rel="canonical" href="https://linux.jiny.dev/03_start/03_3_permission/" />
+<meta property="og:url" content="https://linux.jiny.dev/03_start/03_3_permission/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="6.2 파일 소유권(Ownership)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"6.2 파일 소유권(Ownership)","url":"http://localhost:4000/03_start/03_3_permission/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"6.2 파일 소유권(Ownership)","url":"https://linux.jiny.dev/03_start/03_3_permission/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1166,74 +1166,44 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="62-윈도우에는-없는-강력한-제어-파일-소유권ownership">6.2 윈도우에는 없는 강력한 제어, 파일 소유권(Ownership)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../03_2_filesystem/03_2_7_path/">⬅️ 이전: 파일 경로</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../../04_command/">다음: 4장. 리눅스 명령어 (Command) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>본인이 리눅스 서버에 접속해 어떠한 <code class="language-plaintext highlighter-rouge">문서(File)</code> 파일이나 <code class="language-plaintext highlighter-rouge">폴더(Directory)</code> 등을 새로 만들어냈다면, 여러분은 자동적으로 그 파일들의 법적인 소유권을 가지게 됩니다.</p>
+<h1 id="62-파일-소유권-및-퍼미션permission">6.2 파일 소유권 및 퍼미션(Permission)</h1>
 
-<p><img src="./img/ownership.svg" alt="파일 소유권과 커맨드 구조" /></p>
-<blockquote>
-  <p><strong>동작 원리</strong>: 리눅스의 모든 파일에는 마치 주민등록증처럼 두 가지 이름표가 붙어 있습니다. 하나는 그 파일에 대한 가장 큰 결정권을 쥔 <code class="language-plaintext highlighter-rouge">단일 개인 소유자(User)</code>이고, 다른 하나는 여러 명이 공유할 수 있도록 묶어 놓은 <code class="language-plaintext highlighter-rouge">조직 소속(Group)</code>입니다.</p>
-</blockquote>
+<p><img src="../../img/linux_permission_matrix.svg" alt="Linux Permission Matrix" /></p>
 
-<hr />
+<p>6.2 파일 소유권(Ownership)에 대한 기본 개념과 실습을 연결하는 허브 페이지입니다.</p>
 
-<h2 id="1-파일-소유권의-개념">1. 파일 소유권의 개념</h2>
-
-<p>만약 여러분이 <code class="language-plaintext highlighter-rouge">mydata.txt</code> 파일을 생성했다면, 다른 부서의 사람이나 외부 해커가 접속하더라도 파일 소유권은 엄격하게 보호되므로 타인이 이 파일을 삭제하거나 열어볼 수 없습니다. 파일을 제어할 수 있는 계급은 크게 3가지로 나뉩니다.</p>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>해당 주제의 구조를 이해하고 실습을 진행합니다.</p>
 
 <ul>
-  <li><strong>소유자 (User/Owner)</strong>: 이 파일을 만들어 낸 주인을 의미합니다.</li>
-  <li><strong>소유 그룹 (Group)</strong>: 파일에 대해 제한적인 지분을 인정받는 동료들(개발팀 등)입니다.</li>
-  <li><strong>그 외 타인들 (Others)</strong>: 소유자도 뭣도 아닌 완전히 남남인 일반 사용자들입니다.</li>
-</ul>
+  <li>
+    <p><a href="03_3_0_concept/">6.2 파일 소유권(Ownership) 상세 튜토리얼</a></p>
 
-<p>※ 단, <strong>최고 권한자인 Root(슈퍼 유저)</strong> 는 이 소유권을 철저히 무시하고 어떠한 파일이든 강제로 삭제하거나 뺏어올 수 있습니다.</p>
-
-<hr />
-
-<h2 id="2-권한-탈취-및-양도-관련-명령어">2. 권한 탈취 및 양도 관련 명령어</h2>
-
-<p>퇴사를 하거나 부서가 바뀌는 등의 일로 내가 올려둔 파일의 소유권을 다른 사람이나 부서 그룹에게 강제로 넘겨주어야 할 때가 있습니다. (이 명령어는 보통 최고 관리자인 Root만이 사용할 수 있습니다.)</p>
-
-<h3 id="21-chown-change-owner">2.1 chown (Change Owner)</h3>
-<p>특정 파일의 <strong>단일 소유권자(주인)</strong> 를 전혀 다른 사람의 이름으로 덮어 씌우는 명령어입니다.</p>
-<ul>
-  <li>사용 형식: <code class="language-plaintext highlighter-rouge">chown 새주인아이디 타겟파일이름</code></li>
-  <li>예: <code class="language-plaintext highlighter-rouge">sudo chown ubuntu mydata.txt</code> (명령을 치면 mydata.txt 파일의 주인은 이제부터 ubuntu 사용자가 됩니다.)</li>
-  <li>그룹까지 동시에 바꾸기: <code class="language-plaintext highlighter-rouge">chown 사용아이디:그룹이름 타겟파일</code> 처럼 콜론( : ) 기호로 묶으면 개인과 단체를 한 번에 묶어 양도할 수 있습니다.</li>
-</ul>
-
-<h3 id="22-chgrp-change-group">2.2 chgrp (Change Group)</h3>
-<p>주인(개인)은 가만히 놔둔 채 해당 파일의 <strong>동료 부서(Group)</strong> 명찰만 살짝 교체하고 싶을 때 사용합니다.</p>
-<ul>
-  <li>사용 형식: <code class="language-plaintext highlighter-rouge">chgrp 새그룹이름 타겟파일이름</code></li>
-  <li>예: <code class="language-plaintext highlighter-rouge">sudo chgrp developer mydata.txt</code> (파일을 developer 조직 그룹에 귀속시킵니다.)</li>
+    <p>해당 파트의 상세 문서를 확인하고 터미널 실습 코드를 학습합니다.</p>
+  </li>
 </ul>
 
 <hr />
 
-<h2 id="3-실습-내-파일의-소유권-탈취시켜-보기">3. [실습] 내 파일의 소유권 탈취시켜 보기</h2>
-
-<p>여러분이 폴더 하나를 만들고 명령어를 통해 소유자를 강제로 Root 등의 다른 사람으로 뺏겨 보는 실습입니다.</p>
-
-<h3 id="실습-1-소유권을-넘겨주기">실습 1. 소유권을 넘겨주기</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 빈 파일을 하나 만듭니다. (파일 주인은 여러분의 기본 아이디가 됩니다)</span>
-<span class="nb">touch </span>test.txt
-
-<span class="c"># 파일의 주인을 root 로 강제로 바꿔버립니다!</span>
-<span class="c"># 일반 파일의 주인을 바꾸는 행위는 강력하므로 sudo가 필요합니다.</span>
-<span class="nb">sudo chown </span>root test.txt
-</code></pre></div></div>
-
-<h3 id="실습-2-다시-삭제-시도해-보기">실습 2. 다시 삭제 시도해 보기</h3>
-<p>이제 파일의 주인은 완전히 넘어갔습니다. 다시 파일을 삭제해 보려 합시다.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 삭제를 시도해 봅니다 (내 파일이 아니게 되었으므로 실패하거나 경고가 뜹니다)</span>
-<span class="nb">rm </span>test.txt
-
-<span class="c"># 내 파일로 되찾아오고 싶다면 다시 chown을 통해 내 아이디로 돌려놓으면 됩니다.</span>
-<span class="c"># 이때도 sudo를 쓰지 않으면 내맘대로 뺏어올 수 없습니다.</span>
-<span class="nb">sudo chown </span>본인아이디 test.txt
-</code></pre></div></div>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../03_2_filesystem/03_2_7_path/">⬅️ 이전: 파일 경로</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../../04_command/">다음: 4장. 리눅스 명령어 (Command) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: NodeJs](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: PHP ➡️](../../11_2_7_php/)
+
+![PM2 개념도](img/concept_architecture.svg)
+
 # PM2
 PM2는 Node.js의 프로세스 매니저 입니다.  
 
@@ -14,7 +18,6 @@ Node.js는 기본적으로 싱글 스레드(thread)로 동작을 합니다. 즉,
 Node.js는 이런한 문제를 해결하기 위해 클러스터(Cluster) 모듈을 통해 단일 프로세스를 멀티 프로세스(Worker)로 늘릴 수 있는 방법을 제공합니다.  
 
 따라서 클러스터 모듈을 사용하여 마스터 프로세스에서 CPU 코어 수만큼 워커 프로세스를 생성하여 모든 코어를 사용할 수 있게끔  개발 방법을 변경해 주어야 합니다.  
-
 
 처음에 Nodejs 애플리케이션을 실행하면 마스터 프로세스만 생성이 됩니다. 그리고 이때 CPU 개수만큼 워커 프로세스를 생성하고, 마스터 프로세스와 워커 프로세스가 각각 수행해야 할 일들을 정리해서 구현합니다.  
 
@@ -50,8 +53,9 @@ volta install pm2
 $ pm2 start app.js
 ```
 
-
 ## 참조문헌
 * https://engineering.linecorp.com/ko/blog/pm2-nodejs/
 
+---
 
+[⬅️ 이전: NodeJs](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: PHP ➡️](../../11_2_7_php/)

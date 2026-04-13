@@ -3,10 +3,21 @@ layout: home
 title: 15장. 보안 및 장애복구
 description: 리눅스 커널 보안, 로그 시스템 파악 및 데이터 무손실을 위한 원격 백업 체계를 학습합니다.
 ---
+
+[⬅️ 이전: 12.3 네트워크 모니터링 (netstat, ping)](../14_monitoring/12_3_network/) &nbsp;|&nbsp; [🏠 분류 목차](../) &nbsp;|&nbsp; [다음: 15.1 커널 보안, SELinux 및 방화벽 ➡️](15_1_security/)
+
+![SECURITY RECOVERY 개념도](img/concept_architecture.svg)
+
 # 15장. 보안 및 장애복구 (Security & Recovery)
 
 서버를 외부에 퍼블리싱하면 가장 먼저 부딪히는 문제가 악성 봇들에 의한 해킹 시도와 예기치 않은 하드웨어 파손입니다. 엔지니어가 반드시 갖춰야 할 보안 통제 로직과 시스템 재난 모의를 경험합니다.
 
 * [15.1 커널 보안 및 SSH 강화](15_1_security/)
+
 * [15.2 시스템 로그 분석](15_2_log/)
+
 * [15.3 데이터 동기화 백업 (rsync/tar)](15_3_backup/)
+
+---
+
+[⬅️ 이전: 12.3 네트워크 모니터링 (netstat, ping)](../14_monitoring/12_3_network/) &nbsp;|&nbsp; [🏠 분류 목차](../) &nbsp;|&nbsp; [다음: 15.1 커널 보안, SELinux 및 방화벽 ➡️](15_1_security/)

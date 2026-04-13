@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <rect width="100%" height="100%" fill="#f8f9fa" rx="15"/>
+  <rect x="50" y="50" width="700" height="300" fill="#ffffff" rx="10" stroke="#ced4da" stroke-width="2"/>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#343a40" text-anchor="middle">02_5_2_AZURE</text>
+  <path d="M 230 200 L 580 200" stroke="#adb5bd" stroke-width="3" stroke-dasharray="8,4"/>
+  <path d="M 400 130 L 400 280" stroke="#adb5bd" stroke-width="3" stroke-dasharray="8,4"/>
+  <circle cx="400" cy="200" r="45" fill="#e2edff" stroke="#4d8aff" stroke-width="4"/>
+  <text x="400" y="205" font-family="sans-serif" font-size="14" font-weight="bold" fill="#4d8aff" text-anchor="middle">ROUTER</text>
+  <rect x="150" y="165" width="80" height="70" rx="8" fill="#ffe3e3" stroke="#ff6b6b" stroke-width="2"/>
+  <text x="190" y="205" font-family="sans-serif" font-size="14" fill="#ff6b6b" text-anchor="middle">Client</text>
+  <rect x="580" y="165" width="80" height="70" rx="8" fill="#d3f9d8" stroke="#37b24d" stroke-width="2"/>
+  <text x="620" y="205" font-family="sans-serif" font-size="14" fill="#37b24d" text-anchor="middle">Server</text>
+  <rect x="360" y="80" width="80" height="50" rx="8" fill="#f3f0ff" stroke="#845ef7" stroke-width="2"/>
+  <text x="400" y="110" font-family="sans-serif" font-size="13" fill="#845ef7" text-anchor="middle">Internet</text>
+</svg>

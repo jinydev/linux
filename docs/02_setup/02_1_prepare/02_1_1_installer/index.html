@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/02_setup/02_1_prepare/02_1_1_installer/">
+  <meta property="og:url" content="https://linux.jiny.dev/02_setup/02_1_prepare/02_1_1_installer/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/02_setup/02_1_prepare/02_1_1_installer/" />
-<meta property="og:url" content="http://localhost:4000/02_setup/02_1_prepare/02_1_1_installer/" />
+<link rel="canonical" href="https://linux.jiny.dev/02_setup/02_1_prepare/02_1_1_installer/" />
+<meta property="og:url" content="https://linux.jiny.dev/02_setup/02_1_prepare/02_1_1_installer/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/02_setup/02_1_prepare/02_1_1_installer/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/02_setup/02_1_prepare/02_1_1_installer/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1176,7 +1176,19 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="인스톨러">인스톨러</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 2.1 설치 준비 (ISO 및 인스톨러)</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../02_1_2_iso/">다음: 설치 미디어 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="1 INSTALLER 개념도" /></p>
+
+<h1 id="인스톨러">인스톨러</h1>
 <p>리눅스 배포판은 일반적으로 설치를 간편하게 하기 위해 인스톨러를 제공합니다. 인스톨러는 사용자가 리눅스를 설치하기 위해 따라야 할 단계를 안내하는 도구입니다.</p>
 
 <h2 id="설치미디어">설치미디어</h2>
@@ -1186,18 +1198,18 @@
 
 <p>부트 섹터(Boot sector)는 컴퓨터의 부팅 과정에서 사용되는 특별한 섹터입니다. 부트 섹터는 보조 기억 장치(하드 디스크, USB 드라이브, CD-ROM 등)의 첫 번째 섹터에 위치하며, 이 섹터에는 컴퓨터가 부팅될 때 필요한 정보들이 저장됩니다.</p>
 
-<p><img src="../img/224679__47504.svg" alt="디스크 섹터 Wiki" /></p>
+<!-- Broken Image Removed: ../img/224679__47504.svg -->
 
 <p>부트 섹터에는 부트 로더(Boot loader)라는 프로그램이 저장되어 있습니다. 이 부트 로더는 컴퓨터가 부팅될 때 실행되어 운영 체제를 로드하거나 다른 부트 가능한 프로그램을 실행합니다. 부트 로더는 일반적으로 운영 체제 설치 프로그램이나 부트 가능한 CD-ROM 등에서 생성됩니다.</p>
 
-<p><img src="../img/boot-sector.jpg" alt="FAT 파일시스템 – 예약된 영역 (Reserved Area)" /></p>
+<!-- Broken Image Removed: ../img/boot-sector.jpg -->
 
 <p>부트 섹터는 일반적으로 512바이트 크기로 구성되어 있습니다. 이 중에서 처음 446바이트는 부트 로더를 저장하는 데 사용되며, 나머지 64바이트는 파티션 정보와 부트 섹터의 마지막 두 바이트는 부트 가능한 섹터(Bootable sector)인지 여부를 나타내는 서명(Signature) 값입니다.</p>
 
 <h2 id="인스톨러의-역할">인스톨러의 역할</h2>
 <p>인스톨러는 사용자에게 몇 가지 선택지를 제공합니다. 예를 들어, 어떤 파티션에 리눅스를 설치할지, 어떤 파일 시스템을 사용할지, 어떤 언어를 선택할지 등을 선택할 수 있습니다. 이후에는 디스크 파티션을 설정하고, 필요한 패키지를 설치하며, 부트 로더를 설치하는 등의 과정을 거쳐 리눅스가 설치됩니다.</p>
 
-<p><img src="../img/ubuntu-installer.jpg" alt="img" /></p>
+<!-- Broken Image Removed: ../img/ubuntu-installer.jpg -->
 
 <h3 id="부트로더">부트로더</h3>
 
@@ -1226,11 +1238,23 @@
 
 <p>GRUB는 리눅스 운영 체제를 부팅할 때 다양한 설정을 제공하는 유연하고 강력한 부트로더입니다. GRUB는 운영 체제가 설치된 파티션을 찾아 부트 가능한 파일시스템을 검색하고, 이를 찾아 부팅합니다. 또한 GRUB는 운영 체제의 커널과 초기 램디스크(initrd)를 찾아 로드하고, 부트로더 메뉴에서 선택한 운영 체제를 부팅합니다.</p>
 
-<p><img src="../img/996D5F335A2750B31F.jpg" alt="img" /></p>
+<!-- Broken Image Removed: ../img/996D5F335A2750B31F.jpg -->
 
 <p>리눅스 설치 시, GRUB를 사용하기 위해서는 부트로더를 설치해야 합니다. 이를 위해 설치 시, 디스크 파티션 설정 후, GRUB 부트로더를 설치할 파티션을 선택하고, 부트로더 설치 경로를 지정하게 됩니다. 그러면 GRUB는 해당 경로에 부트 로더를 설치하고, 운영 체제를 부팅할 수 있도록 준비합니다.</p>
 
 <p>GRUB는 사용자가 직접 설정할 수 있는 다양한 옵션을 제공하며, 부트로더 메뉴에 리눅스 외 다른 운영 체제를 추가하거나 부트 로더 메뉴를 변경하는 것도 가능합니다. 이렇게 유연하고 강력한 부트로더 덕분에 리눅스는 다양한 하드웨어에서 안정적이고 높은 성능을 유지할 수 있습니다.</p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 2.1 설치 준비 (ISO 및 인스톨러)</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../02_1_2_iso/">다음: 설치 미디어 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

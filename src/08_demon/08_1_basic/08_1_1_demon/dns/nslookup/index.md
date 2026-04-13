@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: HTTPS](../https/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: 실습 DNS 서버 변경 ➡️](../setting/)
+
+![NSLOOKUP 개념도](img/concept_architecture.svg)
+
 # nslookup
 nslookup은 도메인 `이름` 또는 `IP 주소 정보`를 얻기 위해 DNS(도메인 이름 시스템) 서버를 쿼리하는 데 사용되는 명령줄 도구입니다. 일반적으로 네트워크 연결 문제를 해결하거나 DNS 구성을 확인하는 데 사용됩니다.
 
@@ -32,3 +36,7 @@ Name:   www.naver.com.nheos.com
 Address: 223.130.195.200
 >
 ```
+
+---
+
+[⬅️ 이전: HTTPS](../https/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: 실습 DNS 서버 변경 ➡️](../setting/)

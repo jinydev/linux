@@ -6,6 +6,10 @@ breadcrumb:
 - gcc
 ---
 
+[⬅️ 이전: Python Setup](../11_2_1__python/setup/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: WSL g++ 설치하기 ➡️](g2plus/)
+
+![2 GCC 개념도](img/concept_architecture.svg)
+
 # WSL gcc 설치하기
 ---
 터미널에서 gcc를 입력해 봅니다.
@@ -42,7 +46,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 ## gcc 실습
 ---
-hello world 프로그램을 작성해 봅니다. [>>실습](helloworld)
+hello world 프로그램을 작성해 봅니다. [>>실습](./helloworld/)
 
 <br>
 
@@ -50,3 +54,6 @@ hello world 프로그램을 작성해 봅니다. [>>실습](helloworld)
 ---
 본격적으로 gcc를 학습을 해보도록 합니다. 
 
+---
+
+[⬅️ 이전: Python Setup](../11_2_1__python/setup/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: WSL g++ 설치하기 ➡️](g2plus/)

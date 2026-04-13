@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: hosts 파일을 이용하여 네트워크 접속](../hosts/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: nslookup ➡️](../nslookup/)
+
+![HTTPS 개념도](img/concept_architecture.svg)
+
 # HTTPS
 Let's Encrypt를 사용하여 임시 도메인에 대한 SSL/TLS 인증서를 얻고 HTTPS를 설정할 수 있습니다.
 
@@ -37,7 +41,6 @@ sudo certbot certonly --nginx --domain example.com --webroot -w /var/www/html -d
 
 your_domain_name을 Bind9로 설정한 실제 도메인 이름으로 바꿉니다.
 
-
 인증서가 성공적으로 생성되었는지 확인합니다.
 ```
 sudo certbot certificates
@@ -45,16 +48,16 @@ sudo certbot certificates
 
 이 명령은 방금 생성한 인증서를 포함하여 Certbot이 생성한 모든 인증서 목록을 표시합니다.
 
-
-
 ## 연장
 
-
 Certbot은 SSL/TLS 인증서를 얻고 구성하는 과정을 안내합니다. 프로세스가 완료되면 웹사이트가 HTTPS를 통해 제공됩니다.
-
 
 Let's Encrypt 인증서는 90일 동안만 유효합니다. 웹 사이트가 HTTPS를 통해 계속 제공되도록 하려면 인증서가 만료되기 전에 갱신해야 합니다. 다음 명령을 실행하도록 cron 작업을 설정하여 Certbot을 사용하여 인증서를 자동으로 갱신할 수 있습니다.
 
 ```
 sudo certbot renew
 ```
+
+---
+
+[⬅️ 이전: hosts 파일을 이용하여 네트워크 접속](../hosts/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: nslookup ➡️](../nslookup/)

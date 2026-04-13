@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: DNS](../dns/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: hosts 파일을 이용하여 네트워크 접속 ➡️](../hosts/)
+
+![DOMAIN 개념도](img/concept_architecture.svg)
+
 # 도메인 이름 체계
 
 초창기 인터넷에서는 1대의 네임 서버만으로도 충분히 IP주소와 이름의 관리가 가능
@@ -12,5 +16,8 @@ layout: home
 
 ![image-20230409190627288](../img/image-20230409190627288.png)
 
-
 ![image-20230409190655096](../img/image-20230409190655096.png)
+
+---
+
+[⬅️ 이전: DNS](../dns/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: hosts 파일을 이용하여 네트워크 접속 ➡️](../hosts/)

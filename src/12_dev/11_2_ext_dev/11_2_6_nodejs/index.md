@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: Spring Boot](../11_2_5_java/spring_boot/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: PM2 ➡️](pm2/)
+
+![6 NODEJS 개념도](img/concept_architecture.svg)
+
 # NodeJs
 Node.js®는 Chrome V8 JavaScript 엔진으로 빌드된 JavaScript 런타임입니다.
 
@@ -39,3 +43,6 @@ volta install node
 
 * [pm2](/nodejs/pm2)
 
+---
+
+[⬅️ 이전: Spring Boot](../11_2_5_java/spring_boot/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: PM2 ➡️](pm2/)

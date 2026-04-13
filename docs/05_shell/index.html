@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="BASH 셸의 기본 원리를 이해하고 변수, 제어문, 함수를 활용한 강력한 스크립팅 자동화 역량을 배양합니다."><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>7장. 셸 프로그래밍 (Shell)</title>
   <meta name="title" content="7장. 셸 프로그래밍 (Shell)" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="7장. 셸 프로그래밍 (Shell)"><meta property="og:description" content="BASH 셸의 기본 원리를 이해하고 변수, 제어문, 함수를 활용한 강력한 스크립팅 자동화 역량을 배양합니다."><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/05_shell/">
+  <meta property="og:url" content="https://linux.jiny.dev/05_shell/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="7장. 셸 프로그래밍 (Shell)"><meta property="twitter:description" content="BASH 셸의 기본 원리를 이해하고 변수, 제어문, 함수를 활용한 강력한 스크립팅 자동화 역량을 배양합니다."><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="BASH 셸의 기본 원리를 이해하고 변수, 제어문, 함수를 활용한 강력한 스크립팅 자동화 역량을 배양합니다." />
 <meta property="og:description" content="BASH 셸의 기본 원리를 이해하고 변수, 제어문, 함수를 활용한 강력한 스크립팅 자동화 역량을 배양합니다." />
-<link rel="canonical" href="http://localhost:4000/05_shell/" />
-<meta property="og:url" content="http://localhost:4000/05_shell/" />
+<link rel="canonical" href="https://linux.jiny.dev/05_shell/" />
+<meta property="og:url" content="https://linux.jiny.dev/05_shell/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="7장. 셸 프로그래밍 (Shell)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"BASH 셸의 기본 원리를 이해하고 변수, 제어문, 함수를 활용한 강력한 스크립팅 자동화 역량을 배양합니다.","headline":"7장. 셸 프로그래밍 (Shell)","url":"http://localhost:4000/05_shell/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"BASH 셸의 기본 원리를 이해하고 변수, 제어문, 함수를 활용한 강력한 스크립팅 자동화 역량을 배양합니다.","headline":"7장. 셸 프로그래밍 (Shell)","url":"https://linux.jiny.dev/05_shell/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1156,17 +1156,57 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="7장-셸-프로그래밍-shell">7장. 셸 프로그래밍 (Shell)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../04_command/04_3_editor/04_3_4_edit/vi/">⬅️ 이전: vi</a>  </td>
+      <td>  <a href="../">🏠 분류 목차</a>  </td>
+      <td>  <a href="07_1_intro/">다음: 7.1 쉘 및 변수 기초 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="SHELL 개념도" /></p>
+
+<p><img src="img/bash_pipeline_redirect.svg" alt="Bash Pipeline Redirect" /></p>
+
+<h1 id="7장-셸-프로그래밍-shell">7장. 셸 프로그래밍 (Shell)</h1>
 
 <p>BASH 셸의 기본 원리를 이해하고 변수, 제어문, 함수를 활용한 강력한 스크립팅 자동화 역량을 배양합니다.
 아래의 세부 학습 주제를 챕터별로 클릭하여 상세 레퍼런스를 확인하세요.</p>
 
-<h2 id="세부-커리큘럼">세부 커리큘럼</h2>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>셸 프로그래밍의 기초 개념부터 고급 시스템 제어까지 3단계로 학습합니다.</p>
 
 <ul>
-  <li><strong><a href="07_1_intro/">7.1 Intro</a></strong></li>
-  <li><strong><a href="07_2_terminal/">7.2 Terminal</a></strong></li>
+  <li>
+    <p><a href="07_1_intro/">7.1 쉘 및 변수 기초 (Intro)</a></p>
+
+    <p>리눅스 쉘 환경의 기본 개념과 쉘 변수 할당, 쉘 스크립트(.sh) 파일을 생성하고 구동하는 가장 기저의 원리를 다룹니다.</p>
+  </li>
+  <li>
+    <p><a href="07_2_control/">7.2 반복 및 조건 제어문 (Control)</a></p>
+
+    <p>쉘 프로그래밍의 핵인 if/case 조건문 및 for/while 등 반복 루프를 통해 시스템 작업을 분기 처리하는 고급 로직을 실습합니다.</p>
+  </li>
+  <li>
+    <p><a href="07_2_terminal/">7.3 터미널 활용 명령어 기초 (Terminal)</a></p>
+
+    <p>스크립팅을 벗어나 터미널 환경을 통제하는 기록 확인, 화면 클리어, 사용자 식별 등 필수 내장 명령어들을 다룹니다.</p>
+  </li>
 </ul>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../04_command/04_3_editor/04_3_4_edit/vi/">⬅️ 이전: vi</a>  </td>
+      <td>  <a href="../">🏠 분류 목차</a>  </td>
+      <td>  <a href="07_1_intro/">다음: 7.1 쉘 및 변수 기초 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

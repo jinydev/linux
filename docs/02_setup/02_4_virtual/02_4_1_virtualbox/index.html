@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/02_setup/02_4_virtual/02_4_1_virtualbox/">
+  <meta property="og:url" content="https://linux.jiny.dev/02_setup/02_4_virtual/02_4_1_virtualbox/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/02_setup/02_4_virtual/02_4_1_virtualbox/" />
-<meta property="og:url" content="http://localhost:4000/02_setup/02_4_virtual/02_4_1_virtualbox/" />
+<link rel="canonical" href="https://linux.jiny.dev/02_setup/02_4_virtual/02_4_1_virtualbox/" />
+<meta property="og:url" content="https://linux.jiny.dev/02_setup/02_4_virtual/02_4_1_virtualbox/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/02_setup/02_4_virtual/02_4_1_virtualbox/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/02_setup/02_4_virtual/02_4_1_virtualbox/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1176,7 +1176,19 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="virtualbox">VirtualBox</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 2.1 리눅스 설치 및 가상화의 이해</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="create/">다음: 가상머신 생성 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="1 VIRTUALBOX 개념도" /></p>
+
+<h1 id="virtualbox">VirtualBox</h1>
 <p>VirtualBox는 무료로 사용 가능한 가상머신 소프트웨어 입니다.</p>
 
 <h2 id="virtualbox란">VirtualBox란</h2>
@@ -1192,25 +1204,29 @@
 <hr />
 <p>VirtualBox 응용프로그램을 오라클 사이트에서 다운로드 받습니다. 호스트 운영체제에 설치를 진행하고, 새롭게 추가된 네트워크를 확인합니다.</p>
 
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
 <ul>
-  <li><a href="install">다운로드</a></li>
-  <li><a href="install">설치</a></li>
-  <li><a href="install">네트워크</a></li>
+  <li><a href="./install/">다운로드</a></li>
+  <li><a href="./install/">설치</a></li>
+</ul>
+
+<h2 id="2️⃣-심화-및-연계-파트-1">2️⃣ 심화 및 연계 파트 1</h2>
+<ul>
+  <li>
+    <p><a href="./install/">네트워크</a></p>
+  </li>
+  <li><a href="./create/">VirtualBox 실행</a></li>
+  <li>가상머신 생성</li>
+  <li>이미지 백업</li>
 </ul>
 
 <h2 id="가상머신-생성">가상머신 생성</h2>
 <hr />
 <p>새로운 가상머신을 생성하고, 리눅스를 설치합니다.</p>
-<ul>
-  <li><a href="create">VirtualBox 실행</a></li>
-  <li>가상머신 생성</li>
-  <li>이미지 백업</li>
-</ul>
-
 <h2 id="리눅스-설치">리눅스 설치</h2>
 <p>리눅스를 설치하기 위해서는 먼저 배포본의 설치 iso 파일을 다운로드 받아야 합니다.</p>
 
-<h3 id="우분투-설치"><a href="ubuntu">우분투 설치</a></h3>
+<h3 id="우분투-설치"><a href="./ubuntu/">우분투 설치</a></h3>
 <p>우분투 리눅스를 설치합니다.</p>
 <blockquote>
   <p>참고영상: <a href="https://youtu.be/2Bqp6hy_Wdg">이것이 우분투다 설치</a></p>
@@ -1254,6 +1270,18 @@
     </blockquote>
   </li>
 </ul>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 2.1 리눅스 설치 및 가상화의 이해</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="create/">다음: 가상머신 생성 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 원격터미널 접속](../terminal/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: 래드햇 계열에서 OpenSSH 설치하기 ➡️](../yum/)
+
+![VIRTUALBOX IP 개념도](img/concept_architecture.svg)
+
 ## VirtualBox에서 사설 IP로 SSH 접속
 VirtualBox에서 로컬 호스트 대신 사설 IP로 SSH 접속하는 방법은 다음과 같습니다.
 
@@ -41,3 +45,7 @@ ssh -p 2222 username@127.0.0.1
 * 비밀번호를 입력하면 가상 머신에 SSH로 접속할 수 있습니다.
 
 이제, 가상 머신에 사설 IP 주소로 SSH로 접속할 수 있습니다.
+
+---
+
+[⬅️ 이전: 원격터미널 접속](../terminal/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: 래드햇 계열에서 OpenSSH 설치하기 ➡️](../yum/)

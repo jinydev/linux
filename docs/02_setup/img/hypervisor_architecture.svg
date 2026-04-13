@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .text-title { fill: #f8fafc; font-family: 'Inter', sans-serif; font-size: 22px; font-weight: bold; }
+      .text-sub { fill: #94a3b8; font-family: 'Inter', sans-serif; font-size: 14px; }
+      .text-label { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: bold; text-anchor: middle;}
+      .box-hw { fill: #334155; stroke: #475569; stroke-width: 2; }
+      .box-os { fill: #1e293b; stroke: #3b82f6; stroke-width: 2; }
+      .box-hyper { fill: url(#hyper-grad); stroke: #8b5cf6; stroke-width: 2; }
+      .box-vm { fill: #0f172a; stroke: #10b981; stroke-width: 2; }
+      .box-app { fill: #10b981; }
+    </style>
+    <linearGradient id="hyper-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" class="bg" rx="10" />
+
+  <text x="400" y="45" class="text-title" text-anchor="middle">Type 2 Hosted Hypervisor Architecture</text>
+  <text x="400" y="70" class="text-sub" text-anchor="middle">호스트 운영체제 환경 위에서 구동되는 VMware / VirtualBox 동작 원리</text>
+
+  <!-- Hardware -->
+  <rect x="100" y="350" width="600" height="60" rx="8" class="box-hw" />
+  <text x="400" y="385" class="text-label" style="font-size: 18px">Physical Hardware (CPU, RAM, Disk, NIC)</text>
+
+  <!-- Host OS -->
+  <rect x="100" y="270" width="600" height="60" rx="8" class="box-os" />
+  <text x="400" y="305" class="text-label" style="fill: #bfdbfe; font-size: 18px">Host Operating System (Windows / macOS)</text>
+
+  <!-- Hypervisor -->
+  <rect x="100" y="210" width="600" height="40" rx="8" class="box-hyper" />
+  <text x="400" y="235" class="text-label" style="font-size: 16px">Hypervisor (VMware Workstation / VirtualBox)</text>
+
+  <!-- VM 1 -->
+  <rect x="130" y="110" width="230" height="80" rx="8" class="box-vm" />
+  <rect x="140" y="120" width="60" height="30" rx="4" class="box-app" />
+  <rect x="210" y="120" width="60" height="30" rx="4" class="box-app" />
+  <rect x="280" y="120" width="70" height="30" rx="4" class="box-app" />
+  <text x="245" y="175" class="text-label" style="fill: #34d399;">Guest OS (Ubuntu 24.04)</text>
+
+  <!-- VM 2 -->
+  <rect x="440" y="110" width="230" height="80" rx="8" class="box-vm" />
+  <rect x="450" y="120" width="60" height="30" rx="4" class="box-app" />
+  <rect x="520" y="120" width="60" height="30" rx="4" class="box-app" />
+  <rect x="590" y="120" width="70" height="30" rx="4" class="box-app" />
+  <text x="555" y="175" class="text-label" style="fill: #34d399;">Guest OS (Rocky Linux 9)</text>
+
+  <!-- Arrows to denote isolation -->
+  <line x1="400" y1="110" x2="400" y2="190" stroke="#475569" stroke-width="2" stroke-dasharray="4,4" />
+
+</svg>

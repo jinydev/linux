@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="리눅스 운영체제는 커널, 쉘, 유틸리티의 3부분으로 구성됩니다. 각 구성 요소의 역할과 상호작용에 대해 알아보세요."><meta name="author" content="JinyDev"><!-- 제목 설정 --><title>리눅스 운영체제의 구조 - 커널, 쉘, 유틸리티</title>
   <meta name="title" content="리눅스 운영체제의 구조 - 커널, 쉘, 유틸리티" /><!-- 키워드 설정 --><meta name="keywords" content="리눅스 구조, Linux architecture, 커널, 쉘, 유틸리티, 운영체제 구조"><!-- Open Graph 메타데이터 --><meta property="og:title" content="리눅스 운영체제의 구조 - 커널, 쉘, 유틸리티"><meta property="og:description" content="리눅스 운영체제는 커널, 쉘, 유틸리티의 3부분으로 구성됩니다."><meta property="og:type" content="article"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/01_prologue/01_1_prologue/01_1_12_structure/">
+  <meta property="og:url" content="https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_12_structure/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="리눅스 운영체제의 구조 - 커널, 쉘, 유틸리티"><meta property="twitter:description" content="리눅스 운영체제는 커널, 쉘, 유틸리티의 3부분으로 구성됩니다."><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,15 +17,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="리눅스 운영체제는 커널, 쉘, 유틸리티의 3부분으로 구성됩니다. 각 구성 요소의 역할과 상호작용에 대해 알아보세요." />
 <meta property="og:description" content="리눅스 운영체제는 커널, 쉘, 유틸리티의 3부분으로 구성됩니다. 각 구성 요소의 역할과 상호작용에 대해 알아보세요." />
-<link rel="canonical" href="http://localhost:4000/01_prologue/01_1_prologue/01_1_12_structure/" />
-<meta property="og:url" content="http://localhost:4000/01_prologue/01_1_prologue/01_1_12_structure/" />
+<link rel="canonical" href="https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_12_structure/" />
+<meta property="og:url" content="https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_12_structure/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-03-30T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 운영체제의 구조 - 커널, 쉘, 유틸리티" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"JinyDev"},"dateModified":"2023-03-30T00:00:00+09:00","datePublished":"2023-03-30T00:00:00+09:00","description":"리눅스 운영체제는 커널, 쉘, 유틸리티의 3부분으로 구성됩니다. 각 구성 요소의 역할과 상호작용에 대해 알아보세요.","headline":"리눅스 운영체제의 구조 - 커널, 쉘, 유틸리티","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/01_prologue/01_1_prologue/01_1_12_structure/"},"url":"http://localhost:4000/01_prologue/01_1_prologue/01_1_12_structure/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"JinyDev"},"dateModified":"2023-03-30T00:00:00+09:00","datePublished":"2023-03-30T00:00:00+09:00","description":"리눅스 운영체제는 커널, 쉘, 유틸리티의 3부분으로 구성됩니다. 각 구성 요소의 역할과 상호작용에 대해 알아보세요.","headline":"리눅스 운영체제의 구조 - 커널, 쉘, 유틸리티","mainEntityOfPage":{"@type":"WebPage","@id":"https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_12_structure/"},"url":"https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_12_structure/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1177,522 +1177,88 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="리눅스-운영체제의-구조-linux-operating-system-architecture">리눅스 운영체제의 구조 (Linux Operating System Architecture)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="개요">개요</h2>
+<p><img src="img/concept_architecture.svg" alt="12 STRUCTURE 개념도" /></p>
 
-<p>리눅스 운영체제는 <strong>커널(Kernel)</strong>, <strong>쉘(Shell)</strong>, <strong>유틸리티(Utility)</strong>의 3부분으로 구성됩니다. 이 세 구성 요소는 서로 상호작용하며 완전한 운영체제를 이루며, 각각의 역할과 기능이 명확히 분리되어 있습니다.</p>
+<h1 id="리눅스-운영체제의-구조-linux-operating-system-architecture">리눅스 운영체제의 구조 (Linux Operating System Architecture)</h1>
 
-<p><img src="image-20230316005709249-1678896410275-6.png" alt="리눅스 운영체제 구조" /></p>
+<p>방대한 주제를 분할하여 제공합니다.</p>
 
-<h3 id="구조의-기본-개념">구조의 기본 개념</h3>
-
-<p>리눅스 운영체제의 구조는 계층적 아키텍처를 따르며, 각 계층은 명확한 역할과 책임을 가지고 있습니다.</p>
-
-<p><strong>계층적 구조:</strong></p>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
 <ul>
-  <li><strong>응용 프로그램 계층</strong>: 사용자 애플리케이션</li>
-  <li><strong>쉘 계층</strong>: 사용자 인터페이스 및 명령 해석</li>
-  <li><strong>커널 계층</strong>: 시스템 자원 관리 및 하드웨어 제어</li>
-  <li><strong>하드웨어 계층</strong>: 물리적 하드웨어</li>
+  <li>
+    <p><a href="part_1/">개요</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">커널 Kernel</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_3/">쉘 Shell</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
 </ul>
 
-<h2 id="커널-kernel">커널 (Kernel)</h2>
-
-<h3 id="1-커널의-정의와-역할">1. 커널의 정의와 역할</h3>
-
-<p>커널은 운영체제의 핵심 부분으로, 사용자가 실행하는 애플리케이션과 하드웨어 사이에서 조정자 역할을 합니다.</p>
-
-<h4 id="커널의-주요-역할">커널의 주요 역할</h4>
-
-<p><strong>시스템 자원 관리:</strong></p>
+<h2 id="2️⃣-심화-및-연계-파트-1">2️⃣ 심화 및 연계 파트 1</h2>
 <ul>
-  <li><strong>CPU 관리</strong>: 프로세스 스케줄링 및 CPU 할당</li>
-  <li><strong>메모리 관리</strong>: 가상 메모리 및 물리 메모리 관리</li>
-  <li><strong>파일 시스템 관리</strong>: 파일 및 디렉토리 관리</li>
-  <li><strong>네트워크 관리</strong>: 네트워크 프로토콜 및 통신 관리</li>
+  <li>
+    <p><a href="part_4/">유틸리티 Utility</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_5/">구성 요소 간의 상호작용</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_6/">실무 적용</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
 </ul>
 
-<p><strong>하드웨어 추상화:</strong></p>
+<h2 id="3️⃣-심화-및-연계-파트-2">3️⃣ 심화 및 연계 파트 2</h2>
 <ul>
-  <li><strong>디바이스 드라이버</strong>: 하드웨어 장치 제어</li>
-  <li><strong>입출력 관리</strong>: I/O 장치 관리 및 제어</li>
-  <li><strong>인터럽트 처리</strong>: 하드웨어 인터럽트 처리</li>
-  <li><strong>버스 관리</strong>: 시스템 버스 및 장치 버스 관리</li>
+  <li>
+    <p><a href="part_7/">학습 목표</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_8/">실습 과제</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_9/">참고 자료</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
 </ul>
 
-<h3 id="2-커널의-특징">2. 커널의 특징</h3>
-
-<h4 id="모놀리딕-커널-구조">모놀리딕 커널 구조</h4>
-
-<p>리눅스 커널은 모놀리딕 커널 구조를 채택하고 있습니다.</p>
-
-<p><strong>모놀리딕 커널의 특징:</strong></p>
-<ul>
-  <li><strong>단일 주소 공간</strong>: 커널의 모든 기능이 하나의 주소 공간에서 실행</li>
-  <li><strong>직접 통신</strong>: 커널 내부 모듈 간 직접적인 함수 호출</li>
-  <li><strong>높은 성능</strong>: 모듈 간 통신 오버헤드가 적음</li>
-  <li><strong>복잡한 구조</strong>: 커널이 커지면서 복잡도가 증가</li>
-</ul>
-
-<h4 id="커널-모듈">커널 모듈</h4>
-
-<p>리눅스 커널은 모듈화된 구조를 지원하여 필요에 따라 기능을 동적으로 로드/언로드할 수 있습니다.</p>
-
-<p><strong>커널 모듈의 장점:</strong></p>
-<ul>
-  <li><strong>동적 로딩</strong>: 실행 중에 필요한 기능만 로드</li>
-  <li><strong>메모리 효율성</strong>: 사용하지 않는 기능은 메모리에 로드하지 않음</li>
-  <li><strong>유지보수성</strong>: 개별 모듈 단위로 업데이트 및 수정 가능</li>
-</ul>
-
-<h3 id="3-커널의-기능">3. 커널의 기능</h3>
-
-<h4 id="프로세스-관리">프로세스 관리</h4>
-
-<p><strong>프로세스 생성 및 제어:</strong></p>
-<ul>
-  <li><strong>fork()</strong>: 새로운 프로세스 생성</li>
-  <li><strong>exec()</strong>: 프로세스 이미지 교체</li>
-  <li><strong>wait()</strong>: 자식 프로세스 종료 대기</li>
-  <li><strong>exit()</strong>: 프로세스 종료</li>
-</ul>
-
-<p><strong>스케줄링:</strong></p>
-<ul>
-  <li><strong>Completely Fair Scheduler (CFS)</strong>: 완전 공정 스케줄러</li>
-  <li><strong>실시간 스케줄링</strong>: SCHED_FIFO, SCHED_RR</li>
-  <li><strong>우선순위 관리</strong>: nice 값, real-time priority</li>
-  <li><strong>멀티코어 지원</strong>: SMP(Symmetric Multi-Processing) 환경</li>
-</ul>
-
-<h4 id="메모리-관리">메모리 관리</h4>
-
-<p><strong>가상 메모리 시스템:</strong></p>
-<ul>
-  <li><strong>페이지 관리</strong>: 4KB 페이지 단위 메모리 관리</li>
-  <li><strong>메모리 매핑</strong>: 가상 주소와 물리 주소 매핑</li>
-  <li><strong>스왑 관리</strong>: 디스크 공간을 메모리로 활용</li>
-  <li><strong>캐시 관리</strong>: 페이지 캐시, 버퍼 캐시</li>
-</ul>
-
-<h4 id="파일-시스템-관리">파일 시스템 관리</h4>
-
-<p><strong>VFS (Virtual File System):</strong></p>
-<ul>
-  <li><strong>통합된 인터페이스</strong>: 다양한 파일 시스템을 통합 관리</li>
-  <li><strong>파일 시스템 추상화</strong>: ext4, btrfs, xfs 등 지원</li>
-  <li><strong>네트워크 파일 시스템</strong>: NFS, CIFS 지원</li>
-</ul>
-
-<p><strong>파일 조작:</strong></p>
-<ul>
-  <li><strong>파일 생성/삭제</strong>: inode 기반 파일 관리</li>
-  <li><strong>디렉토리 관리</strong>: 계층적 디렉토리 구조</li>
-  <li><strong>권한 관리</strong>: rwx 권한, ACL 지원</li>
-  <li><strong>링크 관리</strong>: 하드 링크, 심볼릭 링크</li>
-</ul>
-
-<h4 id="네트워크-관리">네트워크 관리</h4>
-
-<p><strong>네트워크 스택:</strong></p>
-<ul>
-  <li><strong>TCP/IP 프로토콜</strong>: 전송 제어 프로토콜 스택</li>
-  <li><strong>소켓 인터페이스</strong>: 네트워크 통신 API</li>
-  <li><strong>라우팅</strong>: 네트워크 패킷 라우팅</li>
-  <li><strong>방화벽</strong>: netfilter 프레임워크</li>
-</ul>
-
-<h2 id="쉘-shell">쉘 (Shell)</h2>
-
-<h3 id="1-쉘의-개념과-역할">1. 쉘의 개념과 역할</h3>
-
-<p>쉘은 커널과 사용자 간의 인터페이스로서 중간 매개의 역할을 담당합니다. 명령어를 해석하고, 명령과 관련된 유틸리티나 커널을 호출하고, 실행 결과를 출력합니다.</p>
-
-<h4 id="쉘의-주요-기능">쉘의 주요 기능</h4>
-
-<p><strong>명령어 해석:</strong></p>
-<ul>
-  <li><strong>명령어 파싱</strong>: 사용자 입력 명령어를 파싱</li>
-  <li><strong>경로 해석</strong>: 명령어의 경로를 찾아 실행</li>
-  <li><strong>인수 처리</strong>: 명령어의 인수 및 옵션 처리</li>
-  <li><strong>리다이렉션</strong>: 입출력 리다이렉션 처리</li>
-</ul>
-
-<p><strong>환경 관리:</strong></p>
-<ul>
-  <li><strong>환경 변수</strong>: 시스템 환경 변수 관리</li>
-  <li><strong>작업 디렉토리</strong>: 현재 작업 디렉토리 관리</li>
-  <li><strong>명령어 히스토리</strong>: 이전 명령어 기록 및 재실행</li>
-  <li><strong>별칭 관리</strong>: 명령어 별칭 및 함수 정의</li>
-</ul>
-
-<h3 id="2-쉘의-종류">2. 쉘의 종류</h3>
-
-<h4 id="bash-bourne-again-shell">Bash (Bourne Again Shell)</h4>
-
-<p><strong>특징:</strong></p>
-<ul>
-  <li><strong>가장 널리 사용</strong>: 리눅스의 기본 쉘</li>
-  <li><strong>GNU 프로젝트</strong>: GNU 프로젝트에서 개발</li>
-  <li><strong>POSIX 호환</strong>: POSIX 표준 호환성</li>
-  <li><strong>강력한 기능</strong>: 스크립팅, 자동 완성, 히스토리 등</li>
-</ul>
-
-<p><strong>주요 기능:</strong></p>
-<ul>
-  <li><strong>명령어 히스토리</strong>: 이전 명령어 검색 및 재실행</li>
-  <li><strong>명령어 완성</strong>: Tab 키를 이용한 자동 완성</li>
-  <li><strong>별칭(Alias)</strong>: 명령어 단축 및 커스터마이징</li>
-  <li><strong>함수 정의</strong>: 사용자 정의 함수 작성</li>
-</ul>
-
-<h4 id="zsh-z-shell">Zsh (Z Shell)</h4>
-
-<p><strong>특징:</strong></p>
-<ul>
-  <li><strong>Bash 확장</strong>: Bash의 확장된 기능</li>
-  <li><strong>플러그인 시스템</strong>: 강력한 플러그인 시스템</li>
-  <li><strong>Oh My Zsh</strong>: 프레임워크 지원</li>
-  <li><strong>사용자 친화적</strong>: 향상된 사용자 경험</li>
-</ul>
-
-<h4 id="fish-friendly-interactive-shell">Fish (Friendly Interactive Shell)</h4>
-
-<p><strong>특징:</strong></p>
-<ul>
-  <li><strong>사용자 친화적</strong>: 직관적인 인터페이스</li>
-  <li><strong>구문 강조</strong>: 명령어 구문 강조</li>
-  <li><strong>자동 완성</strong>: 지능적인 자동 완성</li>
-  <li><strong>설정 파일 없음</strong>: 복잡한 설정 파일 불필요</li>
-</ul>
-
-<h3 id="3-쉘의-사용법">3. 쉘의 사용법</h3>
-
-<h4 id="기본-명령어">기본 명령어</h4>
-
-<p><strong>파일 및 디렉토리 관리:</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 현재 디렉토리 확인</span>
-<span class="nb">pwd</span>
-
-<span class="c"># 디렉토리 목록 보기</span>
-<span class="nb">ls</span> <span class="nt">-la</span>
-
-<span class="c"># 디렉토리 이동</span>
-<span class="nb">cd</span> /path/to/directory
-
-<span class="c"># 디렉토리 생성</span>
-<span class="nb">mkdir </span>directory_name
-
-<span class="c"># 파일/디렉토리 삭제</span>
-<span class="nb">rm</span> <span class="nt">-rf</span> directory_name
-</code></pre></div></div>
-
-<p><strong>프로세스 관리:</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 프로세스 목록 확인</span>
-ps aux
-
-<span class="c"># 실시간 프로세스 모니터링</span>
-top
-
-<span class="c"># 프로세스 종료</span>
-<span class="nb">kill </span>process_id
-
-<span class="c"># 백그라운드 작업</span>
-<span class="nb">command</span> &amp;
-</code></pre></div></div>
-
-<h4 id="쉘-스크립팅">쉘 스크립팅</h4>
-
-<p><strong>기본 스크립트 예제:</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
-<span class="c"># 기본 스크립트 템플릿</span>
-
-<span class="nb">echo</span> <span class="s2">"Hello, World!"</span>
-<span class="nb">echo</span> <span class="s2">"Current directory: </span><span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span><span class="s2">"</span>
-<span class="nb">echo</span> <span class="s2">"Current user: </span><span class="si">$(</span><span class="nb">whoami</span><span class="si">)</span><span class="s2">"</span>
-
-<span class="c"># 조건문 예제</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nt">-f</span> <span class="s2">"file.txt"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
-    </span><span class="nb">echo</span> <span class="s2">"file.txt exists"</span>
-<span class="k">else
-    </span><span class="nb">echo</span> <span class="s2">"file.txt does not exist"</span>
-<span class="k">fi</span>
-
-<span class="c"># 반복문 예제</span>
-<span class="k">for </span>i <span class="k">in</span> <span class="o">{</span>1..5<span class="o">}</span><span class="p">;</span> <span class="k">do
-    </span><span class="nb">echo</span> <span class="s2">"Count: </span><span class="nv">$i</span><span class="s2">"</span>
-<span class="k">done</span>
-</code></pre></div></div>
-
-<h2 id="유틸리티-utility">유틸리티 (Utility)</h2>
-
-<h3 id="1-유틸리티의-개념과-역할">1. 유틸리티의 개념과 역할</h3>
-
-<p>유틸리티는 사용자가 시스템을 편리하게 사용하기 위한 용용 프로그램입니다. 쉘과 유틸리티는 사용자 입장에서는 구분이 필요 없으며, 시스템을 더욱 효율적으로 사용할 수 있도록 도움을 줍니다.</p>
-
-<h4 id="유틸리티의-주요-기능">유틸리티의 주요 기능</h4>
-
-<p><strong>시스템 관리:</strong></p>
-<ul>
-  <li><strong>시스템 모니터링</strong>: CPU, 메모리, 디스크 사용량 확인</li>
-  <li><strong>네트워크 관리</strong>: 네트워크 연결 및 설정 관리</li>
-  <li><strong>사용자 관리</strong>: 사용자 계정 및 권한 관리</li>
-  <li><strong>서비스 관리</strong>: 시스템 서비스 시작/중지/재시작</li>
-</ul>
-
-<p><strong>파일 관리:</strong></p>
-<ul>
-  <li><strong>파일 조작</strong>: 파일 복사, 이동, 삭제</li>
-  <li><strong>압축/해제</strong>: 파일 압축 및 압축 해제</li>
-  <li><strong>검색</strong>: 파일 및 디렉토리 검색</li>
-  <li><strong>편집</strong>: 텍스트 파일 편집</li>
-</ul>
-
-<h3 id="2-주요-유틸리티">2. 주요 유틸리티</h3>
-
-<h4 id="시스템-모니터링-유틸리티">시스템 모니터링 유틸리티</h4>
-
-<p><strong>CPU 및 메모리 모니터링:</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># CPU 사용량 확인</span>
-top
-htop
-mpstat
-
-<span class="c"># 메모리 사용량 확인</span>
-free <span class="nt">-h</span>
-vmstat
-
-<span class="c"># 디스크 사용량 확인</span>
-<span class="nb">df</span> <span class="nt">-h</span>
-<span class="nb">du</span> <span class="nt">-sh</span> directory
-</code></pre></div></div>
-
-<p><strong>네트워크 모니터링:</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 네트워크 연결 확인</span>
-netstat <span class="nt">-tuln</span>
-ss <span class="nt">-tuln</span>
-
-<span class="c"># 네트워크 인터페이스 확인</span>
-ip addr
-ifconfig
-
-<span class="c"># 네트워크 연결 테스트</span>
-ping <span class="nb">hostname
-</span>traceroute <span class="nb">hostname</span>
-</code></pre></div></div>
-
-<h4 id="파일-관리-유틸리티">파일 관리 유틸리티</h4>
-
-<p><strong>파일 조작:</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 파일 복사</span>
-<span class="nb">cp source </span>destination
-
-<span class="c"># 파일 이동</span>
-<span class="nb">mv </span>old_name new_name
-
-<span class="c"># 파일 삭제</span>
-<span class="nb">rm </span>filename
-
-<span class="c"># 파일 내용 보기</span>
-<span class="nb">cat </span>filename
-less filename
-<span class="nb">head</span> <span class="nt">-n</span> 10 filename
-<span class="nb">tail</span> <span class="nt">-n</span> 10 filename
-</code></pre></div></div>
-
-<p><strong>파일 검색:</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 파일 검색</span>
-find /path <span class="nt">-name</span> <span class="s2">"filename"</span>
-
-<span class="c"># 내용 검색</span>
-<span class="nb">grep</span> <span class="s2">"pattern"</span> filename
-
-<span class="c"># 파일 타입 확인</span>
-file filename
-
-<span class="c"># 파일 권한 확인</span>
-<span class="nb">ls</span> <span class="nt">-la</span> filename
-</code></pre></div></div>
-
-<h4 id="텍스트-처리-유틸리티">텍스트 처리 유틸리티</h4>
-
-<p><strong>텍스트 편집:</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 간단한 텍스트 편집</span>
-nano filename
-vim filename
-
-<span class="c"># 텍스트 처리</span>
-<span class="nb">sed</span> <span class="s1">'s/old/new/g'</span> filename
-<span class="nb">awk</span> <span class="s1">'{print $1}'</span> filename
-
-<span class="c"># 텍스트 정렬</span>
-<span class="nb">sort </span>filename
-<span class="nb">uniq </span>filename
-</code></pre></div></div>
-
-<p><strong>파일 비교:</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 파일 비교</span>
-diff file1 file2
-
-<span class="c"># 파일 병합</span>
-patch file.patch
-
-<span class="c"># 파일 무결성 확인</span>
-<span class="nb">md5sum </span>filename
-<span class="nb">sha256sum </span>filename
-</code></pre></div></div>
-
-<h3 id="3-유틸리티의-특징">3. 유틸리티의 특징</h3>
-
-<h4 id="모듈화된-설계">모듈화된 설계</h4>
-
-<p><strong>유틸리티의 특징:</strong></p>
-<ul>
-  <li><strong>단일 기능</strong>: 각 유틸리티는 하나의 특정 기능을 수행</li>
-  <li><strong>파이프라인</strong>: 여러 유틸리티를 연결하여 복잡한 작업 수행</li>
-  <li><strong>재사용성</strong>: 다른 스크립트나 프로그램에서 재사용 가능</li>
-  <li><strong>확장성</strong>: 새로운 유틸리티 추가 가능</li>
-</ul>
-
-<h4 id="unix-철학">Unix 철학</h4>
-
-<p><strong>Unix 철학의 적용:</strong></p>
-<ul>
-  <li><strong>작은 것이 아름답다</strong>: 작고 단순한 프로그램</li>
-  <li><strong>한 가지 일을 잘 한다</strong>: 각 프로그램은 하나의 기능에 집중</li>
-  <li><strong>파이프라인으로 연결</strong>: 프로그램들을 연결하여 복잡한 작업 수행</li>
-  <li><strong>텍스트 기반</strong>: 텍스트 파일을 통한 데이터 교환</li>
-</ul>
-
-<h2 id="구성-요소-간의-상호작용">구성 요소 간의 상호작용</h2>
-
-<h3 id="1-사용자-요청-처리-과정">1. 사용자 요청 처리 과정</h3>
-
-<h4 id="명령어-실행-과정">명령어 실행 과정</h4>
-
-<ol>
-  <li><strong>사용자 입력</strong>: 사용자가 쉘에 명령어 입력</li>
-  <li><strong>명령어 파싱</strong>: 쉘이 명령어를 파싱하고 분석</li>
-  <li><strong>유틸리티 호출</strong>: 해당 유틸리티 프로그램 호출</li>
-  <li><strong>커널 시스템 호출</strong>: 유틸리티가 커널에 시스템 호출 요청</li>
-  <li><strong>하드웨어 제어</strong>: 커널이 하드웨어에 직접 접근하여 작업 수행</li>
-  <li><strong>결과 반환</strong>: 결과를 쉘을 통해 사용자에게 반환</li>
-</ol>
-
-<h4 id="시스템-호출-과정">시스템 호출 과정</h4>
-
-<p><strong>시스템 호출의 예:</strong></p>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 파일 열기 시스템 호출</span>
-<span class="kt">int</span> <span class="n">fd</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="s">"file.txt"</span><span class="p">,</span> <span class="n">O_RDONLY</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">fd</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">perror</span><span class="p">(</span><span class="s">"open"</span><span class="p">);</span>
-    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="c1">// 파일 읽기 시스템 호출</span>
-<span class="kt">char</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
-<span class="kt">ssize_t</span> <span class="n">bytes_read</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buffer</span><span class="p">));</span>
-
-<span class="c1">// 파일 닫기 시스템 호출</span>
-<span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
-</code></pre></div></div>
-
-<h3 id="2-계층-간-통신">2. 계층 간 통신</h3>
-
-<h4 id="쉘과-커널-간-통신">쉘과 커널 간 통신</h4>
-
-<p><strong>시스템 호출을 통한 통신:</strong></p>
-<ul>
-  <li><strong>프로세스 생성</strong>: fork(), exec() 시스템 호출</li>
-  <li><strong>파일 조작</strong>: open(), read(), write(), close() 시스템 호출</li>
-  <li><strong>프로세스 제어</strong>: wait(), exit() 시스템 호출</li>
-  <li><strong>시스템 정보</strong>: uname(), sysinfo() 시스템 호출</li>
-</ul>
-
-<h4 id="유틸리티와-커널-간-통신">유틸리티와 커널 간 통신</h4>
-
-<p><strong>유틸리티의 커널 활용:</strong></p>
-<ul>
-  <li><strong>파일 시스템 유틸리티</strong>: 파일 시스템 시스템 호출 활용</li>
-  <li><strong>네트워크 유틸리티</strong>: 소켓 시스템 호출 활용</li>
-  <li><strong>프로세스 관리 유틸리티</strong>: 프로세스 관리 시스템 호출 활용</li>
-  <li><strong>시스템 모니터링 유틸리티</strong>: 시스템 정보 시스템 호출 활용</li>
-</ul>
-
-<h2 id="실무-적용">실무 적용</h2>
-
-<h3 id="1-시스템-관리">1. 시스템 관리</h3>
-
-<h4 id="일상적인-시스템-관리">일상적인 시스템 관리</h4>
-
-<p><strong>시스템 모니터링:</strong></p>
-<ul>
-  <li><strong>성능 모니터링</strong>: CPU, 메모리, 디스크 사용량 모니터링</li>
-  <li><strong>로그 분석</strong>: 시스템 로그 분석 및 문제 진단</li>
-  <li><strong>백업 관리</strong>: 정기적인 시스템 백업 및 복구</li>
-  <li><strong>보안 관리</strong>: 시스템 보안 설정 및 모니터링</li>
-</ul>
-
-<p><strong>사용자 관리:</strong></p>
-<ul>
-  <li><strong>사용자 계정 관리</strong>: 사용자 생성, 수정, 삭제</li>
-  <li><strong>권한 관리</strong>: 파일 및 디렉토리 권한 설정</li>
-  <li><strong>그룹 관리</strong>: 사용자 그룹 생성 및 관리</li>
-  <li><strong>비밀번호 관리</strong>: 사용자 비밀번호 정책 설정</li>
-</ul>
-
-<h3 id="2-개발-환경">2. 개발 환경</h3>
-
-<h4 id="개발자를-위한-활용">개발자를 위한 활용</h4>
-
-<p><strong>개발 환경 구축:</strong></p>
-<ul>
-  <li><strong>개발 도구 설치</strong>: 컴파일러, 디버거, IDE 설치</li>
-  <li><strong>라이브러리 관리</strong>: 개발 라이브러리 설치 및 관리</li>
-  <li><strong>버전 관리</strong>: Git 등 버전 관리 시스템 설정</li>
-  <li><strong>빌드 자동화</strong>: Make, CMake 등을 통한 빌드 자동화</li>
-</ul>
-
-<p><strong>코드 개발:</strong></p>
-<ul>
-  <li><strong>코드 편집</strong>: 텍스트 에디터 및 IDE 활용</li>
-  <li><strong>디버깅</strong>: GDB 등 디버거를 통한 코드 디버깅</li>
-  <li><strong>프로파일링</strong>: 성능 분석 및 최적화</li>
-  <li><strong>테스팅</strong>: 자동화된 테스팅 환경 구축</li>
-</ul>
-
-<h2 id="학습-목표">학습 목표</h2>
-
-<p>이번 학습을 통해 다음 사항들을 이해할 수 있습니다:</p>
-
-<ol>
-  <li><strong>리눅스 운영체제의 3가지 구성 요소 (커널, 쉘, 유틸리티)</strong></li>
-  <li><strong>각 구성 요소의 역할과 기능</strong></li>
-  <li><strong>구성 요소 간의 상호작용과 통신 방식</strong></li>
-  <li><strong>실무에서의 활용 방법</strong></li>
-  <li><strong>시스템 관리 및 개발 환경에서의 적용</strong></li>
-</ol>
-
-<h2 id="실습-과제">실습 과제</h2>
-
-<ol>
-  <li><strong>커널 모듈 실습</strong>: 커널 모듈 로드/언로드 실습</li>
-  <li><strong>쉘 스크립팅</strong>: Bash 스크립트 작성 및 실행</li>
-  <li><strong>유틸리티 활용</strong>: 다양한 시스템 유틸리티 사용법 학습</li>
-  <li><strong>시스템 분석</strong>: 시스템 구조 분석 및 모니터링</li>
-</ol>
-
-<h2 id="참고-자료">참고 자료</h2>
-
-<ul>
-  <li><a href="https://www.kernel.org/doc/">Linux Kernel Documentation</a></li>
-  <li><a href="https://www.gnu.org/software/bash/manual/">Bash Reference Manual</a></li>
-  <li><a href="https://linuxcommandlibrary.com/">Linux Command Library</a></li>
-  <li><a href="https://tldp.org/LDP/abs/html/">Advanced Bash-Scripting Guide</a></li>
-  <li><a href="https://tldp.org/LDP/sag/html/">Linux System Administration</a></li>
-</ul>
-
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

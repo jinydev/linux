@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/07_network/06_1_basic/06_1_13_icmp/">
+  <meta property="og:url" content="https://linux.jiny.dev/07_network/06_1_basic/06_1_13_icmp/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/07_network/06_1_basic/06_1_13_icmp/" />
-<meta property="og:url" content="http://localhost:4000/07_network/06_1_basic/06_1_13_icmp/" />
+<link rel="canonical" href="https://linux.jiny.dev/07_network/06_1_basic/06_1_13_icmp/" />
+<meta property="og:url" content="https://linux.jiny.dev/07_network/06_1_basic/06_1_13_icmp/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/07_network/06_1_basic/06_1_13_icmp/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/07_network/06_1_basic/06_1_13_icmp/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1176,7 +1176,19 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="centos에서-icmp-패킷을-허용">CentOS에서 ICMP 패킷을 허용</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../06_1_10_hardware/">⬅️ 이전: 네트워크</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../06_1_1_nat/">다음: NAT (Network Address Translation) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="13 ICMP 개념도" /></p>
+
+<h1 id="centos에서-icmp-패킷을-허용">CentOS에서 ICMP 패킷을 허용</h1>
 
 <h2 id="방화벽-설정-확인하기">방화벽 설정 확인하기</h2>
 <p>먼저 CentOS에서 방화벽이 활성화되어 있는지 확인합니다. 방화벽이 활성화되어 있다면, ICMP 패킷을 허용하는 규칙을 추가해야 합니다. 방화벽 설정을 확인하려면 다음 명령어를 실행합니다.</p>
@@ -1201,6 +1213,18 @@ sudo firewall-cmd --runtime-to-permanent
 </code></pre></div></div>
 
 <p>이제 CentOS에서 ICMP 패킷을 허용하도록 설정되었습니다. 다른 시스템에서 CentOS로 ping 요청을 보내면 응답이 돌아와야 합니다.</p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../06_1_10_hardware/">⬅️ 이전: 네트워크</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../06_1_1_nat/">다음: NAT (Network Address Translation) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

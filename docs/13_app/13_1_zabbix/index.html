@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/13_app/13_1_zabbix/">
+  <meta property="og:url" content="https://linux.jiny.dev/13_app/13_1_zabbix/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/13_app/13_1_zabbix/" />
-<meta property="og:url" content="http://localhost:4000/13_app/13_1_zabbix/" />
+<link rel="canonical" href="https://linux.jiny.dev/13_app/13_1_zabbix/" />
+<meta property="og:url" content="https://linux.jiny.dev/13_app/13_1_zabbix/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/13_app/13_1_zabbix/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/13_app/13_1_zabbix/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1166,63 +1166,42 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="zabbix-설치">zabbix 설치</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 13장. 애플리케이션 및 오픈소스 실습 (App)</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../13_2_cloud_drive/">다음: 13.2 오픈소스 클라우드 스토리지 (Nextcloud) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>자빅스는 손쉬운 설치를 위해서 설치 스크립트 명령을 자동으로 생성해 줍니다.<br />
-<code class="language-plaintext highlighter-rouge">https://www.zabbix.com/download</code> 로 접속을 합니다.</p>
+<h1 id="13_1_zabbix-알아보기">13_1_zabbix 알아보기</h1>
 
-<p>자신의 플렛폼 사항을 선택합니다.</p>
+<p>13_1_zabbix 알아보기에 대한 기본 개념과 실습을 연결하는 허브 페이지입니다.</p>
 
-<p><img src="D:\jinydev\linux\src\zabbix\img\image-20210313162456263.png" alt="image-20210313162456263" /></p>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>해당 주제의 구조를 이해하고 실습을 진행합니다.</p>
 
-<h2 id="ubuntu--mysql--apache-환경-설치">Ubuntu + mysql + apache 환경 설치</h2>
+<ul>
+  <li>
+    <p><a href="13_1_0_concept/">13_1_zabbix 알아보기 상세 튜토리얼</a></p>
 
-<h5 id="a-install-zabbix-repository">a. Install Zabbix repository</h5>
+    <p>해당 파트의 상세 문서를 확인하고 터미널 실습 코드를 학습합니다.</p>
+  </li>
+</ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># wget https://repo.zabbix.com/zabbix/5.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.2-1+ubuntu20.04_all.deb# dpkg -i zabbix-release_5.2-1+ubuntu20.04_all.deb# apt update
-</code></pre></div></div>
+<hr />
 
-<h5 id="b-install-zabbix-server-frontend-agent">b. Install Zabbix server, frontend, agent</h5>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-agent
-</code></pre></div></div>
-
-<h5 id="c-create-initial-database">c. Create initial database</h5>
-
-<p>](https://www.zabbix.com/documentation/5.2/manual/appendix/install/db_scripts)</p>
-
-<p>Make sure you have database server up and running.</p>
-
-<p>Run the following on your database host.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mysql -uroot -ppasswordmysql&gt; create database zabbix character set utf8 collate utf8_bin;mysql&gt; create user zabbix@localhost identified by 'password';mysql&gt; grant all privileges on zabbix.* to zabbix@localhost;mysql&gt; quit;
-</code></pre></div></div>
-
-<p>On Zabbix server host import initial schema and data. You will be prompted to enter your newly created password.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -uzabbix -p zabbix
-</code></pre></div></div>
-
-<h5 id="d-configure-the-database-for-zabbix-server">d. Configure the database for Zabbix server</h5>
-
-<p>Edit file /etc/zabbix/zabbix_server.conf</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DBPassword=password
-</code></pre></div></div>
-
-<h5 id="e-start-zabbix-server-and-agent-processes">e. Start Zabbix server and agent processes</h5>
-
-<p>Start Zabbix server and agent processes and make it start at system boot.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># systemctl restart zabbix-server zabbix-agent apache2
-# systemctl enable zabbix-server zabbix-agent apache2
-</code></pre></div></div>
-
-<h5 id="f-configure-zabbix-frontend">f. Configure Zabbix frontend</h5>
-
-<p>Connect to your newly installed Zabbix frontend: http://server_ip_or_name/zabbix
-Follow steps described in Zabbix documentation: <a href="https://www.zabbix.com/documentation/5.2/manual/installation/install#installing_frontend">Installing frontend</a></p>
-
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 13장. 애플리케이션 및 오픈소스 실습 (App)</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../13_2_cloud_drive/">다음: 13.2 오픈소스 클라우드 스토리지 (Nextcloud) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

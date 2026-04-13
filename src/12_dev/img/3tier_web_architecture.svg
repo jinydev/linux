@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <style>
+      .bg { fill: #1e1e24; }
+      .text-title { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 20px; font-weight: bold; }
+      .text-sub { fill: #aaaaaa; font-family: 'Inter', sans-serif; font-size: 14px; }
+      .text-node { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle;}
+      .client-grad { fill: url(#client); }
+      .app-grad { fill: url(#app); }
+      .db-grad { fill: url(#db); }
+      .arrow { stroke: #555566; stroke-width: 3; fill: none; stroke-dasharray: 5,5; animation: dash 20s linear infinite; }
+      .arrow-solid { stroke: #555566; stroke-width: 3; fill: none; }
+      @keyframes dash { to { stroke-dashoffset: -1000; } }
+    </style>
+    <linearGradient id="client" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4e54c8" />
+      <stop offset="100%" stop-color="#8f94fb" />
+    </linearGradient>
+    <linearGradient id="app" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11998e" />
+      <stop offset="100%" stop-color="#38ef7d" />
+    </linearGradient>
+    <linearGradient id="db" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f12711" />
+      <stop offset="100%" stop-color="#f5af19" />
+    </linearGradient>
+    <marker id="head" orient="auto" markerWidth="6" markerHeight="6" refX="5" refY="3">
+      <path d="M0,0 V6 L6,3 Z" fill="#555566" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg" rx="10" />
+
+  <!-- Titles -->
+  <text x="400" y="40" class="text-title" text-anchor="middle">3-Tier Web Application Architecture</text>
+  <text x="400" y="65" class="text-sub" text-anchor="middle">Client - Web / WAS Server - Database</text>
+
+  <!-- Presentation Tier -->
+  <rect x="50" y="120" width="180" height="150" rx="15" class="client-grad" />
+  <text x="140" y="180" class="text-node">Presentation Tier</text>
+  <text x="140" y="210" class="text-node" style="font-size:12px; font-weight:normal;">Web Browser</text>
+  <text x="140" y="230" class="text-node" style="font-size:12px; font-weight:normal;">(HTTP GET/POST)</text>
+
+  <!-- Application Tier -->
+  <rect x="310" y="120" width="180" height="150" rx="15" class="app-grad" />
+  <text x="400" y="180" class="text-node">Application Tier</text>
+  <text x="400" y="210" class="text-node" style="font-size:12px; font-weight:normal;">Apache Tomcat (WAS)</text>
+  <text x="400" y="230" class="text-node" style="font-size:12px; font-weight:normal;">Servlet / JSP / Spring</text>
+
+  <!-- Data Tier -->
+  <rect x="570" y="120" width="180" height="150" rx="15" class="db-grad" />
+  <text x="660" y="180" class="text-node">Data Tier</text>
+  <text x="660" y="210" class="text-node" style="font-size:12px; font-weight:normal;">Database Server</text>
+  <text x="660" y="230" class="text-node" style="font-size:12px; font-weight:normal;">(MySQL / Oracle)</text>
+
+  <!-- Arrows -->
+  <path d="M 230 170 L 300 170" class="arrow-solid" marker-end="url(#head)" />
+  <text x="265" y="160" class="text-sub" style="font-size:12px;" text-anchor="middle">Request</text>
+  
+  <path d="M 300 210 L 230 210" class="arrow" marker-end="url(#head)" />
+  <text x="265" y="235" class="text-sub" style="font-size:12px;" text-anchor="middle">Response</text>
+
+  <path d="M 490 170 L 560 170" class="arrow-solid" marker-end="url(#head)" />
+  <text x="525" y="160" class="text-sub" style="font-size:12px;" text-anchor="middle">SQL Query</text>
+  
+  <path d="M 560 210 L 490 210" class="arrow" marker-end="url(#head)" />
+  <text x="525" y="235" class="text-sub" style="font-size:12px;" text-anchor="middle">Data Result</text>
+
+  <!-- Footer description -->
+  <rect x="50" y="310" width="700" height="60" rx="8" fill="#2a2a35" />
+  <text x="400" y="345" class="text-sub" text-anchor="middle">엔터프라이즈 환경에서 비즈니스 로직(WAS)과 데이터(DB)를 분리하여 시스템의 확장성과 보안성을 극대화합니다.</text>
+</svg>

@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/12_dev/11_2_ext_dev/11_2_7_php/composer/">
+  <meta property="og:url" content="https://linux.jiny.dev/12_dev/11_2_ext_dev/11_2_7_php/composer/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/12_dev/11_2_ext_dev/11_2_7_php/composer/" />
-<meta property="og:url" content="http://localhost:4000/12_dev/11_2_ext_dev/11_2_7_php/composer/" />
+<link rel="canonical" href="https://linux.jiny.dev/12_dev/11_2_ext_dev/11_2_7_php/composer/" />
+<meta property="og:url" content="https://linux.jiny.dev/12_dev/11_2_ext_dev/11_2_7_php/composer/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/12_dev/11_2_ext_dev/11_2_7_php/composer/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/12_dev/11_2_ext_dev/11_2_7_php/composer/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1186,120 +1186,53 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="php-컴포저-설치">PHP 컴포저 설치</h1>
-<hr />
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="COMPOSER 개념도" /></p>
+
+<h1 id="php-컴포저-설치">PHP 컴포저 설치</h1>
 <p>컴포저를 이용하여 다양한 응용 패키지와 연동을 합니다.</p>
 
 <p><br /></p>
 
-<h2 id="다운로드">다운로드</h2>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>방대한 주제를 분할하여 제공합니다.</p>
+
+<ul>
+  <li>
+    <p><a href="part_1/">다운로드</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">설치하기</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_3/">컴포저 실행하기</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+</ul>
+
 <hr />
 
-<p>https://getcomposer.org/download/ 로 접속을 합니다.</p>
-
-<p>터미널에서 다음과 같이 실행합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-</code></pre></div></div>
-
-<p><br /></p>
-
-<h2 id="설치하기">설치하기</h2>
-<p>다운로드 받은 컴포터 파일을 설치합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-</code></pre></div></div>
-
-<p>설치를 진행합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php composer-setup.php 
-</code></pre></div></div>
-
-<p>설치후, 기존 설치파일은 제거 합니다.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php -r "unlink('composer-setup.php');"
-</code></pre></div></div>
-
-<p><br /></p>
-
-<h2 id="컴포저-실행하기">컴포저 실행하기</h2>
-<hr />
-<p>어디서든지 컴포저가 실행이 될 수 있도록 파일을 복사해 둡니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv composer.phar /usr/local/bin/composer
-</code></pre></div></div>
-
-<p>이제 composer 명령을 실행해 봅니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@hojin:~$ composer
-   ______
-  / ____/___  ____ ___  ____  ____  ________  _____
- / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
-/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
-\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
-                    /_/
-Composer version 2.0.8 2020-12-03 17:20:38
-
-Usage:
-  command [options] [arguments]
-
-Options:
-  -h, --help                     Display this help message
-  -q, --quiet                    Do not output any message
-  -V, --version                  Display this application version
-      --ansi                     Force ANSI output
-      --no-ansi                  Disable ANSI output
-  -n, --no-interaction           Do not ask any interactive question
-      --profile                  Display timing and memory usage information
-      --no-plugins               Whether to disable plugins.
-  -d, --working-dir=WORKING-DIR  If specified, use the given directory as working directory.
-      --no-cache                 Prevent use of the cache
-  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
-
-Available commands:
-  about                Shows the short information about Composer.
-  archive              Creates an archive of this composer package.
-  browse               Opens the package's repository URL or homepage in your browser.
-  cc                   Clears composer's internal package cache.
-  check-platform-reqs  Check that platform requirements are satisfied.
-  clear-cache          Clears composer's internal package cache.
-  clearcache           Clears composer's internal package cache.
-  config               Sets config options.
-  create-project       Creates new project from a package into given directory.
-  depends              Shows which packages cause the given package to be installed.
-  diagnose             Diagnoses the system to identify common errors.
-  dump-autoload        Dumps the autoloader.
-  dumpautoload         Dumps the autoloader.
-  exec                 Executes a vendored binary/script.
-  fund                 Discover how to help fund the maintenance of your dependencies.
-  global               Allows running commands in the global composer dir ($COMPOSER_HOME).
-  help                 Displays help for a command
-  home                 Opens the package's repository URL or homepage in your browser.
-  i                    Installs the project dependencies from the composer.lock file if present, or falls back on the composer.json.
-  info                 Shows information about packages.
-  init                 Creates a basic composer.json file in current directory.
-  install              Installs the project dependencies from the composer.lock file if present, or falls back on the composer.json.
-  licenses             Shows information about licenses of dependencies.
-  list                 Lists commands
-  outdated             Shows a list of installed packages that have updates available, including their latest version.
-  prohibits            Shows which packages prevent the given package from being installed.
-  remove               Removes a package from the require or require-dev.
-  require              Adds required packages to your composer.json and installs them.
-  run                  Runs the scripts defined in composer.json.
-  run-script           Runs the scripts defined in composer.json.
-  search               Searches for packages.
-  self-update          Updates composer.phar to the latest version.
-  selfupdate           Updates composer.phar to the latest version.
-  show                 Shows information about packages.
-  status               Shows a list of locally modified packages.
-  suggests             Shows package suggestions.
-  u                    Upgrades your dependencies to the latest version according to composer.json, and updates the composer.lock file.
-  update               Upgrades your dependencies to the latest version according to composer.json, and updates the composer.lock file.
-  upgrade              Upgrades your dependencies to the latest version according to composer.json, and updates the composer.lock file.
-  validate             Validates a composer.json and composer.lock.
-  why                  Shows which packages cause the given package to be installed.
-  why-not              Shows which packages prevent the given package from being installed.
-</code></pre></div></div>
-
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

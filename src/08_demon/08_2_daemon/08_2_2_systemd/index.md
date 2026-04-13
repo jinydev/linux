@@ -3,12 +3,16 @@ layout: home
 title: "10.2 시스템 서비스(systemd)"
 ---
 
+[⬅️ 이전: 10.1 데몬(Daemon)의 개요](../08_2_1_concept/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 10.3 주요 네트워크 서비스 ➡️](../08_2_3_service/)
+
+![2 SYSTEMD 개념도](img/concept_architecture.svg)
+
 # 10.2 리눅스의 조물주 엔진, Systemd (systemctl) 
 
 과거의 리눅스들은 컴퓨터를 부팅할 때 `init` 이라는 낡은 시스템을 사용해서 데몬(서비스)들을 순차적으로 거북이처럼 하나씩 느리게 켰습니다. 
 하지만 최신 리눅스(Ubuntu 16 이상, CentOS 7 이상) 배포판들은 이것을 싹 갈아엎고, 리눅스의 심장이라 불리는 혁신적인 거대 진단 엔진인 **`systemd (시스템디)`** 를 표준으로 도입했습니다.
 
-![시스템디 구조와 리모콘](./img/systemctl.svg)
+<!-- Broken Image Removed: ./img/systemctl.svg -->
 > **동작 원리**: 우분투가 부팅되자마자 PID 1번을 부여받고 최초로 일어나는 마더(Mother) 엔진이 바로 `systemd` 입니다. 엔지니어가 `systemctl (시스템컨트롤)` 이라는 명령줄 리모콘의 버튼을 누르면, 이 엔진이 지시를 받아 하위의 데몬(웹서버, 원격서버 등)들의 멱살을 잡고 통제하게 됩니다.
 
 ---
@@ -64,3 +68,7 @@ sudo systemctl start sshd
 # 또는
 sudo systemctl restart sshd
 ```
+
+---
+
+[⬅️ 이전: 10.1 데몬(Daemon)의 개요](../08_2_1_concept/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 10.3 주요 네트워크 서비스 ➡️](../08_2_3_service/)

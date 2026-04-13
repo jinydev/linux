@@ -2,16 +2,19 @@
 layout: home
 ---
 
+[⬅️ 이전: 사용자 비밀번호](../03_1_7_password/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 권환 획득 ➡️](../03_1_9_su/)
+
+![8 PRACTICE 개념도](img/concept_architecture.svg)
+
 # 사용자 및 그룹생성 실습
 
 ## 실습
-
 
 ![슬라이드12](../img/슬라이드12.PNG)
 
 ![슬라이드13](../img/슬라이드13.PNG)
 
-![슬라이드14](../img/슬라이드14.PNG)
+<!-- Broken Image Removed: ../img/슬라이드14.PNG -->
 
 ![슬라이드15](../img/슬라이드15.PNG)
 
@@ -28,3 +31,7 @@ layout: home
 ![슬라이드21](../img/슬라이드21.PNG)
 
 ![슬라이드22](../img/슬라이드22.PNG)
+
+---
+
+[⬅️ 이전: 사용자 비밀번호](../03_1_7_password/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 권환 획득 ➡️](../03_1_9_su/)

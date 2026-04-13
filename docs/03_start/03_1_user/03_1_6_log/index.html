@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/03_start/03_1_user/03_1_6_log/">
+  <meta property="og:url" content="https://linux.jiny.dev/03_start/03_1_user/03_1_6_log/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/03_start/03_1_user/03_1_6_log/" />
-<meta property="og:url" content="http://localhost:4000/03_start/03_1_user/03_1_6_log/" />
+<link rel="canonical" href="https://linux.jiny.dev/03_start/03_1_user/03_1_6_log/" />
+<meta property="og:url" content="https://linux.jiny.dev/03_start/03_1_user/03_1_6_log/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/03_start/03_1_user/03_1_6_log/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/03_start/03_1_user/03_1_6_log/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1176,81 +1176,46 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="로그인-기록">로그인 기록</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="6 LOG 개념도" /></p>
+
+<h1 id="로그인-기록">로그인 기록</h1>
 <p>리눅스는 접속을 하는 모든 사용자의 로그인을 기록합니다.</p>
 
-<h2 id="로그인-기록-1">로그인 기록</h2>
-<p>리눅스에서 로그인 기록(login record)은 시스템에 로그인한 사용자들의 정보와 로그인 시도에 대한 정보를 기록하는 것을 말합니다.</p>
-
-<p>로그인 기록은 <code class="language-plaintext highlighter-rouge">시스템 보안</code>을 강화하는 데 중요한 역할을 합니다. 이 로그는 보안 관리자가 시스템에 접근한 사용자 및 시간을 추적할 수 있으며, 필요한 경우 불법적인 접근을 추적하고 예방할 수 있습니다.</p>
-
-<p>로그인 기록은 시스템 로그 파일에 기록됩니다. 로그 파일은 <code class="language-plaintext highlighter-rouge">/var/log</code> 디렉토리에 위치하며, 로그인 기록은 <code class="language-plaintext highlighter-rouge">/var/log/auth.log</code> 또는 <code class="language-plaintext highlighter-rouge">/var/log/secure</code> 파일에 저장됩니다.</p>
-
-<p>로그인 기록에는 다음과 같은 정보들이 포함됩니다.</p>
+<h2 id="1️⃣-세부-학습-가이드">1️⃣ 세부 학습 가이드</h2>
+<p>방대한 주제를 분할하여 제공합니다.</p>
 
 <ul>
-  <li>사용자 이름과 IP 주소</li>
-  <li>로그인 시도 시간</li>
-  <li>로그인 성공 여부</li>
-  <li>실패한 로그인 시도 횟수</li>
-  <li>실패한 로그인 시도 시간</li>
+  <li>
+    <p><a href="part_1/">로그인 기록</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">접속기록</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
 </ul>
 
-<p>로그인 기록을 정기적으로 <code class="language-plaintext highlighter-rouge">모니터</code>링하고 검토하여, <code class="language-plaintext highlighter-rouge">보안 관련 이슈</code>를 <code class="language-plaintext highlighter-rouge">감지</code>하고 처리할 수 있습니다.</p>
+<hr />
 
-<h2 id="접속기록">접속기록</h2>
-<p>리눅스는 모든 로그인 기록을 <code class="language-plaintext highlighter-rouge">/var/log/wtmp</code>에 기록합니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hojin@hojin-550XDA:~<span class="nv">$ </span><span class="nb">ls</span> /var/log/wtmp
-/var/log/wtmp
-</code></pre></div></div>
-<p><code class="language-plaintext highlighter-rouge">last</code>의 명령은 <code class="language-plaintext highlighter-rouge">/var/log/wtmp</code>파일의 내용을 쉽게 할인 할 수 있는 명령을 제공합니다.</p>
-
-<h3 id="last">last</h3>
-<p><code class="language-plaintext highlighter-rouge">last</code> 명령어로 최근 접속 기록 및 최근 재부팅 기록을 볼 수 있다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hojin@hojin-550XDA:~$ last
-hojin    pts/0        172.30.1.76      Wed Mar 29 13:07   still logged in
-hojin    pts/0        172.30.1.67      Fri Mar 24 15:09 - 03:21  (12:11)
-hojin    pts/0        172.30.1.91      Wed Mar 22 14:28 - 14:42  (00:14)
-hojin    pts/0        172.30.1.91      Wed Mar 22 14:26 - 14:27  (00:01)
-hojin    pts/1        172.30.1.25      Mon Mar 13 14:12 - 20:25  (06:13)
-hojin    tty2         tty2             Tue Mar  7 17:52   still logged in
-reboot   system boot  5.19.0-35-generi Tue Mar  7 17:52   still running
-
-wtmp begins Sat Mar  4 17:53:01 2023
-</code></pre></div></div>
-
-<h3 id="일부-특정-사용자-확인">일부 특정 사용자 확인</h3>
-<p><code class="language-plaintext highlighter-rouge">last</code>명령 뒤에 계정을 붙여 입력합니다.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hojin@hojin-550XDA:~$ last hojin
-hojin    pts/0        172.30.1.76      Wed Mar 29 13:07   still logged in
-hojin    pts/0        172.30.1.67      Fri Mar 24 15:09 - 03:21  (12:11)
-hojin    pts/1        172.30.1.25      Mon Mar 13 14:12 - 20:25  (06:13)
-hojin    tty2         tty2             Tue Mar  7 17:52   still logged in
-
-wtmp begins Sat Mar  4 17:53:01 2023
-hojin@hojin-550XDA:~$
-</code></pre></div></div>
-
-<h3 id="특정시간-이전-접속-확인">특정시간 이전 접속 확인</h3>
-<p><code class="language-plaintext highlighter-rouge">-t</code> 옵션으로 일시를 붙이면 그 이전의 접속기록만 표시된다. 인수는 <code class="language-plaintext highlighter-rouge">YYYYMMDDHHMMSS(연월일시분초)</code> 형식으로 적어야 한다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hojin@hojin-550XDA:~$ last -t 20230329040000
-hojin    pts/0        172.30.1.67      Fri Mar 24 15:09 - 03:21  (12:11)
-hojin    pts/0        172.30.1.91      Wed Mar 22 14:28 - 14:42  (00:14)
-hojin    pts/0        172.30.1.91      Wed Mar 22 14:26 - 14:27  (00:01)
-
-wtmp begins Sat Mar  4 17:53:01 2023
-hojin@hojin-550XDA:~$
-</code></pre></div></div>
-
-<h3 id="지난달-기록-보기">지난달 기록 보기</h3>
-<p><code class="language-plaintext highlighter-rouge">/var/log/wtmp</code>는 <code class="language-plaintext highlighter-rouge">logrotate</code>에 의해 로그 기록값이 순환됩니다.
-<code class="language-plaintext highlighter-rouge">logrotate</code>는 <code class="language-plaintext highlighter-rouge">/etc/logrotate.conf</code> 설정에 따라 매달 1일의 특정 갯수가 넘는 경우 순환되어 기록되게 설계되어 있습니다. 이런경우 <code class="language-plaintext highlighter-rouge">.1</code>, <code class="language-plaintext highlighter-rouge">.2</code>와 같은 확장자를 확인하여 보존된 파일을 확인해야 합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>last -f /var/log/wtmp.1
-</code></pre></div></div>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 도메인](../domain/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: mariaDB를 설치합니다. ➡️](../mysql/)
+
+![LAPM 개념도](img/concept_architecture.svg)
+
 ```shell
 # wget https://bitnami.com/redirect/to/654754/bitnami-lampstack-7.2.21-0-linux-x64-installer.run
 ```
@@ -30,3 +34,7 @@ drwxr-xr-x   3 root root        17 Apr 27  2016 .config
 -rw-r--r--.  1 root root       129 Dec 29  2013 .tcshrc
 [root@jiny ~]#
 ```
+
+---
+
+[⬅️ 이전: 도메인](../domain/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: mariaDB를 설치합니다. ➡️](../mysql/)

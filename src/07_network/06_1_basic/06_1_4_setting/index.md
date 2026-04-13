@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 네트워크 재시작(우분투)](../06_1_3_restart/ubuntu/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: TCP/IP ➡️](../06_1_5_tcp/)
+
+![4 SETTING 개념도](img/concept_architecture.svg)
+
 # 네트웍 설정
 
 ## 고정 아이피 변경
@@ -32,3 +36,7 @@ dns=192.168.111.2
 ```
 reboot
 ```
+
+---
+
+[⬅️ 이전: 네트워크 재시작(우분투)](../06_1_3_restart/ubuntu/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: TCP/IP ➡️](../06_1_5_tcp/)

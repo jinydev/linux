@@ -10,6 +10,10 @@ og_type: "article"
 twitter_card: "summary"
 ---
 
+[⬅️ 이전: 유닉스(Unix)란 - 개발자를 위한 리눅스](../01_1_13_unix/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 안드로이드 - 리눅스 기반 스마트폰 운영체제 ➡️](../01_1_1_android/)
+
+![14 XWINDOW 개념도](img/concept_architecture.svg)
+
 # X-Window
 X Window System, 일반적으로 `X` 또는 `X11`이라고도 불리는 것은 리눅스와 같은 유닉스 계열 운영체제에서 사용되는 윈도우 시스템입니다. X Window System은 사용자가 GUI(Graphical User Interface)를 통해 리눅스 시스템을 조작할 수 있도록 해줍니다.
 
@@ -37,3 +41,7 @@ X Window System은 네트워크 투명성을 제공하며, 원격 접속을 지�
 * **네트워크 투명성**: 원격 시스템의 애플리케이션을 로컬에서 실행할 수 있음
 * **보안**: SSH 터널링을 통한 안전한 원격 접속 지원
 * **성능**: 네트워크 환경에 따라 최적화된 그래픽 전송
+
+---
+
+[⬅️ 이전: 유닉스(Unix)란 - 개발자를 위한 리눅스](../01_1_13_unix/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 안드로이드 - 리눅스 기반 스마트폰 운영체제 ➡️](../01_1_1_android/)

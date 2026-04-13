@@ -3,6 +3,10 @@ layout: home
 title: "10.1 데몬(Daemon)의 개요"
 ---
 
+[⬅️ 이전: sqlite3 설치](../../08_1_basic/08_1_2_server/sqlite3/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 10.2 시스템 서비스(systemd) ➡️](../08_2_2_systemd/)
+
+![1 CONCEPT 개념도](img/concept_architecture.svg)
+
 # 10.1 보이지 않는 유령 관리자, 데몬(Daemon)
 
 서버(Server)는 클라이언트의 요청이 언제 들어올지 모르기 때문에 365일 24시간 항상 잠들지 않고 깨어 있어야만 합니다. 이렇게 화면에 보이지 않는 서버의 어두운 뒷단에서, 사용자의 지시 없이도 스스로 무한히 일하는 프로그램을 리눅스에서는 **데몬(Daemon)** 이라고 부릅니다. 
@@ -40,3 +44,7 @@ title: "10.1 데몬(Daemon)의 개요"
 # systemd 혹은 sshd 같은 데몬만 찾아서 구경합니다.
 ps -ef | grep "sshd"
 ```
+
+---
+
+[⬅️ 이전: sqlite3 설치](../../08_1_basic/08_1_2_server/sqlite3/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 10.2 시스템 서비스(systemd) ➡️](../08_2_2_systemd/)

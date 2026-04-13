@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/01_prologue/01_2_history/">
+  <meta property="og:url" content="https://linux.jiny.dev/01_prologue/01_2_history/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/01_prologue/01_2_history/" />
-<meta property="og:url" content="http://localhost:4000/01_prologue/01_2_history/" />
+<link rel="canonical" href="https://linux.jiny.dev/01_prologue/01_2_history/" />
+<meta property="og:url" content="https://linux.jiny.dev/01_prologue/01_2_history/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/01_prologue/01_2_history/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/01_prologue/01_2_history/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1166,61 +1166,48 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="12-리눅스의-역사와-철학">1.2 리눅스의 역사와 철학</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../01_1_prologue/01_1_9_opensource/">⬅️ 이전: 오픈소스 라이선스 - GPL, Apache2, MIT 라이선스</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="01_2_1_linux/">다음: 1.2 리눅스의 역사와 철학 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="HISTORY 개념도" /></p>
+
+<h1 id="12-리눅스의-역사와-철학">1.2 리눅스의 역사와 철학</h1>
 
 <p>리눅스(Linux)는 1991년 핀란드의 대학생이었던 <strong>리누스 토르발스(Linus Torvalds)</strong> 가 개발한 오픈소스 커널입니다. 유닉스(UNIX)와 유사하게 동작하지만 코드를 완전히 새로 작성했으며, 현재는 전 세계 서버와 인프라, 클라우드의 표준으로 자리매김했습니다.</p>
 
 <hr />
 
-<h2 id="1-리눅스의-탄생-배경">1. 리눅스의 탄생 배경</h2>
+<p>본 과정에서는 리눅스가 탄생하기까지의 시대적 배경(유닉스와 미닉스의 한계)을 짚어보고, 소스코드를 개방하는 오픈소스 철학과 결합하여 글로벌 생태계를 장악하게 된 위대한 여정을 학습합니다.</p>
 
-<p>당시 대형 컴퓨터 전용이었던 고가의 유닉스(UNIX)를 개인 PC에서 사용하려는 열망이 컸습니다.</p>
+<h2 id="1️⃣-탄생과-철학-가이드">1️⃣ 탄생과 철학 가이드</h2>
+<p>유닉스에서 파생되어 세상에 나오기까지 리눅스가 걸어온 역사의 발자취를 추적합니다.</p>
 
-<p><img src="./img/linux_history.svg" alt="리눅스 역사와 흐름도" /></p>
-<blockquote>
-  <p><strong>흐름도</strong>: UNIX의 구조적 모방에서 시작해 미닉스(MINIX)를 거쳐, 리눅스 커널과 GNU 도구들이 합쳐져 오늘날의 완전한 OS(GNU/Linux)가 완성되었습니다.</p>
-</blockquote>
-
-<h3 id="11-유닉스의-한계와-미닉스minix">1.1 유닉스의 한계와 미닉스(MINIX)</h3>
 <ul>
-  <li><strong>UNIX (1969)</strong>: 우수한 성능을 가졌으나 상용화되어 라이선스 비용이 천문학적이었습니다.</li>
-  <li><strong>MINIX (1987)</strong>: 앤드류 타넨바움 교수가 교육용으로 만든 소형 유닉스입니다. 소스가 공개되었으나 제약이 있었고, 기능적으로 부족함이 많았습니다.</li>
-</ul>
+  <li>
+    <p><a href="01_2_1_linux/">리눅스의 역사와 오픈소스 정신 깊이보기</a></p>
 
-<h3 id="12-리눅스-커널의-탄생">1.2 리눅스 커널의 탄생</h3>
-<ul>
-  <li>미닉스에 만족하지 못한 리누스 토르발스가 1991년에 취미 삼아 독자적인 커널(Kernel 0.01)을 작성하여 인터넷에 무료로 배포한 것이 리눅스의 시초입니다.</li>
+    <p>초기 폐쇄적이었던 유닉스와 미닉스의 한계에서 출발하여, 리누스 토르발스의 0.01 커널 및 GNU 프로젝트와 결합함으로써 오늘날의 위대한 오플소스 생태계를 구축하게 된 핵심 역사 스토리를 학습합니다.</p>
+  </li>
 </ul>
 
 <hr />
 
-<h2 id="2-gnu-프로젝트와의-결합">2. GNU 프로젝트와의 결합</h2>
-
-<p>리눅스만으로는 단순히 핵심 ‘커널’일 뿐 작동하는 완전한 운영체제가 될 수 없었습니다. 여기에 생명을 불어넣은 것이 바로 <strong>GNU 프로젝트</strong>입니다.</p>
-
-<h3 id="21-자유-소프트웨어-재단-fsf">2.1 자유 소프트웨어 재단 (FSF)</h3>
-<ul>
-  <li>리처드 스톨만(Richard Stallman)이 주도한 GNU(GNU is Not Unix) 프로젝트는 유닉스와 완벽하게 호환되면서도 누구나 무료로 쓸 수 있는 “자유 소프트웨어”를 생산하기 시작했습니다.</li>
-  <li>GCC 컴파일러, bash 쉘, 각종 필수 터미널 명령어(ls, mv 등)를 개발했습니다.</li>
-</ul>
-
-<h3 id="22-gnulinux의-완성">2.2 GNU/Linux의 완성</h3>
-<ul>
-  <li>GNU 프로젝트는 쓸만한 도구는 다 만들었지만 이 도구들이 올라갈 핵심 ‘커널’이 없었고, 리누스 토르발스의 ‘리눅스 커널’은 명령어를 실행해 줄 ‘도구’가 부족했습니다.</li>
-  <li>1992년, 리눅스 커널이 GNU의 <strong>GPL 라이선스(자유롭게 복제 및 수정 가능한 라이선스)</strong>를 채택하면서, 두 생태계가 결합된 <code class="language-plaintext highlighter-rouge">GNU/Linux</code> 가 탄생했습니다. (하지만 사람들은 짧게 ‘리눅스’라고 부릅니다.)</li>
-</ul>
-
-<hr />
-
-<h2 id="3-오픈소스-정신-open-source">3. 오픈소스 정신 (Open Source)</h2>
-
-<p>리눅스의 거대한 성공은 소스코드가 완전하게 개방된 <strong>오픈소스 생태계</strong> 덕분입니다.</p>
-
-<ul>
-  <li><strong>집단 지성</strong>: 수많은 전 세계 개발자들이 인터넷을 통해 자발적으로 버그를 수정하고 기여합니다.</li>
-  <li><strong>포크(Fork)와 배포판(Distribution)</strong>: 코드가 열려 있으므로 레드햇, 우분투, 데비안 등 수백 가지의 파생 ‘리눅스 배포판’이 탄생할 수 있었습니다.</li>
-  <li><strong>플랫폼 독립성</strong>: 오픈소스 구조로 인해 인텔 CPU는 물론 스마트폰(안드로이드), 공유기(ARM), 슈퍼컴퓨터 등 거의 모든 환경에 이식되었습니다.</li>
-</ul>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../01_1_prologue/01_1_9_opensource/">⬅️ 이전: 오픈소스 라이선스 - GPL, Apache2, MIT 라이선스</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="01_2_1_linux/">다음: 1.2 리눅스의 역사와 철학 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

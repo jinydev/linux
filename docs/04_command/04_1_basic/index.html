@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="리눅스 명령어의 기초부터 고급까지 체계적으로 학습하는 가이드. 파일시스템 탐색, 시스템 관리, 쉘 스크립트 등 리눅스 커맨드 라인 마스터가 되는 방법을 알아보세요."><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>리눅스 명령어 학습하기 - 개발자를 위한 리눅스</title>
   <meta name="title" content="리눅스 명령어 학습하기 - 개발자를 위한 리눅스" /><!-- 키워드 설정 --><meta name="keywords" content="리눅스, 명령어, 커맨드라인, 쉘, bash, 파일시스템, 시스템관리, 쉘스크립트, 터미널"><!-- Open Graph 메타데이터 --><meta property="og:title" content="리눅스 명령어 학습하기 - 개발자를 위한 리눅스"><meta property="og:description" content="리눅스 명령어의 기초부터 고급까지 체계적으로 학습하는 가이드"><meta property="og:type" content="article"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/04_command/04_1_basic/">
+  <meta property="og:url" content="https://linux.jiny.dev/04_command/04_1_basic/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="리눅스 명령어 학습하기 - 개발자를 위한 리눅스"><meta property="twitter:description" content="리눅스 명령어의 기초부터 고급까지 체계적으로 학습하는 가이드"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="리눅스 명령어의 기초부터 고급까지 체계적으로 학습하는 가이드. 파일시스템 탐색, 시스템 관리, 쉘 스크립트 등 리눅스 커맨드 라인 마스터가 되는 방법을 알아보세요." />
 <meta property="og:description" content="리눅스 명령어의 기초부터 고급까지 체계적으로 학습하는 가이드. 파일시스템 탐색, 시스템 관리, 쉘 스크립트 등 리눅스 커맨드 라인 마스터가 되는 방법을 알아보세요." />
-<link rel="canonical" href="http://localhost:4000/04_command/04_1_basic/" />
-<meta property="og:url" content="http://localhost:4000/04_command/04_1_basic/" />
+<link rel="canonical" href="https://linux.jiny.dev/04_command/04_1_basic/" />
+<meta property="og:url" content="https://linux.jiny.dev/04_command/04_1_basic/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 명령어 학습하기 - 개발자를 위한 리눅스" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"HojinLee"},"description":"리눅스 명령어의 기초부터 고급까지 체계적으로 학습하는 가이드. 파일시스템 탐색, 시스템 관리, 쉘 스크립트 등 리눅스 커맨드 라인 마스터가 되는 방법을 알아보세요.","headline":"리눅스 명령어 학습하기 - 개발자를 위한 리눅스","url":"http://localhost:4000/04_command/04_1_basic/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"HojinLee"},"description":"리눅스 명령어의 기초부터 고급까지 체계적으로 학습하는 가이드. 파일시스템 탐색, 시스템 관리, 쉘 스크립트 등 리눅스 커맨드 라인 마스터가 되는 방법을 알아보세요.","headline":"리눅스 명령어 학습하기 - 개발자를 위한 리눅스","url":"https://linux.jiny.dev/04_command/04_1_basic/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1166,433 +1166,84 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="리눅스-명령어-학습하기">리눅스 명령어 학습하기</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 4장. 리눅스 명령어 (Command)</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../04_2_advanced/">다음: 고급 명령어 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<blockquote>
-  <p>참조 : 리눅스 커멘드 라인</p>
-</blockquote>
+<h1 id="41-리눅스-기본-명령어-마스터-basic">4.1 리눅스 기본 명령어 마스터 (Basic)</h1>
 
-<p>리눅스 명령어는 리눅스 시스템을 효율적으로 관리하고 활용하기 위한 핵심 도구입니다. 이 가이드를 통해 리눅스 커맨드 라인의 기초부터 고급 기술까지 체계적으로 학습할 수 있습니다.</p>
+<p>리눅스 터미널에서 시스템을 통제하기 위해 반드시 알아야 할 기초 명령어부터 쉘 자동화 스크립트 제어까지 폭넓고 체계적인 구문을 다룹니다.</p>
 
-<h2 id="파일시스템-및-탐색">파일시스템 및 탐색</h2>
-
-<p>리눅스 커맨드 라인에서 첫 번째로 학습해야 하는 부분은 파일시스템을 탐색하는 것입니다. 파일시스템은 리눅스에서 모든 데이터가 저장되는 구조이며, 이를 이해하고 탐색하는 능력은 리눅스 사용의 기본이 됩니다.</p>
-
-<h3 id="기본-탐색-명령어">기본 탐색 명령어</h3>
+<h2 id="1️⃣-터미널-환경-및-시스템-기초">1️⃣ 터미널 환경 및 시스템 기초</h2>
+<p>터미널의 가장 기본적인 환경을 다루고 운영체제 자원을 통제합니다.</p>
 
 <ul>
-  <li><strong>pwd</strong> : 현재 작업 디렉터리 확인 (Print Working Directory)</li>
-  <li><strong>cd</strong> : 디렉터리 변경하기 (Change Directory)</li>
-  <li><strong>ls</strong> : 디렉터리 목록 보기 (List)</li>
+  <li>
+    <p><a href="04_1_1_file_dir/">파일 시스템 탐색 및 자원 조작</a></p>
+
+    <p>리눅스의 근간인 파일시스템의 계층적 트리 구조를 살피고, <code class="language-plaintext highlighter-rouge">pwd</code>, <code class="language-plaintext highlighter-rouge">cd</code>, <code class="language-plaintext highlighter-rouge">ls</code>, <code class="language-plaintext highlighter-rouge">mkdir</code>, <code class="language-plaintext highlighter-rouge">cp</code>, <code class="language-plaintext highlighter-rouge">mv</code> 등의 원초적 조작법을 배웁니다.</p>
+  </li>
+  <li>
+    <p><a href="04_1_2_system/">운영체제 시스템 및 프로세스 제어</a></p>
+
+    <p><code class="language-plaintext highlighter-rouge">uname</code>, <code class="language-plaintext highlighter-rouge">top</code>, <code class="language-plaintext highlighter-rouge">ps</code> 명령어 등을 사용하여 서버의 가용 하드웨어 리소스 상태와 백그라운드 데몬 구동 정보를 깊이 있게 통제합니다.</p>
+  </li>
+  <li>
+    <p><a href="04_1_3_cli_env/">명령어와 터미널 환경 설정</a></p>
+
+    <p>리다이렉션(<code class="language-plaintext highlighter-rouge">&gt;</code>), 와일드카드 확장, 고급 숏컷 키보드 기법과 더불어 시스템 프로필 환경변수(<code class="language-plaintext highlighter-rouge">PATH</code>)를 내 입맛에 맞게 커스터마이징합니다.</p>
+  </li>
 </ul>
 
-<h3 id="파일시스템-트리-구조의-이해">파일시스템 트리 구조의 이해</h3>
+<h2 id="2️⃣-서버-관리-및-텍스트-스트림">2️⃣ 서버 관리 및 텍스트 스트림</h2>
+<p>보안 및 패키지와 함께 터미널의 꽃인 텍스트 스트림 조작 기법을 학습합니다.</p>
 
-<p>모든 운영체제는 데이터를 보관하는 파일시스템을 가지고 있습니다. 그리고, 파일시스템은 <code class="language-plaintext highlighter-rouge">계층적인 디렉터리</code> 구조로 되어 있습니다. 계층적이라는 말은 다른 용어로 트리 구조라고도 합니다.</p>
-
-<p>트리 구조에서 최상위 노드를 루트(root) 디렉터리라고 합니다. 리눅스는 최상위 root 디렉터리를 기준으로 다수의 하위 디렉터리를 가지고 있습니다.</p>
-
-<blockquote>
-  <p><strong>참고</strong>: 윈도우 운영체제는 저장장치별로 개별 파일 시스템을 가지고 관리합니다. 리눅스에서는 모든 저장장치를 단일 파일 시스템으로 관리합니다.</p>
-</blockquote>
-
-<h3 id="현재-작업-디렉터리">현재 작업 디렉터리</h3>
-
-<p>현재 작업 디렉터리는 사용자가 현재 위치한 디렉터리를 의미합니다. 모든 상대 경로는 현재 작업 디렉터리를 기준으로 해석되며, <code class="language-plaintext highlighter-rouge">pwd</code> 명령어를 통해 확인할 수 있습니다.</p>
-
-<h2 id="시스템-살펴보기">시스템 살펴보기</h2>
-
-<p>리눅스 시스템의 상태와 정보를 확인하는 방법을 학습합니다. 시스템 리소스, 프로세스, 사용자 정보 등을 모니터링하고 관리하는 명령어들을 다룹니다.</p>
-
-<h3 id="시스템-정보-확인">시스템 정보 확인</h3>
 <ul>
-  <li><strong>uname</strong> : 시스템 정보 출력</li>
-  <li><strong>who</strong> : 현재 로그인한 사용자 확인</li>
-  <li><strong>w</strong> : 시스템 사용자와 프로세스 정보</li>
-  <li><strong>top</strong> : 시스템 프로세스 모니터링</li>
+  <li>
+    <p><a href="04_1_4_admin/">관리자 권한 및 패키지 관리</a></p>
+
+    <p>서버 보안 1원칙인 파일 퍼미션(rwx) 체계 관리 및 파티셔닝 기초, <code class="language-plaintext highlighter-rouge">apt</code> 등 응용 패키지 소프트웨어 관리/업데이트 요령을 배웁니다.</p>
+  </li>
+  <li>
+    <p><a href="04_1_5_text_tool/">텍스트 스트림 조작 및 아카이빙 처리</a></p>
+
+    <p><code class="language-plaintext highlighter-rouge">grep</code>, <code class="language-plaintext highlighter-rouge">find</code>, <code class="language-plaintext highlighter-rouge">sed</code> 등을 조합한 강력한 정규표현식 텍스트 탐색/치환 기법과 <code class="language-plaintext highlighter-rouge">tar</code> 압축, 표준 vi 텍스트 에디터 운영법을 배웁니다.</p>
+  </li>
 </ul>
 
-<h2 id="파일과-디렉터리-조작">파일과 디렉터리 조작</h2>
+<h2 id="3️⃣-쉘-스크립트-기반-코딩-및-자동화">3️⃣ 쉘 스크립트 기반 코딩 및 자동화</h2>
+<p>단순 명령어 입력을 넘어, 반복 작업을 프로그래밍 로직으로 자동화합니다.</p>
 
-<p>파일과 디렉터리를 생성, 복사, 이동, 삭제하는 기본적인 조작 방법을 학습합니다.</p>
-
-<h3 id="파일-조작-명령어">파일 조작 명령어</h3>
 <ul>
-  <li><strong>touch</strong> : 빈 파일 생성 또는 파일 시간 수정</li>
-  <li><strong>cp</strong> : 파일 복사</li>
-  <li><strong>mv</strong> : 파일 이동 및 이름 변경</li>
-  <li><strong>rm</strong> : 파일 삭제</li>
-  <li><strong>mkdir</strong> : 디렉터리 생성</li>
-  <li><strong>rmdir</strong> : 빈 디렉터리 삭제</li>
+  <li>
+    <p><a href="04_1_6_scripting/">쉘 스크립트 작성 및 자동화 기초</a></p>
+
+    <p>수동 타이핑을 탈피하여, 루틴화된 반복 서버관리 작업을 스크립트 파일(.sh)로 빌드하여 자동 실행(Auto-run)하는 기초 메커니즘을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="04_1_7_control_flow/">쉘 로직 흐름제어 및 데이터 응용</a></p>
+
+    <p>파이썬과 같이 if/case 분기, for/while 반복문, 그리고 문자열 연산 배열 등 수준 높은 흐름 제어 및 응용 코딩 로직을 터미널에서 구현합니다.</p>
+  </li>
 </ul>
 
-<h2 id="명령어와-친해지기">명령어와 친해지기</h2>
-
-<p>리눅스 명령어의 기본 구조와 사용법을 이해하고, 명령어 옵션과 인자를 활용하는 방법을 학습합니다.</p>
-
-<h3 id="명령어-구조">명령어 구조</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>명령어 [옵션] [인자]
-</code></pre></div></div>
-
-<h3 id="도움말-활용">도움말 활용</h3>
-<ul>
-  <li><strong>man</strong> : 매뉴얼 페이지 확인</li>
-  <li><strong>help</strong> : 쉘 내장 명령어 도움말</li>
-  <li><strong>–help</strong> : 명령어 옵션 확인</li>
-</ul>
-
-<h2 id="리다이렉션">리다이렉션</h2>
-
-<p>표준 입력, 출력, 오류를 조작하여 데이터의 흐름을 제어하는 방법을 학습합니다.</p>
-
-<h3 id="리다이렉션-연산자">리다이렉션 연산자</h3>
-<ul>
-  <li><strong>&gt;</strong> : 출력 리다이렉션 (덮어쓰기)</li>
-  <li><strong>»</strong> : 출력 리다이렉션 (추가)</li>
-  <li><strong>&lt;</strong> : 입력 리다이렉션</li>
-  <li><strong>2&gt;</strong> : 오류 출력 리다이렉션</li>
-</ul>
-
-<h2 id="확장과-인용">확장과 인용</h2>
-
-<p>쉘의 확장 기능과 인용을 통한 특수 문자 처리 방법을 학습합니다.</p>
-
-<h3 id="확장-기능">확장 기능</h3>
-<ul>
-  <li><strong>파일명 확장</strong> : 와일드카드 사용</li>
-  <li><strong>변수 확장</strong> : 환경 변수 사용</li>
-  <li><strong>산술 확장</strong> : 수식 계산</li>
-</ul>
-
-<h2 id="고급-키보드-기법">고급 키보드 기법</h2>
-
-<p>터미널에서 효율적으로 작업할 수 있는 키보드 단축키와 편집 기능을 학습합니다.</p>
-
-<h3 id="단축키">단축키</h3>
-<ul>
-  <li><strong>Ctrl+A</strong> : 라인 시작으로 이동</li>
-  <li><strong>Ctrl+E</strong> : 라인 끝으로 이동</li>
-  <li><strong>Ctrl+R</strong> : 명령어 히스토리 검색</li>
-  <li><strong>Tab</strong> : 자동 완성</li>
-</ul>
-
-<h2 id="퍼미션">퍼미션</h2>
-
-<p>파일과 디렉터리의 권한을 관리하고 보안을 설정하는 방법을 학습합니다.</p>
-
-<h3 id="권한-시스템">권한 시스템</h3>
-<ul>
-  <li><strong>읽기(r)</strong> : 파일 읽기, 디렉터리 목록 보기</li>
-  <li><strong>쓰기(w)</strong> : 파일 수정, 디렉터리 내용 변경</li>
-  <li><strong>실행(x)</strong> : 파일 실행, 디렉터리 접근</li>
-</ul>
-
-<h2 id="프로세스">프로세스</h2>
-
-<p>시스템에서 실행되는 프로세스를 관리하고 제어하는 방법을 학습합니다.</p>
-
-<h3 id="프로세스-관리">프로세스 관리</h3>
-<ul>
-  <li><strong>ps</strong> : 프로세스 상태 확인</li>
-  <li><strong>kill</strong> : 프로세스 종료</li>
-  <li><strong>jobs</strong> : 백그라운드 작업 확인</li>
-  <li><strong>fg/bg</strong> : 포그라운드/백그라운드 작업 전환</li>
-</ul>
-
-<h2 id="환경">환경</h2>
-
-<p>쉘 환경 변수를 설정하고 관리하는 방법을 학습합니다.</p>
-
-<h3 id="환경-변수">환경 변수</h3>
-<ul>
-  <li><strong>PATH</strong> : 실행 파일 경로</li>
-  <li><strong>HOME</strong> : 홈 디렉터리</li>
-  <li><strong>USER</strong> : 사용자 이름</li>
-  <li><strong>SHELL</strong> : 기본 쉘</li>
-</ul>
-
-<h2 id="vi-에디터">vi 에디터</h2>
-
-<p>리눅스에서 가장 널리 사용되는 텍스트 에디터인 vi의 사용법을 학습합니다.</p>
-
-<h3 id="vi-모드">vi 모드</h3>
-<ul>
-  <li><strong>명령 모드</strong> : 편집 명령 실행</li>
-  <li><strong>입력 모드</strong> : 텍스트 입력</li>
-  <li><strong>마지막 줄 모드</strong> : 파일 저장, 종료 등</li>
-</ul>
-
-<h2 id="프롬프트-커스터마이징">프롬프트 커스터마이징</h2>
-
-<p>쉘 프롬프트를 사용자 정의하여 더 효율적인 작업 환경을 구축하는 방법을 학습합니다.</p>
-
-<h3 id="프롬프트-설정">프롬프트 설정</h3>
-<ul>
-  <li><strong>PS1</strong> : 기본 프롬프트</li>
-  <li><strong>PS2</strong> : 2차 프롬프트</li>
-  <li><strong>색상 및 정보 표시</strong></li>
-</ul>
-
-<h2 id="패키지-관리">패키지 관리</h2>
-
-<p>소프트웨어 패키지를 설치, 업데이트, 제거하는 방법을 학습합니다.</p>
-
-<h3 id="패키지-관리자">패키지 관리자</h3>
-<ul>
-  <li><strong>apt</strong> : Debian/Ubuntu 패키지 관리</li>
-  <li><strong>yum</strong> : Red Hat/CentOS 패키지 관리</li>
-  <li><strong>dnf</strong> : Fedora 패키지 관리</li>
-</ul>
-
-<h2 id="저장장치">저장장치</h2>
-
-<p>디스크와 저장장치를 관리하고 파일시스템을 다루는 방법을 학습합니다.</p>
-
-<h3 id="저장장치-관리">저장장치 관리</h3>
-<ul>
-  <li><strong>fdisk</strong> : 디스크 파티션 관리</li>
-  <li><strong>mount</strong> : 파일시스템 마운트</li>
-  <li><strong>df</strong> : 디스크 사용량 확인</li>
-  <li><strong>du</strong> : 디렉터리 사용량 확인</li>
-</ul>
-
-<h2 id="네트워킹">네트워킹</h2>
-
-<p>네트워크 연결과 통신을 관리하는 방법을 학습합니다.</p>
-
-<h3 id="네트워크-명령어">네트워크 명령어</h3>
-<ul>
-  <li><strong>ping</strong> : 네트워크 연결 확인</li>
-  <li><strong>netstat</strong> : 네트워크 상태 확인</li>
-  <li><strong>ssh</strong> : 원격 접속</li>
-  <li><strong>scp</strong> : 원격 파일 복사</li>
-</ul>
-
-<h2 id="파일검색">파일검색</h2>
-
-<p>파일과 내용을 효율적으로 검색하는 방법을 학습합니다.</p>
-
-<h3 id="검색-명령어">검색 명령어</h3>
-<ul>
-  <li><strong>find</strong> : 파일 검색</li>
-  <li><strong>grep</strong> : 텍스트 검색</li>
-  <li><strong>locate</strong> : 파일 위치 검색</li>
-</ul>
-
-<h2 id="파일-보관-및-백업">파일 보관 및 백업</h2>
-
-<p>파일을 압축하고 백업하는 방법을 학습합니다.</p>
-
-<h3 id="압축-및-아카이브">압축 및 아카이브</h3>
-<ul>
-  <li><strong>tar</strong> : 파일 아카이브</li>
-  <li><strong>gzip</strong> : 파일 압축</li>
-  <li><strong>zip</strong> : ZIP 압축</li>
-</ul>
-
-<h2 id="정규표현식">정규표현식</h2>
-
-<p>텍스트 패턴을 검색하고 처리하는 정규표현식을 학습합니다.</p>
-
-<h3 id="정규표현식-패턴">정규표현식 패턴</h3>
-<ul>
-  <li><strong>문자 클래스</strong> : [a-z], [0-9]</li>
-  <li><strong>수량자</strong> : *, +, ?, {n}</li>
-  <li><strong>앵커</strong> : ^, $, \b</li>
-</ul>
-
-<h2 id="텍스트-편집">텍스트 편집</h2>
-
-<p>텍스트 파일을 처리하고 편집하는 고급 방법을 학습합니다.</p>
-
-<h3 id="텍스트-처리">텍스트 처리</h3>
-<ul>
-  <li><strong>sed</strong> : 스트림 에디터</li>
-  <li><strong>awk</strong> : 패턴 처리 언어</li>
-  <li><strong>cut</strong> : 필드 추출</li>
-</ul>
-
-<h2 id="출력-포맷-지정">출력 포맷 지정</h2>
-
-<p>명령어 출력을 원하는 형태로 포맷팅하는 방법을 학습합니다.</p>
-
-<h3 id="포맷팅-도구">포맷팅 도구</h3>
-<ul>
-  <li><strong>column</strong> : 컬럼 형태로 출력</li>
-  <li><strong>sort</strong> : 정렬</li>
-  <li><strong>uniq</strong> : 중복 제거</li>
-</ul>
-
-<h2 id="인쇄">인쇄</h2>
-
-<p>리눅스 시스템에서 인쇄 작업을 관리하는 방법을 학습합니다.</p>
-
-<h3 id="인쇄-시스템">인쇄 시스템</h3>
-<ul>
-  <li><strong>CUPS</strong> : Common Unix Printing System</li>
-  <li><strong>lp</strong> : 인쇄 작업 제출</li>
-  <li><strong>lpstat</strong> : 인쇄 큐 상태 확인</li>
-</ul>
-
-<h2 id="프로그램-컴파일">프로그램 컴파일</h2>
-
-<p>소스 코드를 컴파일하고 실행 파일을 생성하는 방법을 학습합니다.</p>
-
-<h3 id="컴파일-과정">컴파일 과정</h3>
-<ul>
-  <li><strong>gcc</strong> : GNU C 컴파일러</li>
-  <li><strong>make</strong> : 빌드 자동화</li>
-  <li><strong>configure</strong> : 설정 스크립트</li>
-</ul>
-
-<h2 id="쉘-스크립트">쉘 스크립트</h2>
-
-<p>자동화된 작업을 위한 쉘 스크립트 작성 방법을 학습합니다.</p>
-
-<h3 id="스크립트-작성">스크립트 작성</h3>
-<ul>
-  <li><strong>스크립트 구조</strong> : shebang, 주석, 함수</li>
-  <li><strong>변수</strong> : 지역 변수, 환경 변수</li>
-  <li><strong>제어 구조</strong> : 조건문, 반복문</li>
-</ul>
-
-<h2 id="프로젝트-시작하기">프로젝트 시작하기</h2>
-
-<p>실제 프로젝트에서 리눅스 명령어를 활용하는 방법을 학습합니다.</p>
-
-<h3 id="프로젝트-관리">프로젝트 관리</h3>
-<ul>
-  <li><strong>버전 관리</strong> : Git 활용</li>
-  <li><strong>빌드 시스템</strong> : Makefile 작성</li>
-  <li><strong>배포</strong> : 자동화 스크립트</li>
-</ul>
-
-<h2 id="하향식-설계">하향식 설계</h2>
-
-<p>복잡한 작업을 단계별로 분해하여 해결하는 설계 방법을 학습합니다.</p>
-
-<h3 id="설계-원칙">설계 원칙</h3>
-<ul>
-  <li><strong>모듈화</strong> : 기능별 분리</li>
-  <li><strong>재사용성</strong> : 공통 기능 추출</li>
-  <li><strong>유지보수성</strong> : 코드 구조화</li>
-</ul>
-
-<h2 id="흐름제어">흐름제어</h2>
-
-<p>스크립트의 실행 흐름을 제어하는 방법을 학습합니다.</p>
-
-<h3 id="제어-구조">제어 구조</h3>
-<ul>
-  <li><strong>if-then-else</strong> : 조건문</li>
-  <li><strong>case</strong> : 다중 선택</li>
-  <li><strong>for/while</strong> : 반복문</li>
-</ul>
-
-<h2 id="키보드-입력-읽기">키보드 입력 읽기</h2>
-
-<p>사용자 입력을 받아 처리하는 방법을 학습합니다.</p>
-
-<h3 id="입력-처리">입력 처리</h3>
-<ul>
-  <li><strong>read</strong> : 키보드 입력 읽기</li>
-  <li><strong>select</strong> : 메뉴 선택</li>
-  <li><strong>getopts</strong> : 명령행 옵션 처리</li>
-</ul>
-
-<h2 id="흐름제어-루프">흐름제어: 루프</h2>
-
-<p>반복 작업을 효율적으로 처리하는 루프 구조를 학습합니다.</p>
-
-<h3 id="루프-종류">루프 종류</h3>
-<ul>
-  <li><strong>for 루프</strong> : 범위 기반 반복</li>
-  <li><strong>while 루프</strong> : 조건 기반 반복</li>
-  <li><strong>until 루프</strong> : 조건 부정 반복</li>
-</ul>
-
-<h2 id="문제해결">문제해결</h2>
-
-<p>리눅스 시스템에서 발생하는 문제를 진단하고 해결하는 방법을 학습합니다.</p>
-
-<h3 id="문제-해결-과정">문제 해결 과정</h3>
-<ul>
-  <li><strong>문제 식별</strong> : 증상 분석</li>
-  <li><strong>원인 분석</strong> : 로그 확인</li>
-  <li><strong>해결책 적용</strong> : 수정 및 검증</li>
-</ul>
-
-<h2 id="흐름제어-case">흐름제어: case</h2>
-
-<p>다중 조건에 따른 분기 처리를 위한 case 문을 학습합니다.</p>
-
-<h3 id="case-문-구조">case 문 구조</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">case</span> 변수 <span class="k">in
-    </span>패턴1<span class="p">)</span> 명령1 <span class="p">;;</span>
-    패턴2<span class="p">)</span> 명령2 <span class="p">;;</span>
-    <span class="k">*</span><span class="p">)</span> 기본명령 <span class="p">;;</span>
-<span class="k">esac</span>
-</code></pre></div></div>
-
-<h2 id="위치-매개변수">위치 매개변수</h2>
-
-<p>스크립트 실행 시 전달되는 인자를 처리하는 방법을 학습합니다.</p>
-
-<h3 id="매개변수">매개변수</h3>
-<ul>
-  <li><strong>$0</strong> : 스크립트 이름</li>
-  <li><strong>$1, $2, …</strong> : 위치 매개변수</li>
-  <li><strong>$#</strong> : 매개변수 개수</li>
-  <li><strong>$@</strong> : 모든 매개변수</li>
-</ul>
-
-<h2 id="흐름제어-for-루프">흐름제어: for 루프</h2>
-
-<p>for 루프의 다양한 사용법과 활용 예제를 학습합니다.</p>
-
-<h3 id="for-루프-패턴">for 루프 패턴</h3>
-<ul>
-  <li><strong>범위 기반</strong> : for i in {1..10}</li>
-  <li><strong>파일 기반</strong> : for file in *.txt</li>
-  <li><strong>명령어 출력</strong> : for line in $(command)</li>
-</ul>
-
-<h2 id="문자열과-수">문자열과 수</h2>
-
-<p>쉘에서 문자열과 숫자를 처리하는 방법을 학습합니다.</p>
-
-<h3 id="문자열-처리">문자열 처리</h3>
-<ul>
-  <li><strong>길이</strong> : ${#변수}</li>
-  <li><strong>부분 추출</strong> : ${변수:시작:길이}</li>
-  <li><strong>치환</strong> : ${변수/패턴/대체}</li>
-</ul>
-
-<h2 id="배열">배열</h2>
-
-<p>쉘에서 배열을 사용하여 데이터를 관리하는 방법을 학습합니다.</p>
-
-<h3 id="배열-사용법">배열 사용법</h3>
-<ul>
-  <li><strong>배열 선언</strong> : declare -a 배열명</li>
-  <li><strong>배열 요소</strong> : 배열명[인덱스]=값</li>
-  <li><strong>배열 접근</strong> : ${배열명[인덱스]}</li>
-</ul>
-
-<h2 id="그외-툴들">그외 툴들</h2>
-
-<p>리눅스 시스템에서 유용하게 사용할 수 있는 다양한 도구들을 학습합니다.</p>
-
-<h3 id="유틸리티-도구">유틸리티 도구</h3>
-<ul>
-  <li><strong>curl</strong> : 웹 요청 및 파일 다운로드</li>
-  <li><strong>wget</strong> : 웹 파일 다운로드</li>
-  <li><strong>rsync</strong> : 파일 동기화</li>
-  <li><strong>cron</strong> : 작업 스케줄링</li>
-</ul>
-
-<p>이 가이드를 통해 리눅스 명령어의 기초부터 고급 기술까지 체계적으로 학습할 수 있습니다. 각 섹션을 순차적으로 학습하면서 실제 예제를 통해 연습해보시기 바랍니다.</p>
-
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 4장. 리눅스 명령어 (Command)</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../04_2_advanced/">다음: 고급 명령어 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/08_demon/08_1_basic/08_1_2_server/mysql/">
+  <meta property="og:url" content="https://linux.jiny.dev/08_demon/08_1_basic/08_1_2_server/mysql/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/08_demon/08_1_basic/08_1_2_server/mysql/" />
-<meta property="og:url" content="http://localhost:4000/08_demon/08_1_basic/08_1_2_server/mysql/" />
+<link rel="canonical" href="https://linux.jiny.dev/08_demon/08_1_basic/08_1_2_server/mysql/" />
+<meta property="og:url" content="https://linux.jiny.dev/08_demon/08_1_basic/08_1_2_server/mysql/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/08_demon/08_1_basic/08_1_2_server/mysql/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/08_demon/08_1_basic/08_1_2_server/mysql/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1186,8 +1186,18 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="mariadb를-설치합니다">mariaDB를 설치합니다.</h1>
-<hr />
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="MYSQL 개념도" /></p>
+
+<h1 id="mariadb를-설치합니다">mariaDB를 설치합니다.</h1>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>dpkg <span class="nt">-l</span> | <span class="nb">grep </span>mysql
 <span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>dpkg <span class="nt">-l</span> | <span class="nb">grep </span>mariadb
@@ -1212,54 +1222,32 @@ ii  mariadb-server-core-10.3       1:10.3.22-1ubuntu1                amd64      
 
 <p><code class="language-plaintext highlighter-rouge">서버</code>와 <code class="language-plaintext highlighter-rouge">클라이언트</code>가 모두 설치가 된것을 확인할 수 있습니다.</p>
 
-<h2 id="프로세스-확인">프로세스 확인</h2>
-<hr />
-<p>시작여부의 프로세스를 확인해 봅니다.</p>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>방대한 주제를 분할하여 제공합니다.</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>ps <span class="nt">-ef</span> | <span class="nb">grep </span>mysql
-<span class="go">hojin     5863     8  0 16:15 tty1     00:00:00 grep --color=auto mysql
-</span></code></pre></div></div>
+<ul>
+  <li>
+    <p><a href="part_1/">프로세스 확인</a></p>
 
-<p>서버를 시작합니다.</p>
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">sudo </span>service mysql status
-<span class="go">[sudo] password for hojin:
- * MariaDB is stopped.
-</span></code></pre></div></div>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">mysql 접속하기</a></p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">sudo </span>service mysql status
-<span class="go"> * /usr/bin/mysqladmin  Ver 9.1 Distrib 10.3.22-MariaDB, for debian-linux-gnu on x86_64
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+</ul>
 
-Server version          10.3.22-MariaDB-1ubuntu1
-Protocol version        10
-Connection              Localhost via UNIX socket
-UNIX socket             /var/run/mysqld/mysqld.sock
-Uptime:                 15 sec
-
-Threads: 7  Questions: 2  Slow queries: 0  Opens: 17  Flush tables: 1  Open tables: 11  Queries per second avg: 0.133
-</span></code></pre></div></div>
-
-<p>중지하기</p>
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">sudo </span>service mysql stop
-<span class="go"> * Stopping MariaDB database server mysqld                                                                       [ OK ]
-</span></code></pre></div></div>
-
-<h2 id="mysql-접속하기">mysql 접속하기</h2>
 <hr />
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">sudo </span>mysql
-<span class="gp">Welcome to the MariaDB monitor.  Commands end with ;</span><span class="w"> </span>or <span class="se">\g</span><span class="nb">.</span>
-<span class="go">Your MariaDB connection id is 17
-Server version: 10.3.22-MariaDB-1ubuntu1 Ubuntu 20.04
-
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-
-</span><span class="gp">Type 'help;</span><span class="s1">' or '</span><span class="se">\h</span><span class="s1">' for help. Type '</span><span class="se">\c</span><span class="s1">' to clear the current input statement.
-</span><span class="go">
-</span><span class="gp">MariaDB [(none)]&gt;</span><span class="w">
-</span></code></pre></div></div>
-<p>비밀번호 기본값은 <code class="language-plaintext highlighter-rouge">엔터</code> 입니다.</p>
-
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

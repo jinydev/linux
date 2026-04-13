@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 메일](../mail/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Samba 서버 ➡️](../samba/)
+
+![RUNLEVEL 개념도](img/concept_architecture.svg)
+
 # Run-level
 리눅스에서 런레벨(runlevel)은 시스템이 시작될 때 실행할 `프로세스의 그룹`을 지정하는 방법입니다. 각 런레벨에는 시스템에서 실행되는 특정 서비스 또는 데몬의 집합이 있습니다.
 
@@ -18,3 +22,7 @@ layout: home
 
 ## 런레벨 관리
 각 런레벨은 `/etc/inittab` 파일에서 관리됩니다. 하지만 systemd가 대부분의 리눅스 배포판에서 사용되고 있기 때문에, 최신 리눅스 배포판에서는 systemd를 사용하여 런레벨을 관리합니다. 따라서 최신 리눅스 배포판에서는 `/etc/inittab` 파일 대신에, systemd의 설정 파일을 사용하여 런레벨을 관리합니다.
+
+---
+
+[⬅️ 이전: 메일](../mail/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Samba 서버 ➡️](../samba/)

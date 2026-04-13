@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>12.3 웹/DB 연동 (PHP/Node) 기초</title>
   <meta name="title" content="12.3 웹/DB 연동 (PHP/Node) 기초" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="12.3 웹/DB 연동 (PHP/Node) 기초"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/12_dev/11_2_ext_dev/">
+  <meta property="og:url" content="https://linux.jiny.dev/12_dev/11_2_ext_dev/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="12.3 웹/DB 연동 (PHP/Node) 기초"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/12_dev/11_2_ext_dev/" />
-<meta property="og:url" content="http://localhost:4000/12_dev/11_2_ext_dev/" />
+<link rel="canonical" href="https://linux.jiny.dev/12_dev/11_2_ext_dev/" />
+<meta property="og:url" content="https://linux.jiny.dev/12_dev/11_2_ext_dev/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="12.3 웹/DB 연동 (PHP/Node) 기초" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"12.3 웹/DB 연동 (PHP/Node) 기초","url":"http://localhost:4000/12_dev/11_2_ext_dev/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"12.3 웹/DB 연동 (PHP/Node) 기초","url":"https://linux.jiny.dev/12_dev/11_2_ext_dev/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1166,47 +1166,101 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="123-인터넷-아키텍처의-완성-was-서버와-3계층3-tier-구조">12.3 인터넷 아키텍처의 완성, WAS 서버와 3계층(3-Tier) 구조</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../11_1_tools/11_1_4_vscode/vscode/">⬅️ 이전: VSCode</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="11_2_10_vscode/">다음: vscod로 원격 서버 접속하여 개발하기 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>이전 장에서 배운 <code class="language-plaintext highlighter-rouge">웹 서버</code> 데몬은 단순히 그림과 글씨 문서 파일(HTML) 껍데기만 뿌려주는 아주 멍청한 바보입니다. 고객이 로그인 버튼을 눌렀을 때 아이디와 비밀번호가 맞는지 프로그래밍(C, Java, PHP) 뇌로 판단을 하고, 뒤에 있는 <code class="language-plaintext highlighter-rouge">데이터베이스 엔진</code>에게 “이 사람 정보 좀 줘봐” 라고 명령을 내리는 중간자 브레인이 있어야 합니다. 이 중간 브레인을 <strong>WAS(Web Application Server)</strong> 라고 불렀습니다.</p>
+<h1 id="123-웹db-연동-phpnode-기초">12.3 웹/DB 연동 (PHP/Node) 기초</h1>
 
-<p><img src="./img/3tier_arch.svg" alt="웹 3계층 아키텍처 구조도" /></p>
-<blockquote>
-  <p><strong>동작 원리</strong>: 보안과 트래픽 관리를 위해 현대의 웹 서비스는 <strong>[1-브라우저 껍데기]</strong> ➡️ <strong>[2-WAS 프로그래밍 (PHP, Node.js)]</strong> ➡️ <strong>[3-데이터베이스 엔진 (MySQL)]</strong> 로 구성되는 철저한 ‘3단 논법’ 아키텍처로 세팅됩니다. 외부의 해커가 1단계를 뚫고 들어오더라도 깊은 심연에 박힌 3단계 데이터베이스의 문을 열지 못하게 하는 보안 체계입니다.</p>
-</blockquote>
+<p>12.3 웹/DB 연동 (PHP/Node) 기초에 대한 기본 개념과 실습을 연결하는 허브 페이지입니다.</p>
 
-<hr />
+<p>해당 주제의 구조를 이해하고 실습을 진행합니다.</p>
 
-<h2 id="1-전설의-apm-apache--php--mysql-스택">1. 전설의 APM (Apache + PHP + MySQL) 스택</h2>
-<p>단순히 그림판 쪼가리였던 1990년대 초반 인터넷 환경을 폭발시키고, 오늘날의 동적인 ‘게시판’ 혁신 문화를 만들어 낸 리눅스의 가장 핵심적인 조합 패키지입니다.</p>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
 <ul>
-  <li><strong>A (웹서버)</strong>: 클라이언트 네트워크 요청을 제일 앞에서 방어하는 문지기 (Apache / Nginx 탑재)</li>
-  <li><strong>P (WAS 프로그래밍)</strong>: 아파치가 요청 번호표를 넘겨주면, 복잡한 분기 연산을 처리하는 뇌 모듈 (PHP 모듈 탑재)</li>
-  <li><strong>M (디비 저장소)</strong>: 최종적으로 사용자의 정보와 글이 적힐 영구 보관소 (MySQL 탑재)</li>
+  <li>
+    <p><a href="11_2_0_concept/">12.3 웹/DB 연동 (PHP/Node) 기초 상세 튜토리얼</a></p>
+
+    <p>해당 파트의 상세 문서를 확인하고 터미널 실습 코드를 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="11_2_10_vscode/">11_2_10_vscode</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="11_2_1__python/">11_2_1__python</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="11_2_2_gcc/">WSL2 gcc 설치하기 - Learn Linux</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
 </ul>
 
-<h3 id="1-1-최신-트렌드-구조-nodejs-시대">1-1. 최신 트렌드 구조 (Node.js 시대)</h3>
-<p>현재는 무겁고 오래된 APM 낡은 방식에서, Nginx를 선봉장으로 세우고 언어로 Javascript를 끌어와 쓰는 <code class="language-plaintext highlighter-rouge">Node.js</code> 혹은 파이썬의 <code class="language-plaintext highlighter-rouge">Django</code> 와 같은 강력한 고속 WAS 체계로 세대 교체가 모두 완료되었습니다.</p>
+<h2 id="2️⃣-심화-및-활용-파트-1">2️⃣ 심화 및 활용 파트 1</h2>
+<ul>
+  <li>
+    <p><a href="11_2_3_git/">11_2_3_git</a></p>
 
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="11_2_4_go/">11_2_4_go</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="11_2_5_java/">11_2_5_java</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="11_2_6_nodejs/">11_2_6_nodejs</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+</ul>
+
+<h2 id="3️⃣-심화-및-활용-파트-2">3️⃣ 심화 및 활용 파트 2</h2>
+<ul>
+  <li>
+    <p><a href="11_2_7_php/">11_2_7_php</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="11_2_8_python/">11_2_8_python</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="11_2_9_rust/">11_2_9_rust</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+</ul>
+
+<h2 id="3️⃣-심화-및-활용-파트-2-1">3️⃣ 심화 및 활용 파트 2</h2>
 <hr />
 
-<h2 id="2-실습-패키지를-통한-apm-연동-환경-구동">2. [실습] 패키지를 통한 APM 연동 환경 구동</h2>
-<p>나의 리눅스 공간에 WAS 프로그래밍 언어인 <code class="language-plaintext highlighter-rouge">PHP</code> 를 우겨넣어 연동하는 실습 방법입니다.</p>
-
-<h3 id="실습-1-구동-언어-php-모듈-설치-배포">실습 1. 구동 언어 (PHP 모듈) 설치 배포</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># APT 툴킷으로 복잡한 연산 기능을 하는 서버 언어 모듈인 php-fpm 과</span>
-<span class="c"># php가 mysql과 소통하기 위해 사용하는 플러그인(php-mysql)을 세트로 다운로드합니다.</span>
-<span class="nb">sudo </span>apt update
-<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> php-fpm php-mysql
-</code></pre></div></div>
-
-<h3 id="실습-2-정상-구동-버전-확인">실습 2. 정상 구동 버전 확인</h3>
-<p>가장 유명한 뼈대 언어가 내 리눅스 서버에 잘 스며들었는지 점검합니다.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 내 리눅스에 어떤 버전의 프로그래밍 언어가 탑재되었는지 확인!</span>
-php <span class="nt">-v</span>
-</code></pre></div></div>
-
-<p>이제 Nginx(문지기)와 PHP(뇌)와 Mysql(창고) 3개의 유령(데몬)들이 우분투 안에서 하나로 결합하며, 쿠팡이나 네이버 같은 회원가입 로그인이 가능한 거대한 <strong>풀 스택(Full-Stack) 서비스 서버</strong>가 완벽하게 탄생했습니다!</p>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../11_1_tools/11_1_4_vscode/vscode/">⬅️ 이전: VSCode</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="11_2_10_vscode/">다음: vscod로 원격 서버 접속하여 개발하기 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

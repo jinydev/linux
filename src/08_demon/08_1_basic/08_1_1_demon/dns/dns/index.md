@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: bind9](../bind9/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: 도메인 이름 체계 ➡️](../domain/)
+
+![DNS 개념도](img/concept_architecture.svg)
+
 # DNS
 
 ## DNS란?
@@ -19,3 +23,7 @@ layout: home
 * 사용자가 모두 외워서 직접 IP주소로 접근함
 
 ![image-20230409190113922](../img/image-20230409190113922.png)
+
+---
+
+[⬅️ 이전: bind9](../bind9/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: 도메인 이름 체계 ➡️](../domain/)

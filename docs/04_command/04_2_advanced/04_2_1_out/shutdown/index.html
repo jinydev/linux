@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/04_command/04_2_advanced/04_2_1_out/shutdown/">
+  <meta property="og:url" content="https://linux.jiny.dev/04_command/04_2_advanced/04_2_1_out/shutdown/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/04_command/04_2_advanced/04_2_1_out/shutdown/" />
-<meta property="og:url" content="http://localhost:4000/04_command/04_2_advanced/04_2_1_out/shutdown/" />
+<link rel="canonical" href="https://linux.jiny.dev/04_command/04_2_advanced/04_2_1_out/shutdown/" />
+<meta property="og:url" content="https://linux.jiny.dev/04_command/04_2_advanced/04_2_1_out/shutdown/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/04_command/04_2_advanced/04_2_1_out/shutdown/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/04_command/04_2_advanced/04_2_1_out/shutdown/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1186,7 +1186,19 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="shutdown">shutdown</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../reboot/">⬅️ 이전: Reboot</a>  </td>
+      <td>  <a href="../../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../../04_2_2_shell/">다음: 리눅스 쉘 명령어 - 개발자를 위한 리눅스 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="SHUTDOWN 개념도" /></p>
+
+<h1 id="shutdown">shutdown</h1>
 <p>리눅스에서 shutdown 명령어는 시스템을 <code class="language-plaintext highlighter-rouge">종료</code>하거나 <code class="language-plaintext highlighter-rouge">재부팅</code>하는데 사용됩니다. 이 명령은 시스템이 종료되기 전에 <code class="language-plaintext highlighter-rouge">모든 프로세스를 안전하게 종료</code>하고 파일 시스템을 정리합니다. 따라서 시스템의 데이터 손실을 방지하고 안정적인 종료를 보장합니다. shutdown 명령은 시스템 관리자 권한이 필요하며, 일반적으로 정지 예약 시간과 종료 메시지를 지정할 수 있습니다.</p>
 
 <h2 id="shutdown을-해야-하는-이유">shutdown을 해야 하는 이유</h2>
@@ -1212,7 +1224,7 @@
 <h2 id="x-windows">X-Windows</h2>
 <p>리눅스를 GUI방식으로 사용한다면, 마우스 클릭만으로 종료를 할 수 있습니다. x-window 사용시 바탕화면 오른쪽 위의 <code class="language-plaintext highlighter-rouge">▼ 아이콘</code>을 선택합니다. 컴퓨터 끄기 아이콘을 선택합니다.  컴퓨터 끄기 확인을 합니다.</p>
 
-<p><img src="../img/image-20230322171700076.png" alt="image-20230322171700076" /></p>
+<!-- Broken Image Removed: ../img/image-20230322171700076.png -->
 
 <h2 id="콘솔-모드">콘솔 모드</h2>
 <p>외부 원격 터미널 또는 콘솔에서 명령을 통하여 리눅스를 종료 할 수 있습니다. 다양한 명령어를 통하여 종료할 수 있습니다.</p>
@@ -1230,7 +1242,7 @@
 </code></pre></div></div>
 <p>shutdown 명령어 옵션 중 now 부분에 시간을 지정하면 설정한 시간에 시스템 종료됨</p>
 
-<p><img src="../img/image-20230322172020445.png" alt="image-20230322172020445" /></p>
+<!-- Broken Image Removed: ../img/image-20230322172020445.png -->
 
 <p>주요옵션</p>
 <ul>
@@ -1260,6 +1272,17 @@
 <h2 id="x-windows-1">X-windows</h2>
 <p><code class="language-plaintext highlighter-rouge">컴퓨터 끄기</code> 대신 <code class="language-plaintext highlighter-rouge">다시 시작</code> 클릭 합니다.</p>
 
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../reboot/">⬅️ 이전: Reboot</a>  </td>
+      <td>  <a href="../../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../../04_2_2_shell/">다음: 리눅스 쉘 명령어 - 개발자를 위한 리눅스 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

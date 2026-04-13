@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="리눅스 터미널에서의 기본/고급 명령어와 텍스트 편집기(Vim) 활용"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>4장. 리눅스 명령어 (Command)</title>
   <meta name="title" content="4장. 리눅스 명령어 (Command)" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="4장. 리눅스 명령어 (Command)"><meta property="og:description" content="리눅스 터미널에서의 기본/고급 명령어와 텍스트 편집기(Vim) 활용"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/04_command/">
+  <meta property="og:url" content="https://linux.jiny.dev/04_command/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="4장. 리눅스 명령어 (Command)"><meta property="twitter:description" content="리눅스 터미널에서의 기본/고급 명령어와 텍스트 편집기(Vim) 활용"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="리눅스 터미널에서의 기본/고급 명령어와 텍스트 편집기(Vim) 활용" />
 <meta property="og:description" content="리눅스 터미널에서의 기본/고급 명령어와 텍스트 편집기(Vim) 활용" />
-<link rel="canonical" href="http://localhost:4000/04_command/" />
-<meta property="og:url" content="http://localhost:4000/04_command/" />
+<link rel="canonical" href="https://linux.jiny.dev/04_command/" />
+<meta property="og:url" content="https://linux.jiny.dev/04_command/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="4장. 리눅스 명령어 (Command)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"리눅스 터미널에서의 기본/고급 명령어와 텍스트 편집기(Vim) 활용","headline":"4장. 리눅스 명령어 (Command)","url":"http://localhost:4000/04_command/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"리눅스 터미널에서의 기본/고급 명령어와 텍스트 편집기(Vim) 활용","headline":"4장. 리눅스 명령어 (Command)","url":"https://linux.jiny.dev/04_command/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1156,25 +1156,59 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="4장-리눅스-명령어-command">4장. 리눅스 명령어 (Command)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../03_start/03_3_permission/">⬅️ 이전: 6.2 파일 소유권(Ownership)</a>  </td>
+      <td>  <a href="../">🏠 분류 목차</a>  </td>
+      <td>  <a href="04_1_basic/">다음: 리눅스 명령어 학습하기 - 개발자를 위한 리눅스 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="COMMAND 개념도" /></p>
+
+<h1 id="4장-리눅스-명령어-command">4장. 리눅스 명령어 (Command)</h1>
 
 <p>그래픽 환경(GUI) 없이 터미널 인터페이스(CLI)에서 리눅스 시스템을 제어하는데 필수적인 명령어들을 학습합니다. 서버 엔지니어가 마우스 없이 키보드만으로 시스템을 빠르고 안전하게 다루기 위한 명령어 파이프라인과 텍스트 스트림 조작 기법을 살펴봅니다.</p>
 
-<h2 id="세부-학습-목차">세부 학습 목차</h2>
+<h2 id="1️⃣-핵심-학습-목차">1️⃣ 핵심 학습 목차</h2>
+<p>본 단원의 세부 커리큘럼을 안내합니다.</p>
 
 <ul>
-  <li><strong><a href="04_1_basic/">4.1 리눅스 기본 명령어 (Basic)</a></strong>
-현재 작업 경로를 확인하고(<code class="language-plaintext highlighter-rouge">pwd</code>), 디렉토리를 이동하며(<code class="language-plaintext highlighter-rouge">cd</code>), 파일을 목록화 및 열람, 나아가 복사 및 삭제(<code class="language-plaintext highlighter-rouge">cp</code>, <code class="language-plaintext highlighter-rouge">mv</code>, <code class="language-plaintext highlighter-rouge">rm</code>, <code class="language-plaintext highlighter-rouge">cat</code>)하는 가장 기초적이면서도 필수적인 리눅스 터미널 활용 방법들을 학습합니다.</li>
-  <li><strong><a href="04_2_advanced/">4.2 리눅스 고급 명령어 구축 (Advanced)</a></strong>
-단순 파일 조작을 넘어, 다수의 파일을 아카이브(tar) 및 압축하거나, 정규식을 포함해 심층적으로 텍스트를 검색(<code class="language-plaintext highlighter-rouge">grep</code>, <code class="language-plaintext highlighter-rouge">find</code>)하고 서버의 동작(시작/종료)을 시스템 수준에서 처리하는 깊이 있는 명령어 환경을 배웁니다.</li>
-  <li><strong><a href="04_3_editor/">4.3 텍스트 편집기 및 입출력 제어 (Editor &amp; Stream)</a></strong>
-서버 환경에서 가장 강력하고 표준적인 터미널 텍스트 편집기인 Vim(vi)의 조작 모드들을 마스터하고, 파이프(<code class="language-plaintext highlighter-rouge">|</code>)와 리다이렉션(<code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;</code>) 기호를 이용해 여러 명령어 간의 입출력 데이터 스트림(Stream) 흐름을 조립하는 파이프라이닝 스킬을 획득합니다.</li>
+  <li>
+    <p><a href="04_1_basic/">4.1 리눅스 기본 명령어 (Basic)</a></p>
+
+    <p>현재 작업 경로를 확인하고(<code class="language-plaintext highlighter-rouge">pwd</code>), 디렉토리를 이동하며(<code class="language-plaintext highlighter-rouge">cd</code>), 파일을 목록화 및 열람, 나아가 복사 및 삭제(<code class="language-plaintext highlighter-rouge">cp</code>, <code class="language-plaintext highlighter-rouge">mv</code>, <code class="language-plaintext highlighter-rouge">rm</code>, <code class="language-plaintext highlighter-rouge">cat</code>)하는 가장 기초적이면서도 필수적인 리눅스 터미널 활용 방법들을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="04_2_advanced/">4.2 리눅스 고급 명령어 구축 (Advanced)</a></p>
+
+    <p>단순 파일 조작을 넘어, 다수의 파일을 아카이브(tar) 및 압축하거나, 정규식을 포함해 심층적으로 텍스트를 검색(<code class="language-plaintext highlighter-rouge">grep</code>, <code class="language-plaintext highlighter-rouge">find</code>)하고 서버의 동작(시작/종료)을 시스템 수준에서 처리하는 깊이 있는 명령어 환경을 배웁니다.</p>
+  </li>
+  <li>
+    <p><a href="04_3_editor/">4.3 텍스트 편집기 및 입출력 제어 (Editor &amp; Stream)</a></p>
+
+    <p>서버 환경에서 가장 강력하고 표준적인 터미널 텍스트 편집기인 Vim(vi)의 조작 모드들을 마스터하고, 파이프(<code class="language-plaintext highlighter-rouge">|</code>)와 리다이렉션(<code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;</code>) 기호를 이용해 여러 명령어 간의 입출력 데이터 스트림(Stream) 흐름을 조립하는 파이프라이닝 스킬을 획득합니다.</p>
+  </li>
 </ul>
 
 <blockquote>
   <p><strong>💡 이관 안내:</strong>
 과거 버전에 수록되어 있던 네트워크(Network) 설정 메뉴얼, 웹 개발 도구 환경(VSCode, Git 등), 사용자 계정 및 권한 제어 문서는 강의 커리큘럼 정책에 따라 전용 챕터인 <strong>6장(네트워크), 11장(개발 시스템), 3장(기본 사용법)</strong> 으로 각각 이관 통합되었습니다. 본 장에서는 시스템 명령어 활용 구문에만 집중합니다.</p>
 </blockquote>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../03_start/03_3_permission/">⬅️ 이전: 6.2 파일 소유권(Ownership)</a>  </td>
+      <td>  <a href="../">🏠 분류 목차</a>  </td>
+      <td>  <a href="04_1_basic/">다음: 리눅스 명령어 학습하기 - 개발자를 위한 리눅스 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

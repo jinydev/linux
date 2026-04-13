@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="리눅스 커널은 운영체제의 핵심 부분으로, 하드웨어와 소프트웨어 간의 인터페이스를 담당합니다. 커널의 기능, 구조, 오픈소스 특성에 대해 알아보세요."><meta name="author" content="JinyDev"><!-- 제목 설정 --><title>리눅스 커널 - 운영체제의 핵심 구성 요소</title>
   <meta name="title" content="리눅스 커널 - 운영체제의 핵심 구성 요소" /><!-- 키워드 설정 --><meta name="keywords" content="리눅스 커널, Linux kernel, 운영체제 커널, 시스템 호출, 프로세스 관리, 메모리 관리"><!-- Open Graph 메타데이터 --><meta property="og:title" content="리눅스 커널 - 운영체제의 핵심 구성 요소"><meta property="og:description" content="리눅스 커널은 운영체제의 핵심 부분으로, 하드웨어와 소프트웨어 간의 인터페이스를 담당합니다."><meta property="og:type" content="article"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/01_prologue/01_1_prologue/01_1_7_kernel/">
+  <meta property="og:url" content="https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_7_kernel/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="리눅스 커널 - 운영체제의 핵심 구성 요소"><meta property="twitter:description" content="리눅스 커널은 운영체제의 핵심 부분으로, 하드웨어와 소프트웨어 간의 인터페이스를 담당합니다."><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,15 +17,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="리눅스 커널은 운영체제의 핵심 부분으로, 하드웨어와 소프트웨어 간의 인터페이스를 담당합니다. 커널의 기능, 구조, 오픈소스 특성에 대해 알아보세요." />
 <meta property="og:description" content="리눅스 커널은 운영체제의 핵심 부분으로, 하드웨어와 소프트웨어 간의 인터페이스를 담당합니다. 커널의 기능, 구조, 오픈소스 특성에 대해 알아보세요." />
-<link rel="canonical" href="http://localhost:4000/01_prologue/01_1_prologue/01_1_7_kernel/" />
-<meta property="og:url" content="http://localhost:4000/01_prologue/01_1_prologue/01_1_7_kernel/" />
+<link rel="canonical" href="https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_7_kernel/" />
+<meta property="og:url" content="https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_7_kernel/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-03-30T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 커널 - 운영체제의 핵심 구성 요소" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"JinyDev"},"dateModified":"2023-03-30T00:00:00+09:00","datePublished":"2023-03-30T00:00:00+09:00","description":"리눅스 커널은 운영체제의 핵심 부분으로, 하드웨어와 소프트웨어 간의 인터페이스를 담당합니다. 커널의 기능, 구조, 오픈소스 특성에 대해 알아보세요.","headline":"리눅스 커널 - 운영체제의 핵심 구성 요소","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/01_prologue/01_1_prologue/01_1_7_kernel/"},"url":"http://localhost:4000/01_prologue/01_1_prologue/01_1_7_kernel/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"JinyDev"},"dateModified":"2023-03-30T00:00:00+09:00","datePublished":"2023-03-30T00:00:00+09:00","description":"리눅스 커널은 운영체제의 핵심 부분으로, 하드웨어와 소프트웨어 간의 인터페이스를 담당합니다. 커널의 기능, 구조, 오픈소스 특성에 대해 알아보세요.","headline":"리눅스 커널 - 운영체제의 핵심 구성 요소","mainEntityOfPage":{"@type":"WebPage","@id":"https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_7_kernel/"},"url":"https://linux.jiny.dev/01_prologue/01_1_prologue/01_1_7_kernel/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1177,290 +1177,88 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="리눅스-커널-linux-kernel">리눅스 커널 (Linux Kernel)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="개요">개요</h2>
+<p><img src="img/concept_architecture.svg" alt="7 KERNEL 개념도" /></p>
 
-<p>리눅스 커널은 운영체제의 핵심 구성 요소로, 하드웨어와 소프트웨어 간의 인터페이스를 담당하는 프로그램입니다. 리눅스 시스템은 <strong>Kernel &lt; Shell &lt; Application</strong> 형태의 계층적 구조로 구성되어 있으며, 커널은 가장 하위 계층에서 시스템의 모든 자원을 관리하고 제어합니다.</p>
+<h1 id="리눅스-커널-linux-kernel">리눅스 커널 (Linux Kernel)</h1>
 
-<h3 id="커널의-역할">커널의 역할</h3>
+<p>방대한 주제를 분할하여 제공합니다.</p>
 
-<p>커널은 다음과 같은 핵심 역할을 수행합니다:</p>
-
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
 <ul>
-  <li><strong>하드웨어 추상화</strong>: 다양한 하드웨어 장치를 추상화하여 상위 레벨에서 일관된 인터페이스 제공</li>
-  <li><strong>자원 관리</strong>: CPU, 메모리, 디스크, 네트워크 등 시스템 자원의 효율적 관리</li>
-  <li><strong>프로세스 관리</strong>: 프로세스의 생성, 실행, 종료 및 스케줄링</li>
-  <li><strong>보안 및 권한 관리</strong>: 사용자 인증, 파일 접근 권한, 시스템 보안</li>
-  <li><strong>시스템 호출 제공</strong>: 사용자 프로그램이 커널 기능을 사용할 수 있는 인터페이스</li>
+  <li>
+    <p><a href="part_1/">개요</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">커널의 구조</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_3/">커널의 주요 기능</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
 </ul>
 
-<h2 id="커널의-구조">커널의 구조</h2>
-
-<h3 id="1-모놀리딕-커널-monolithic-kernel">1. 모놀리딕 커널 (Monolithic Kernel)</h3>
-
-<p>리눅스 커널은 모놀리딕 커널 구조를 채택하고 있습니다.</p>
-
-<p><strong>특징:</strong></p>
+<h2 id="2️⃣-심화-및-연계-파트-1">2️⃣ 심화 및 연계 파트 1</h2>
 <ul>
-  <li><strong>단일 프로세스 공간</strong>: 커널의 모든 기능이 하나의 주소 공간에서 실행</li>
-  <li><strong>직접 통신</strong>: 커널 내부 모듈 간 직접적인 함수 호출</li>
-  <li><strong>높은 성능</strong>: 모듈 간 통신 오버헤드가 적음</li>
-  <li><strong>복잡한 구조</strong>: 커널이 커지면서 복잡도가 증가</li>
+  <li>
+    <p><a href="part_4/">시스템 호출 System Calls</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_5/">커널 개발과 오픈소스</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_6/">커널 튜닝과 최적화</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
 </ul>
 
-<h3 id="2-커널-모듈-kernel-modules">2. 커널 모듈 (Kernel Modules)</h3>
-
-<p>리눅스 커널은 모듈화된 구조를 지원하여 필요에 따라 기능을 동적으로 로드/언로드할 수 있습니다.</p>
-
-<p><strong>모듈의 장점:</strong></p>
+<h2 id="3️⃣-심화-및-연계-파트-2">3️⃣ 심화 및 연계 파트 2</h2>
 <ul>
-  <li><strong>동적 로딩</strong>: 실행 중에 필요한 기능만 로드</li>
-  <li><strong>메모리 효율성</strong>: 사용하지 않는 기능은 메모리에 로드하지 않음</li>
-  <li><strong>유지보수성</strong>: 개별 모듈 단위로 업데이트 및 수정 가능</li>
+  <li>
+    <p><a href="part_7/">학습 목표</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_8/">실습 과제</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_9/">참고 자료</a></p>
+
+    <p>해당 세부 내용에 대한 튜토리얼을 진행합니다.</p>
+  </li>
 </ul>
 
-<p><strong>주요 모듈 예시:</strong></p>
-<ul>
-  <li><strong>디바이스 드라이버</strong>: 하드웨어 장치 제어</li>
-  <li><strong>파일 시스템</strong>: 다양한 파일 시스템 지원</li>
-  <li><strong>네트워크 프로토콜</strong>: 네트워크 통신 프로토콜</li>
-</ul>
+<hr />
 
-<h2 id="커널의-주요-기능">커널의 주요 기능</h2>
-
-<h3 id="1-프로세스-관리-process-management">1. 프로세스 관리 (Process Management)</h3>
-
-<p><strong>프로세스 생성 및 제어:</strong></p>
-<ul>
-  <li><strong>fork()</strong>: 새로운 프로세스 생성</li>
-  <li><strong>exec()</strong>: 프로세스 이미지 교체</li>
-  <li><strong>wait()</strong>: 자식 프로세스 종료 대기</li>
-  <li><strong>exit()</strong>: 프로세스 종료</li>
-</ul>
-
-<p><strong>스케줄링:</strong></p>
-<ul>
-  <li><strong>Completely Fair Scheduler (CFS)</strong>: 완전 공정 스케줄러</li>
-  <li><strong>실시간 스케줄링</strong>: SCHED_FIFO, SCHED_RR</li>
-  <li><strong>우선순위 관리</strong>: nice 값, real-time priority</li>
-  <li><strong>멀티코어 지원</strong>: SMP(Symmetric Multi-Processing) 환경</li>
-</ul>
-
-<h3 id="2-메모리-관리-memory-management">2. 메모리 관리 (Memory Management)</h3>
-
-<p><strong>가상 메모리 시스템:</strong></p>
-<ul>
-  <li><strong>페이지 관리</strong>: 4KB 페이지 단위 메모리 관리</li>
-  <li><strong>메모리 매핑</strong>: 가상 주소와 물리 주소 매핑</li>
-  <li><strong>스왑 관리</strong>: 디스크 공간을 메모리로 활용</li>
-  <li><strong>캐시 관리</strong>: 페이지 캐시, 버퍼 캐시</li>
-</ul>
-
-<p><strong>메모리 할당:</strong></p>
-<ul>
-  <li><strong>슬랩 할당자</strong>: 커널 메모리 할당</li>
-  <li><strong>buddy 시스템</strong>: 물리 메모리 할당</li>
-  <li><strong>OOM Killer</strong>: 메모리 부족 시 프로세스 종료</li>
-</ul>
-
-<h3 id="3-파일-시스템-관리-file-system-management">3. 파일 시스템 관리 (File System Management)</h3>
-
-<p><strong>VFS (Virtual File System):</strong></p>
-<ul>
-  <li><strong>통합된 인터페이스</strong>: 다양한 파일 시스템을 통합 관리</li>
-  <li><strong>파일 시스템 추상화</strong>: ext4, btrfs, xfs 등 지원</li>
-  <li><strong>네트워크 파일 시스템</strong>: NFS, CIFS 지원</li>
-</ul>
-
-<p><strong>파일 조작:</strong></p>
-<ul>
-  <li><strong>파일 생성/삭제</strong>: inode 기반 파일 관리</li>
-  <li><strong>디렉토리 관리</strong>: 계층적 디렉토리 구조</li>
-  <li><strong>권한 관리</strong>: rwx 권한, ACL 지원</li>
-  <li><strong>링크 관리</strong>: 하드 링크, 심볼릭 링크</li>
-</ul>
-
-<h3 id="4-네트워크-관리-network-management">4. 네트워크 관리 (Network Management)</h3>
-
-<p><strong>네트워크 스택:</strong></p>
-<ul>
-  <li><strong>TCP/IP 프로토콜</strong>: 전송 제어 프로토콜 스택</li>
-  <li><strong>소켓 인터페이스</strong>: 네트워크 통신 API</li>
-  <li><strong>라우팅</strong>: 네트워크 패킷 라우팅</li>
-  <li><strong>방화벽</strong>: netfilter 프레임워크</li>
-</ul>
-
-<p><strong>네트워크 인터페이스:</strong></p>
-<ul>
-  <li><strong>네트워크 장치 관리</strong>: 이더넷, 무선랜 등</li>
-  <li><strong>프로토콜 지원</strong>: IPv4, IPv6, TCP, UDP</li>
-  <li><strong>네트워크 보안</strong>: SELinux, AppArmor</li>
-</ul>
-
-<h3 id="5-디바이스-드라이버-관리-device-driver-management">5. 디바이스 드라이버 관리 (Device Driver Management)</h3>
-
-<p><strong>드라이버 아키텍처:</strong></p>
-<ul>
-  <li><strong>플러그 앤 플레이</strong>: 자동 장치 인식</li>
-  <li><strong>핫플러그</strong>: 실행 중 장치 연결/해제</li>
-  <li><strong>버스 시스템</strong>: PCI, USB, I2C 등 지원</li>
-</ul>
-
-<p><strong>드라이버 종류:</strong></p>
-<ul>
-  <li><strong>문자 장치 드라이버</strong>: 키보드, 마우스, 터미널</li>
-  <li><strong>블록 장치 드라이버</strong>: 하드디스크, SSD</li>
-  <li><strong>네트워크 장치 드라이버</strong>: 이더넷 카드, 무선랜</li>
-</ul>
-
-<h3 id="6-보안-기능-security-features">6. 보안 기능 (Security Features)</h3>
-
-<p><strong>접근 제어:</strong></p>
-<ul>
-  <li><strong>사용자/그룹 관리</strong>: UID, GID 기반 권한</li>
-  <li><strong>파일 권한</strong>: rwx 권한, setuid, setgid</li>
-  <li><strong>SELinux</strong>: 강제 접근 제어</li>
-  <li><strong>AppArmor</strong>: 응용 프로그램별 보안 정책</li>
-</ul>
-
-<p><strong>암호화 및 인증:</strong></p>
-<ul>
-  <li><strong>커널 암호화</strong>: dm-crypt, LUKS</li>
-  <li><strong>키 관리</strong>: 키링 시스템</li>
-  <li><strong>보안 모듈</strong>: LSM (Linux Security Modules)</li>
-</ul>
-
-<h2 id="시스템-호출-system-calls">시스템 호출 (System Calls)</h2>
-
-<h3 id="1-시스템-호출의-개념">1. 시스템 호출의 개념</h3>
-
-<p>시스템 호출은 사용자 프로그램이 커널의 기능을 사용할 수 있도록 제공하는 인터페이스입니다.</p>
-
-<p><strong>주요 특징:</strong></p>
-<ul>
-  <li><strong>권한 모드 전환</strong>: 사용자 모드에서 커널 모드로 전환</li>
-  <li><strong>안전한 인터페이스</strong>: 사용자 프로그램의 직접적인 하드웨어 접근 방지</li>
-  <li><strong>표준화된 API</strong>: POSIX 표준을 따르는 시스템 호출</li>
-</ul>
-
-<h3 id="2-주요-시스템-호출">2. 주요 시스템 호출</h3>
-
-<p><strong>파일 조작:</strong></p>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">open</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pathname</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">);</span>
-<span class="kt">int</span> <span class="nf">close</span><span class="p">(</span><span class="kt">int</span> <span class="n">fd</span><span class="p">);</span>
-<span class="kt">ssize_t</span> <span class="nf">read</span><span class="p">(</span><span class="kt">int</span> <span class="n">fd</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">count</span><span class="p">);</span>
-<span class="kt">ssize_t</span> <span class="nf">write</span><span class="p">(</span><span class="kt">int</span> <span class="n">fd</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">count</span><span class="p">);</span>
-<span class="kt">int</span> <span class="nf">unlink</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pathname</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p><strong>프로세스 관리:</strong></p>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pid_t</span> <span class="nf">fork</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<span class="kt">int</span> <span class="nf">execve</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pathname</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="k">const</span> <span class="n">argv</span><span class="p">[],</span> <span class="kt">char</span> <span class="o">*</span><span class="k">const</span> <span class="n">envp</span><span class="p">[]);</span>
-<span class="n">pid_t</span> <span class="nf">wait</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">wstatus</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">exit</span><span class="p">(</span><span class="kt">int</span> <span class="n">status</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p><strong>메모리 관리:</strong></p>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="o">*</span><span class="nf">mmap</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">addr</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">length</span><span class="p">,</span> <span class="kt">int</span> <span class="n">prot</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">,</span> <span class="kt">int</span> <span class="n">fd</span><span class="p">,</span> <span class="kt">off_t</span> <span class="n">offset</span><span class="p">);</span>
-<span class="kt">int</span> <span class="nf">munmap</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">addr</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">length</span><span class="p">);</span>
-<span class="kt">void</span> <span class="o">*</span><span class="nf">brk</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">addr</span><span class="p">);</span>
-<span class="kt">void</span> <span class="o">*</span><span class="nf">sbrk</span><span class="p">(</span><span class="kt">intptr_t</span> <span class="n">increment</span><span class="p">);</span>
-</code></pre></div></div>
-
-<h2 id="커널-개발과-오픈소스">커널 개발과 오픈소스</h2>
-
-<h3 id="1-오픈소스-개발-모델">1. 오픈소스 개발 모델</h3>
-
-<p>리눅스 커널은 자유-오픈 소스 소프트웨어로 개발되고 있습니다.</p>
-
-<p><strong>오픈소스의 장점:</strong></p>
-<ul>
-  <li><strong>투명성</strong>: 소스 코드가 공개되어 검토 가능</li>
-  <li><strong>협력 개발</strong>: 전 세계 개발자들의 기여</li>
-  <li><strong>빠른 발전</strong>: 지속적인 기능 개선과 버그 수정</li>
-  <li><strong>커스터마이징</strong>: 사용 목적에 맞게 수정 가능</li>
-</ul>
-
-<h3 id="2-커널-개발-과정">2. 커널 개발 과정</h3>
-
-<p><strong>개발 워크플로우:</strong></p>
-<ol>
-  <li><strong>기능 제안</strong>: 메일링 리스트를 통한 RFC (Request for Comments)</li>
-  <li><strong>코드 개발</strong>: 기능 구현 및 테스트</li>
-  <li><strong>코드 리뷰</strong>: 커뮤니티의 검토 및 피드백</li>
-  <li><strong>메인라인 통합</strong>: 승인된 코드를 메인 커널에 통합</li>
-  <li><strong>릴리스</strong>: 정기적인 커널 릴리스</li>
-</ol>
-
-<h3 id="3-커널-버전-관리">3. 커널 버전 관리</h3>
-
-<p><strong>버전 번호 체계:</strong></p>
-<ul>
-  <li><strong>메이저 버전</strong>: 주요 기능 변경 (예: 5.x)</li>
-  <li><strong>마이너 버전</strong>: 새로운 기능 추가 (예: 5.15)</li>
-  <li><strong>패치 레벨</strong>: 버그 수정 및 보안 패치 (예: 5.15.123)</li>
-</ul>
-
-<p><strong>릴리스 주기:</strong></p>
-<ul>
-  <li><strong>메인라인</strong>: 2-3개월마다 새로운 마이너 버전</li>
-  <li><strong>LTS (Long Term Support)</strong>: 장기 지원 버전</li>
-  <li><strong>안정 버전</strong>: 프로덕션 환경용 안정화된 버전</li>
-</ul>
-
-<h2 id="커널-튜닝과-최적화">커널 튜닝과 최적화</h2>
-
-<h3 id="1-커널-파라미터-튜닝">1. 커널 파라미터 튜닝</h3>
-
-<p><strong>주요 튜닝 파라미터:</strong></p>
-<ul>
-  <li><strong>vm.swappiness</strong>: 스왑 사용 빈도</li>
-  <li><strong>vm.dirty_ratio</strong>: 페이지 캐시의 최대 비율</li>
-  <li><strong>net.core.rmem_max</strong>: 수신 버퍼 최대 크기</li>
-  <li><strong>fs.file-max</strong>: 최대 파일 디스크립터 수</li>
-</ul>
-
-<h3 id="2-성능-모니터링">2. 성능 모니터링</h3>
-
-<p><strong>모니터링 도구:</strong></p>
-<ul>
-  <li><strong>perf</strong>: 성능 분석 도구</li>
-  <li><strong>ftrace</strong>: 커널 트레이싱</li>
-  <li><strong>systemtap</strong>: 동적 트레이싱</li>
-  <li><strong>eBPF</strong>: 확장 버클리 패킷 필터</li>
-</ul>
-
-<h2 id="학습-목표">학습 목표</h2>
-
-<p>이번 학습을 통해 다음 사항들을 이해할 수 있습니다:</p>
-
-<ol>
-  <li><strong>커널의 기본 개념과 역할</strong></li>
-  <li><strong>리눅스 커널의 구조와 특징</strong></li>
-  <li><strong>커널의 주요 기능과 관리 방법</strong></li>
-  <li><strong>시스템 호출의 개념과 사용법</strong></li>
-  <li><strong>오픈소스 개발 모델의 이해</strong></li>
-  <li><strong>커널 튜닝과 성능 최적화</strong></li>
-</ol>
-
-<h2 id="실습-과제">실습 과제</h2>
-
-<ol>
-  <li><strong>시스템 호출 확인</strong>: strace를 이용한 시스템 호출 추적</li>
-  <li><strong>커널 모듈 관리</strong>: insmod, rmmod, modprobe 명령어 실습</li>
-  <li><strong>커널 파라미터 조정</strong>: sysctl을 이용한 커널 파라미터 변경</li>
-  <li><strong>성능 모니터링</strong>: perf, ftrace를 이용한 성능 분석</li>
-</ol>
-
-<h2 id="참고-자료">참고 자료</h2>
-
-<ul>
-  <li><a href="https://www.kernel.org/doc/">Linux Kernel Documentation</a></li>
-  <li><a href="https://kernelnewbies.org/">Linux Kernel Newbies</a></li>
-  <li><a href="https://lwn.net/Kernel/">Linux Kernel Development</a></li>
-  <li><a href="https://github.com/torvalds/linux">Linux Kernel Source Code</a></li>
-</ul>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

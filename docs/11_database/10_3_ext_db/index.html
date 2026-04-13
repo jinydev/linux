@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>12.1 데이터베이스 구조 개요</title>
   <meta name="title" content="12.1 데이터베이스 구조 개요" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="12.1 데이터베이스 구조 개요"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/11_database/10_3_ext_db/">
+  <meta property="og:url" content="https://linux.jiny.dev/11_database/10_3_ext_db/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="12.1 데이터베이스 구조 개요"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/11_database/10_3_ext_db/" />
-<meta property="og:url" content="http://localhost:4000/11_database/10_3_ext_db/" />
+<link rel="canonical" href="https://linux.jiny.dev/11_database/10_3_ext_db/" />
+<meta property="og:url" content="https://linux.jiny.dev/11_database/10_3_ext_db/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="12.1 데이터베이스 구조 개요" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"12.1 데이터베이스 구조 개요","url":"http://localhost:4000/11_database/10_3_ext_db/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"12.1 데이터베이스 구조 개요","url":"https://linux.jiny.dev/11_database/10_3_ext_db/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1166,41 +1166,91 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="121-인터넷-서비스의-궁극적-심장-데이터베이스db">12.1 인터넷 서비스의 궁극적 심장, 데이터베이스(DB)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../10_1_db_12/10_1_3_webdb/">⬅️ 이전: 12.3 웹/DB 연동 (PHP/Node) 기초</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="10_3_1_client/dbeaver/">다음: Dbeaver ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>지금까지 설치했던 Nginx 웹 서버는 정적인 그림판을 보여줄 뿐입니다. 사용자가 직접 회원 가입 버튼을 눌러 자신의 아이디와 비밀번호, 그리고 게시판에 작성한 글을 영구히 저장하려면 리눅스에 완전히 새로운 ‘수납장 엔진’인 <strong>데이터베이스(Database)</strong> 데몬 프로세스를 구동해야 합니다.</p>
+<h1 id="121-데이터베이스-구조-개요">12.1 데이터베이스 구조 개요</h1>
 
-<p><img src="./img/db_intro.svg" alt="텍스트 파일과 데이터베이스 비교도" /></p>
-<blockquote>
-  <p><strong>동작 원리</strong>: 데이터를 엑셀(txt/csv) 파일에 저장하면 수백 명이 동시에 글을 남길 때 파일 충돌(Lock)이 터져 데이터가 다 날아갑니다. 반면 RDBMS 데이터베이스 데몬은 인덱스(B-Tree) 기반의 표(Table)로 데이터를 관리하며, 수백만 사용자가 동시에 몰려도 체계적으로 교통 정리를 해 줍니다.</p>
-</blockquote>
+<p>12.1 데이터베이스 구조 개요에 대한 기본 개념과 실습을 연결하는 허브 페이지입니다.</p>
 
+<p>해당 주제의 구조를 이해하고 실습을 진행합니다.</p>
+
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<ul>
+  <li>
+    <p><a href="10_3_0_concept/">12.1 데이터베이스 구조 개요 상세 튜토리얼</a></p>
+
+    <p>해당 파트의 상세 문서를 확인하고 터미널 실습 코드를 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="10_3_1_client/">10_3_1_client</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="10_3_2_mariadb/">10_3_2_mariadb</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+</ul>
+
+<h2 id="2️⃣-심화-및-활용-파트-1">2️⃣ 심화 및 활용 파트 1</h2>
+<ul>
+  <li>
+    <p><a href="10_3_3_mongodb/">10_3_3_mongodb</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="10_3_4_mysql/">12.2 MySQL / MariaDB 구축</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="10_3_5_oracle/">10_3_5_oracle</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+</ul>
+
+<h2 id="3️⃣-심화-및-활용-파트-2">3️⃣ 심화 및 활용 파트 2</h2>
+<ul>
+  <li>
+    <p><a href="10_3_6_postgresql/">10_3_6_postgresql</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="10_3_7_redis/">10_3_7_redis</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+  <li>
+    <p><a href="10_3_8_sqlight/">10_3_8_sqlight</a></p>
+
+    <p>추가적인 세부 학습을 위한 딥다이브 페이지입니다.</p>
+  </li>
+</ul>
+
+<h2 id="3️⃣-심화-및-활용-파트-2-1">3️⃣ 심화 및 활용 파트 2</h2>
 <hr />
 
-<h2 id="1-관계형-데이터베이스rdbms의-역사">1. 관계형 데이터베이스(RDBMS)의 역사</h2>
-<p>인터넷 웹사이트 시장의 99% 는 ‘표(Table)’ 형태로 데이터를 묶어 관리하는 관계형 방식을 채택합니다.</p>
-
-<ul>
-  <li><strong>Oracle Database</strong>: 데이터 하나에 수천만 원의 가치가 있는 은행권, 국가 기관 등에서 수십억을 주고 사용하는 최고급 폐쇄망 데이터베이스입니다. 무지막지하게 무겁고 비쌉니다.</li>
-  <li><strong>MySQL</strong>: 전 세계 인터넷 홈페이지 생태계를 폭발시킨 무료 RDBMS 시스템 데몬입니다. 굉장히 가볍고 속도가 빠르며 대부분의 클라우드 플랫폼에서 표준으로 쓰입니다. 나중에 썬(Sun)과 통합되어 유료화 논란이 있었습니다.</li>
-  <li><strong>MariaDB</strong>: 위 MySQL의 유료화 행보에 빡친(?) 오리지널 개발자들이 나와서 핵심 구조만 똑같이 복제해서 만든 쌍둥이형 100% 무료 오픈소스 DB입니다. 명령어마저 완벽히 동일합니다.</li>
-</ul>
-
-<h2 id="2-nosql-not-only-sql-데이터베이스">2. NoSQL (Not Only SQL) 데이터베이스</h2>
-<p>엄격하게 엑셀 표(가로, 세로)에 맞춰 저장해야 하는 RDBMS의 틀을 부수고 등장한 신식 자유형 저장소입니다.</p>
-
-<ul>
-  <li><strong>MongoDB</strong>: 회원들의 복잡하고 유동적인 정보(json 포맷 배열)를 표가 아닌 비정형 텍스트 덩어리로 던져버릴 수 있게 해주는 데이터베이스입니다. 게시판 구조가 수시로 바뀌는 스타트업에서 유행합니다.</li>
-  <li><strong>Redis (레디스)</strong>: 하드디스크가 아닌 <strong>메모리(RAM) 상주형</strong> 데이터베이스로 빛의 속도를 자랑합니다. BTS 티켓팅이나 네이버 실시간 검색어 같은 초고속 일회용 캐시 데이터 처리에 주로 씁니다.</li>
-</ul>
-
-<hr />
-
-<h2 id="3-개념-정리-sql-이란-무엇인가요">3. [개념 정리] SQL 이란 무엇인가요?</h2>
-<p>데몬 프로세스(MySQL)가 구동되면, 우리는 이 유령 엔진과 대화를 나누기 위해 마우스를 딸깍이는 대신 프로그래밍 언어를 타건해야 합니다. 이때 사용하는 전 세계 표준 명령 문법을 <code class="language-plaintext highlighter-rouge">SQL(Structured Query Language)</code> 라고 합니다.</p>
-<ul>
-  <li>예: <code class="language-plaintext highlighter-rouge">SELECT * FROM tbl_member WHERE userid = 'hojin';</code> (회원 테이블에서 hojin 아이디를 찾아라)</li>
-</ul>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../10_1_db_12/10_1_3_webdb/">⬅️ 이전: 12.3 웹/DB 연동 (PHP/Node) 기초</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="10_3_1_client/dbeaver/">다음: Dbeaver ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

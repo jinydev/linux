@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/07_network/06_4_security/06_1_7_acl/">
+  <meta property="og:url" content="https://linux.jiny.dev/07_network/06_4_security/06_1_7_acl/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/07_network/06_4_security/06_1_7_acl/" />
-<meta property="og:url" content="http://localhost:4000/07_network/06_4_security/06_1_7_acl/" />
+<link rel="canonical" href="https://linux.jiny.dev/07_network/06_4_security/06_1_7_acl/" />
+<meta property="og:url" content="https://linux.jiny.dev/07_network/06_4_security/06_1_7_acl/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/07_network/06_4_security/06_1_7_acl/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/07_network/06_4_security/06_1_7_acl/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1176,7 +1176,19 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="acl">ACL</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../../06_4_remote/06_4_7_winterm/">⬅️ 이전: 윈도우 터미널</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../06_1_9_firewall/">다음: 방화벽 설정 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="7 ACL 개념도" /></p>
+
+<h1 id="acl">ACL</h1>
 <p>리눅스에서는 파일 및 디렉토리에 대한 접근 권한을 관리하기 위해 파일 시스템에 <code class="language-plaintext highlighter-rouge">Access Control List(ACL)</code>을 적용할 수 있습니다. ACL은 파일 및 디렉토리에 대한 권한을 보다 세밀하게 제어할 수 있도록 하며, 일반적인 파일 권한(Read, Write, Execute) 이외에도 <code class="language-plaintext highlighter-rouge">추가적인 권한</code>을 설정할 수 있습니다.</p>
 
 <h2 id="사용자-및-그룹제어">사용자 및 그룹제어</h2>
@@ -1184,6 +1196,18 @@
 
 <h2 id="acl-명령어">ACL 명령어</h2>
 <p>리눅스에서는 ACL을 적용하기 위해 일반적으로 setfacl, getfacl 등의 명령어를 사용합니다. 하지만 ACL을 지원하지 않는 파일 시스템도 있으며, 사용자나 그룹에 대한 ACL 설정은 기존 파일 권한과 충돌할 수 있으므로 주의가 필요합니다.</p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../../06_4_remote/06_4_7_winterm/">⬅️ 이전: 윈도우 터미널</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../06_1_9_firewall/">다음: 방화벽 설정 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

@@ -2,9 +2,11 @@
 layout: home
 ---
 
+[⬅️ 이전: Setting](../setting/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Vm15 ➡️](../vm15/)
+
+![SETUP 개념도](img/concept_architecture.svg)
 
 ## WMWare 설치
-
 
 ### 확장 설치 copy and past
 
@@ -16,8 +18,6 @@ layout: home
 $ sudo apt-get install -y dkms build-essential linux-headers-generic linux-headers-$(uname -r)
 ```
 
-
-
 #### CD롬 삽입
 
 ```
@@ -26,9 +26,10 @@ $ cd /mnt
 $ ./VBoxLinuxAdditions.run
 ```
 
-
-
 #### 리부팅
 
 우분투를 재부팅 합니다.
 
+---
+
+[⬅️ 이전: Setting](../setting/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Vm15 ➡️](../vm15/)

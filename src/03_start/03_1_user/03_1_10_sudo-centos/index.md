@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 최상위 관리자 계정이란](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: Sudo ➡️](../03_1_11_sudo/)
+
+![10 SUDO-CENTOS 개념도](img/concept_architecture.svg)
+
 # CentOS에서 sudo 명령 사용
 sudo는 우분투에서 일반 사용자가 root 권한을 가진 사용자처럼 명령을 실행할 수 있게 해주는 명령입니다. 하지만, 그외 레드햇 계열인 CentOS 리눅스에서도 sudo 명령을 사용할 수 있습니다.
 
@@ -34,3 +38,7 @@ sudo systemctl restart 서비스이름
 ```
 
 이와 같이 sudo를 사용하여 명령을 실행하면, 해당 명령은 root 권한으로 실행되며 필요한 권한을 가진 사용자만이 sudo 명령을 사용할 수 있습니다.
+
+---
+
+[⬅️ 이전: 최상위 관리자 계정이란](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: Sudo ➡️](../03_1_11_sudo/)

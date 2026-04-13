@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="date 명령어의 사용법과 옵션을 알아보세요. 현재 날짜 시간 출력, 날짜 형식 지정, 시간대 설정, 스크립트에서 활용 방법을 포함한 포괄적인 가이드입니다."><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>date - 리눅스 날짜 시간 명령어 - 개발자를 위한 리눅스</title>
   <meta name="title" content="date - 리눅스 날짜 시간 명령어 - 개발자를 위한 리눅스" /><!-- 키워드 설정 --><meta name="keywords" content="date, 날짜, 시간, linux, 명령어, 타임스탬프, 시간대, UTC, KST, 리눅스"><!-- Open Graph 메타데이터 --><meta property="og:title" content="date - 리눅스 날짜 시간 명령어 - 개발자를 위한 리눅스"><meta property="og:description" content="date 명령어의 사용법과 옵션을 알아보세요. 현재 날짜 시간 출력, 날짜 형식 지정, 시간대 설정, 스크립트에서 활용 방법을 포함한 포괄적인 가이드입니다."><meta property="og:type" content="article"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/date/">
+  <meta property="og:url" content="https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/date/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="date - 리눅스 날짜 시간 명령어 - 개발자를 위한 리눅스"><meta property="twitter:description" content="date 명령어의 사용법과 옵션을 알아보세요. 현재 날짜 시간 출력, 날짜 형식 지정, 시간대 설정, 스크립트에서 활용 방법을 포함한 포괄적인 가이드입니다."><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="date 명령어의 사용법과 옵션을 알아보세요. 현재 날짜 시간 출력, 날짜 형식 지정, 시간대 설정, 스크립트에서 활용 방법을 포함한 포괄적인 가이드입니다." />
 <meta property="og:description" content="date 명령어의 사용법과 옵션을 알아보세요. 현재 날짜 시간 출력, 날짜 형식 지정, 시간대 설정, 스크립트에서 활용 방법을 포함한 포괄적인 가이드입니다." />
-<link rel="canonical" href="http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/date/" />
-<meta property="og:url" content="http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/date/" />
+<link rel="canonical" href="https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/date/" />
+<meta property="og:url" content="https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/date/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="date - 리눅스 날짜 시간 명령어 - 개발자를 위한 리눅스" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"HojinLee"},"description":"date 명령어의 사용법과 옵션을 알아보세요. 현재 날짜 시간 출력, 날짜 형식 지정, 시간대 설정, 스크립트에서 활용 방법을 포함한 포괄적인 가이드입니다.","headline":"date - 리눅스 날짜 시간 명령어 - 개발자를 위한 리눅스","url":"http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/date/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"HojinLee"},"description":"date 명령어의 사용법과 옵션을 알아보세요. 현재 날짜 시간 출력, 날짜 형식 지정, 시간대 설정, 스크립트에서 활용 방법을 포함한 포괄적인 가이드입니다.","headline":"date - 리눅스 날짜 시간 명령어 - 개발자를 위한 리눅스","url":"https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/date/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1186,310 +1186,67 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="date-명령어">date 명령어</h1>
-
-<p><code class="language-plaintext highlighter-rouge">date</code> 명령어는 리눅스 시스템에서 현재 날짜와 시간을 출력하거나 설정하는 유틸리티입니다. 이 명령어는 시스템의 현재 시간을 확인하고, 다양한 형식으로 날짜와 시간 정보를 표시할 수 있습니다.</p>
-
-<h2 id="기본-사용법">기본 사용법</h2>
-
-<h3 id="현재-날짜와-시간-출력">현재 날짜와 시간 출력</h3>
-
-<p>가장 기본적인 사용법으로, 현재 시스템의 날짜와 시간을 출력합니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span>
-<span class="go">Thu May 21 15:41:31 KST 2020
-</span></code></pre></div></div>
-
-<h2 id="날짜-형식-지정">날짜 형식 지정</h2>
-
-<p><code class="language-plaintext highlighter-rouge">date</code> 명령어는 다양한 형식으로 날짜와 시간을 출력할 수 있습니다.</p>
-
-<h3 id="기본-형식-옵션">기본 형식 옵션</h3>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>년-월-일 형식
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> +%Y-%m-%d
-<span class="go">2020-05-21
-
-</span><span class="gp">#</span><span class="w"> </span>년/월/일 형식
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> +%Y/%m/%d
-<span class="go">2020/05/21
-
-</span><span class="gp">#</span><span class="w"> </span>요일, 월, 일, 년도
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> +%A, %B %d, %Y
-<span class="go">Thursday, May 21, 2020
-
-</span><span class="gp">#</span><span class="w"> </span>24시간 형식
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> +%Y-%m-%d %H:%M:%S
-<span class="go">2020-05-21 15:41:31
-
-</span><span class="gp">#</span><span class="w"> </span>12시간 형식
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> +%Y-%m-%d %I:%M:%S %p
-<span class="go">2020-05-21 03:41:31 PM
-</span></code></pre></div></div>
-
-<h3 id="자주-사용되는-형식-지정자">자주 사용되는 형식 지정자</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>지정자</th>
-      <th>설명</th>
-      <th>예시</th>
-    </tr>
-  </thead>
+    <table>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">%Y</code></td>
-      <td>4자리 년도</td>
-      <td>2020</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%y</code></td>
-      <td>2자리 년도</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%m</code></td>
-      <td>월 (01-12)</td>
-      <td>05</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%d</code></td>
-      <td>일 (01-31)</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%H</code></td>
-      <td>시간 (00-23)</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%I</code></td>
-      <td>시간 (01-12)</td>
-      <td>03</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%M</code></td>
-      <td>분 (00-59)</td>
-      <td>41</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%S</code></td>
-      <td>초 (00-59)</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%A</code></td>
-      <td>요일 (전체)</td>
-      <td>Thursday</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%a</code></td>
-      <td>요일 (축약)</td>
-      <td>Thu</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%B</code></td>
-      <td>월 (전체)</td>
-      <td>May</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%b</code></td>
-      <td>월 (축약)</td>
-      <td>May</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%p</code></td>
-      <td>AM/PM</td>
-      <td>PM</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%Z</code></td>
-      <td>시간대</td>
-      <td>KST</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%z</code></td>
-      <td>시간대 오프셋</td>
-      <td>+0900</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">%s</code></td>
-      <td>Unix 타임스탬프</td>
-      <td>1590049291</td>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="고급-사용법">고급 사용법</h2>
+<p><img src="img/concept_architecture.svg" alt="DATE 개념도" /></p>
 
-<h3 id="unix-타임스탬프">Unix 타임스탬프</h3>
+<h1 id="date-명령어">date 명령어</h1>
 
-<p>Unix 타임스탬프(1970년 1월 1일부터의 초 단위)를 출력합니다.</p>
+<p><code class="language-plaintext highlighter-rouge">date</code> 명령어는 리눅스 시스템에서 현재 날짜와 시간을 출력하거나 설정하는 유틸리티입니다. 이 명령어는 시스템의 현재 시간을 확인하고, 다양한 형식으로 날짜와 시간 정보를 표시할 수 있습니다.</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> +%s
-<span class="go">1590049291
-</span></code></pre></div></div>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>세부 옵션과 예제를 분할하여 제공합니다.</p>
 
-<h3 id="타임스탬프에서-날짜-변환">타임스탬프에서 날짜 변환</h3>
+<ul>
+  <li>
+    <p><a href="part_1/">기본 사용법</a></p>
 
-<p>Unix 타임스탬프를 읽기 쉬운 날짜 형식으로 변환할 수 있습니다.</p>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">날짜 형식 지정</a></p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> <span class="nt">-d</span> @1590049291
-<span class="go">Thu May 21 15:41:31 KST 2020
-</span></code></pre></div></div>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_3/">고급 사용법</a></p>
 
-<h3 id="특정-날짜-출력">특정 날짜 출력</h3>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_4/">실용적인 예제</a></p>
 
-<p>특정 날짜를 지정하여 해당 날짜의 정보를 출력할 수 있습니다.</p>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_5/">문제 해결</a></p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>내일 날짜
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"tomorrow"</span>
-<span class="go">Fri May 22 15:41:31 KST 2020
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_6/">고급 기능</a></p>
 
-</span><span class="gp">#</span><span class="w"> </span>어제 날짜
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"yesterday"</span>
-<span class="go">Wed May 20 15:41:31 KST 2020
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+</ul>
 
-</span><span class="gp">#</span><span class="w"> </span>특정 날짜
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"2020-05-21"</span>
-<span class="go">Thu May 21 00:00:00 KST 2020
+<hr />
 
-</span><span class="gp">#</span><span class="w"> </span>상대적 날짜
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"1 week ago"</span>
-<span class="go">Thu May 14 15:41:31 KST 2020
-
-</span><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"2 months ago"</span>
-<span class="go">Thu Mar 21 15:41:31 KST 2020
-</span></code></pre></div></div>
-
-<h3 id="시간대-설정">시간대 설정</h3>
-
-<p>다른 시간대의 시간을 확인할 수 있습니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>UTC 시간
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> <span class="nt">-u</span>
-<span class="go">Thu May 21 06:41:31 UTC 2020
-
-</span><span class="gp">#</span><span class="w"> </span>특정 시간대
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nv">TZ</span><span class="o">=</span><span class="s1">'America/New_York'</span> <span class="nb">date</span>
-<span class="go">Thu May 21 02:41:31 EDT 2020
-
-</span><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nv">TZ</span><span class="o">=</span><span class="s1">'Europe/London'</span> <span class="nb">date</span>
-<span class="go">Thu May 21 07:41:31 BST 2020
-</span></code></pre></div></div>
-
-<h2 id="실용적인-예제">실용적인 예제</h2>
-
-<h3 id="파일명에-날짜-사용">파일명에 날짜 사용</h3>
-
-<p>백업 파일이나 로그 파일의 이름에 날짜를 포함할 수 있습니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>현재 날짜로 파일명 생성
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nv">backup_name</span><span class="o">=</span><span class="s2">"backup_</span><span class="si">$(</span><span class="nb">date</span> +%Y%m%d_%H%M%S<span class="si">)</span><span class="s2">.tar.gz"</span>
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">echo</span> <span class="nv">$backup_name</span>
-<span class="go">backup_20200521_154131.tar.gz
-
-</span><span class="gp">#</span><span class="w"> </span>파일 생성
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">touch</span> <span class="s2">"log_</span><span class="si">$(</span><span class="nb">date</span> +%Y-%m-%d<span class="si">)</span><span class="s2">.txt"</span>
-</code></pre></div></div>
-
-<h3 id="스크립트에서-활용">스크립트에서 활용</h3>
-
-<p><code class="language-plaintext highlighter-rouge">date</code> 명령어는 스크립트에서 매우 유용하게 활용됩니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
-<span class="c"># 현재 날짜를 변수에 저장</span>
-<span class="nv">current_date</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> +%Y-%m-%d<span class="si">)</span>
-<span class="nv">current_time</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> +%H:%M:%S<span class="si">)</span>
-
-<span class="nb">echo</span> <span class="s2">"현재 날짜: </span><span class="nv">$current_date</span><span class="s2">"</span>
-<span class="nb">echo</span> <span class="s2">"현재 시간: </span><span class="nv">$current_time</span><span class="s2">"</span>
-
-<span class="c"># 로그 파일 생성</span>
-<span class="nv">log_file</span><span class="o">=</span><span class="s2">"log_</span><span class="k">${</span><span class="nv">current_date</span><span class="k">}</span><span class="s2">.log"</span>
-<span class="nb">echo</span> <span class="s2">"[</span><span class="si">$(</span><span class="nb">date</span> +%Y-%m-%d %H:%M:%S<span class="si">)</span><span class="s2">] 스크립트 시작"</span> <span class="o">&gt;&gt;</span> <span class="nv">$log_file</span>
-</code></pre></div></div>
-
-<h3 id="시스템-시간-설정">시스템 시간 설정</h3>
-
-<p>시스템 시간을 설정할 수도 있습니다 (root 권한 필요).</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>시스템 시간 설정 <span class="o">(</span>root 권한 필요<span class="o">)</span>
-<span class="go">sudo date -s "2020-05-21 15:41:31"
-
-</span><span class="gp">#</span><span class="w"> </span>또는
-<span class="go">sudo date 052115412020.31
-</span></code></pre></div></div>
-
-<h2 id="문제-해결">문제 해결</h2>
-
-<h3 id="시간대-문제">시간대 문제</h3>
-
-<p>시간대가 올바르게 설정되지 않은 경우 해결 방법입니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>현재 시간대 확인
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>timedatectl status
-<span class="go">               Local time: Thu 2020-05-21 15:41:31 KST
-           Universal time: Thu 2020-05-21 06:41:31 UTC
-                 RTC time: Thu 2020-05-21 06:41:31
-                Time zone: Asia/Seoul (KST, +0900)
-
-</span><span class="gp">#</span><span class="w"> </span>시간대 목록 확인
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>timedatectl list-timezones | <span class="nb">grep </span>Seoul
-<span class="go">Asia/Seoul
-
-</span><span class="gp">#</span><span class="w"> </span>시간대 설정
-<span class="go">sudo timedatectl set-timezone Asia/Seoul
-</span></code></pre></div></div>
-
-<h3 id="날짜-형식-오류">날짜 형식 오류</h3>
-
-<p>날짜 형식이 올바르지 않은 경우의 해결 방법입니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>올바른 날짜 형식 예시
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"2020-05-21"</span>
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"May 21 2020"</span>
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"21 May 2020"</span>
-<span class="go">
-</span><span class="gp">#</span><span class="w"> </span>잘못된 형식 <span class="o">(</span>오류 발생 가능<span class="o">)</span>
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"2020/05/21"</span>  <span class="c"># 대시(-) 사용 권장</span>
-</code></pre></div></div>
-
-<h2 id="고급-기능">고급 기능</h2>
-
-<h3 id="날짜-계산">날짜 계산</h3>
-
-<p><code class="language-plaintext highlighter-rouge">date</code> 명령어를 사용하여 날짜 계산을 수행할 수 있습니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
-<span class="c"># 7일 후 날짜 계산</span>
-<span class="nv">future_date</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"7 days"</span> +%Y-%m-%d<span class="si">)</span>
-<span class="nb">echo</span> <span class="s2">"7일 후: </span><span class="nv">$future_date</span><span class="s2">"</span>
-
-<span class="c"># 30일 전 날짜 계산</span>
-<span class="nv">past_date</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"30 days ago"</span> +%Y-%m-%d<span class="si">)</span>
-<span class="nb">echo</span> <span class="s2">"30일 전: </span><span class="nv">$past_date</span><span class="s2">"</span>
-
-<span class="c"># 특정 날짜로부터 계산</span>
-<span class="nv">start_date</span><span class="o">=</span><span class="s2">"2020-05-01"</span>
-<span class="nv">end_date</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$start_date</span><span class="s2"> + 1 month"</span> +%Y-%m-%d<span class="si">)</span>
-<span class="nb">echo</span> <span class="s2">"시작일: </span><span class="nv">$start_date</span><span class="s2">"</span>
-<span class="nb">echo</span> <span class="s2">"종료일: </span><span class="nv">$end_date</span><span class="s2">"</span>
-</code></pre></div></div>
-
-<h3 id="로그-타임스탬프">로그 타임스탬프</h3>
-
-<p>로그 파일에 타임스탬프를 추가하는 방법입니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 로그에 타임스탬프 추가</span>
-<span class="nb">echo</span> <span class="s2">"[</span><span class="si">$(</span><span class="nb">date</span> <span class="s1">'+%Y-%m-%d %H:%M:%S'</span><span class="si">)</span><span class="s2">] 작업 시작"</span> <span class="o">&gt;&gt;</span> /var/log/app.log
-
-<span class="c"># 또는 ISO 8601 형식</span>
-<span class="nb">echo</span> <span class="s2">"[</span><span class="si">$(</span><span class="nb">date</span> <span class="nt">-Iseconds</span><span class="si">)</span><span class="s2">] 작업 시작"</span> <span class="o">&gt;&gt;</span> /var/log/app.log
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">date</code> 명령어는 리눅스 시스템 관리와 스크립트 작성에서 필수적인 도구입니다. 다양한 형식 지정자와 옵션을 활용하여 효율적으로 날짜와 시간 정보를 처리할 수 있습니다.</p>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

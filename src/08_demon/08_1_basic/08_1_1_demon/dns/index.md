@@ -2,20 +2,44 @@
 layout: home
 ---
 
+[⬅️ 이전: 데몬(demon)](../demon/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: bind9 ➡️](bind9/)
+
+![DNS 개념도](img/concept_architecture.svg)
+
 # Domain Name System
 Linux 서버의 DNS는 도메인 이름을 IP 주소로 변환하여 네트워크의 리소스를 찾고 연결하는 서비스입니다.
 
-* [dns란](dns)
 
-## hosts 파일을 이용하여 네트워크 접속
+
+## 1️⃣ 핵심 학습 가이드
+* [dns란](./dns/)
+
 * [window host](window)
+
+
+## 2️⃣ 심화 및 활용 파트 1
 * [linux host](window)
 
+* [실습](./nslookup/)
 
+
+
+## 3️⃣ 심화 및 활용 파트 2
+* [www.naver.com](http://www.naver.com/)의 ip을
+   [www.daum.net](http://www.daum.net/)로 변경
+
+결과 화면 (엉뚱한 사이트로 접속)
+![image-20230409190518150](./img/image-20230409190518150.png)
+
+* [domain](./domain/)
+
+
+
+## 3️⃣ 심화 및 활용 파트 2
+## hosts 파일을 이용하여 네트워크 접속
 ## 네임 서버를 이용하여 네트워크 접속
 
 ![image-20230409190253697](./img/image-20230409190253697.png)
-
 
 * 기하급수적으로 늘어나는 네트워크 상의 컴퓨터에 대한 모든 IP 정보를 파일 하나에 기록하는 것은 무리
 
@@ -27,11 +51,8 @@ Linux 서버의 DNS는 도메인 이름을 IP 주소로 변환하여 네트워�
 
 ![image-20230409190341296](./img/image-20230409190341296.png)
 
-
 ## NSLookup
 nslookup 명령은 도메인 이름 및 IP 주소 정보에 대해 DNS 서버를 쿼리하는 데 사용되는 도구입니다. 
-
-* [실습](nslookup)
 
 ## Host 동작실습
 리눅스의 `/etc/hosts` 파일 수정하여, 우리가 일상적으로 사용하는 사이트의 ip를 조작해 봅니다.
@@ -43,25 +64,13 @@ nslookup 명령은 도메인 이름 및 IP 주소 정보에 대해 DNS 서버를
 
 Domain name과 ip를 바꿔보자.
 
-* [www.naver.com](http://www.naver.com/)의 ip을
-   [www.daum.net](http://www.daum.net/)로 변경
-
-결과 화면 (엉뚱한 사이트로 접속)
-![image-20230409190518150](./img/image-20230409190518150.png)
-
-
-
 ## IP주소를 얻는 내부 흐름
 
 ![image-20230409190540106](./img/image-20230409190540106.png)
 
 Order hosts,bind hosts 먼저 조회하고, 그 후에 resolv.conf를 본다는 의미
 
-
 ## 도메인 이름 체계
-* [domain](domain)
-
-
 ## 로컬 네임 서버가 작동하는 순서
 
 * PC가 사용하는 네임 서버가 `/etc/resolv.conf` 파일에 `nameserver IP주소`로 설정되어 있는데, 
@@ -75,4 +84,6 @@ Order hosts,bind hosts 먼저 조회하고, 그 후에 resolv.conf를 본다는 
 
 ![image-20230409190748855](./img/image-20230409190748855.png)
 
+---
 
+[⬅️ 이전: 데몬(demon)](../demon/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: bind9 ➡️](bind9/)

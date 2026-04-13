@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 네트워크](../06_1_10_hardware/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: NAT (Network Address Translation) ➡️](../06_1_1_nat/)
+
+![13 ICMP 개념도](img/concept_architecture.svg)
+
 # CentOS에서 ICMP 패킷을 허용
 
 ## 방화벽 설정 확인하기
@@ -30,3 +34,7 @@ sudo systemctl restart firewalld
 ```
 
 이제 CentOS에서 ICMP 패킷을 허용하도록 설정되었습니다. 다른 시스템에서 CentOS로 ping 요청을 보내면 응답이 돌아와야 합니다.
+
+---
+
+[⬅️ 이전: 네트워크](../06_1_10_hardware/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: NAT (Network Address Translation) ➡️](../06_1_1_nat/)

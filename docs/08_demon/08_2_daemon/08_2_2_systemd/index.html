@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>10.2 시스템 서비스(systemd)</title>
   <meta name="title" content="10.2 시스템 서비스(systemd)" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="10.2 시스템 서비스(systemd)"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/08_demon/08_2_daemon/08_2_2_systemd/">
+  <meta property="og:url" content="https://linux.jiny.dev/08_demon/08_2_daemon/08_2_2_systemd/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="10.2 시스템 서비스(systemd)"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/08_demon/08_2_daemon/08_2_2_systemd/" />
-<meta property="og:url" content="http://localhost:4000/08_demon/08_2_daemon/08_2_2_systemd/" />
+<link rel="canonical" href="https://linux.jiny.dev/08_demon/08_2_daemon/08_2_2_systemd/" />
+<meta property="og:url" content="https://linux.jiny.dev/08_demon/08_2_daemon/08_2_2_systemd/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="10.2 시스템 서비스(systemd)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"10.2 시스템 서비스(systemd)","url":"http://localhost:4000/08_demon/08_2_daemon/08_2_2_systemd/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"10.2 시스템 서비스(systemd)","url":"https://linux.jiny.dev/08_demon/08_2_daemon/08_2_2_systemd/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1176,12 +1176,24 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="102-리눅스의-조물주-엔진-systemd-systemctl">10.2 리눅스의 조물주 엔진, Systemd (systemctl)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../08_2_1_concept/">⬅️ 이전: 10.1 데몬(Daemon)의 개요</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../08_2_3_service/">다음: 10.3 주요 네트워크 서비스 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="2 SYSTEMD 개념도" /></p>
+
+<h1 id="102-리눅스의-조물주-엔진-systemd-systemctl">10.2 리눅스의 조물주 엔진, Systemd (systemctl)</h1>
 
 <p>과거의 리눅스들은 컴퓨터를 부팅할 때 <code class="language-plaintext highlighter-rouge">init</code> 이라는 낡은 시스템을 사용해서 데몬(서비스)들을 순차적으로 거북이처럼 하나씩 느리게 켰습니다. 
 하지만 최신 리눅스(Ubuntu 16 이상, CentOS 7 이상) 배포판들은 이것을 싹 갈아엎고, 리눅스의 심장이라 불리는 혁신적인 거대 진단 엔진인 <strong><code class="language-plaintext highlighter-rouge">systemd (시스템디)</code></strong> 를 표준으로 도입했습니다.</p>
 
-<p><img src="./img/systemctl.svg" alt="시스템디 구조와 리모콘" /></p>
+<!-- Broken Image Removed: ./img/systemctl.svg -->
 <blockquote>
   <p><strong>동작 원리</strong>: 우분투가 부팅되자마자 PID 1번을 부여받고 최초로 일어나는 마더(Mother) 엔진이 바로 <code class="language-plaintext highlighter-rouge">systemd</code> 입니다. 엔지니어가 <code class="language-plaintext highlighter-rouge">systemctl (시스템컨트롤)</code> 이라는 명령줄 리모콘의 버튼을 누르면, 이 엔진이 지시를 받아 하위의 데몬(웹서버, 원격서버 등)들의 멱살을 잡고 통제하게 됩니다.</p>
 </blockquote>
@@ -1265,6 +1277,18 @@ System has not been booted with systemd as init system <span class="o">(</span>P
 <span class="c"># 또는</span>
 <span class="nb">sudo </span>systemctl restart sshd
 </code></pre></div></div>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../08_2_1_concept/">⬅️ 이전: 10.1 데몬(Daemon)의 개요</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../08_2_3_service/">다음: 10.3 주요 네트워크 서비스 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

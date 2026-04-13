@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/14_monitoring/12_2_disk/">
+  <meta property="og:url" content="https://linux.jiny.dev/14_monitoring/12_2_disk/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/14_monitoring/12_2_disk/" />
-<meta property="og:url" content="http://localhost:4000/14_monitoring/12_2_disk/" />
+<link rel="canonical" href="https://linux.jiny.dev/14_monitoring/12_2_disk/" />
+<meta property="og:url" content="https://linux.jiny.dev/14_monitoring/12_2_disk/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/14_monitoring/12_2_disk/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/14_monitoring/12_2_disk/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1166,100 +1166,42 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="디스크-모니터링">디스크 모니터링</h1>
-<p>리눅스에서는 디스크 공간의 사용량과 가용성을 모니터링하는 여러 도구가 제공됩니다. 이러한 도구를 사용하여 디스크 공간을 효율적으로 관리할 수 있습니다.</p>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../12_1_resource/">⬅️ 이전: 13.1 시스템 안정성 모니터링</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../12_3_network/">다음: 12.3 네트워크 모니터링 (netstat, ping) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="디스크공간">디스크공간</h2>
-<p>리눅스에서 df 명령은 디스크의 사용 용량과 사용 가능한 용량을 보여주는 명령어입니다. 사용법은 다음과 같습니다.</p>
+<h1 id="12_2_disk-알아보기">12_2_disk 알아보기</h1>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df [옵션] [디렉토리 또는 파일명]
-</code></pre></div></div>
+<p>12_2_disk 알아보기에 대한 기본 개념과 실습을 연결하는 허브 페이지입니다.</p>
 
-<p>일반적으로 옵션을 지정하지 않아도 df 명령어를 실행할 수 있습니다. 이 경우 모든 파일 시스템에 대한 사용 용량 정보가 출력됩니다. 만약 특정 파일 시스템에 대한 정보만을 출력하려면 파일 시스템의 마운트 포인트를 명령어 인자로 전달하면 됩니다.</p>
-
-<p>옵션 중 자주 사용하는 것은 다음과 같습니다.</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">-h</code>: 사람이 읽기 쉬운 형식으로 출력합니다. 예를 들어, 1KB 대신 1.0K와 같은 형식으로 출력됩니다.</li>
-  <li><code class="language-plaintext highlighter-rouge">-i</code>: inode 사용 정보를 보여줍니다.</li>
-  <li><code class="language-plaintext highlighter-rouge">-T</code>: 파일 시스템 유형을 보여줍니다.</li>
-</ul>
-
-<p>예를 들어, 다음 명령어를 실행하면 현재 시스템의 모든 파일 시스템에 대한 사용 용량 정보가 출력됩니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">df</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">/mnt/mydisk</code> 디렉토리에 마운트된 파일 시스템에 대한 사용 용량 정보만을 보려면 다음과 같이 명령어를 실행할 수 있습니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">df</span> /mnt/mydisk
-</code></pre></div></div>
-
-<p>사람이 읽기 쉬운 형식으로 출력하려면 다음과 같이 <code class="language-plaintext highlighter-rouge">-h</code> 옵션을 추가합니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">df</span> <span class="nt">-h</span>
-</code></pre></div></div>
-
-<p>다음과 같이 <code class="language-plaintext highlighter-rouge">-T</code> 옵션을 추가하여 파일 시스템 유형도 함께 출력할 수 있습니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">df</span> <span class="nt">-hT</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">df</code> 명령어는 리눅스 시스템에서 디스크 사용량을 모니터링하거나 디스크 용량을 확인해야 할 때 자주 사용되는 명령어입니다.</p>
-
-<h2 id="크기-확인">크기 확인</h2>
-<p>다. 디렉토리 또는 파일에 대한 디스크 사용 용량을 확인할 수 있으며, 하위 디렉토리의 사용 용량도 함께 출력할 수 있습니다. 사용법은 다음과 같습니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">du</span> <span class="o">[</span>옵션] <span class="o">[</span>디렉토리 또는 파일명]
-</code></pre></div></div>
-
-<p>일반적으로 옵션을 지정하지 않아도 du 명령어를 실행할 수 있습니다. 이 경우 현재 디렉토리의 모든 파일과 디렉토리의 사용 용량 정보가 출력됩니다. 만약 특정 디렉토리에 대한 정보만을 출력하려면 디렉토리 이름을 명령어 인자로 전달하면 됩니다.</p>
-
-<p>옵션 중 자주 사용하는 것은 다음과 같습니다.</p>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>해당 주제의 구조를 이해하고 실습을 진행합니다.</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">-h</code>: 사람이 읽기 쉬운 형식으로 출력합니다. 예를 들어, 1KB 대신 1.0K와 같은 형식으로 출력됩니다.</li>
-  <li><code class="language-plaintext highlighter-rouge">-s</code>: 하위 디렉토리를 포함한 총 사용 용량을 출력합니다.</li>
-  <li><code class="language-plaintext highlighter-rouge">-c</code>: 지정한 모든 파일과 디렉토리의 사용 용량을 합산한 총 사용 용량을 출력합니다.</li>
-  <li><code class="language-plaintext highlighter-rouge">--max-depth=[숫자]</code>: 하위 디렉토리의 깊이를 제한합니다. 예를 들어,  <code class="language-plaintext highlighter-rouge">--max-depth=1</code>을 지정하면 현재 디렉토리의 하위 디렉토리의 사용 용량만을 출력합니다.</li>
+  <li>
+    <p><a href="12_2_0_concept/">12_2_disk 알아보기 상세 튜토리얼</a></p>
+
+    <p>해당 파트의 상세 문서를 확인하고 터미널 실습 코드를 학습합니다.</p>
+  </li>
 </ul>
 
-<p>예를 들어, 다음 명령어를 실행하면 현재 디렉토리의 모든 파일과 디렉토리의 사용 용량 정보가 출력됩니다.</p>
+<hr />
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">du</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">/mnt/mydisk</code> 디렉토리에 있는 파일과 디렉토리의 사용 용량 정보만을 보려면 다음과 같이 명령어를 실행할 수 있습니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">du</span> /mnt/mydisk
-</code></pre></div></div>
-
-<p>사람이 읽기 쉬운 형식으로 출력하려면 다음과 같이 -h 옵션을 추가합니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">du</span> <span class="nt">-h</span>
-</code></pre></div></div>
-
-<p>하위 디렉토리를 포함한 총 사용 용량을 출력하려면 다음과 같이 -s 옵션을 추가합니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">du</span> <span class="nt">-hs</span>
-</code></pre></div></div>
-
-<p>지정한 모든 파일과 디렉토리의 사용 용량을 합산한 총 사용 용량을 출력하려면 다음과 같이 -c 옵션을 추가합니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">du</span> <span class="nt">-hc</span>
-</code></pre></div></div>
-
-<p>하위 디렉토리의 깊이를 제한하려면 다음과 같이 –max-depth=[숫자] 옵션을 추가합니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">du</span> <span class="nt">--max-depth</span><span class="o">=</span>1
-</code></pre></div></div>
-
-<p>이 명령어는 현재 디렉토리의 하위 디렉토리까지만 사용 용량을 출력합니다. 만약 /home/user 디렉토리의 하위 디렉토리까지만 사용 용량을 출력하려면 다음과 같이 명령어를 실행할 수 있습니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">du</span> <span class="nt">--max-depth</span><span class="o">=</span>2 /home/user
-</code></pre></div></div>
-
-<p>위 명령어는 /home/user 디렉토리와 그 하위 디렉토리의 사용 용량 정보만을 출력합니다.</p>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../12_1_resource/">⬅️ 이전: 13.1 시스템 안정성 모니터링</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../12_3_network/">다음: 12.3 네트워크 모니터링 (netstat, ping) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

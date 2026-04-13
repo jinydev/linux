@@ -2,13 +2,16 @@
 layout: home
 ---
 
+[⬅️ 이전: 우분투 Mysql 설치](../apt/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Mysql 패스워드 설정 ➡️](../password/)
+
+![CLIENT 개념도](img/concept_architecture.svg)
+
 # Mysql 클라이언트 접속
 mysql에 접속을 하기위해서는 서버와 별개로 접속 도구를 이용하여 연결을 해야 합니다.
 
 ## 콘솔 접속
 mysql 서버를 설치하게 되면 콘솔 client 접속 프로그램도 같이 설치가 됩니다. 
 콘솔창에서 `mysql` 명령을 입력하면 됩니다.
-
 
 ## 비밀번호
 mysql 보안을 위하여 root 비밀번호를 설정햔 경우라면 사용자 정보와 비밀번호를 같이 입력해 주어야 합니다.
@@ -40,3 +43,6 @@ Bye
 
 데이터베이스 접속을 종료할때에는 `exit`를 입력합니다.
 
+---
+
+[⬅️ 이전: 우분투 Mysql 설치](../apt/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Mysql 패스워드 설정 ➡️](../password/)

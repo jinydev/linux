@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/service/">
+  <meta property="og:url" content="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/service/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/service/" />
-<meta property="og:url" content="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/service/" />
+<link rel="canonical" href="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/service/" />
+<meta property="og:url" content="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/service/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/service/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/service/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1186,7 +1186,19 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="서비스service">서비스(Service)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../server/">⬅️ 이전: 서버란</a>  </td>
+      <td>  <a href="../../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../systemctl/">다음: 10.2 시스템 서비스(systemd) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="SERVICE 개념도" /></p>
+
+<h1 id="서비스service">서비스(Service)</h1>
 <p>Linux OS가 부팅되었을 때, 생성되면서 종료될 때까지 실행되는 Process및 설정 파일을 service라고 한다</p>
 
 <blockquote>
@@ -1210,6 +1222,17 @@
 <h2 id="데몬의-실행">데몬의 실행</h2>
 <p>Linux는 OS가 부팅되면서 여러가지 <code class="language-plaintext highlighter-rouge">데몬</code>들을 실행한다. 부팅과 함께 실행되는 데몬은 네트워크 요청을 처리하는 데몬, 하드웨어 동작을 처리하는 데몬 등, 시스템단에서 필요한 작업을 백그라운드로 처리하는 데몬들이다.</p>
 
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../server/">⬅️ 이전: 서버란</a>  </td>
+      <td>  <a href="../../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../systemctl/">다음: 10.2 시스템 서비스(systemd) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

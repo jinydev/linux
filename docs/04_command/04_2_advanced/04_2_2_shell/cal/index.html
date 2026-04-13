@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="cal 명령어의 사용법과 옵션을 알아보세요. 달력 출력, 한글 달력 설정, 다양한 형식의 달력 표시 방법을 포함한 포괄적인 가이드입니다."><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>cal - 리눅스 달력 명령어 - 개발자를 위한 리눅스</title>
   <meta name="title" content="cal - 리눅스 달력 명령어 - 개발자를 위한 리눅스" /><!-- 키워드 설정 --><meta name="keywords" content="cal, 달력, linux, 명령어, locale, 한글달력, 날짜, 리눅스"><!-- Open Graph 메타데이터 --><meta property="og:title" content="cal - 리눅스 달력 명령어 - 개발자를 위한 리눅스"><meta property="og:description" content="cal 명령어의 사용법과 옵션을 알아보세요. 달력 출력, 한글 달력 설정, 다양한 형식의 달력 표시 방법을 포함한 포괄적인 가이드입니다."><meta property="og:type" content="article"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/cal/">
+  <meta property="og:url" content="https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/cal/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="cal - 리눅스 달력 명령어 - 개발자를 위한 리눅스"><meta property="twitter:description" content="cal 명령어의 사용법과 옵션을 알아보세요. 달력 출력, 한글 달력 설정, 다양한 형식의 달력 표시 방법을 포함한 포괄적인 가이드입니다."><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="cal 명령어의 사용법과 옵션을 알아보세요. 달력 출력, 한글 달력 설정, 다양한 형식의 달력 표시 방법을 포함한 포괄적인 가이드입니다." />
 <meta property="og:description" content="cal 명령어의 사용법과 옵션을 알아보세요. 달력 출력, 한글 달력 설정, 다양한 형식의 달력 표시 방법을 포함한 포괄적인 가이드입니다." />
-<link rel="canonical" href="http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/cal/" />
-<meta property="og:url" content="http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/cal/" />
+<link rel="canonical" href="https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/cal/" />
+<meta property="og:url" content="https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/cal/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="cal - 리눅스 달력 명령어 - 개발자를 위한 리눅스" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"HojinLee"},"description":"cal 명령어의 사용법과 옵션을 알아보세요. 달력 출력, 한글 달력 설정, 다양한 형식의 달력 표시 방법을 포함한 포괄적인 가이드입니다.","headline":"cal - 리눅스 달력 명령어 - 개발자를 위한 리눅스","url":"http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/cal/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"HojinLee"},"description":"cal 명령어의 사용법과 옵션을 알아보세요. 달력 출력, 한글 달력 설정, 다양한 형식의 달력 표시 방법을 포함한 포괄적인 가이드입니다.","headline":"cal - 리눅스 달력 명령어 - 개발자를 위한 리눅스","url":"https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/cal/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1186,238 +1186,67 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="cal-명령어">cal 명령어</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="CAL 개념도" /></p>
+
+<h1 id="cal-명령어">cal 명령어</h1>
 
 <p><code class="language-plaintext highlighter-rouge">cal</code> 명령어는 리눅스 시스템에서 달력을 출력하는 유틸리티입니다. 이 명령어는 현재 월의 달력이나 지정된 년도, 월의 달력을 터미널에 표시할 수 있습니다.</p>
 
-<h2 id="기본-사용법">기본 사용법</h2>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>세부 옵션과 예제를 분할하여 제공합니다.</p>
 
-<h3 id="현재-월의-달력-출력">현재 월의 달력 출력</h3>
+<ul>
+  <li>
+    <p><a href="part_1/">기본 사용법</a></p>
 
-<p>가장 기본적인 사용법으로, 현재 월의 달력을 출력합니다.</p>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">주요 옵션</a></p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal
-<span class="go">      May 2020
-Su Mo Tu We Th Fr Sa
-                1  2
- 3  4  5  6  7  8  9
-10 11 12 13 14 15 16
-17 18 19 20 21 22 23
-24 25 26 27 28 29 30
-31
-</span></code></pre></div></div>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_3/">한글 달력 설정</a></p>
 
-<h3 id="특정-년도-달력-출력">특정 년도 달력 출력</h3>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_4/">고급 사용법</a></p>
 
-<p><code class="language-plaintext highlighter-rouge">-y</code> 옵션을 사용하여 전체 년도 달력을 출력할 수 있습니다.</p>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_5/">문제 해결</a></p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal <span class="nt">-y</span> 2020
-<span class="go">                               2020
-      January               February               March
-Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
-          1  2  3  4                     1   1  2  3  4  5  6  7
- 5  6  7  8  9 10 11   2  3  4  5  6  7  8   8  9 10 11 12 13 14
-12 13 14 15 16 17 18   9 10 11 12 13 14 15  15 16 17 18 19 20 21
-19 20 21 22 23 24 25  16 17 18 19 20 21 22  22 23 24 25 26 27 28
-26 27 28 29 30 31     23 24 25 26 27 28 29  29 30 31
-</span></code></pre></div></div>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_6/">활용 예제</a></p>
 
-<h3 id="특정-월-달력-출력">특정 월 달력 출력</h3>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+</ul>
 
-<p>년도와 월을 지정하여 특정 월의 달력을 출력할 수 있습니다.</p>
+<hr />
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal 12 2020
-<span class="go">   December 2020
-Su Mo Tu We Th Fr Sa
-       1  2  3  4  5
- 6  7  8  9 10 11 12
-13 14 15 16 17 18 19
-20 21 22 23 24 25 26
-27 28 29 30 31
-</span></code></pre></div></div>
-
-<h2 id="주요-옵션">주요 옵션</h2>
-
-<h3 id="-y-옵션"><code class="language-plaintext highlighter-rouge">-y</code> 옵션</h3>
-<p>현재 년도의 전체 달력을 출력합니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal <span class="nt">-y</span>
-</code></pre></div></div>
-
-<h3 id="-m-옵션"><code class="language-plaintext highlighter-rouge">-m</code> 옵션</h3>
-<p>월요일을 주의 첫 번째 날로 표시합니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal <span class="nt">-m</span>
-<span class="go">      May 2020
-Mo Tu We Th Fr Sa Su
-             1  2  3
- 4  5  6  7  8  9 10
-11 12 13 14 15 16 17
-18 19 20 21 22 23 24
-25 26 27 28 29 30 31
-</span></code></pre></div></div>
-
-<h3 id="-j-옵션"><code class="language-plaintext highlighter-rouge">-j</code> 옵션</h3>
-<p>율리우스력(Julian day numbers)으로 날짜를 표시합니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal <span class="nt">-j</span> 5 2020
-<span class="go">        May 2020
- Su  Mo  Tu  We  Th  Fr  Sa
-                    122 123
-124 125 126 127 128 129 130
-131 132 133 134 135 136 137
-138 139 140 141 142 143 144
-145 146 147 148 149 150 151
-152
-</span></code></pre></div></div>
-
-<h3 id="-3-옵션"><code class="language-plaintext highlighter-rouge">-3</code> 옵션</h3>
-<p>현재 월과 이전, 다음 월을 함께 표시합니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal <span class="nt">-3</span>
-<span class="go">      April 2020              May 2020              June 2020
-Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
-          1  2  3  4                  1  2      1  2  3  4  5  6
- 5  6  7  8  9 10 11   3  4  5  6  7  8  9   7  8  9 10 11 12 13
-12 13 14 15 16 17 18  10 11 12 13 14 15 16  14 15 16 17 18 19 20
-19 20 21 22 23 24 25  17 18 19 20 21 22 23  21 22 23 24 25 26 27
-26 27 28 29 30        24 25 26 27 28 29 30  28 29 30
-</span></code></pre></div></div>
-
-<h2 id="한글-달력-설정">한글 달력 설정</h2>
-
-<h3 id="로케일-확인">로케일 확인</h3>
-
-<p>기본 설정값은 영문 달력입니다. 로케일을 변경하여 한글 달력을 출력할 수 있습니다.</p>
-
-<p><code class="language-plaintext highlighter-rouge">locale</code> 명령을 통해 현재 설정을 확인합니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>locale
-<span class="go">LANG=C.UTF-8
-LANGUAGE=
-LC_CTYPE="C.UTF-8"
-LC_NUMERIC="C.UTF-8"
-LC_TIME="C.UTF-8"
-LC_COLLATE="C.UTF-8"
-LC_MONETARY="C.UTF-8"
-LC_MESSAGES="C.UTF-8"
-LC_PAPER="C.UTF-8"
-LC_NAME="C.UTF-8"
-LC_ADDRESS="C.UTF-8"
-LC_TELEPHONE="C.UTF-8"
-LC_MEASUREMENT="C.UTF-8"
-LC_IDENTIFICATION="C.UTF-8"
-LC_ALL=
-</span></code></pre></div></div>
-
-<p>현재 <code class="language-plaintext highlighter-rouge">LANG=C.UTF-8</code>로 설정되어 있습니다.</p>
-
-<h3 id="한글-로케일-설정">한글 로케일 설정</h3>
-
-<p>한글 달력을 보려면 로케일을 한국어로 변경해야 합니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>임시로 한글 로케일 설정
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">export </span><span class="nv">LANG</span><span class="o">=</span>ko_KR.UTF-8
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal
-<span class="go">      5월 2020
-일 월 화 수 목 금 토
-                1  2
- 3  4  5  6  7  8  9
-10 11 12 13 14 15 16
-17 18 19 20 21 22 23
-24 25 26 27 28 29 30
-31
-</span></code></pre></div></div>
-
-<h3 id="영구-설정">영구 설정</h3>
-
-<p>한글 달력을 기본값으로 설정하려면 <code class="language-plaintext highlighter-rouge">~/.bashrc</code> 파일에 다음 내용을 추가합니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ~/.bashrc 파일에 추가</span>
-<span class="nb">export </span><span class="nv">LANG</span><span class="o">=</span>ko_KR.UTF-8
-<span class="nb">export </span><span class="nv">LC_TIME</span><span class="o">=</span>ko_KR.UTF-8
-</code></pre></div></div>
-
-<p>설정 후 터미널을 재시작하거나 다음 명령어를 실행합니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">source</span> ~/.bashrc
-</code></pre></div></div>
-
-<h2 id="고급-사용법">고급 사용법</h2>
-
-<h3 id="특정-년도-범위-출력">특정 년도 범위 출력</h3>
-
-<p>여러 년도의 달력을 연속으로 출력할 수 있습니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="k">for </span>year <span class="k">in</span> <span class="o">{</span>2020..2022<span class="o">}</span><span class="p">;</span> <span class="k">do </span><span class="nb">echo</span> <span class="s2">"=== </span><span class="nv">$year</span><span class="s2"> ==="</span><span class="p">;</span> cal <span class="nt">-y</span> <span class="nv">$year</span> | <span class="nb">head</span> <span class="nt">-9</span><span class="p">;</span> <span class="k">done</span>
-</code></pre></div></div>
-
-<h3 id="달력-정보를-파일로-저장">달력 정보를 파일로 저장</h3>
-
-<p>달력 출력을 파일로 저장하여 나중에 참조할 수 있습니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal <span class="nt">-y</span> <span class="o">&gt;</span> calendar_2020.txt
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal 12 2020 <span class="o">&gt;</span> december_2020.txt
-</code></pre></div></div>
-
-<h3 id="다른-명령어와-조합">다른 명령어와 조합</h3>
-
-<p><code class="language-plaintext highlighter-rouge">cal</code> 명령어를 다른 명령어와 조합하여 활용할 수 있습니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>현재 월의 마지막 날 확인
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal | <span class="nb">tail</span> <span class="nt">-1</span> | <span class="nb">awk</span> <span class="s1">'{print $NF}'</span>
-<span class="go">31
-
-</span><span class="gp">#</span><span class="w"> </span>현재 월의 주 수 확인
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>cal | <span class="nb">wc</span> <span class="nt">-l</span>
-<span class="go">8
-</span></code></pre></div></div>
-
-<h2 id="문제-해결">문제 해결</h2>
-
-<h3 id="로케일-오류">로케일 오류</h3>
-
-<p>한글 로케일이 설치되지 않은 경우 다음 명령어로 설치할 수 있습니다.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>Ubuntu/Debian
-<span class="go">sudo apt-get install locales
-sudo locale-gen ko_KR.UTF-8
-
-</span><span class="gp">#</span><span class="w"> </span>CentOS/RHEL
-<span class="go">sudo yum install glibc-locale-source
-sudo localedef -c -f UTF-8 -i ko_KR ko_KR.UTF-8
-</span></code></pre></div></div>
-
-<h3 id="달력이-제대로-표시되지-않는-경우">달력이 제대로 표시되지 않는 경우</h3>
-
-<p>터미널의 폰트 설정이나 인코딩 문제일 수 있습니다. 다음을 확인해보세요.</p>
-
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>터미널 인코딩 확인
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span><span class="nb">echo</span> <span class="nv">$LANG</span>
-<span class="go">ko_KR.UTF-8
-
-</span><span class="gp">#</span><span class="w"> </span>UTF-8 지원 확인
-<span class="gp">hojin@DESKTOP-11LMH3B:~$</span><span class="w"> </span>locale <span class="nt">-a</span> | <span class="nb">grep </span>ko
-<span class="go">ko_KR.utf8
-</span></code></pre></div></div>
-
-<h2 id="활용-예제">활용 예제</h2>
-
-<h3 id="스크립트에서-활용">스크립트에서 활용</h3>
-
-<p><code class="language-plaintext highlighter-rouge">cal</code> 명령어를 스크립트에서 활용하는 예제입니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
-<span class="c"># 현재 월의 날짜 수 확인</span>
-<span class="nv">days_in_month</span><span class="o">=</span><span class="si">$(</span>cal | <span class="nb">tail</span> <span class="nt">-1</span> | <span class="nb">awk</span> <span class="s1">'{print $NF}'</span><span class="si">)</span>
-<span class="nb">echo</span> <span class="s2">"이번 달은 </span><span class="nv">$days_in_month</span><span class="s2">일입니다."</span>
-
-<span class="c"># 주말 날짜 추출</span>
-<span class="nv">weekends</span><span class="o">=</span><span class="si">$(</span>cal | <span class="nb">awk</span> <span class="s1">'NR&gt;2 {for(i=1;i&lt;=NF;i++) if($i ~ /^[0-9]+$/ &amp;&amp; (i==1 || i==7)) print $i}'</span><span class="si">)</span>
-<span class="nb">echo</span> <span class="s2">"주말 날짜: </span><span class="nv">$weekends</span><span class="s2">"</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">cal</code> 명령어는 간단하지만 매우 유용한 리눅스 명령어입니다. 다양한 옵션과 조합을 통해 효율적으로 날짜 정보를 확인하고 관리할 수 있습니다.</p>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

@@ -2,7 +2,9 @@
 layout: home
 ---
 
+[⬅️ 이전: Setup](../setup/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: VMWare 17 설치 ➡️](../vm17/)
 
+![VM15 개념도](img/concept_architecture.svg)
 
 ## VMware Workstation Player 설치하기
 
@@ -12,26 +14,19 @@ vmware 홈페이지, download,  15.0.3 버전 다운로드 (15 이후 버전이�
 
 ![img](../img/clip_image035.jpg)
 
-
-
 ### 설치 진행하기
 
 설치 파일 더블클릭
 
 ![img](../img/clip_image034.jpg)
 
-
-
 ### 환영 메시지에서 `<Next>` 클릭
 
 ![img](../img/clip_image037.jpg)
 
-
-
 라이선스 동의 창에서 `I accept the terms …`에 체크 표시를 하고 `<Next>` 클릭
 
 ![img](../img/clip_image039.jpg)
-
 
 설치 폴더 지정, 기본 설정 그대로 두고 `<Next>`클릭, `Enhanced Keyboard Driver…`에는 체크 표시를 하지 않음
 
@@ -45,23 +40,22 @@ vmware 홈페이지, download,  15.0.3 버전 다운로드 (15 이후 버전이�
 
 [Shortcuts] 창에서는 디폴트로 두고 <Next> 클릭
 
-
 ![img](../img/clip_image045.jpg)
-
 
 [Ready to install VMware Workstation 15 Player] 창에서 <Install> 클릭
 
 ![img](../img/clip_image047.jpg)
 
-
-
 잠시 동안 설치 진행
 
 ![img](../img/clip_image049.jpg)
-
 
 [Completed the VMware Workstation 15 ~] 창에서 <Finish> 클릭, 설치 종료
 
 ![img](../img/clip_image051.jpg)
 
  
+
+---
+
+[⬅️ 이전: Setup](../setup/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: VMWare 17 설치 ➡️](../vm17/)

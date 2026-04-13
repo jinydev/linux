@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="리눅스 쉘(shell) 명령어를 체계적으로 학습하는 가이드. 기본 명령어부터 고급 기능까지, 쉘 사용법과 명령어 활용 방법을 알아보세요."><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>리눅스 쉘 명령어 - 개발자를 위한 리눅스</title>
   <meta name="title" content="리눅스 쉘 명령어 - 개발자를 위한 리눅스" /><!-- 키워드 설정 --><meta name="keywords" content="shell, 쉘, linux, 명령어, bash, 터미널, 커맨드라인, 리눅스"><!-- Open Graph 메타데이터 --><meta property="og:title" content="리눅스 쉘 명령어 - 개발자를 위한 리눅스"><meta property="og:description" content="리눅스 쉘(shell) 명령어를 체계적으로 학습하는 가이드. 기본 명령어부터 고급 기능까지, 쉘 사용법과 명령어 활용 방법을 알아보세요."><meta property="og:type" content="article"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/">
+  <meta property="og:url" content="https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="리눅스 쉘 명령어 - 개발자를 위한 리눅스"><meta property="twitter:description" content="리눅스 쉘(shell) 명령어를 체계적으로 학습하는 가이드. 기본 명령어부터 고급 기능까지, 쉘 사용법과 명령어 활용 방법을 알아보세요."><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="리눅스 쉘(shell) 명령어를 체계적으로 학습하는 가이드. 기본 명령어부터 고급 기능까지, 쉘 사용법과 명령어 활용 방법을 알아보세요." />
 <meta property="og:description" content="리눅스 쉘(shell) 명령어를 체계적으로 학습하는 가이드. 기본 명령어부터 고급 기능까지, 쉘 사용법과 명령어 활용 방법을 알아보세요." />
-<link rel="canonical" href="http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/" />
-<meta property="og:url" content="http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/" />
+<link rel="canonical" href="https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/" />
+<meta property="og:url" content="https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 쉘 명령어 - 개발자를 위한 리눅스" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"HojinLee"},"description":"리눅스 쉘(shell) 명령어를 체계적으로 학습하는 가이드. 기본 명령어부터 고급 기능까지, 쉘 사용법과 명령어 활용 방법을 알아보세요.","headline":"리눅스 쉘 명령어 - 개발자를 위한 리눅스","url":"http://localhost:4000/04_command/04_2_advanced/04_2_2_shell/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"HojinLee"},"description":"리눅스 쉘(shell) 명령어를 체계적으로 학습하는 가이드. 기본 명령어부터 고급 기능까지, 쉘 사용법과 명령어 활용 방법을 알아보세요.","headline":"리눅스 쉘 명령어 - 개발자를 위한 리눅스","url":"https://linux.jiny.dev/04_command/04_2_advanced/04_2_2_shell/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1176,7 +1176,19 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="리눅스-쉘-명령어">리눅스 쉘 명령어</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../04_2_1_out/shutdown/">⬅️ 이전: shutdown</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="cal/">다음: cal - 리눅스 달력 명령어 - 개발자를 위한 리눅스 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="2 SHELL 개념도" /></p>
+
+<h1 id="리눅스-쉘-명령어">리눅스 쉘 명령어</h1>
 
 <p>리눅스 쉘(shell)은 사용자와 운영체제 간의 인터페이스를 제공하는 명령어 해석기입니다. 이 가이드를 통해 리눅스 쉘의 기본 명령어부터 고급 기능까지 체계적으로 학습할 수 있습니다.</p>
 
@@ -1199,149 +1211,161 @@
 
 <h3 id="시스템-정보-확인-명령어">시스템 정보 확인 명령어</h3>
 
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
 <ul>
-  <li><strong><a href="date">date</a></strong> : 현재의 날짜와 시간을 출력합니다.
+  <li><a href="./date/">date</a> : 현재의 날짜와 시간을 출력합니다.
     <ul>
       <li>시스템의 현재 날짜와 시간을 확인</li>
       <li>다양한 형식으로 날짜 정보 출력</li>
       <li>스크립트에서 타임스탬프 생성에 활용</li>
     </ul>
   </li>
-  <li><strong><a href="cal">cal</a></strong> : 달력을 출력합니다.
+  <li><a href="./cal/">cal</a> : 달력을 출력합니다.
     <ul>
       <li>현재 월 또는 지정된 년도의 달력 출력</li>
       <li>한글 달력 설정 방법</li>
       <li>다양한 달력 형식 지원</li>
     </ul>
   </li>
-  <li><strong><a href="whoami">whoami</a></strong> : 시스템에 접속한 당시의 계정명과 접속정보를 확인합니다.
+  <li><a href="./whoami/">whoami</a> : 시스템에 접속한 당시의 계정명과 접속정보를 확인합니다.
     <ul>
       <li>현재 로그인한 사용자명 출력</li>
       <li>스크립트에서 사용자 권한 확인</li>
       <li>시스템 보안 검증에 활용</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="파일-시스템-탐색-명령어">파일 시스템 탐색 명령어</h3>
-
-<ul>
-  <li><strong><a href="pwd">pwd</a></strong> : 현재 작업 디렉터리를 출력합니다.
+  <li><a href="pwd">pwd</a> : 현재 작업 디렉터리를 출력합니다.
     <ul>
       <li>Print Working Directory의 약자</li>
       <li>현재 위치한 디렉터리의 절대 경로 출력</li>
       <li>스크립트에서 현재 위치 확인에 활용</li>
     </ul>
   </li>
-  <li><strong><a href="ls">ls</a></strong> : 디렉터리의 내용을 나열합니다.
+</ul>
+
+<h2 id="2️⃣-심화-및-활용-파트-1">2️⃣ 심화 및 활용 파트 1</h2>
+<ul>
+  <li><a href="ls">ls</a> : 디렉터리의 내용을 나열합니다.
     <ul>
       <li>파일과 디렉터리 목록 출력</li>
       <li>다양한 옵션으로 상세 정보 표시</li>
       <li>숨김 파일, 권한 정보 등 포함</li>
     </ul>
   </li>
-  <li><strong><a href="cd">cd</a></strong> : 디렉터리를 변경합니다.
+  <li><a href="cd">cd</a> : 디렉터리를 변경합니다.
     <ul>
       <li>Change Directory의 약자</li>
       <li>상대 경로와 절대 경로 지원</li>
       <li>홈 디렉터리, 상위 디렉터리 등 특수 경로 지원</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="파일-조작-명령어">파일 조작 명령어</h3>
-
-<ul>
-  <li><strong><a href="touch">touch</a></strong> : 빈 파일을 생성하거나 파일의 시간을 수정합니다.
+  <li><a href="touch">touch</a> : 빈 파일을 생성하거나 파일의 시간을 수정합니다.
     <ul>
       <li>새로운 파일 생성</li>
       <li>파일의 접근/수정 시간 업데이트</li>
       <li>여러 파일 동시 생성 가능</li>
     </ul>
   </li>
-  <li><strong><a href="cp">cp</a></strong> : 파일을 복사합니다.
+  <li><a href="cp">cp</a> : 파일을 복사합니다.
     <ul>
       <li>Copy의 약자</li>
       <li>파일 복사 및 디렉터리 복사</li>
       <li>다양한 옵션으로 복사 방식 제어</li>
     </ul>
   </li>
-  <li><strong><a href="mv">mv</a></strong> : 파일을 이동하거나 이름을 변경합니다.
+</ul>
+
+<h2 id="3️⃣-심화-및-활용-파트-2">3️⃣ 심화 및 활용 파트 2</h2>
+<ul>
+  <li><a href="mv">mv</a> : 파일을 이동하거나 이름을 변경합니다.
     <ul>
       <li>Move의 약자</li>
       <li>파일 이동 및 이름 변경</li>
       <li>디렉터리 이동도 지원</li>
     </ul>
   </li>
-  <li><strong><a href="rm">rm</a></strong> : 파일을 삭제합니다.
+  <li><a href="rm">rm</a> : 파일을 삭제합니다.
     <ul>
       <li>Remove의 약자</li>
       <li>파일 삭제 및 디렉터리 삭제</li>
       <li>재귀적 삭제 옵션 제공</li>
     </ul>
   </li>
-</ul>
-
-<h2 id="고급-명령어">고급 명령어</h2>
-
-<h3 id="텍스트-처리-명령어">텍스트 처리 명령어</h3>
-
-<ul>
-  <li><strong><a href="cat">cat</a></strong> : 파일의 내용을 출력합니다.
+  <li><a href="cat">cat</a> : 파일의 내용을 출력합니다.
     <ul>
       <li>파일 내용 확인</li>
       <li>여러 파일 연결</li>
       <li>파일 생성 및 내용 추가</li>
     </ul>
   </li>
-  <li><strong><a href="grep">grep</a></strong> : 텍스트에서 패턴을 검색합니다.
+  <li><a href="grep">grep</a> : 텍스트에서 패턴을 검색합니다.
     <ul>
       <li>정규표현식 지원</li>
       <li>파일 내용 검색</li>
       <li>다양한 검색 옵션 제공</li>
     </ul>
   </li>
-  <li><strong><a href="sed">sed</a></strong> : 스트림 에디터로 텍스트를 편집합니다.
+</ul>
+
+<h2 id="4️⃣-심화-및-활용-파트-3">4️⃣ 심화 및 활용 파트 3</h2>
+<ul>
+  <li><a href="sed">sed</a> : 스트림 에디터로 텍스트를 편집합니다.
     <ul>
       <li>텍스트 치환, 삭제, 추가</li>
       <li>배치 처리에 활용</li>
       <li>정규표현식 기반 편집</li>
     </ul>
   </li>
-  <li><strong><a href="awk">awk</a></strong> : 패턴 처리 언어로 텍스트를 분석합니다.
+  <li><a href="awk">awk</a> : 패턴 처리 언어로 텍스트를 분석합니다.
     <ul>
       <li>텍스트 파일 처리</li>
       <li>데이터 분석 및 변환</li>
       <li>스크립트 언어로 활용</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="시스템-관리-명령어">시스템 관리 명령어</h3>
-
-<ul>
-  <li><strong><a href="ps">ps</a></strong> : 실행 중인 프로세스 정보를 출력합니다.
+  <li><a href="ps">ps</a> : 실행 중인 프로세스 정보를 출력합니다.
     <ul>
       <li>Process Status의 약자</li>
       <li>시스템 프로세스 목록</li>
       <li>프로세스 상태 및 정보 확인</li>
     </ul>
   </li>
-  <li><strong><a href="top">top</a></strong> : 시스템 프로세스를 실시간으로 모니터링합니다.
+  <li><a href="top">top</a> : 시스템 프로세스를 실시간으로 모니터링합니다.
     <ul>
       <li>실시간 시스템 상태 확인</li>
       <li>CPU, 메모리 사용량 모니터링</li>
       <li>프로세스 관리 및 제어</li>
     </ul>
   </li>
-  <li><strong><a href="kill">kill</a></strong> : 프로세스를 종료합니다.
+</ul>
+
+<h2 id="5️⃣-심화-및-활용-파트-4">5️⃣ 심화 및 활용 파트 4</h2>
+<ul>
+  <li><a href="kill">kill</a> : 프로세스를 종료합니다.
     <ul>
       <li>프로세스 종료</li>
       <li>다양한 시그널 전송</li>
       <li>프로세스 관리</li>
     </ul>
   </li>
+  <li><a href="history">history</a> : 명령어 히스토리를 확인합니다.
+    <ul>
+      <li>이전 명령어 목록 출력</li>
+      <li>히스토리 검색 및 재실행</li>
+      <li>히스토리 관리</li>
+    </ul>
+  </li>
 </ul>
+
+<h3 id="파일-시스템-탐색-명령어">파일 시스템 탐색 명령어</h3>
+
+<h3 id="파일-조작-명령어">파일 조작 명령어</h3>
+
+<h2 id="고급-명령어">고급 명령어</h2>
+
+<h3 id="텍스트-처리-명령어">텍스트 처리 명령어</h3>
+
+<h3 id="시스템-관리-명령어">시스템 관리 명령어</h3>
 
 <h2 id="쉘-스크립트">쉘 스크립트</h2>
 
@@ -1413,16 +1437,6 @@
 <h2 id="고급-기능">고급 기능</h2>
 
 <h3 id="명령어-히스토리">명령어 히스토리</h3>
-
-<ul>
-  <li><strong><a href="history">history</a></strong> : 명령어 히스토리를 확인합니다.
-    <ul>
-      <li>이전 명령어 목록 출력</li>
-      <li>히스토리 검색 및 재실행</li>
-      <li>히스토리 관리</li>
-    </ul>
-  </li>
-</ul>
 
 <h3 id="자동-완성">자동 완성</h3>
 
@@ -1500,6 +1514,18 @@
 </ul>
 
 <p>이 가이드를 통해 리눅스 쉘의 기본 명령어부터 고급 기능까지 체계적으로 학습할 수 있습니다. 실제 예제를 통해 연습하면서 리눅스 시스템을 효율적으로 관리하는 방법을 익혀보시기 바랍니다.</p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../04_2_1_out/shutdown/">⬅️ 이전: shutdown</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="cal/">다음: cal - 리눅스 달력 명령어 - 개발자를 위한 리눅스 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

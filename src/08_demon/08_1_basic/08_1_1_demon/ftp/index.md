@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 실습 DNS 서버 변경](../dns/setting/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: ProFtp ➡️](proftp/)
+
+![FTP 개념도](img/concept_architecture.svg)
+
 # FTP
 파일 전송 프로토콜은 TCP/IP 프로토콜을 가지고 서버와 클라이언트 사이의 파일 전송을 하기 위한 프로토콜이다. 파일 전송 프로토콜은 TCP/IP 프로토콜 테이블의 응용 계층에 속하며, 역사는 오래 되었지만 지금도 인터넷에서 자주 사용된다
 
@@ -33,8 +37,8 @@ FTP 서버는 FTP를 통해 파일을 주고받을 수 있도록 컴퓨터에서
 
 다음을 포함하여 Linux에 설치할 수 있는 여러 유형의 FTP 서버가 있습니다.  
 
-* [proftp](proftp): 구성하기 쉽고 다양한 인증 방법을 지원하는 오픈 소스 FTP 서버입니다.
-* [vsftp](vsftp): 보안을 위해 설계된 경량 FTP 서버로 chroot 감옥 및 SSL/TLS 암호화와 같은 기능이 있습니다.
+* [proftp](./proftp/): 구성하기 쉽고 다양한 인증 방법을 지원하는 오픈 소스 FTP 서버입니다.
+* [vsftp](./ubuntu-vsftp/): 보안을 위해 설계된 경량 FTP 서버로 chroot 감옥 및 SSL/TLS 암호화와 같은 기능이 있습니다.
 * Pure-FTPd: 다양한 인증 방법, 가상 사용자 및 SSL/TLS 암호화를 지원하는 안전하고 가벼운 무료 FTP 서버입니다.
 * Wu-FTPd: 아직 사용 중이지만 적극적으로 유지 관리되지 않고 보안 기능이 제한된 이전 FTP 서버입니다.
 * Tftpd: 네트워크 환경에서 파일을 전송하는 데 일반적으로 사용되는 간단한 TFTP(Trivial File Transfer Protocol) 서버입니다.
@@ -51,5 +55,6 @@ FTP 서버는 FTP를 통해 파일을 주고받을 수 있도록 컴퓨터에서
 
 이러한 각 FTP 클라이언트에는 고유한 장단점이 있으므로 사용 용이성, 필요한 기능 및 운영 체제 또는 장치와의 호환성과 같은 요소를 기반으로 요구 사항에 가장 적합한 것을 선택하는 것이 중요합니다.
 
+---
 
-
+[⬅️ 이전: 실습 DNS 서버 변경](../dns/setting/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: ProFtp ➡️](proftp/)

@@ -3,6 +3,10 @@ layout: home
 typora-copy-images-to: ./img
 ---
 
+[⬅️ 이전: Java8 (APT)](../apt/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: Eclipse ➡️](../../eclipse/)
+
+![YUM 개념도](img/concept_architecture.svg)
+
 # Java8 (Yum)
 yum 패키지 관리자를 사용하여 Linux 시스템에 Java 8을 설치하려면 다음 단계를 따르십시오.
 
@@ -30,6 +34,8 @@ java -version
 
 이 명령은 시스템에 설치된 Java 버전을 표시합니다.
 
-
 참고: 특정 패키지 이름은 사용 중인 Linux 배포판에 따라 다를 수 있습니다. 또한 헤드리스 서버에 Java를 설치하는 경우 JRE(Java Runtime Environment) 대신 JDK(Java Development Kit)를 설치할 수 있습니다. JDK에는 Java 개발에 필요한 추가 도구 및 라이브러리가 포함되어 있습니다.
 
+---
+
+[⬅️ 이전: Java8 (APT)](../apt/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: Eclipse ➡️](../../eclipse/)

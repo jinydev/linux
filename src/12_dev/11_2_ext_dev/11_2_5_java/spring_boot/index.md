@@ -3,9 +3,12 @@ layout: home
 typora-copy-images-to: ./img
 ---
 
+[⬅️ 이전: 톰켓 및 jsp 테스트](../jsp/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: NodeJs ➡️](../../11_2_6_nodejs/)
+
+![SPRING BOOT 개념도](img/concept_architecture.svg)
+
 # Spring Boot
 Spring Boot 다운로드 및 설치: 공식 웹 사이트(https://spring.io/projects/spring-boot)에서 Spring Boot JAR 파일을 다운로드하거나 Maven 또는 Gradle과 같은 패키지 관리자를 사용할 수 있습니다. 여기에서는 Maven을 사용하여 Spring Boot를 설치합니다.
-
 
 ## Maven을 설치합니다.
 
@@ -57,3 +60,7 @@ sudo systemctl restart tomcat10
 ```
 
 이제 Spring Boot 애플리케이션이 Tomcat에서 실행되고 있어야 합니다! 웹 브라우저에서 http://localhost:8080/my-spring-boot-app-1.0-SNAPSHOT/으로 이동하여 액세스할 수 있습니다.
+
+---
+
+[⬅️ 이전: 톰켓 및 jsp 테스트](../jsp/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: NodeJs ➡️](../../11_2_6_nodejs/)

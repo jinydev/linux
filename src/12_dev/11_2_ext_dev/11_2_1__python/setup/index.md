@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: Python](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: WSL2 gcc 설치하기 - Learn Linux ➡️](../../11_2_2_gcc/)
+
+![SETUP 개념도](img/concept_architecture.svg)
+
 # Python Setup
 
 ## 설치
@@ -32,3 +36,7 @@ $ sudo yum install python3 -y
 hojin@hojin3:~$ python3 --version
 Python 3.10.6
 ```
+
+---
+
+[⬅️ 이전: Python](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: WSL2 gcc 설치하기 - Learn Linux ➡️](../../11_2_2_gcc/)

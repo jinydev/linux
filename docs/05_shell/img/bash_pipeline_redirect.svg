@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350">
+  <defs>
+    <style>
+      .bg { fill: #171717; }
+      .title { fill: #fafafa; font-family: 'Courier New', monospace; font-size: 22px; font-weight: bold; }
+      .lbl { fill: #a3a3a3; font-family: 'Courier New', monospace; font-size: 14px; text-anchor: middle;}
+      .cmd-box { fill: #262626; stroke: #4ade80; stroke-width: 2; rx: 8; }
+      .text-cmd { fill: #4ade80; font-family: 'Courier New', monospace; font-size: 18px; font-weight: bold; text-anchor: middle;}
+      .arrow { stroke: #fb923c; stroke-width: 3; fill: none; }
+      .arrow-err { stroke: #f87171; stroke-width: 3; fill: none; stroke-dasharray: 4,4;}
+    </style>
+    <marker id="arr" orient="auto" markerWidth="6" markerHeight="6" refX="5" refY="3">
+      <path d="M0,0 V6 L6,3 Z" fill="#fb923c" />
+    </marker>
+    <marker id="arr-err" orient="auto" markerWidth="6" markerHeight="6" refX="5" refY="3">
+      <path d="M0,0 V6 L6,3 Z" fill="#f87171" />
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" class="bg" rx="10" />
+
+  <text x="400" y="40" class="title" text-anchor="middle">Standard I/O &amp; Pipeline ( | ) &amp; Redirection ( &gt; )</text>
+
+  <!-- Input -->
+  <text x="90" y="150" class="lbl" style="fill:#60a5fa; font-size:16px;">STDIN (0)</text>
+  <path d="M 140 160 L 210 160" class="arrow" style="stroke:#60a5fa" marker-end="url(#arr)" />
+
+  <!-- Command 1 -->
+  <rect x="220" y="120" width="140" height="80" class="cmd-box" />
+  <text x="290" y="165" class="text-cmd">ls -l</text>
+  
+  <!-- Pipeline -->
+  <path d="M 370 160 L 440 160" class="arrow" marker-end="url(#arr)" />
+  <text x="405" y="145" class="lbl" style="fill:#fb923c; font-weight:bold; font-size:18px;">Pipe ( | )</text>
+  <text x="405" y="185" class="lbl" style="font-size:12px;">STDOUT(1)</text>
+  
+  <!-- Command 2 -->
+  <rect x="450" y="120" width="140" height="80" class="cmd-box" />
+  <text x="520" y="165" class="text-cmd">grep "txt"</text>
+
+  <!-- Redirection -->
+  <path d="M 600 160 L 670 160" class="arrow" marker-end="url(#arr)" />
+  <text x="635" y="145" class="lbl" style="fill:#fb923c; font-weight:bold; font-size:18px;">&gt;</text>
+  
+  <!-- Output File -->
+  <rect x="680" y="130" width="80" height="60" fill="#3b82f6" rx="4"/>
+  <text x="720" y="165" class="text-cmd" style="fill:#fff; font-size:14px;">result.txt</text>
+
+  <!-- Standard Error -->
+  <path d="M 290 210 L 290 270 L 670 270" class="arrow-err" marker-end="url(#arr-err)" />
+  <text x="480" y="260" class="lbl" style="fill:#f87171; font-weight:bold;">STDERR (2) -> error.log</text>
+
+</svg>

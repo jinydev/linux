@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 네트웍 설정](../06_1_4_setting/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 유무선 네트워크 ➡️](../06_1_6_wire/)
+
+![5 TCP 개념도](img/concept_architecture.svg)
+
 # TCP/IP
 TCP/IP는 대표적인 컴퓨터 네트워크 통신 규칙이다.
 
@@ -12,17 +16,11 @@ TCP/IP는 서로다른 운영체제를 쓰는 컴퓨터 간에도 데이터를 �
 TCP는 Transfer Control Protocol의 약자로서 전송 데이터를 일정 단위로 나누어 포장하여 전송합니다.
 또한 IP는 Internet Protocol의 약자로 직접 데이터를 주고 받는 규약을 말한다.
 
-
-
 ### OSI Layer
 
 TCP/IP는 OSI 7 레이어의 계층중 일부분 입니다.
 
-
-
-![image-20230330160020471](D:\jinydev\linux\src\network\img\image-20230330160020471.png)
-
-
+<!-- Broken Image Removed: D:\jinydev\linux\src\network\img\image-20230330160020471.png -->
 
 ### OSI 계층
 
@@ -32,3 +30,7 @@ OSI 7 Layer 는 서로간의 통신을 위하여 여러 계층으로 나누어�
 * 전달 계층 : TCP커널, 소켓 라이브러리등 네트워크 부분과 연결 전달 역할을 함
 * 인터넷 계층 : 인터넷 IP 체계, 라우팅 동작 원리등 논리적 계층을 처리합니다.
 * 네트워크 액세스 계층 : UTP 케이블 스팩, 랜카드, 라우터, 허브 등 물리적 장치간의 통신을 처리한다.
+
+---
+
+[⬅️ 이전: 네트웍 설정](../06_1_4_setting/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 유무선 네트워크 ➡️](../06_1_6_wire/)

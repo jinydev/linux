@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: git deploy](../11_2_3_git/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: Java ➡️](../11_2_5_java/)
+
+![4 GO 개념도](img/concept_architecture.svg)
+
 # Go
 리눅스에 Go를 설치하려면 다음과 같은 단계를 따르면 됩니다.
 
@@ -51,3 +55,7 @@ go version
 ```
 
 위와 같이 간단한 단계를 따르면 리눅스에 Go를 설치할 수 있습니다.
+
+---
+
+[⬅️ 이전: git deploy](../11_2_3_git/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: Java ➡️](../11_2_5_java/)

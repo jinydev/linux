@@ -3,6 +3,10 @@ layout: home
 typora-copy-images-to: ./img
 ---
 
+[⬅️ 이전: 11](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: Java11 (Yum) ➡️](../yum/)
+
+![APT 개념도](img/concept_architecture.svg)
+
 ## Java11 설치
 
 ### openjdk 설치
@@ -27,3 +31,7 @@ openjdk 11.0.18 2023-01-17
 OpenJDK Runtime Environment (build 11.0.18+10-post-Ubuntu-0ubuntu122.04)
 OpenJDK 64-Bit Server VM (build 11.0.18+10-post-Ubuntu-0ubuntu122.04, mixed mode, sharing)
 ```
+
+---
+
+[⬅️ 이전: 11](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: Java11 (Yum) ➡️](../yum/)

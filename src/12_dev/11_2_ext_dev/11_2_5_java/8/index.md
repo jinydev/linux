@@ -3,6 +3,10 @@ layout: home
 typora-copy-images-to: ./img
 ---
 
+[⬅️ 이전: Java11 (Yum)](../11/yum/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Java8 (APT) ➡️](apt/)
+
+![8 개념도](img/concept_architecture.svg)
+
 # Java8
 JSP를 개발하는 현장에서는 아직까지도 오래된  JAVA 8(= JAVA 1.8) 버젼이 널리 사용됩니다. 
 > 개발 환경에 따라 버젼을 확인하여 설치합니다.
@@ -24,7 +28,6 @@ Java 8에 도입된 일부 주요 기능은 다음과 같습니다.
 
 Java 8에는 성능 향상, 보안 향상 및 멀티 코어 프로세서 지원 향상과 같은 몇 가지 다른 개선 사항도 포함되어 있습니다.
 
-
 전반적으로 Java 8은 Java 언어 및 플랫폼에 많은 새로운 기능과 개선 사항을 도입한 중요한 릴리스였으며 전 세계 개발자가 널리 채택했습니다.
 
 ## 패키지 설치
@@ -38,3 +41,7 @@ yum 명령을 통하여 Centos 와 유사한 리눅스 배포판에 java 설치�
 
 ## 참고
 * https://techblog.gccompany.co.kr/%EC%9A%B0%EB%A6%AC%ED%8C%80%EC%9D%B4-jdk-17%EC%9D%84-%EB%8F%84%EC%9E%85%ED%95%9C-%EC%9D%B4%EC%9C%A0-ced2b754cd7
+
+---
+
+[⬅️ 이전: Java11 (Yum)](../11/yum/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Java8 (APT) ➡️](apt/)

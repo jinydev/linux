@@ -3,6 +3,10 @@ layout: home
 title: "12.2 MySQL / MariaDB 구축"
 ---
 
+[⬅️ 이전: 12.1 데이터베이스 구조 개요](../10_1_1_intro/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 12.3 웹/DB 연동 (PHP/Node) 기초 ➡️](../10_1_3_webdb/)
+
+![2 MYSQL 개념도](img/concept_architecture.svg)
+
 # 12.2 MySQL (MariaDB) 기본 설치 및 데몬 구동
 
 가장 표준형인 오픈소스 데이터베이스 `MySQL`을 우분투 리눅스 환경에 배포하고, 구동시키는 방법을 배웁니다.
@@ -69,3 +73,7 @@ sudo mysql -u root -p
 SHOW DATABASES;
 ```
 결과로 `mysql`, `information_schema` 등의 기본 도화지 구조물들을 확인하실 수 있습니다. 빠져나오려면 `exit`를 칩니다.
+
+---
+
+[⬅️ 이전: 12.1 데이터베이스 구조 개요](../10_1_1_intro/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 12.3 웹/DB 연동 (PHP/Node) 기초 ➡️](../10_1_3_webdb/)

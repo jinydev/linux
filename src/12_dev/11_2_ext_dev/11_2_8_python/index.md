@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 셈플코드 작성](../11_2_7_php/sample/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: Rust ➡️](../11_2_9_rust/)
+
+![8 PYTHON 개념도](img/concept_architecture.svg)
+
 # Python
 
 ## WSL에서 파이썬 개발하기
@@ -14,3 +18,7 @@ layout: home
 hojin@DESKTOP-11LMH3B:~$ python3 --version
 Python 3.8.2
 ```
+
+---
+
+[⬅️ 이전: 셈플코드 작성](../11_2_7_php/sample/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: Rust ➡️](../11_2_9_rust/)

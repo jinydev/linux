@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: CentOS에서 sudo 명령 사용](../03_1_10_sudo-centos/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 사용자 계정 ➡️](../03_1_1_account/)
+
+![11 SUDO 개념도](img/concept_architecture.svg)
+
 # Sudo
 `sudo`는 리눅스에서 사용자가 root와 같은 권한을 `일시적`으로 얻을 수 있도록 해주는 명령어입니다. sudo를 사용하면 일반 사용자 계정으로 로그인한 상태에서도 `root 권한이 필요한 작업`을 수행할 수 있습니다.
 
@@ -20,7 +24,6 @@ Defaults    timestamp_timeout=30
 
 단, 보안을 위해 가능한 짧은 유효기간으로 설정하는 것이 좋습니다. 불필요한 root 권한 사용을 방지할 수 있기 때문입니다.  
 
-
 ## sudo 명령어 사용법
 sudo를 사용하는 방법은 다음과 같습니다.
 
@@ -36,7 +39,6 @@ sudo apt-get install [패키지 이름]
 
 이렇게 하면 apt-get이 root 권한으로 실행되며, 패키지를 설치할 수 있습니다.
 
+---
 
-
-
-
+[⬅️ 이전: CentOS에서 sudo 명령 사용](../03_1_10_sudo-centos/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 사용자 계정 ➡️](../03_1_1_account/)

@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 10.1 데몬(Daemon)의 개요](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Domain Name System ➡️](../dns/)
+
+![DEMON 개념도](img/concept_architecture.svg)
+
 # 데몬(demon)
 OS에서 해당 서비스를 제공해주려고 대기중인 모듈
 
@@ -33,8 +37,6 @@ Ubuntu에서는 기본적으로 Super daemon이 설치되지 않기에 Package M
 sudo apt install netkit-inetd
 ```
 
-
-
 ## 서비스 설정
 
 ### 서비스란? 
@@ -45,8 +47,6 @@ sudo apt install netkit-inetd
 $ systemctl status/restart/stop/start 서비스 이름
 ```
 
-
-
 * GUI환경
 
 ```
@@ -55,8 +55,8 @@ $ kcmshell5 kcm_systemd
 
 ```
 
-
-
 ![image-20230324183222906](../img/image-20230324183222906.png)
 
+---
 
+[⬅️ 이전: 10.1 데몬(Daemon)의 개요](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Domain Name System ➡️](../dns/)

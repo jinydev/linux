@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/dns/bind9/">
+  <meta property="og:url" content="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/dns/bind9/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/dns/bind9/" />
-<meta property="og:url" content="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/dns/bind9/" />
+<link rel="canonical" href="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/dns/bind9/" />
+<meta property="og:url" content="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/dns/bind9/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/dns/bind9/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/dns/bind9/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1196,93 +1196,75 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="bind9">bind9</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="BIND9 개념도" /></p>
+
+<h1 id="bind9">bind9</h1>
 <p>Ubuntu에 BIND(Berkeley Internet Name Domain)를 설치합니다.</p>
 
-<h2 id="패키지-설치">패키지 설치</h2>
-<p>명령을 실행하여 BIND를 설치합니다.</p>
+<p>방대한 주제를 분할하여 제공합니다.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update 
-<span class="nb">sudo </span>apt-get <span class="nb">install </span>bind9 
-</code></pre></div></div>
-
-<p>BIND가 설치되면 구성해야 할 수 있습니다. 
-명령을 실행하여 BIND 서비스를 다시 시작합니다.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service bind9 restart 
-</code></pre></div></div>
-
-<h2 id="설정">설정</h2>
-<p><code class="language-plaintext highlighter-rouge">jinydev.com</code> 도메인을 예를 들어 설정하는 방법에 대해서 알아 보도록 합니다.</p>
-
-<p>BIND9를 사용하여 새 도메인 jinydev.com을 설정하려면 다음 단계를 따르십시오.</p>
-
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
 <ul>
-  <li>/etc/bind 디렉토리에 있는 named.conf.local</li>
+  <li>
+    <p><a href="part_1/">패키지 설치</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">설정</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo vi /etc/bind/named.conf.local
-</code></pre></div></div>
-
-<p>파일을 편집하여 jinydev.com에 대한 새 영역을 추가합니다.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zone <span class="s2">"jinydev.com"</span> <span class="o">{</span>
-    <span class="nb">type </span>master<span class="p">;</span>
-    file <span class="s2">"/etc/bind/db.jinydev.com"</span><span class="p">;</span>
-<span class="o">}</span><span class="p">;</span>
-</code></pre></div></div>
-
+<h2 id="2️⃣-심화-및-활용-파트-1">2️⃣ 심화 및 활용 파트 1</h2>
 <ul>
-  <li>/etc/bind 디렉토리에 db.jinydev.com이라는 새 영역 파일을 만듭니다.</li>
+  <li>
+    <p><a href="part_3/">테스트</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_4/">도메인 등록 기관</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo touch /etc/bind/db.jinydev.com
-sudo vi /etc/bind/db.jinydev.com
-</code></pre></div></div>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$TTL</span>    86400
-@       IN      SOA     jinydev.com. admin.jinydev.com. <span class="o">(</span>
-                  1         <span class="p">;</span> Serial
-             604800         <span class="p">;</span> Refresh
-              86400         <span class="p">;</span> Retry
-            2419200         <span class="p">;</span> Expire
-             86400 <span class="o">)</span>       <span class="p">;</span> Minimum TTL
-<span class="p">;</span>
-@       IN      NS      ns1.jinydev.com.
-@       IN      NS      ns2.jinydev.com.
-@       IN      A       192.168.56.114
-www     IN      A       192.168.56.114
-
-ns1     IN      A       192.168.56.114
-ns2     IN      A       192.168.56.113
-</code></pre></div></div>
-<p>이렇게 하면 ns1.jinydev.com 및 ns2.jinydev.com에 대한 두 개의 추가 NS 레코드와 해당 IP 주소에 대한 두 개의 A 레코드가 추가됩니다. @ 기호는 도메인 이름 자체의 줄임말이므로 @ IN NS ns1.jinydev.com입니다. jinydev.com 도메인이 ns1.jinydev.com 네임서버에 의해 제공됨을 지정합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service bind9 restart
-</code></pre></div></div>
-<p>명령을 실행하여 BIND9 서비스를 다시 시작하여 변경 사항을 적용합니다.</p>
-
-<h2 id="테스트">테스트</h2>
-<p>ip설정을 수동으로 하고, 네임서버를 bind9으로 설정한 곳으로 지정합니다.</p>
-
-<p>추가한 도메인으로 접속을 합니다.</p>
-
-<h2 id="도메인-등록-기관">도메인 등록 기관</h2>
+<h2 id="3️⃣-심화-및-활용-파트-2">3️⃣ 심화 및 활용 파트 2</h2>
 <ul>
-  <li>BIND9 서버의 IP 주소로 ns1.jinydev.com 및 ns2.jinydev.com에 대한 NS 레코드를 추가하여 BIND9 서버를 가리키도록 도메인 등록 기관을 구성합니다.</li>
+  <li>
+    <p><a href="part_5/">Slave DNS 구성</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_6/">웹기반 DNS 설정 도구</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
 </ul>
 
-<h2 id="slave-dns-구성">Slave DNS 구성</h2>
+<h2 id="3️⃣-심화-및-활용-파트-2-1">3️⃣ 심화 및 활용 파트 2</h2>
+<hr />
 
-<h2 id="웹기반-dns-설정-도구">웹기반 DNS 설정 도구</h2>
-<p>음은 BIND9 DNS 서버를 관리하기 위한 무료 오픈 소스 웹 기반 도구입니다.</p>
-
-<ul>
-  <li>Webmin: Linux 및 Unix 시스템에서 BIND9 및 기타 서비스 관리를 지원하는 무료 오픈 소스 웹 기반 시스템 관리 도구입니다.</li>
-  <li>ISPConfig: BIND9용 DNS 관리 기능이 포함된 무료 오픈 소스 웹 호스팅 제어판입니다.</li>
-  <li>Virtualmin: 이것은 BIND9 관리 기능을 포함하는 ISPConfig와 유사한 무료 오픈 소스 웹 호스팅 제어판입니다.</li>
-</ul>
-
-<p>이러한 도구는 무료로 사용할 수 있지만 올바르게 설정하고 구성하려면 약간의 기술 지식이 필요할 수 있습니다. 서버에 설치하는 모든 소프트웨어가 안전하고 최신 상태인지 확인하고 DNS 서버 관리 모범 사례를 따라 보안 취약성 또는 기타 문제를 방지하는 것이 중요합니다.</p>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

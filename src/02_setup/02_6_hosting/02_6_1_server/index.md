@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 호스팅 서비스](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: WEB 호스팅 ➡️](../02_6_2_web/)
+
+![1 SERVER 개념도](img/concept_architecture.svg)
+
 # 서버 호스팅
 서버 호스팅(Server Hosting)은 서버 컴퓨터를 대여하여 인터넷 서비스를 제공하는 것입니다. 일반적으로 대규모 트래픽을 처리해야 하는 웹사이트나 애플리케이션을 운영하는 기업이나 개인이 이용합니다. 
 
@@ -49,3 +53,7 @@ layout: home
 * 공유 호스팅(Shared Hosting)
 * 가상 서버 호스팅(Virtual Private Server Hosting)
 * 전용 서버 호스팅(Dedicated Server Hosting)
+
+---
+
+[⬅️ 이전: 호스팅 서비스](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: WEB 호스팅 ➡️](../02_6_2_web/)

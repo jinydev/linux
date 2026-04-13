@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: Mysql 패스워드 설정](../password/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: WorkBench ➡️](../workbench/)
+
+![SERVICE 개념도](img/concept_architecture.svg)
+
 # Mysql 서비스
 systemd를 통하여 mysqld 서비스를 실행합니다.
 
@@ -19,3 +23,6 @@ systemctl start mysqld
 ps -ef | grep mysql
 ```
 
+---
+
+[⬅️ 이전: Mysql 패스워드 설정](../password/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: WorkBench ➡️](../workbench/)

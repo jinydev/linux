@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/07_network/06_4_remote/06_4_4_ssh/">
+  <meta property="og:url" content="https://linux.jiny.dev/07_network/06_4_remote/06_4_4_ssh/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/07_network/06_4_remote/06_4_4_ssh/" />
-<meta property="og:url" content="http://localhost:4000/07_network/06_4_remote/06_4_4_ssh/" />
+<link rel="canonical" href="https://linux.jiny.dev/07_network/06_4_remote/06_4_4_ssh/" />
+<meta property="og:url" content="https://linux.jiny.dev/07_network/06_4_remote/06_4_4_ssh/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/07_network/06_4_remote/06_4_4_ssh/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/07_network/06_4_remote/06_4_4_ssh/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1176,93 +1176,53 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="ssh">SSH</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="4 SSH 개념도" /></p>
+
+<h1 id="ssh">SSH</h1>
 <p>telnet과 동일한 역할을 히는 프로그램으로 보안이 강화된 방식으로 접속하는 방법입니다.</p>
 
-<h2 id="ssh란">SSH란?</h2>
-<p>시큐어 셸은 네트워크 상의 다른 컴퓨터에 <code class="language-plaintext highlighter-rouge">로그인</code>하거나 원격 시스템에서 명령을 실행하고 다른 시스템으로 파일을 복사할 수 있도록 해 주는 응용 프로그램 또는 그 <code class="language-plaintext highlighter-rouge">프로토콜</code>을 가리킨다.</p>
+<p><img src="../../../../img/ssh_encryption_flow.svg" alt="SSH Encryption Flow" /></p>
 
-<h2 id="ssh-설치하기">ssh 설치하기</h2>
-<p>ssh를 통하여 서버에 접속을 하기 위해서는 별도의 <code class="language-plaintext highlighter-rouge">ssh 서비스</code> 서버 프로그램을 설치해 주셔야 합니다.
-ssh 서버를 구축하기 위해서는 2단계 작업이 필요 합니다.</p>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>방대한 주제를 분할하여 제공합니다.</p>
 
 <ul>
-  <li><a href="apt">apt</a>로 명령으로 우분투 리눅스에 설치하기</li>
-  <li><a href="yum">yum</a>로 명령으로 로키 리눅스에 설치하기</li>
+  <li>
+    <p><a href="part_1/">SSH란</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">ssh 설치하기</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_3/">클라이언트 접속</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
 </ul>
 
-<h3 id="ssh-설치여부-확인하기">ssh 설치여부 확인하기</h3>
-<p>apt 명령으로 먼저 ssh가 설치가 되어 있는지 확인을 합니다.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>s
-hojin@hojin-VirtualBox:~<span class="nv">$ </span>apt list <span class="nt">--installed</span> | <span class="nb">grep </span>ssh
+<hr />
 
-WARNING: apt does not have a stable CLI interface. Use with caution <span class="k">in </span>scripts.
-
-libssh-4/jammy,now 0.9.6-2build1 amd64 <span class="o">[</span>installed,automatic]
-openssh-client/jammy-updates,now 1:8.9p1-3ubuntu0.1 amd64 <span class="o">[</span>installed,automatic]
-openssh-server/jammy-updates,now 1:8.9p1-3ubuntu0.1 amd64 <span class="o">[</span>installed,automatic]
-openssh-sftp-server/jammy-updates,now 1:8.9p1-3ubuntu0.1 amd64 <span class="o">[</span>installed,automatic]
-ssh-import-id/jammy,jammy,now 5.11-0ubuntu1 all <span class="o">[</span>installed,automatic]
-ssh/jammy-updates,jammy-updates,now 1:8.9p1-3ubuntu0.1 all <span class="o">[</span>installed]
-hojin@hojin-VirtualBox:~<span class="err">$</span>
-
-</code></pre></div></div>
-
-<h3 id="ssh-서버-설치">ssh 서버 설치</h3>
-<p><code class="language-plaintext highlighter-rouge">apt</code> 명령어를 사용하여 패키지를 설치합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$sudo apt-get install openssh-server
-</code></pre></div></div>
-
-<p>설치된 sshd가 실행중인지 확인을 합니다.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps <span class="nt">-ed</span> | <span class="nb">grep </span>sshd
-</code></pre></div></div>
-
-<h3 id="virtualbox-네트워크-추가-설정">VirtualBox 네트워크 추가 설정</h3>
-<p>외부에서 VirtualBox안에 있는 Ubuntu를 접속을 하기 위해서틑 포트 포워딩을 통한 활성화를 해주어야 합니다.
-VirtualBox 메뉴에서 <code class="language-plaintext highlighter-rouge">장치</code>-&gt;<code class="language-plaintext highlighter-rouge">네크워크</code>-&gt;<code class="language-plaintext highlighter-rouge">네트워크 설정</code>을 선택합니다.</p>
-
-<p><img src="./img/image-20230329185149729.png" alt="image-20230329185149729" /></p>
-
-<p>SSH는 기본적으로 22번 포트를 사용합니다. 윈도우 호스트의 22번 포트와 VM의 22번 포트를 연결해 주어야 합니다.</p>
-
-<blockquote>
-  <p>실제 서버를 사용하는 경우 보안을 위하여 다른 번호를 사용합니다.</p>
-</blockquote>
-
-<p><img src="./img/image-20230329185246081.png" alt="image-20230329185246081" /></p>
-
-<h2 id="클라이언트-접속">클라이언트 접속</h2>
-<p>SSH 서버에 접속을 하기위해서는 전용 터미널 프로그램이 필요로 합니다.</p>
-
-<ul>
-  <li><a href="terminal">putty</a></li>
-  <li><a href="terminal">MobaXterm</a></li>
-</ul>
-
-<h3 id="putty-다운로드-및-설치">Putty 다운로드 및 설치</h3>
-<p>가장 인기있는 SSH 서버 접속 프로그램은 <code class="language-plaintext highlighter-rouge">putty</code>입니다. <code class="language-plaintext highlighter-rouge">putty</code>는 매우 작고, 무료로 사용을 할 수 있습니다.</p>
-<ul>
-  <li><a href="../putty">putty 설치하기</a></li>
-</ul>
-
-<h3 id="ssh-접속하기">ssh 접속하기</h3>
-<p>putty를 실행합니다.<img src="./img/image-20230329185616516.png" alt="image-20230329185616516" /></p>
-
-<p>localhost로 접속을 합니다. 로컬 호스트의 22번 포트는 VM 의 22번 포트와 연결이 되어 있습니다.</p>
-
-<p><img src="./img/image-20230329185747637.png" alt="image-20230329185747637" /></p>
-
-<p>리눅스를 처음 설치할때 생성한 사용자 아이디로 로그인합니다.</p>
-
-<p><img src="./img/image-20230329190105778.png" alt="image-20230329190105778" /></p>
-
-<p>클라이언트에서 서버로 원격으로 로그인을 진행합니다.</p>
-
-<p><img src="./img/image-20230329190031415.png" alt="image-20230329190031415" /></p>
-
-<p>원격 접속을 종료할 때에는 <code class="language-plaintext highlighter-rouge">exit</code>명령을 입력합니다.</p>
-
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

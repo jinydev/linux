@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>13.2 예약 및 정기구동 (cron)</title>
   <meta name="title" content="13.2 예약 및 정기구동 (cron)" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="13.2 예약 및 정기구동 (cron)"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/06_system/05_4_cron/">
+  <meta property="og:url" content="https://linux.jiny.dev/06_system/05_4_cron/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="13.2 예약 및 정기구동 (cron)"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/06_system/05_4_cron/" />
-<meta property="og:url" content="http://localhost:4000/06_system/05_4_cron/" />
+<link rel="canonical" href="https://linux.jiny.dev/06_system/05_4_cron/" />
+<meta property="og:url" content="https://linux.jiny.dev/06_system/05_4_cron/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="13.2 예약 및 정기구동 (cron)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"13.2 예약 및 정기구동 (cron)","url":"http://localhost:4000/06_system/05_4_cron/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"13.2 예약 및 정기구동 (cron)","url":"https://linux.jiny.dev/06_system/05_4_cron/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1166,98 +1166,42 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="132-리눅스의-잠들지-않는-마법-시간-요정-cron-크론">13.2 리눅스의 잠들지 않는 마법 시간 요정, Cron (크론)</h1>
-
-<p>리눅스 서버 관리는 매일 새벽 3시에 데이터베이스를 압축 백업하거나, 월말마다 휴지통(Log)을 비워주는 등 <strong>반복적이고 정기적인 백그라운드 업무</strong>가 필수적입니다. 이 일을 엔지니어가 매일 새벽 3시마다 알람을 맞추고 깨서 수동으로 칠 수는 없기 때문에, 운영체제는 시간을 감시하는 <code class="language-plaintext highlighter-rouge">스케줄링 데몬</code>을 제공합니다.</p>
-
-<p><img src="./img/cron_flow.svg" alt="Cron 요정 데몬의 예약 구조도" /></p>
-<blockquote>
-  <p><strong>동작 원리</strong>: 사용자가 <code class="language-plaintext highlighter-rouge">crontab</code> 이라는 지시서 텍스트 파일에 “언제, 어떤 쉘 스크립트를 실행해라” 라고 적어두고 자러 가면, 백그라운드에서 죽지 않고 시계만 쳐다보고 앉아있는 <strong><code class="language-plaintext highlighter-rouge">cron 데몬</code></strong> 이 그 시간이 도달하는 정확한 순간에 벼락처럼 명령어 방아쇠를 당겨(Trigger) 줍니다.</p>
-</blockquote>
-
-<hr />
-
-<h2 id="1-cron-작업-지시서-작성-문법">1. Cron 작업 지시서 작성 문법</h2>
-
-<p>크론은 띄어쓰기를 공간으로 인식하는 5자리의 별표(<code class="language-plaintext highlighter-rouge">*</code>) 암호 시스템을 사용하여 시간을 미세 구조로 세팅합니다.</p>
-
-<h3 id="11-5개의-별star-공식">1.1 5개의 별(Star) 공식</h3>
-<p><code class="language-plaintext highlighter-rouge">* * * * *</code> (분 / 시간 / 일 / 월 / 요일 순서)</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>위치</th>
-      <th>의미</th>
-      <th>범위</th>
-      <th>설명</th>
-    </tr>
-  </thead>
+    <table>
   <tbody>
     <tr>
-      <td>첫 번째 <code class="language-plaintext highlighter-rouge">*</code></td>
-      <td><strong>분</strong> (Minute)</td>
-      <td>0 ~ 59</td>
-      <td>몇 분에 쏠까</td>
-    </tr>
-    <tr>
-      <td>두 번째 <code class="language-plaintext highlighter-rouge">*</code></td>
-      <td><strong>시간</strong> (Hour)</td>
-      <td>0 ~ 23</td>
-      <td>몇 시에 쏠까 (24시간제)</td>
-    </tr>
-    <tr>
-      <td>세 번째 <code class="language-plaintext highlighter-rouge">*</code></td>
-      <td><strong>일</strong> (Day)</td>
-      <td>1 ~ 31</td>
-      <td>며칠 날 쏠까</td>
-    </tr>
-    <tr>
-      <td>네 번째 <code class="language-plaintext highlighter-rouge">*</code></td>
-      <td><strong>월</strong> (Month)</td>
-      <td>1 ~ 12</td>
-      <td>몇 월에 쏠까</td>
-    </tr>
-    <tr>
-      <td>다섯 번째 <code class="language-plaintext highlighter-rouge">*</code></td>
-      <td><strong>요일</strong> (Weekday)</td>
-      <td>0 ~ 6</td>
-      <td>무슨 요일에 쏠까 (0:일, 1:월 … 6:토)</td>
+      <td><a href="../05_3_package/05_3_4_compile/">⬅️ 이전: 7.4 소스 파일 컴파일 설치</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../05_5_storage/">다음: 24.시스템 관리 ➡️</a></td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="12-실무-세팅-예시-모음">1.2 실무 세팅 예시 모음</h3>
+<h1 id="132-예약-및-정기구동-cron">13.2 예약 및 정기구동 (cron)</h1>
+
+<p>13.2 예약 및 정기구동 (cron)에 대한 기본 개념과 실습을 연결하는 허브 페이지입니다.</p>
+
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>해당 주제의 구조를 이해하고 실습을 진행합니다.</p>
+
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">30 2 * * * /backup_db.sh</code>: <strong>[매일 새벽 2시 30분]</strong> 에 백업 스크립트를 돌려라!</li>
-  <li><code class="language-plaintext highlighter-rouge">0 9 1 * * /mail.sh</code>: <strong>[매달 1일 아침 9시 정각]</strong> 에 월간 메일을 쏴라!</li>
-  <li><code class="language-plaintext highlighter-rouge">*/10 * * * * /check.sh</code>: <strong>[10분에 한 번씩 영원히 무한 반복]</strong> 해서 사이트 에러 헬스체크 해라!</li>
+  <li>
+    <p><a href="05_4_0_concept/">13.2 예약 및 정기구동 (cron) 상세 튜토리얼</a></p>
+
+    <p>해당 파트의 상세 문서를 확인하고 터미널 실습 코드를 학습합니다.</p>
+  </li>
 </ul>
 
 <hr />
 
-<h2 id="2-실습-나의-첫-백그라운드-자동화-스케줄-등록">2. [실습] 나의 첫 백그라운드 자동화 스케줄 등록</h2>
-
-<p>크론 지시서를 직접 열고, 오늘 1분마다 특정 텍스트 파일에 글씨를 쓰도록 세팅해보는 튜토리얼입니다.</p>
-
-<h3 id="실습-1-나의-crontab-지시서-열기">실습 1. 나의 crontab 지시서 열기</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 내 계정 전용 crontab 파일을 엽니다. (최초 실행 시 에디터 번호를 고르라 하면 1(nano)을 칩니다)</span>
-crontab <span class="nt">-e</span>
-</code></pre></div></div>
-
-<h3 id="실습-2-시간-예약-명령-타이핑">실습 2. 시간 예약 명령 타이핑</h3>
-<p>맨 밑줄 공백으로 내려가서 아래와 같이 적어넣고 저장(<code class="language-plaintext highlighter-rouge">Ctrl+O, Enter, Ctrl+X</code>)합니다.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 매분 매초(1분마다) 자동 실행하여 텍스트 누적 시키기</span>
-<span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="nb">echo</span> <span class="s2">"크론 요정이 1분마다 글씨를 남기고 있습니다!"</span> <span class="o">&gt;&gt;</span> /home/ubuntu/cron_test.txt
-</code></pre></div></div>
-
-<h3 id="실습-3-크론-등록-확인-및-결과-점검">실습 3. 크론 등록 확인 및 결과 점검</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 내 지시서가 잘 꽂혀 있는지 리스트를 봅니다.</span>
-crontab <span class="nt">-l</span>
-
-<span class="c"># 이제 아무것도 안하고 3분 정도 멍하니 기다린 뒤에 텍스트 파일이 생겼는지 열어봅니다!</span>
-<span class="nb">cat</span> /home/ubuntu/cron_test.txt
-</code></pre></div></div>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../05_3_package/05_3_4_compile/">⬅️ 이전: 7.4 소스 파일 컴파일 설치</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../05_5_storage/">다음: 24.시스템 관리 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

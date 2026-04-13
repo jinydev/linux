@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: mariaDB를 설치합니다.](../mysql/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: 10.1 데몬(Daemon)의 개요 ➡️](../../../08_2_daemon/08_2_1_concept/)
+
+![SQLITE3 개념도](img/concept_architecture.svg)
+
 # sqlite3 설치
 ---
 
@@ -43,7 +47,6 @@ Processing triggers for man-db (2.9.1-1) ...
 
 설치가 완료되었습니다. 페키지 목록에서 설치를 확인합니다.
 
-
 ```console
 hojin@DESKTOP-11LMH3B:~$ dpkg -l | grep sql
 ii  libsqlite3-0:amd64             3.31.1-4                          amd64        SQLite 3 shared library
@@ -66,3 +69,7 @@ sqlite>
 ```
 sqlite> .quit
 ```
+
+---
+
+[⬅️ 이전: mariaDB를 설치합니다.](../mysql/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: 10.1 데몬(Daemon)의 개요 ➡️](../../../08_2_daemon/08_2_1_concept/)

@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: Java8](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: Java8 (Yum) ➡️](../yum/)
+
+![APT 개념도](img/concept_architecture.svg)
+
 # Java8 (APT)
 자바 해석기와 컴파일러를 같이 설치 합니다.
 
@@ -31,4 +35,6 @@ OpenJDK Runtime Environment (build 1.8.0_362-8u362-ga-0ubuntu1~22.04-b09)
 OpenJDK 64-Bit Server VM (build 25.362-b09, mixed mode)
 ```
 
+---
 
+[⬅️ 이전: Java8](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../../) &nbsp;|&nbsp; [다음: Java8 (Yum) ➡️](../yum/)

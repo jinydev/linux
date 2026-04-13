@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: Sudo](../03_1_11_sudo/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 콘솔에서 로그아웃 하는 방법 ➡️](../03_1_2_cli/)
+
+![1 ACCOUNT 개념도](img/concept_architecture.svg)
+
 # 사용자 계정
 리눅스 시스템에 사용자를 추가하고 삭제하는 방법에 대해서 알아 보도록 합니다.
 
@@ -9,8 +13,6 @@ layout: home
 `addUser` 명령은 새로운 사용자를 추가합니다. adduser 명령어를 실행하면 `/etc/passwd`, `/etc/shadow`, `/etc/group`파일에 새로운 행이 추가됩니다.
 
 ![image-20230320171627328](../img/image-20230320171627328.png)
-
-
 
 ## 사용자 속성 변경
 등록된 사용자의 속성을 변경합니다.
@@ -31,3 +33,6 @@ userdel 사용자명
 userdel -r 사용자명
 ```
 
+---
+
+[⬅️ 이전: Sudo](../03_1_11_sudo/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 콘솔에서 로그아웃 하는 방법 ➡️](../03_1_2_cli/)

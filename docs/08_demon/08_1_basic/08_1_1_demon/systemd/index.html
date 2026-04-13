@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/systemd/">
+  <meta property="og:url" content="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/systemd/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/systemd/" />
-<meta property="og:url" content="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/systemd/" />
+<link rel="canonical" href="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/systemd/" />
+<meta property="og:url" content="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/systemd/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/systemd/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/systemd/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1186,84 +1186,78 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="systemd">systemd</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="SYSTEMD 개념도" /></p>
+
+<h1 id="systemd">systemd</h1>
 <p><code class="language-plaintext highlighter-rouge">systemd</code>는 리눅스 시스템의 부팅 및 서비스 관리에 사용되는 시스템 및 서비스 관리 도구입니다.</p>
 <blockquote>
   <p>systemd는 이전에 사용되던 <code class="language-plaintext highlighter-rouge">SysVinit</code>와 <code class="language-plaintext highlighter-rouge">Upstart</code>와 같은 기존 시스템 관리 도구들을 대체하고 있습니다.</p>
 </blockquote>
 
-<h2 id="systemd의-역할">Systemd의 역할</h2>
-<p><code class="language-plaintext highlighter-rouge">systemd</code>는 시스템의 <code class="language-plaintext highlighter-rouge">초기화</code> 및 <code class="language-plaintext highlighter-rouge">부팅</code>을 담당하며, 시스템 서비스 및 데몬을 시작, 중지, 재시작, 감시 및 로그 기록과 같은 관리 작업을 수행합니다. 또한, systemd는 병렬 부팅 및 데몬 로딩을 지원하여 부팅 시간을 단축시키는 등 성능 향상을 제공합니다.</p>
+<p>방대한 주제를 분할하여 제공합니다.</p>
 
-<p>systemd는 대부분의 <code class="language-plaintext highlighter-rouge">최신 리눅스 배포판</code>에서 기본 시스템 관리 도구로 사용되고 있습니다</p>
-
-<h2 id="systemd-프로세스">systemd 프로세스</h2>
-<p><code class="language-plaintext highlighter-rouge">systemd</code>는 운영 체제 시작 시, <a href="runlevel">런레벨</a> 변경 시, 시스템 및 서비스 오류 시 등 다양한 이벤트에서 실행되는 프로세스입니다. 이를 통해 시스템 및 서비스 구성 및 관리에 대한 자동화 수준이 높아지고, 복잡한 서비스 구성 및 관리 작업을 단순화할 수 있습니다.</p>
-
-<p>systemd는 또한 cgroups를 사용하여 프로세스 그룹을 만들어 프로세스 관리와 자원 할당을 향상시키는 등 다양한 기능을 제공합니다. 이를 통해 운영 체제 및 서비스의 안정성과 보안성을 향상시킬 수 있습니다.</p>
-
-<h2 id="systemd-동작">systemd 동작</h2>
-<p><code class="language-plaintext highlighter-rouge">systemd</code>는 1번 PID를 갖는 프로세스로 프로세스 트리에서 가장 상위의 프로세스이며 모든 프로세스의 직간접 부모인 데몬이다. 즉 OS부팅시 systemd 프로세스가 가장 먼저 실행되어서, OS에 필요한 여러 데몬들을 <code class="language-plaintext highlighter-rouge">init</code>해주는 역할을 하고 있다.</p>
-
-<h2 id="systemctl">systemctl</h2>
-<p>Service는 시스템 데몬 및 사용자 정의 데몬을 의미하며, <code class="language-plaintext highlighter-rouge">systemctl</code> 명령은 service(데몬)들을 관리한다.</p>
-
-<h2 id="service-명령">Service 명령</h2>
-<p><code class="language-plaintext highlighter-rouge">systemd</code>를 사용하는 리눅스 배포판에서 service 파일은 서비스를 관리하는 데 사용됩니다. service 파일은 일반적으로 <code class="language-plaintext highlighter-rouge">/etc/systemd/system</code> 디렉토리에 위치하며 <code class="language-plaintext highlighter-rouge">.service</code> 확장자를 갖습니다.</p>
-
-<p>이 경로에 있는 service 들은 systemd에 의해 관리되고 있는 service라는 뜻이다.</p>
-
-<h3 id="service-파일-생성">service 파일 생성</h3>
-<p>새로운 서비스 파일을 만드는 방법은 다음과 같습니다.</p>
-
-<p>텍스트 편집기를 사용하여 새로운 파일을 만듭니다.<br />
-예를 들어, <code class="language-plaintext highlighter-rouge">/etc/systemd/system/my-service.service</code>와 같은 경로에 <code class="language-plaintext highlighter-rouge">my-service.service</code> 파일을 만듭니다.</p>
-
-<p>서비스 이름과 설명을 정의합니다. 
-예를 들어, 다음과 같이 <code class="language-plaintext highlighter-rouge">[Unit]</code> 섹션을 추가할 수 있습니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Unit]
-Description=My custom service
-</code></pre></div></div>
-
-<p>서비스의 동작을 정의합니다.<br />
-예를 들어, 다음과 같이 <code class="language-plaintext highlighter-rouge">[Service]</code> 섹션을 추가할 수 있습니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Service]
-ExecStart=/usr/bin/my-service
-Restart=always
-</code></pre></div></div>
-
-<p>위의 예에서는 서비스 실행 파일 경로와 재시작 옵션을 정의하고 있습니다.</p>
-
-<p>서비스가 의존하는 다른 서비스를 정의합니다.<br />
-예를 들어, 다음과 같이 <code class="language-plaintext highlighter-rouge">[Unit]</code> 섹션에 <code class="language-plaintext highlighter-rouge">Requires</code> 옵션을 추가할 수 있습니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Unit]
-Description=My custom service
-Requires=network.target
-</code></pre></div></div>
-
-<p>위의 예에서는 서비스가 <code class="language-plaintext highlighter-rouge">network.target</code> 서비스에 의존하고 있다는 것을 나타냅니다.</p>
-
-<h3 id="서비스-실행하기">서비스 실행하기</h3>
-<p>서비스 파일을 저장하고 <code class="language-plaintext highlighter-rouge">systemctl</code> 명령어를 사용하여 서비스를 활성화합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo systemctl daemon-reload
-$ sudo systemctl enable my-service.service
-$ sudo systemctl start my-service.service
-</code></pre></div></div>
-
-<p>위와 같이 하면 새로운 서비스가 생성되고, 서비스를 관리할 수 있게 됩니다.</p>
-
-<h2 id="service-파일-속성">Service 파일 속성</h2>
-<p>Service파일은 <code class="language-plaintext highlighter-rouge">[Unit]</code>, <code class="language-plaintext highlighter-rouge">[Service]</code>, <code class="language-plaintext highlighter-rouge">[Install]</code>의 섹션으로 구성되어 있다.</p>
-
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
 <ul>
-  <li>Unit</li>
-  <li>Service</li>
-  <li>Install</li>
+  <li>
+    <p><a href="part_1/">Systemd의 역할</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">systemd 프로세스</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
 </ul>
+
+<h2 id="2️⃣-심화-및-활용-파트-1">2️⃣ 심화 및 활용 파트 1</h2>
+<ul>
+  <li>
+    <p><a href="part_3/">systemd 동작</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_4/">systemctl</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+</ul>
+
+<h2 id="3️⃣-심화-및-활용-파트-2">3️⃣ 심화 및 활용 파트 2</h2>
+<ul>
+  <li>
+    <p><a href="part_5/">Service 명령</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_6/">Service 파일 속성</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+</ul>
+
+<h2 id="3️⃣-심화-및-활용-파트-2-1">3️⃣ 심화 및 활용 파트 2</h2>
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

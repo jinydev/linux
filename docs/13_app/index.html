@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="웹 및 DB 인프라 지식을 응용하여 실무에서 환영받는 유력 오픈소스 프로그램들을 지접 구축해봅니다."><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>13장. 애플리케이션 및 오픈소스 실습 (App)</title>
   <meta name="title" content="13장. 애플리케이션 및 오픈소스 실습 (App)" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="13장. 애플리케이션 및 오픈소스 실습 (App)"><meta property="og:description" content="웹 및 DB 인프라 지식을 응용하여 실무에서 환영받는 유력 오픈소스 프로그램들을 지접 구축해봅니다."><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/13_app/">
+  <meta property="og:url" content="https://linux.jiny.dev/13_app/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="13장. 애플리케이션 및 오픈소스 실습 (App)"><meta property="twitter:description" content="웹 및 DB 인프라 지식을 응용하여 실무에서 환영받는 유력 오픈소스 프로그램들을 지접 구축해봅니다."><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="웹 및 DB 인프라 지식을 응용하여 실무에서 환영받는 유력 오픈소스 프로그램들을 지접 구축해봅니다." />
 <meta property="og:description" content="웹 및 DB 인프라 지식을 응용하여 실무에서 환영받는 유력 오픈소스 프로그램들을 지접 구축해봅니다." />
-<link rel="canonical" href="http://localhost:4000/13_app/" />
-<meta property="og:url" content="http://localhost:4000/13_app/" />
+<link rel="canonical" href="https://linux.jiny.dev/13_app/" />
+<meta property="og:url" content="https://linux.jiny.dev/13_app/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="13장. 애플리케이션 및 오픈소스 실습 (App)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"웹 및 DB 인프라 지식을 응용하여 실무에서 환영받는 유력 오픈소스 프로그램들을 지접 구축해봅니다.","headline":"13장. 애플리케이션 및 오픈소스 실습 (App)","url":"http://localhost:4000/13_app/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"웹 및 DB 인프라 지식을 응용하여 실무에서 환영받는 유력 오픈소스 프로그램들을 지접 구축해봅니다.","headline":"13장. 애플리케이션 및 오픈소스 실습 (App)","url":"https://linux.jiny.dev/13_app/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1156,26 +1156,51 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="13장-애플리케이션-및-오픈소스-실습-app">13장. 애플리케이션 및 오픈소스 실습 (App)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../12_dev/11_2_ext_dev/11_2_9_rust/">⬅️ 이전: Rust</a>  </td>
+      <td>  <a href="../">🏠 분류 목차</a>  </td>
+      <td>  <a href="13_1_zabbix/">다음: zabbix 설치 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="APP 개념도" /></p>
+
+<h1 id="13장-애플리케이션-및-오픈소스-실습-app">13장. 애플리케이션 및 오픈소스 실습 (App)</h1>
 
 <p>리눅스와 오픈소스 문화는 떼려야 뗄 수 없는 관계입니다. 앞선 중급 과정에서 습득한 파일 권한 논리, 웹 서버(Apache/Nginx) 및 데이터베이스(DB) 연결 지식을 응용하여 복합적인 생태계의 오픈소스 시스템을 처음부터 끝까지 혼자 구축해 봅니다.</p>
 
 <p>아래의 세부 학습 주제를 챕터별로 클릭하여 상세 레퍼런스를 확인하세요.</p>
 
-<h2 id="세부-커리큘럼">세부 커리큘럼</h2>
+<h2 id="1️⃣-핵심-학습-목차">1️⃣ 핵심 학습 목차</h2>
+<p>본 단원의 세부 커리큘럼을 안내합니다.</p>
 
 <ul>
-  <li><strong><a href="13_1_zabbix/">13.1 엔터프라이즈 모니터링 (Zabbix)</a></strong>
+  <li><a href="13_1_zabbix/">13.1 엔터프라이즈 모니터링 (Zabbix)</a>
     <ul>
       <li>여러 대의 서버 부하와 상태를 중앙에서 수집하고 대시보드로 관제하는 Zabbix 시스템 인스톨</li>
     </ul>
   </li>
-  <li><strong><a href="13_2_cloud_drive/">13.2 사설 클라우드 드라이브 (Nextcloud)</a></strong>
+  <li><a href="13_2_cloud_drive/">13.2 사설 클라우드 드라이브 (Nextcloud)</a>
     <ul>
       <li>LAMP 스택을 결합하여 내 서버 안에 Google Drive 급의 동기화 저장소를 구축하는 방법</li>
     </ul>
   </li>
 </ul>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../12_dev/11_2_ext_dev/11_2_9_rust/">⬅️ 이전: Rust</a>  </td>
+      <td>  <a href="../">🏠 분류 목차</a>  </td>
+      <td>  <a href="13_1_zabbix/">다음: zabbix 설치 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: init 종료](../init/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Reboot ➡️](../reboot/)
+
+![POWEROFF 개념도](img/concept_architecture.svg)
+
 # PowerOff
 `poweroff`는 리눅스 시스템을 종료하는 명령어입니다.
 
@@ -15,3 +19,7 @@ layout: home
 poweroff
 ```
 예를 들어, 서버나 데스크톱 컴퓨터가 더 이상 사용되지 않을 때, 전원을 차단할 때 등에 사용됩니다. 그러나 사용자들은 종료를 하기 전에 꼭 저장을 하고, shutdown 명령을 사용하여 명령어를 실행할 것을 권장합니다.
+
+---
+
+[⬅️ 이전: init 종료](../init/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Reboot ➡️](../reboot/)

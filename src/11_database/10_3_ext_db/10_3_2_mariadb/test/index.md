@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 시작/정지/상태/활성화](../service/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Mongo DB ➡️](../../10_3_3_mongodb/)
+
+![TEST 개념도](img/concept_architecture.svg)
+
 # 테스트 및 접속하기
 ---
 설치 및 실행된 MariaDB에 접속해 보도록 합니다. 
@@ -12,7 +16,6 @@ layout: home
 ---
 mariaDB의 데몬이 실행되어 있는 상태에서 `mysql`명령을 입력하면 클라이언트 프로그램이 실행됩니다.
 mysql 실행스크립트 mysql은 /usr/bin/mysql 에 있습니다.
-
 
 다음과 같이 입력합니다.
 ```
@@ -47,6 +50,6 @@ MariaDB [(none)]> 이 출력되면 정상이다.
 
 데이터베이스를 종료할 때에는 `exit`명령을 입력합니다.
 
+---
 
-
-
+[⬅️ 이전: 시작/정지/상태/활성화](../service/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Mongo DB ➡️](../../10_3_3_mongodb/)

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <defs>
+    <style>
+      .bg { fill: #111827; }
+      .title { fill: #f9fafb; font-family: 'Courier New', monospace; font-size: 24px; font-weight: bold; }
+      .lbl { fill: #9ca3af; font-family: 'Courier New', monospace; font-size: 14px; text-anchor: middle;}
+      .val { fill: #ffffff; font-family: 'Courier New', monospace; font-size: 28px; font-weight: bold; text-anchor: middle;}
+      
+      .box-u { fill: #dc2626; rx: 6; }
+      .box-g { fill: #2563eb; rx: 6; }
+      .box-o { fill: #059669; rx: 6; }
+      .box-void { fill: #374151; rx: 6; }
+    </style>
+  </defs>
+
+  <rect width="100%" height="100%" class="bg" rx="10" />
+
+  <text x="400" y="40" class="title" text-anchor="middle">Linux File Permission Matrix (chmod 754)</text>
+
+  <!-- OWNER (7) -->
+  <text x="210" y="90" class="lbl" style="font-size:18px; fill:#fca5a5;">Owner (u)</text>
+  <rect x="120" y="110" width="50" height="50" class="box-u" />
+  <text x="145" y="145" class="val">r</text>
+  <rect x="180" y="110" width="50" height="50" class="box-u" />
+  <text x="205" y="145" class="val">w</text>
+  <rect x="240" y="110" width="50" height="50" class="box-u" />
+  <text x="265" y="145" class="val">x</text>
+  
+  <text x="145" y="185" class="lbl">4</text>
+  <text x="205" y="185" class="lbl">2</text>
+  <text x="265" y="185" class="lbl">1</text>
+  <text x="205" y="220" class="title" style="fill:#fca5a5;">= 7</text>
+
+  <!-- GROUP (5) -->
+  <text x="400" y="90" class="lbl" style="font-size:18px; fill:#93c5fd;">Group (g)</text>
+  <rect x="310" y="110" width="50" height="50" class="box-g" />
+  <text x="335" y="145" class="val">r</text>
+  <rect x="370" y="110" width="50" height="50" class="box-void" />
+  <text x="395" y="145" class="val">-</text>
+  <rect x="430" y="110" width="50" height="50" class="box-g" />
+  <text x="455" y="145" class="val">x</text>
+  
+  <text x="335" y="185" class="lbl">4</text>
+  <text x="395" y="185" class="lbl">0</text>
+  <text x="455" y="185" class="lbl">1</text>
+  <text x="395" y="220" class="title" style="fill:#93c5fd;">= 5</text>
+
+  <!-- OTHERS (4) -->
+  <text x="590" y="90" class="lbl" style="font-size:18px; fill:#6ee7b7;">Others (o)</text>
+  <rect x="500" y="110" width="50" height="50" class="box-o" />
+  <text x="525" y="145" class="val">r</text>
+  <rect x="560" y="110" width="50" height="50" class="box-void" />
+  <text x="585" y="145" class="val">-</text>
+  <rect x="620" y="110" width="50" height="50" class="box-void" />
+  <text x="645" y="145" class="val">-</text>
+  
+  <text x="525" y="185" class="lbl">4</text>
+  <text x="585" y="185" class="lbl">0</text>
+  <text x="645" y="185" class="lbl">0</text>
+  <text x="585" y="220" class="title" style="fill:#6ee7b7;">= 4</text>
+
+  <!-- Combined -->
+  <text x="400" y="270" class="title" style="font-size: 28px;">Result: `chmod 754 file.txt`</text>
+
+</svg>

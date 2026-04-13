@@ -2,13 +2,14 @@
 layout: home
 ---
 
+[⬅️ 이전: PHP 컴포저 설치](../composer/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: 셈플코드 작성 ➡️](../sample/)
+
+![PACKAGE 개념도](img/concept_architecture.svg)
+
 # php 설치
 PHP는 소스를 컴파일 하여 설치하는 방법과 패티지를 이용하는 설치하는 방법이 있습니다.
 
 패키지의 경우 운영체제에 최적화 되어 있다는 점과, 쉽게 설치를 할 수 있는 점에서 많이 선호 합니다.
-
-
-
 
 ## 01.설치하기
 
@@ -19,8 +20,6 @@ PHP는 소스를 컴파일 하여 설치하는 방법과 패티지를 이용하�
 ```
 
 ubuntu 20.04의 경우 php 7.4가 기본적으로 설치됩니다. 그이상의 버젼은 별도의 패키지 저장소를 등록하거나 컴파일 하여 설치를 해야 합니다.
-
-
 
 #### 실행
 
@@ -36,3 +35,6 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
     with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
 ```
 
+---
+
+[⬅️ 이전: PHP 컴포저 설치](../composer/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: 셈플코드 작성 ➡️](../sample/)

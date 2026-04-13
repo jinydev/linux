@@ -4,6 +4,10 @@ breadcrumb:
 - g++
 ---
 
+[⬅️ 이전: WSL2 gcc 설치하기 - Learn Linux](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: gcc hello world 출력하기 - Learn Linux ➡️](../helloworld/)
+
+![G2PLUS 개념도](img/concept_architecture.svg)
+
 # WSL g++ 설치하기
 ---
 
@@ -28,3 +32,7 @@ Copyright (C) 2019 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
+
+---
+
+[⬅️ 이전: WSL2 gcc 설치하기 - Learn Linux](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: gcc hello world 출력하기 - Learn Linux ➡️](../helloworld/)

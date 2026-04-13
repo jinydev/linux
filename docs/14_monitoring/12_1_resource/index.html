@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>13.1 시스템 안정성 모니터링</title>
   <meta name="title" content="13.1 시스템 안정성 모니터링" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="13.1 시스템 안정성 모니터링"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/14_monitoring/12_1_resource/">
+  <meta property="og:url" content="https://linux.jiny.dev/14_monitoring/12_1_resource/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="13.1 시스템 안정성 모니터링"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/14_monitoring/12_1_resource/" />
-<meta property="og:url" content="http://localhost:4000/14_monitoring/12_1_resource/" />
+<link rel="canonical" href="https://linux.jiny.dev/14_monitoring/12_1_resource/" />
+<meta property="og:url" content="https://linux.jiny.dev/14_monitoring/12_1_resource/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="13.1 시스템 안정성 모니터링" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"13.1 시스템 안정성 모니터링","url":"http://localhost:4000/14_monitoring/12_1_resource/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"13.1 시스템 안정성 모니터링","url":"https://linux.jiny.dev/14_monitoring/12_1_resource/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1166,7 +1166,19 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="131-내-서버-컴퓨터의-건강-진단-시스템-모니터링">13.1 내 서버 컴퓨터의 건강 진단 (시스템 모니터링)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 12장. 시스템 모니터링 및 성능 체크 (Monitoring)</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../12_2_disk/">다음: 디스크 모니터링 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="RESOURCE 개념도" /></p>
+
+<h1 id="131-내-서버-컴퓨터의-건강-진단-시스템-모니터링">13.1 내 서버 컴퓨터의 건강 진단 (시스템 모니터링)</h1>
 
 <p>아무리 완벽하게 세팅된 서버라도 시간이 지나면 메모리가 새거나 하드디스크가 꽉 차서 뻗게 마련입니다. 시스템 엔지니어의 가장 중요한 일과는 출근하자마자 까만 터미널 화면에 진단 명령어를 쳐보고, 서버가 건강한지 의사처럼 청진기를 대보는 일입니다.</p>
 
@@ -1233,6 +1245,18 @@ top
 <span class="nb">sudo </span>netstat <span class="nt">-ntlp</span>
 </code></pre></div></div>
 <p>결과 중에 <code class="language-plaintext highlighter-rouge">22 (SSH)</code>, <code class="language-plaintext highlighter-rouge">80 (웹)</code>, <code class="language-plaintext highlighter-rouge">3306 (DB)</code> 포트가 <code class="language-plaintext highlighter-rouge">LISTEN</code> 상태로 잘 열려 있는지 확인합니다!</p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 12장. 시스템 모니터링 및 성능 체크 (Monitoring)</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../12_2_disk/">다음: 디스크 모니터링 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

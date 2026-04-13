@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="리눅스 운영체제 설치를 위한 ISO 이미지 파일의 개념과 인스톨러의 역할"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>2.1 설치 준비 (ISO 및 인스톨러)</title>
   <meta name="title" content="2.1 설치 준비 (ISO 및 인스톨러)" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="2.1 설치 준비 (ISO 및 인스톨러)"><meta property="og:description" content="리눅스 운영체제 설치를 위한 ISO 이미지 파일의 개념과 인스톨러의 역할"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/02_setup/02_1_prepare/">
+  <meta property="og:url" content="https://linux.jiny.dev/02_setup/02_1_prepare/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="2.1 설치 준비 (ISO 및 인스톨러)"><meta property="twitter:description" content="리눅스 운영체제 설치를 위한 ISO 이미지 파일의 개념과 인스톨러의 역할"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="리눅스 운영체제 설치를 위한 ISO 이미지 파일의 개념과 인스톨러의 역할" />
 <meta property="og:description" content="리눅스 운영체제 설치를 위한 ISO 이미지 파일의 개념과 인스톨러의 역할" />
-<link rel="canonical" href="http://localhost:4000/02_setup/02_1_prepare/" />
-<meta property="og:url" content="http://localhost:4000/02_setup/02_1_prepare/" />
+<link rel="canonical" href="https://linux.jiny.dev/02_setup/02_1_prepare/" />
+<meta property="og:url" content="https://linux.jiny.dev/02_setup/02_1_prepare/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="2.1 설치 준비 (ISO 및 인스톨러)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"리눅스 운영체제 설치를 위한 ISO 이미지 파일의 개념과 인스톨러의 역할","headline":"2.1 설치 준비 (ISO 및 인스톨러)","url":"http://localhost:4000/02_setup/02_1_prepare/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"리눅스 운영체제 설치를 위한 ISO 이미지 파일의 개념과 인스톨러의 역할","headline":"2.1 설치 준비 (ISO 및 인스톨러)","url":"https://linux.jiny.dev/02_setup/02_1_prepare/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1166,18 +1166,48 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="21-설치-준비-iso-및-인스톨러">2.1 설치 준비 (ISO 및 인스톨러)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 2장. 리눅스 설치 및 환경 설정 (Setup)</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="02_1_1_installer/">다음: 인스톨러 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="PREPARE 개념도" /></p>
+
+<h1 id="21-설치-준비-iso-및-인스톨러">2.1 설치 준비 (ISO 및 인스톨러)</h1>
 
 <p>모든 운영체제의 설치는 하드웨어가 읽을 수 있는 설치 디스크 이미지와, 설치 프로세스를 초기화해주는 인스톨러 프로그램에서 시작됩니다. 이 장에서는 리눅스를 설치하기 전 필수적으로 알아야 할 두 가지 핵심 요소를 학습합니다.</p>
 
 <h2 id="세부-학습-내용">세부 학습 내용</h2>
 
 <ul>
-  <li><strong><a href="iso.md">ISO 이미지 (ISO Image)</a></strong>
-운영 체제 설치 파일이 담겨있는 디스크 이미지 파일 구조에 대해 배웁니다.</li>
-  <li><strong><a href="installer.md">인스톨러 (Installer)</a></strong>
-각 배포판에서 제공하는 설치 프로그램이 시스템 영역을 구성하는 과정을 학습합니다.</li>
+  <li>
+    <p><a href="02_1_2_iso/">ISO 이미지 (ISO Image) 이해</a></p>
+
+    <p>운영 체제 설치 파일이 묶음 포장되어 있는 단일 디스크 이미지(ISO)의 구조와 파일 추출 원리에 대해 배웁니다.</p>
+  </li>
+  <li>
+    <p><a href="02_1_1_installer/">설치 인스톨러 (Installer) 프로세스</a></p>
+
+    <p>화면 출력과 키보드 입력을 통해 각 배포판에서 제공하는 설치 프로그램이 시스템 디스크 영역을 논리적으로 분할하고 구성하는 과정을 학습합니다.</p>
+  </li>
 </ul>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전: 2장. 리눅스 설치 및 환경 설정 (Setup)</a>  </td>
+      <td>  <a href="../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="02_1_1_installer/">다음: 인스톨러 ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

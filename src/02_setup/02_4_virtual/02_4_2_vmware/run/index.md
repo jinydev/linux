@@ -2,18 +2,19 @@
 layout: home
 ---
 
+[⬅️ 이전: Create](../create/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Setting ➡️](../setting/)
+
+![RUN 개념도](img/concept_architecture.svg)
+
 ## 설치 완료 후 실행하기
 
 바탕화면의 VMware Workstation Player 아이콘 더블클릭,
 
 ![img](../img/clip_image052.gif)또는 윈도우의 [시작]-[VMware]-[VMware Workstation Player] 선택
 
-
 `Use VMware Workstation 15~` 선택 후 `<Continue>` 클릭, 마지막 화면에서 `<Finish>` 클릭
 
 ![img](../img/clip_image054.jpg)
-
-
 
 오른쪽 위의 X 클릭하여 종료 또는 [Player]-[Exit]를 선택하여 종료
 
@@ -21,11 +22,7 @@ layout: home
 
 |      |                                 |
 | ---- | ------------------------------- |
-|      | ![img](../img/clip_image056.jpg) |
-
-
-
-
+|      | <!-- Broken Image Removed: ../img/clip_image056.jpg --> |
 
 ## 가상머신의 겉모양
 
@@ -51,3 +48,6 @@ layout: home
 
 → ‘가짜’라는 점을 제외하면 완전한 컴퓨터와 마찬가지
 
+---
+
+[⬅️ 이전: Create](../create/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: Setting ➡️](../setting/)

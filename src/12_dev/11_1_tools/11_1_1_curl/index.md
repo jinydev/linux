@@ -2,9 +2,12 @@
 layout: home
 ---
 
+[⬅️ 이전: 도구설정](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 형상관리 git ➡️](../11_1_2_git/)
+
+![1 CURL 개념도](img/concept_architecture.svg)
+
 # Curl
 `curl`은 command line 용 data transfer tool 이다.
-
 
 * DOWNLOAD / UPLOAD 모두 가능하다.
 
@@ -15,8 +18,6 @@ layout: home
 * ibcurl 이라는 C 기반의 library가 제공되므로 C / C++ 프로 그램 개발시 위의 protocol과 연계가 필요하다면 libcurl을 손쉽게 연계할 수 있다.
 
 * libcurl은 PHP, RUBY, PERL 및 여러 언어에 바인딩 되어 있으므로 사용하는 언어나 개발 환경에 맞게 libcurl을 사용할 수 있다.
-
-
 
 ## CURL 설치
 우분투에 curl을 설치해 봅니다.
@@ -49,3 +50,7 @@ SSL 인증관련
 서버에서 301, 302 응답이 오면 redirection URL로 따라간다.
 apt-key : apt가 패키지를 인증할 때 사용하는 키 리스트를 관리한다. 이 키를 사용해 인증된 패키지는 신뢰할 수 있는 것으로 간주한다.
 add 명령어는 키 리스트에 새로운 키를 추가하겠다는 의미이다.
+
+---
+
+[⬅️ 이전: 도구설정](../) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 형상관리 git ➡️](../11_1_2_git/)

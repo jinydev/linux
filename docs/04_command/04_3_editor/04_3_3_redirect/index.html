@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>8.3 리다이렉션(Redirection)</title>
   <meta name="title" content="8.3 리다이렉션(Redirection)" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="8.3 리다이렉션(Redirection)"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/04_command/04_3_editor/04_3_3_redirect/">
+  <meta property="og:url" content="https://linux.jiny.dev/04_command/04_3_editor/04_3_3_redirect/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="8.3 리다이렉션(Redirection)"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/04_command/04_3_editor/04_3_3_redirect/" />
-<meta property="og:url" content="http://localhost:4000/04_command/04_3_editor/04_3_3_redirect/" />
+<link rel="canonical" href="https://linux.jiny.dev/04_command/04_3_editor/04_3_3_redirect/" />
+<meta property="og:url" content="https://linux.jiny.dev/04_command/04_3_editor/04_3_3_redirect/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="8.3 리다이렉션(Redirection)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"8.3 리다이렉션(Redirection)","url":"http://localhost:4000/04_command/04_3_editor/04_3_3_redirect/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"8.3 리다이렉션(Redirection)","url":"https://linux.jiny.dev/04_command/04_3_editor/04_3_3_redirect/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1176,11 +1176,23 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="83-표준-입출력의-방향-전환-리다이렉션-redirection">8.3 표준 입출력의 방향 전환, 리다이렉션 (Redirection)</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../04_3_2_pipe/">⬅️ 이전: 8.2 파이프(Pipe)와 필터</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../04_3_4_edit/">다음: 8.1 문서 에디터 종류 (vi/nano) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="3 REDIRECT 개념도" /></p>
+
+<h1 id="83-표준-입출력의-방향-전환-리다이렉션-redirection">8.3 표준 입출력의 방향 전환, 리다이렉션 (Redirection)</h1>
 
 <p>리눅스와 같은 유닉스 기반 시스템은 단순히 화면에 글씨를 뿌리고 키보드로 명령을 내리는 기본 흐름(데이터 흐름)의 방향을 완전히 다른 곳으로 강제 전환시키는 작업이 가능합니다. 이 프로세스를 <strong>리다이렉션(Redirection)</strong> 이라고 부릅니다.</p>
 
-<p><img src="./img/redirect_flow.svg" alt="표준 입출력 및 리다이렉션 구조도" /></p>
+<!-- Broken Image Removed: ./img/redirect_flow.svg -->
 <blockquote>
   <p><strong>동작 원리</strong>: 명령어의 결과물(Standard Output)은 원래 모니터 방향으로 흘러가야 정상입니다. 하지만 출력 기호(<code class="language-plaintext highlighter-rouge">&gt;</code>)를 사용하여 그 결과물이 향하는 방향 화살표를 꺾어서 모니터가 아닌 <code class="language-plaintext highlighter-rouge">텍스트 파일</code>이나 다른 외곽 시스템 쪽으로 데이터가 흘러 들어가도록 강제 방향 지시를 할 수 있습니다.</p>
 </blockquote>
@@ -1223,7 +1235,7 @@
 
 <blockquote>
   <p>(기존 작성된 표준 입출력의 도해 자료입니다.)
-<img src="./img/image-20230416170053637.png" alt="image-20230416170053637" /></p>
+<!-- Broken Image Removed: ./img/image-20230416170053637.png --></p>
 </blockquote>
 
 <hr />
@@ -1280,6 +1292,18 @@ cal <span class="o">&gt;</span> my_cal.txt
 <span class="c"># 다시 달력 파일을 까보면, 달력 밑동 가장 아래에 내 이름이 지워지지 않고 추가되어 있습니다.</span>
 <span class="nb">cat </span>my_cal.txt
 </code></pre></div></div>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../04_3_2_pipe/">⬅️ 이전: 8.2 파이프(Pipe)와 필터</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a>  </td>
+      <td>  <a href="../04_3_4_edit/">다음: 8.1 문서 에디터 종류 (vi/nano) ➡️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

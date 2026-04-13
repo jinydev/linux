@@ -3,6 +3,10 @@ layout: home
 title: "10.2 시스템 서비스(systemd)"
 ---
 
+[⬅️ 이전: 서비스(Service)](../service/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: systemd ➡️](../systemd/)
+
+![SYSTEMCTL 개념도](img/concept_architecture.svg)
+
 # 10.2 리눅스의 조물주 엔진, Systemd (systemctl) 
 
 과거의 리눅스들은 컴퓨터를 부팅할 때 `init` 이라는 낡은 시스템을 사용해서 데몬(서비스)들을 순차적으로 거북이처럼 하나씩 느리게 켰습니다. 
@@ -64,3 +68,7 @@ sudo systemctl start sshd
 # 또는
 sudo systemctl restart sshd
 ```
+
+---
+
+[⬅️ 이전: 서비스(Service)](../service/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: systemd ➡️](../systemd/)

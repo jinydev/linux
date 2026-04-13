@@ -2,6 +2,10 @@
 layout: home
 ---
 
+[⬅️ 이전: 디렉터리](../03_2_2_directory/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 파일이란 ➡️](../03_2_4_file/)
+
+![3 EXT 개념도](img/concept_architecture.svg)
+
 # 파일 시스템의 종류
 리눅스에서 지원하는 파일 시스템은 다양합니다. 여기에는 일부 주요 파일 시스템을 소개하겠습니다.
 이외에도 FAT, VFAT, ISO9660, UDF, NFS 등 다양한 파일 시스템을 지원합니다.
@@ -24,3 +28,6 @@ Btrfs는 복사본-on-쓰기 (Copy-on-Write) 방식을 사용하는 파일 시�
 ## NTFS (New Technology File System)
 NTFS는 마이크로소프트에서 개발한 파일 시스템으로, 윈도우 운영체제에서 기본 파일 시스템으로 사용됩니다. 리눅스에서는 NTFS-3G 드라이버를 사용하여 NTFS 파일 시스템을 지원합니다.
 
+---
+
+[⬅️ 이전: 디렉터리](../03_2_2_directory/) &nbsp;|&nbsp; [🏠 분류 목차](../../../) &nbsp;|&nbsp; [다음: 파일이란 ➡️](../03_2_4_file/)

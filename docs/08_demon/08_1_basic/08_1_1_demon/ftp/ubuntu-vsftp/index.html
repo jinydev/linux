@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 리눅스</title>
   <meta name="title" content="개발자를 위한 리눅스" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/ftp/ubuntu-vsftp/">
+  <meta property="og:url" content="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/ftp/ubuntu-vsftp/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/ftp/ubuntu-vsftp/" />
-<meta property="og:url" content="http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/ftp/ubuntu-vsftp/" />
+<link rel="canonical" href="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/ftp/ubuntu-vsftp/" />
+<meta property="og:url" content="https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/ftp/ubuntu-vsftp/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="리눅스 구조 및 명령어" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"http://localhost:4000/08_demon/08_1_basic/08_1_1_demon/ftp/ubuntu-vsftp/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/08_demon/08_1_basic/08_1_1_demon/ftp/ubuntu-vsftp/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1196,96 +1196,50 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="vsftpd">vsftpd</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="vsftpd-설정">vsftpd 설정</h2>
-<p>vsftpd.conf 파일을 열어 FTP 서버의 설정을 변경해줘야 합니다.</p>
+<p><img src="img/concept_architecture.svg" alt="UBUNTU-VSFTP 개념도" /></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /etc/vsftpd.conf
-</code></pre></div></div>
+<h1 id="vsftpd">vsftpd</h1>
 
-<p>다음과 같은 설정을 추가해줍니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listen=YES
-listen_ipv6=NO
-anonymous_enable=NO
-local_enable=YES
-write_enable=YES
-local_umask=022
-dirmessage_enable=YES
-use_localtime=YES
-xferlog_enable=YES
-connect_from_port_20=YES
-chroot_local_user=YES
-secure_chroot_dir=/var/run/vsftpd/empty
-pam_service_name=vsftpd
-pasv_enable=YES
-pasv_min_port=40000
-pasv_max_port=40100
-</code></pre></div></div>
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>방대한 주제를 분할하여 제공합니다.</p>
 
 <ul>
-  <li>listen: FTP 서버가 동작하는 IP와 포트를 설정합니다.</li>
-  <li>anonymous_enable: 익명 FTP 접속을 허용할지 여부를 설정합니다.</li>
-  <li>local_enable: 로컬 FTP 접속을 허용할지 여부를 설정합니다.</li>
-  <li>write_enable: FTP 서버에서 파일 쓰기를 허용할지 여부를 설정합니다.</li>
-  <li>local_umask: FTP 클라이언트에서 업로드한 파일의 권한을 설정합니다.</li>
-  <li>dirmessage_enable: 디렉토리의 메시지를 출력할지 여부를 설정합니다.</li>
-  <li>use_localtime: 서버 시간대를 사용할지 여부를 설정합니다.</li>
-  <li>xferlog_enable: 전송 로그를 기록할지 여부를 설정합니다.</li>
-  <li>connect_from_port_20: 데이터 포트를 20번 포트 대신에 다른 포트를 사용하도록 설정합니다.</li>
-  <li>chroot_local_user: 사용자의 홈 디렉토리로 제한합니다.</li>
-  <li>secure_chroot_dir: chroot 디렉토리를 설정합니다.</li>
-  <li>pam_service_name: PAM 인증 모듈 이름을 설정합니다.</li>
-  <li>pasv_enable: Passive 모드를 사용할지 여부를 설정합니다.</li>
-  <li>pasv_min_port: Passive 모드에서 사용할 최소 포트를 설정합니다.</li>
-  <li>pasv_max_port: Passive 모드에서 사용할 최대 포트를 설정합니다.</li>
-</ul>
-
-<p>저장 후, FTP 서버를 재시작합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service vsftpd restart
-</code></pre></div></div>
-
-<h2 id="방화벽-설정">방화벽 설정</h2>
-<p>FTP 서버에 방화벽을 설정해줘야 합니다. Ubuntu의 기본 방화벽인 ufw를 사용하여 설정합니다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ufw allow 20/tcp
-sudo ufw allow 21/tcp
-sudo ufw allow 40000:50000/tcp
-sudo ufw enable
-</code></pre></div></div>
-
-<ul>
-  <li>ufw allow 20/tcp: FTP 서버의 데이터 포트를 열어줍니다.</li>
-  <li>ufw allow 21/tcp: FTP 서버의 제어 포트를 열어줍니다.</li>
-  <li>ufw allow 40000:50000/tcp: FTP 서버의 Passive 모드에서 사용하는 포트를 열어줍니다.</li>
-  <li>ufw enable: 방화벽을 활성화합니다.</li>
-</ul>
-
-<h2 id="포트-포워딩">포트 포워딩</h2>
-<p>호스트에서 FTP 서버에 접속하기 위해서는 VirtualBox에서 포트 포워딩</p>
-
-<p>VirtualBox에서 호스트와 게스트 간의 네트워크 연결 방식 중 하나인 NAT(Network Address Translation)를 사용하는 경우, 호스트에서 게스트에 접속하기 위해서는 게스트에서 열어둔 포트를 호스트에서 접근 가능한 포트로 포워딩해줘야 합니다.</p>
-
-<ul>
-  <li>VirtualBox의 설정에서 네트워크 탭으로 이동합니다.</li>
-  <li>NAT 네트워크의 설정을 클릭합니다.</li>
   <li>
-    <p>포트 포워딩을 추가하기 위해서는 아래의 정보를 입력합니다.</p>
+    <p><a href="part_1/">vsftpd 설정</a></p>
 
-    <ul>
-      <li>이름: 임의로 지정 가능합니다. 예를 들어, “FTP”라고 입력합니다.</li>
-      <li>프로토콜: TCP</li>
-      <li>호스트 IP: 비워둡니다.</li>
-      <li>호스트 포트: 호스트에서 접근할 포트 번호를 입력합니다. 예를 들어, 21번 포트를 사용한다면 21이라고 입력합니다.</li>
-      <li>게스트 IP: 비워둡니다.</li>
-      <li>게스트 포트: 게스트에서 열어둔 포트 번호를 입력합니다. 예를 들어, vsftpd에서 설정한 Passive 모드에서 사용하는 포트 범위인 40000-40100번 포트 중 아무 번호나 입력합니다.</li>
-    </ul>
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">방화벽 설정</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_3/">포트 포워딩</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
   </li>
 </ul>
 
-<p>호스트에서 FTP 클라이언트를 실행하여, 호스트 IP와 호스트에서 포워딩한 포트 번호를 입력하면 게스트의 FTP 서버에 접속할 수 있습니다. 예를 들어, 호스트 IP가 192.168.0.10이고 호스트에서 포워딩한 포트 번호가 21번이라면, FTP 클라이언트에서 192.168.0.10:21로 접속하면 됩니다.</p>
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">

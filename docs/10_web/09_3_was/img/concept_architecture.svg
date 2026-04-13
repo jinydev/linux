@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <rect width="100%" height="100%" fill="#f8f9fa" rx="15"/>
+  <rect x="50" y="50" width="700" height="300" fill="#ffffff" rx="10" stroke="#ced4da" stroke-width="2"/>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#343a40" text-anchor="middle">9.3 WAS 연동 (TOMCAT/PHP)</text>
+  <!-- Cylinder -->
+  <path d="M 500 150 C 500 130, 600 130, 600 150 L 600 250 C 600 270, 500 270, 500 250 Z" fill="#e2edff" stroke="#4d8aff" stroke-width="3"/>
+  <ellipse cx="550" cy="150" rx="50" ry="20" fill="#fff" stroke="#4d8aff" stroke-width="3"/>
+  <ellipse cx="550" cy="200" rx="50" ry="20" fill="none" stroke="#4d8aff" stroke-width="3"/>
+  <text x="550" y="155" fill="#4d8aff" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">STORAGE</text>
+  <!-- App Block -->
+  <rect x="200" y="160" width="120" height="80" rx="10" fill="#ffe3e3" stroke="#ff6b6b" stroke-width="3"/>
+  <text x="260" y="205" fill="#ff6b6b" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Engine</text>
+  <!-- Data flow arrows -->
+  <path d="M 330 190 L 480 190" stroke="#495057" stroke-width="4" fill="none"/>
+  <polygon points="480,190 470,183 470,197" fill="#495057"/>
+  <path d="M 480 210 L 330 210" stroke="#495057" stroke-width="4" fill="none"/>
+  <polygon points="330,210 340,203 340,217" fill="#495057"/>
+</svg>

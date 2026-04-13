@@ -2,87 +2,63 @@
 layout: home
 ---
 
+[⬅️ 이전: 가상머신 생성](../create/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: VirtualBox에서 Ubuntu 설치하기 ➡️](../ubuntu/)
+
+![INSTALL 개념도](img/concept_architecture.svg)
+
 # VirtualBox 설치
-
-
 
 ## 다운로드
 
 VirtualBox 사이트로 접속합니다. https://www.virtualbox.org/ 
 
-![image-20230328185525241](D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328185525241.png)
+<!-- Broken Image Removed: D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328185525241.png -->
 
 다운로드 버튼을 클립합니다. 다양한 운영체제에서 사용 가능한 설치 프로그램을 제공합니다.
 
-![image-20230328185717658](D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328185717658.png)
-
-
-
-
+<!-- Broken Image Removed: D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328185717658.png -->
 
 ## 설치
 
 자신의 호스트 컴퓨터에 VirtualBox를 설치합니다. 다음은 windows 운영체제 에서의 설치 방법입니다.
 
-![image-20230328185923655](D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328185923655.png)
+<!-- Broken Image Removed: D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328185923655.png -->
 
+<!-- Broken Image Removed: D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328185947784.png -->
 
-
-![image-20230328185947784](D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328185947784.png)
-
-
-
-![image-20230328190007687](D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190007687.png)
+<!-- Broken Image Removed: D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190007687.png -->
 
 네트워크 설정이 변경될 수 있어 네트워크가 끊길수 있답니다.
 
 특별한 상황이 아니라면 "Yes"를 눌러 다음으로 진행합니다.
 
-
-
-![image-20230328190042040](D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190042040.png)
+<!-- Broken Image Removed: D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190042040.png -->
 
 VirtualBox 설치를 위해서는 Python Core / win32api 가 의존성으로 필요합니다. 필요시 나중에 설치를 진행하겠냐고 물어봅니다. 
-
-
 
 Linux를 설치하는데 는 필요가 없으니 "Yes" 버튼을 선택합니다. 
 
 만약 이 메시지를 보고 싶지 않다면 pywin32를 설치하시고 다시 설치하면 됩니다.
 
-![image-20230328190122767](D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190122767.png)
+<!-- Broken Image Removed: D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190122767.png -->
 
+<!-- Broken Image Removed: D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190543504.png -->
 
-
-![image-20230328190543504](D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190543504.png)
-
-
-
-![image-20230328190647225](D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190647225.png)
-
-
+<!-- Broken Image Removed: D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190647225.png -->
 
 설치가 완료되었습니다.
-
-
 
 ## 실행
 
 VirtualBox를 설치하였다면, 바탕화면에 아이콘이 생성됩니다. 클릭하여 VirtualBox를 실행합니다.
 
-
-
-![image-20230328190803554](D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190803554.png)
-
-
+<!-- Broken Image Removed: D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328190803554.png -->
 
 ## 네트워크
 
 VirtualBox를 설치하게 되면 윈도우에 새로운 네트워크가 추가 됩니다.
 
-![image-20230328191005753](D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328191005753.png)
-
-
+<!-- Broken Image Removed: D:\jinydev\linux\src\setup\virtual\virtualbox\img\image-20230328191005753.png -->
 
 제어판->네트워크연결 탭을 확인해 보면 `VirtualBox Host-Only`가 추가된 것을 확인확인합니다.
 
@@ -111,6 +87,6 @@ OVA 파일은 VMware와 같은 다른 가상화 소프트웨어에서도 사용�
 
 즉, OVA 파일을 사용하면 가상 머신을 쉽게 이식할 수 있으며, 다양한 가상화 소프트웨어에서 호환됩니다.
 
+---
 
-
-
+[⬅️ 이전: 가상머신 생성](../create/) &nbsp;|&nbsp; [🏠 분류 목차](../../../../) &nbsp;|&nbsp; [다음: VirtualBox에서 Ubuntu 설치하기 ➡️](../ubuntu/)

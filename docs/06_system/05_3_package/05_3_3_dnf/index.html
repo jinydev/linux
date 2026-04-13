@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="Jiny linux"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>7.3 레드햇 계열 (RPM/DNF) 패키지 관리</title>
   <meta name="title" content="7.3 레드햇 계열 (RPM/DNF) 패키지 관리" /><!-- 키워드 설정 --><!-- Open Graph 메타데이터 --><meta property="og:title" content="7.3 레드햇 계열 (RPM/DNF) 패키지 관리"><meta property="og:description" content="Jiny linux"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="http://localhost:4000/06_system/05_3_package/05_3_3_dnf/">
+  <meta property="og:url" content="https://linux.jiny.dev/06_system/05_3_package/05_3_3_dnf/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="7.3 레드햇 계열 (RPM/DNF) 패키지 관리"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="개발자를 위한 리눅스 핵심 가이드" />
 <meta property="og:description" content="개발자를 위한 리눅스 핵심 가이드" />
-<link rel="canonical" href="http://localhost:4000/06_system/05_3_package/05_3_3_dnf/" />
-<meta property="og:url" content="http://localhost:4000/06_system/05_3_package/05_3_3_dnf/" />
+<link rel="canonical" href="https://linux.jiny.dev/06_system/05_3_package/05_3_3_dnf/" />
+<meta property="og:url" content="https://linux.jiny.dev/06_system/05_3_package/05_3_3_dnf/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="7.3 레드햇 계열 (RPM/DNF) 패키지 관리" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"7.3 레드햇 계열 (RPM/DNF) 패키지 관리","url":"http://localhost:4000/06_system/05_3_package/05_3_3_dnf/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Hojin"},"description":"개발자를 위한 리눅스 핵심 가이드","headline":"7.3 레드햇 계열 (RPM/DNF) 패키지 관리","url":"https://linux.jiny.dev/06_system/05_3_package/05_3_3_dnf/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1176,77 +1176,52 @@
     </ol>
 </nav>
         <div class="bd-content ps-lg-2">
-    <h1 id="73-레드햇-계열-rockycentos-dnf-패키지-관리">7.3 레드햇 계열 (Rocky/CentOS) DNF 패키지 관리</h1>
+    <table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="img/concept_architecture.svg" alt="3 DNF 개념도" /></p>
+
+<h1 id="73-레드햇-계열-rockycentos-dnf-패키지-관리">7.3 레드햇 계열 (Rocky/CentOS) DNF 패키지 관리</h1>
 
 <p>대형 글로벌 금융권 서버 등에서 압도적으로 많이 쓰이는 RHEL(레드햇) 운영체제 기반의 패키지 관리 도구인 <strong>DNF</strong>의 개념과 실무 활용법을 알아봅니다.</p>
 
-<hr />
+<h2 id="1️⃣-핵심-학습-가이드">1️⃣ 핵심 학습 가이드</h2>
+<p>방대한 주제를 분할하여 제공합니다.</p>
 
-<h2 id="1-yum의-진화-dnf-dandified-yum-개요">1. YUM의 진화, DNF (Dandified Yum) 개요</h2>
-
-<p>윈도우와 다르게 레드햇 리눅스는 초창기에 <code class="language-plaintext highlighter-rouge">*.rpm</code> 이라는 껍데기 파일 포맷으로 소프트웨어를 유통했습니다. (데비안 계열의 <code class="language-plaintext highlighter-rouge">.deb</code>와 대척점인 개념입니다).</p>
-
-<p>이 소스 구조의 네트워크 의존성을 해결해 주는 최고참 원조 매니저로 <strong><code class="language-plaintext highlighter-rouge">yum</code></strong> 명령어를 십수 년 동안 써왔습니다.
-그러나 얌(<code class="language-plaintext highlighter-rouge">yum</code>)은 세월이 흐르며 구형 아키텍처 탓에 너무 느리고 오류가 잦아지는 문제가 발생했습니다.</p>
-
-<p>그래서 현재 Rocky Linux 8, 9 등 최신 엔터프라이즈 환경에서는 <code class="language-plaintext highlighter-rouge">yum</code>의 메모리 소모를 대폭 개선한 <strong>차세대 패키지 관리 툴인 <code class="language-plaintext highlighter-rouge">dnf</code></strong> 가 완벽히 표준으로 자리를 잡았습니다.</p>
-
-<h3 id="11-yum보다-dnf를-100-무조건-써야-하는-이유">1.1 YUM보다 DNF를 100% 무조건 써야 하는 이유</h3>
 <ul>
-  <li><strong>더 빠른 다운로드/설치 성능</strong>: C++ 언어로 완전히 밑바닥부터 싹 재작성된 알고리즘으로 구성되어, 수백 개의 패키지 종속성 연결 고리를 번개같이 풀어내어 프로그램 설치 속도가 매우 향상되었습니다.</li>
-  <li><strong>더 나은 오류 처리 역량</strong>: 설치 도중 패키지가 깨지는 현상을 잘 견뎌내고, 더 직관적인 에러 메세지를 출력하여 초보 엔지니어도 트러블슈팅(문제 해결)을 하기가 월등히 수월합니다.</li>
-  <li><strong>호환성</strong>: 옛날 옛적 서버에 익숙한 현장의 꼰대 개발자들이 <code class="language-plaintext highlighter-rouge">yum</code> 이라고 쳐도, 서버 내부에서 눈치껏 알아서 <code class="language-plaintext highlighter-rouge">dnf</code> 모드로 돌려주는 파이프라인 호환성을 갖췄습니다. 하지만 아키텍트라면 가급적 <code class="language-plaintext highlighter-rouge">dnf</code>라고 손에 완전히 익혀 두는 것이 좋습니다.</li>
+  <li>
+    <p><a href="part_1/">1. YUM의 진화 DNF Dandified Yum 개요</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_2/">2. 필수 시스템 패키지 명령어 DNF</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
+  <li>
+    <p><a href="part_3/">4. 실습 DNF를 활용한 로키Rocky 리눅스 패키지 제어</a></p>
+
+    <p>해당 파트의 상세 내용을 학습합니다.</p>
+  </li>
 </ul>
 
 <hr />
 
-<h2 id="2-필수-시스템-패키지-명령어-dnf">2. 필수 시스템 패키지 명령어 (DNF)</h2>
-
-<p>우분투 서버의 <code class="language-plaintext highlighter-rouge">apt</code> 문법 체계와 비교해보면 알파벳 단어만 바뀌었을 뿐 매커니즘은 매우 흡사합니다. (마찬가지로 최상위 관리자 권리인 <code class="language-plaintext highlighter-rouge">sudo</code>가 강제됩니다.)</p>
-
-<h3 id="21-서버-패키지-카탈로그-업데이트-update">2.1 서버 패키지 카탈로그 업데이트 (<code class="language-plaintext highlighter-rouge">update</code>)</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf update
-<span class="c"># (apt update + apt upgrade 두 가지 명령어를 이 dnf 한 줄이 전부 흡수하여 처리해 줍니다!)</span>
-</code></pre></div></div>
-
-<h3 id="22-새-패키지-강력-설치-install">2.2 새 패키지 강력 설치 (<code class="language-plaintext highlighter-rouge">install</code>)</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf <span class="nb">install </span>패키지이름
-</code></pre></div></div>
-
-<h3 id="23-시스템에서-패키지-지우기-remove">2.3 시스템에서 패키지 지우기 (<code class="language-plaintext highlighter-rouge">remove</code>)</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>dnf remove 패키지이름
-</code></pre></div></div>
-
-<h3 id="24-원하는-패키지가-있는지-창고에서-색출-search--info">2.4 원하는 패키지가 있는지 창고에서 색출 (<code class="language-plaintext highlighter-rouge">search / info</code>)</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 창고에 nginx 서버용 파일이 존재하는지 이름으로 검색합니다</span>
-<span class="nb">sudo </span>dnf search nginx
-
-<span class="c"># 다운받기 전에 그 패키지의 용량, 제작사 등 엄청 상세한 정보를 표출합니다.</span>
-<span class="nb">sudo </span>dnf info nginx
-</code></pre></div></div>
-
-<hr />
-
-<h2 id="4-실습-dnf를-활용한-로키rocky-리눅스-패키지-제어">4. [실습] DNF를 활용한 로키(Rocky) 리눅스 패키지 제어</h2>
-
-<p>로키 리눅스 혹은 레드햇 서버 환경에서 패키지를 다루는 기초 실무입니다. (자신의 서버가 데비안/우분투 계통이라면 동작하지 않습니다.)</p>
-
-<h3 id="실습-1-웹web-통신용-curl-인프라-프로그램-설치하기">실습 1. 웹(Web) 통신용 <code class="language-plaintext highlighter-rouge">curl</code> 인프라 프로그램 설치하기</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1단계. 설치 전 이 패키지가 구비된 창고(Repository) 버전을 상세히 정보 조회합니다.</span>
-<span class="nb">sudo </span>dnf info curl
-
-<span class="c"># 2단계. 정보를 확인 후 내 시스템에 설치를 확정합니다.</span>
-<span class="nb">sudo </span>dnf <span class="nb">install </span>curl
-
-<span class="c"># 3단계. 깔린 프로그램의 버전을 검증합니다.</span>
-curl <span class="nt">--version</span>
-</code></pre></div></div>
-
-<h3 id="실습-2-깔리지-않은-가상의-게임-패키지-검색-시도">실습 2. 깔리지 않은 가상의 게임 패키지 검색 시도</h3>
-<p>내 컴퓨터에 없는 마인크래프트 게임 관련 패키지가 레드햇 공식 창고에 등록되어 있는지 검색(Search) 망을 돌려보는 테스트입니다.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 관련 패키지나 플러그인이 나오는지(혹은 없다고 나오는지) 화면 출력을 봅니다.</span>
-<span class="nb">sudo </span>dnf search minecraft
-</code></pre></div></div>
+<table>
+  <tbody>
+    <tr>
+      <td><a href="../">⬅️ 이전</a>  </td>
+      <td>  <a href="../../../">🏠 분류 목차</a></td>
+    </tr>
+  </tbody>
+</table>
 
 
     <div style="padding-top: 50px;">
