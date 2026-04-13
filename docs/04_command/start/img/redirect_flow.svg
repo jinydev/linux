@@ -1,0 +1,68 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc; }
+    .box { fill: white; stroke: #64748b; stroke-width: 3px; rx: 8px; }
+    
+    .head { fill: #0f172a; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .node-text { fill: #1e293b; font-family: sans-serif; font-weight: bold; font-size: 18px; text-anchor: middle; }
+    .sub-text { fill: #64748b; font-family: sans-serif; font-size: 13px; text-anchor: middle; }
+    
+    .sys-io { font-family: monospace; font-size: 16px; font-weight: bold; text-anchor: middle; }
+    
+    .arrow-in { stroke: #3b82f6; stroke-width: 5px; fill: none; }
+    .arrow-out { stroke: #10b981; stroke-width: 5px; fill: none; }
+    .arrow-err { stroke: #ef4444; stroke-width: 5px; fill: none; stroke-dasharray: 6; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="15" />
+  <text x="400" y="40" class="head">리눅스 표준 입출력(File Descriptor) 핸들 및 리다이렉션 구조도</text>
+
+  <!-- Left Input -->
+  <g transform="translate(100, 150)">
+    <rect x="-60" y="-30" width="120" height="60" class="box" stroke="#3b82f6" />
+    <text x="0" y="-5" class="node-text">키보드</text>
+    <text x="0" y="15" class="sub-text">(입력 장치)</text>
+  </g>
+
+  <!-- Arrow Input -->
+  <path d="M 160 150 L 290 150" class="arrow-in" />
+  <polygon points="290,150 275,140 275,160" fill="#3b82f6" />
+  <text x="225" y="135" class="sys-io" fill="#3b82f6">STDIN (0)</text>
+  <text x="225" y="175" class="sys-io" style="font-size: 30px;" fill="#3b82f6"><tspan>&lt;</tspan></text>
+
+  <!-- Center Process -->
+  <g transform="translate(400, 150)">
+    <rect x="-80" y="-60" width="160" height="120" class="box" fill="#1e293b" />
+    <text x="0" y="-5" fill="white" font-family="sans-serif" font-weight="bold" font-size="20px" text-anchor="middle">프로세스</text>
+    <text x="0" y="25" fill="#94a3b8" font-family="monospace" font-size="14px" text-anchor="middle">(터미널 명령어)</text>
+  </g>
+
+  <!-- Right Top Output -->
+  <path d="M 480 120 L 590 80" class="arrow-out" />
+  <polygon points="590,80 575,76 582,90" fill="#10b981" />
+  <text x="535" y="75" class="sys-io" fill="#10b981">STDOUT (1)</text>
+  <text x="535" y="115" class="sys-io" style="font-size: 30px;" fill="#10b981"><tspan>&gt;</tspan> 또는 <tspan>&gt;&gt;</tspan></text>
+  
+  <g transform="translate(680, 80)">
+    <rect x="-60" y="-30" width="120" height="60" class="box" stroke="#10b981" />
+    <text x="0" y="-5" class="node-text">모니터 (정상)</text>
+    <text x="0" y="15" class="sub-text">또는 텍스트 파일</text>
+  </g>
+
+  <!-- Right Bottom Error -->
+  <path d="M 480 180 L 590 220" class="arrow-err" />
+  <polygon points="590,220 582,210 575,224" fill="#ef4444" />
+  <text x="535" y="250" class="sys-io" fill="#ef4444">STDERR (2)</text>
+  <text x="535" y="210" class="sys-io" style="font-size: 26px;" fill="#ef4444"><tspan>2&gt;</tspan></text>
+
+  <g transform="translate(680, 220)">
+    <rect x="-60" y="-30" width="120" height="60" class="box" stroke="#ef4444" />
+    <text x="0" y="-5" class="node-text">에러 화면</text>
+    <text x="0" y="15" class="sub-text">또는 로그 파일</text>
+  </g>
+
+  <rect x="150" y="320" width="500" height="40" fill="#fef2f2" rx="4" />
+  <text x="400" y="345" fill="#ef4444" font-family="monospace" font-weight="bold" font-size="14px" text-anchor="middle">
+    에러와 정상 결과를 파일 1개에 동시에 몰아넣기: command > file.txt 2>&1
+  </text>
+</svg>

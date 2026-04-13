@@ -1,0 +1,71 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc; }
+    .box { fill: white; stroke-width: 2px; rx: 8px; stroke: #cbd5e1; }
+    
+    .head { fill: #0f172a; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .txt { fill: #1e293b; font-family: sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; }
+    
+    .wall { stroke: #ef4444; fill: #fef2f2; stroke-width: 4px; rx: 4px; }
+    .safe { stroke: #10b981; fill: #ecfdf5; }
+    
+    .arrow { stroke: #0f172a; stroke-width: 4px; fill: none; stroke-dasharray: 6; }
+    .bolt { fill: #b91c1c; font-weight: bold; font-family: sans-serif; font-size: 20px; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="15" />
+  <text x="400" y="40" class="head">리눅스 방화벽(Firewall/UFW)의 차단 및 패스 철학 원리도</text>
+
+  <!-- External Internet Traffic -->
+  <g transform="translate(80, 100)">
+    <circle cx="0" cy="0" r="20" fill="#3b82f6" />
+    <text x="-40" y="5" font-family="sans-serif" font-weight="bold" font-size="14px">정상손님 웹접속</text>
+    
+    <circle cx="0" cy="80" r="20" fill="#ef4444" />
+    <text x="-40" y="85" font-family="sans-serif" font-weight="bold" font-size="14px">해커 공격(포트스캔)</text>
+
+    <circle cx="0" cy="160" r="20" fill="#10b981" />
+    <text x="-40" y="165" font-family="sans-serif" font-weight="bold" font-size="14px">엔지니어 원격관리</text>
+  </g>
+
+  <!-- Arrows hitting firewall -->
+  <path d="M 120 100 L 250 100" class="arrow" />
+  <path d="M 120 180 L 250 180" class="arrow" stroke="#ef4444" />
+  <path d="M 120 260 L 250 260" class="arrow" />
+
+  <!-- The Firewall -->
+  <g transform="translate(260, 60)">
+    <rect x="0" y="0" width="80" height="240" class="wall" />
+    <text x="40" y="-15" class="txt" fill="#b91c1c">리눅스 방화벽</text>
+    <text x="40" y="-35" class="txt" fill="#b91c1c" font-size="18px">iptables / UFW</text>
+    
+    <!-- Gates -->
+    <rect x="-10" y="25" width="100" height="30" fill="#10b981" rx="4" />
+    <text x="40" y="45" fill="white" font-family="sans-serif" font-size="12px" font-weight="bold" text-anchor="middle">Port 80 (Allow)</text>
+
+    <text x="40" y="125" class="bolt" text-anchor="middle">DENY!</text>
+    
+    <rect x="-10" y="185" width="100" height="30" fill="#10b981" rx="4" />
+    <text x="40" y="205" fill="white" font-family="sans-serif" font-size="12px" font-weight="bold" text-anchor="middle">Port 22 (Allow)</text>
+  </g>
+
+  <!-- Arrows passing through -->
+  <path d="M 360 100 L 490 100" class="arrow" stroke-dasharray="none" />
+  <polygon points="490,100 480,90 480,110" fill="#0f172a" />
+  
+  <path d="M 360 260 L 490 260" class="arrow" stroke-dasharray="none" />
+  <polygon points="490,260 480,250 480,270" fill="#0f172a" />
+
+  <!-- Internal Server Engine -->
+  <g transform="translate(520, 80)">
+    <rect x="0" y="0" width="200" height="200" class="box safe" />
+    <text x="100" y="40" class="txt" fill="#047857">보호받는 내부 통제 서버</text>
+
+    <rect x="20" y="80" width="160" height="40" fill="#ecfdf5" stroke="#10b981" rx="4" />
+    <text x="100" y="105" fill="#064e3b" font-family="monospace" font-size="14px" font-weight="bold" text-anchor="middle">Apache/Nginx 데몬</text>
+
+    <rect x="20" y="140" width="160" height="40" fill="#ecfdf5" stroke="#10b981" rx="4" />
+    <text x="100" y="165" fill="#064e3b" font-family="monospace" font-size="14px" font-weight="bold" text-anchor="middle">OpenSSH 엔진</text>
+  </g>
+
+</svg>

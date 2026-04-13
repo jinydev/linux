@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc; }
+    .box { fill: white; stroke-width: 2px; rx: 8px; stroke: #94a3b8; }
+    
+    .head { fill: #0f172a; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .title { fill: white; font-family: sans-serif; font-weight: bold; font-size: 18px; text-anchor: middle; }
+    .info { fill: #334155; font-family: sans-serif; font-size: 14px; text-anchor: middle; font-weight: bold; }
+    
+    .file-box { stroke: #64748b; }
+    .db-box { stroke: #eab308; stroke-width: 3px; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="15" />
+  <text x="400" y="40" class="head">데이터 저장 방식의 진화 (텍스트 파일 VS 데이터베이스)</text>
+
+  <!-- Old File System -->
+  <g transform="translate(150, 90)">
+    <rect x="0" y="0" width="220" height="200" class="box file-box" />
+    <rect x="0" y="0" width="220" height="40" fill="#64748b" rx="8" />
+    <text x="110" y="26" class="title">일반 텍스트 파일 (.txt)</text>
+    
+    <text x="110" y="70" class="info">순차적 텍스트 저장</text>
+    <rect x="30" y="90" width="160" height="80" fill="#f1f5f9" rx="4" />
+    <text x="110" y="115" class="info" fill="#475569" font-size="12px">동시 접속 시 파일 락(Lock)</text>
+    <text x="110" y="135" class="info" fill="#475569" font-size="12px">내용 검색 시 1시간 소요</text>
+    <text x="110" y="155" class="info" fill="#ef4444" font-size="12px">웹 서비스 절대 불가</text>
+  </g>
+
+  <!-- Database System -->
+  <g transform="translate(430, 90)">
+    <rect x="0" y="0" width="220" height="200" class="box db-box" />
+    <rect x="0" y="0" width="220" height="40" fill="#ca8a04" rx="8" />
+    <text x="110" y="26" class="title">데이터베이스 (RDBMS)</text>
+    
+    <text x="110" y="70" class="info">B-Tree 인덱스 기반 표(Table)</text>
+    <rect x="30" y="90" width="160" height="80" fill="#fefce8" rx="4" />
+    <text x="110" y="115" class="info" fill="#854d0e" font-size="12px">수만 명 동시 접속 지원 (ACID)</text>
+    <text x="110" y="135" class="info" fill="#854d0e" font-size="12px">1억 건 데이터도 0.1초 검색</text>
+    <text x="110" y="155" class="info" fill="#166534" font-size="12px">대형 웹 서비스의 심장</text>
+  </g>
+
+  <!-- VS -->
+  <circle cx="400" cy="190" r="20" fill="#334155" />
+  <text x="400" y="196" fill="white" font-family="sans-serif" font-weight="bold" font-size="16px" text-anchor="middle">VS</text>
+
+</svg>

@@ -1,0 +1,53 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc; }
+    .box { fill: white; stroke-width: 2px; rx: 8px; stroke: #334155; }
+    
+    .head { fill: #0f172a; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .txt { fill: #1e293b; font-family: sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; }
+    .desc { fill: #64748b; font-family: sans-serif; font-size: 13px; text-anchor: middle; }
+    
+    .fg-box { stroke: #3b82f6; fill: #eff6ff; }
+    .bg-box { stroke: #10b981; fill: #ecfdf5; stroke-dasharray: 4; }
+    .line { stroke: #94a3b8; stroke-width: 4px; stroke-dasharray: 6; fill: none; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="15" />
+  <text x="400" y="40" class="head">데몬(Daemon) 프로그램의 백그라운드 구동 원리</text>
+
+  <!-- Frontend Process -->
+  <g transform="translate(100, 100)">
+    <rect x="0" y="0" width="180" height="100" class="box fg-box" />
+    <text x="90" y="30" class="txt" fill="#1d4ed8">포그라운드 프로그램</text>
+    <text x="90" y="55" class="desc">(Foreground Process)</text>
+    <text x="90" y="80" class="desc">ex: ls, vi, nano, 웹브라우저</text>
+  </g>
+
+  <!-- Characteristics -->
+  <rect x="110" y="210" width="160" height="80" class="box" fill="#f8fafc" />
+  <text x="190" y="235" class="desc" font-weight="bold">사용자 직접 통제</text>
+  <text x="190" y="255" class="desc">화면을 직접 점유함</text>
+  <text x="190" y="275" class="desc">종료하면 바로 꺼짐</text>
+  
+  <line x1="190" y1="200" x2="190" y2="210" stroke="#334155" stroke-width="2" />
+
+  <!-- Background Daemon -->
+  <g transform="translate(520, 100)">
+    <rect x="0" y="0" width="180" height="100" class="box bg-box" />
+    <text x="90" y="30" class="txt" fill="#047857">데몬 (Daemon)</text>
+    <text x="90" y="55" class="desc">(Background Service)</text>
+    <text x="90" y="80" class="desc">ex: sshd, httpd, mysqld</text>
+  </g>
+
+  <rect x="530" y="210" width="160" height="80" class="box" fill="#f8fafc" />
+  <text x="610" y="235" class="desc" font-weight="bold">시스템 뒷단 통제</text>
+  <text x="610" y="255" class="desc">화면에 보이지 않음</text>
+  <text x="610" y="275" class="desc">365일 24시간 혼자 돈다</text>
+  
+  <line x1="610" y1="200" x2="610" y2="210" stroke="#334155" stroke-width="2" />
+
+  <!-- Splitter -->
+  <line x1="400" y1="80" x2="400" y2="300" class="line" />
+  <text x="400" y="160" fill="#94a3b8" font-family="sans-serif" font-weight="bold" font-size="18px" text-anchor="middle">VS</text>
+
+</svg>

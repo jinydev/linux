@@ -1,0 +1,105 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #fcfcfc; }
+    .folder { fill: #3498db; }
+    .root-folder { fill: #e74c3c; }
+    .link-line { stroke: #bdc3c7; stroke-width: 3; fill: none; }
+    .text-title { fill: #2c3e50; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .text-main { fill: white; font-family: sans-serif; font-weight: bold; font-size: 16px; text-anchor: middle; alignment-baseline: middle; }
+    .text-desc { fill: white; font-family: sans-serif; font-size: 12px; text-anchor: middle; }
+
+    /* Fix the top-left stuck issue with transform-box */
+    .pop {
+      animation: pop 3s infinite ease-in-out;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .delay-1 { animation-delay: 0.5s; }
+    .delay-2 { animation-delay: 1.0s; }
+    .delay-3 { animation-delay: 1.5s; }
+
+    @keyframes pop {
+      0% { transform: scale(1); filter: brightness(1); }
+      15% { transform: scale(1.08); filter: brightness(1.2); }
+      30% { transform: scale(1); filter: brightness(1); }
+      100% { transform: scale(1); }
+    }
+    
+    .data-flow {
+      stroke: #f1c40f;
+      stroke-width: 4;
+      stroke-dasharray: 6;
+      fill: none;
+      animation: dash 1s linear infinite;
+    }
+    
+    @keyframes dash {
+      to { stroke-dashoffset: -12; }
+    }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="10" />
+  <text x="400" y="40" class="text-title">리눅스 파일 시스템 계층 구조도 (FHS)</text>
+  
+  <!-- Network Lines -->
+  <!-- from root to level 1 -->
+  <path d="M 400 130 L 400 200" class="link-line" />
+  
+  <!-- Horizontal branching -->
+  <path d="M 120 160 L 680 160" class="link-line" />
+  <path d="M 400 130 L 400 160" class="link-line" />
+  
+  <!-- Drops from branch -->
+  <path d="M 120 160 L 120 200" class="link-line" />
+  <path d="M 260 160 L 260 200" class="link-line" />
+  <path d="M 540 160 L 540 200" class="link-line" />
+  <path d="M 680 160 L 680 200" class="link-line" />
+  
+  <!-- ROOT Element -->
+  <g transform="translate(400, 100)" class="pop">
+    <rect x="-50" y="-30" width="100" height="60" rx="8" class="root-folder" />
+    <text x="0" y="-5" class="text-main" style="font-size: 20px;">/ (루트)</text>
+    <text x="0" y="15" class="text-desc" style="fill:#ffeaa7;">최상위 디렉터리</text>
+  </g>
+  
+  <!-- /bin (120) -->
+  <g transform="translate(120, 230)" class="pop delay-1">
+    <rect x="-50" y="-30" width="100" height="60" rx="6" class="folder" />
+    <text x="0" y="-5" class="text-main">/bin</text>
+    <text x="0" y="15" class="text-desc" style="fill:#ecf0f1;">기본 명령어</text>
+  </g>
+
+  <!-- /etc (260) -->
+  <g transform="translate(260, 230)" class="pop delay-2">
+    <rect x="-50" y="-30" width="100" height="60" rx="6" class="folder" />
+    <text x="0" y="-5" class="text-main">/etc</text>
+    <text x="0" y="15" class="text-desc" style="fill:#ecf0f1;">환경설정 파일</text>
+  </g>
+  
+  <!-- /home & /root (400) -->
+  <g transform="translate(400, 230)" class="pop delay-3">
+    <rect x="-60" y="-30" width="120" height="60" rx="6" class="folder" style="fill:#8e44ad;" />
+    <text x="0" y="-5" class="text-main">/home &amp; /root</text>
+    <text x="0" y="15" class="text-desc" style="fill:#ecf0f1;">사용자별 개인 공간</text>
+  </g>
+
+  <!-- /var (540) -->
+  <g transform="translate(540, 230)" class="pop delay-1">
+    <rect x="-50" y="-30" width="100" height="60" rx="6" class="folder" />
+    <text x="0" y="-5" class="text-main">/var</text>
+    <text x="0" y="15" class="text-desc" style="fill:#ecf0f1;">시스템 로그 등가변</text>
+  </g>
+  
+  <!-- /dev (680) -->
+  <g transform="translate(680, 230)" class="pop delay-2">
+    <rect x="-50" y="-30" width="100" height="60" rx="6" class="folder" />
+    <text x="0" y="-5" class="text-main">/dev</text>
+    <text x="0" y="15" class="text-desc" style="fill:#ecf0f1;">하드웨어 장치 정보</text>
+  </g>
+
+  <!-- Flow animation passing data -->
+  <!-- Represents a file search starting from root down into /home -->
+  <path d="M 400 130 L 400 160 L 400 200" class="data-flow" />
+
+  <text x="400" y="340" class="text-title" style="font-size:16px;">모든 구조는 오직 단 하나의 최상위 루트(/)에서 출발합니다.</text>
+</svg>

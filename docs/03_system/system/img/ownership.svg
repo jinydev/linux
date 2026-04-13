@@ -1,0 +1,64 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc; rx: 12px; }
+    .file { fill: #cbd5e1; stroke: #94a3b8; stroke-width: 3px; rx: 4px; }
+    .label-box { fill: white; stroke: #cbd5e1; rx: 4px; }
+    .head { fill: #0f172a; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .txt-sub { fill: #64748b; font-family: sans-serif; font-size: 14px; text-anchor: middle; font-weight: bold; }
+    .code { font-family: monospace; font-size: 18px; font-weight: bold; }
+    .cmd { fill: #ef4444; font-family: monospace; font-size: 16px; font-weight: bold; text-anchor: middle; }
+    .arrow { stroke: #3b82f6; stroke-width: 3px; fill: none; stroke-dasharray: 4; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" />
+  <text x="400" y="40" class="head">파일에 대한 소유권자(User) 및 소속(Group) 개념</text>
+  
+  <!-- The File -->
+  <g transform="translate(350, 100)">
+    <rect x="-40" y="0" width="80" height="100" class="file" />
+    <path d="M 0 0 L 40 40 L 40 0 Z" fill="#94a3b8" />
+    <text x="0" y="60" fill="white" font-family="sans-serif" font-size="12px" text-anchor="middle" font-weight="bold">mydata.txt</text>
+  </g>
+
+  <!-- Left: Ownership User -->
+  <g transform="translate(150, 100)">
+    <circle cx="0" cy="20" r="18" fill="#3b82f6" />
+    <rect x="-30" y="45" width="60" height="30" fill="#3b82f6" rx="10" />
+    <text x="0" y="100" class="txt-sub" style="fill: #1d4ed8;">소유자 (User/Owner)</text>
+    <text x="0" y="120" font-family="sans-serif" font-size="12px" text-anchor="middle">파일을 처음 만든 사람</text>
+    
+    <rect x="-70" y="140" width="140" height="30" class="label-box" />
+    <text x="0" y="160" class="cmd">chown 명령어</text>
+  </g>
+  
+  <path d="M 230 140 L 320 140" class="arrow" />
+  <polygon points="320,140 310,135 310,145" fill="#3b82f6" />
+
+  <!-- Right: Ownership Group -->
+  <g transform="translate(650, 100)">
+    <!-- 3 people group -->
+    <circle cx="-15" cy="20" r="14" fill="#10b981" />
+    <circle cx="15" cy="20" r="14" fill="#10b981" />
+    <circle cx="0" cy="15" r="16" fill="#047857" />
+    <rect x="-40" y="40" width="80" height="25" fill="#10b981" rx="10" />
+    
+    <text x="0" y="100" class="txt-sub" style="fill: #047857;">소속 그룹 (Group)</text>
+    <text x="0" y="120" font-family="sans-serif" font-size="12px" text-anchor="middle">부서/팀 등 다수 권한 묶음</text>
+    
+    <rect x="-70" y="140" width="140" height="30" class="label-box" />
+    <text x="0" y="160" class="cmd">chgrp 명령어</text>
+  </g>
+
+  <path d="M 570 140 L 460 140" class="arrow" />
+  <polygon points="460,140 470,135 470,145" fill="#3b82f6" />
+
+  <!-- Code Sample Below -->
+  <g transform="translate(150, 270)">
+    <rect x="0" y="0" width="500" height="50" fill="#1e293b" rx="6" />
+    <text x="20" y="32" class="code">
+      <tspan fill="#6ee7b7">sudo</tspan> <tspan fill="#fca5a5">chown</tspan> <tspan fill="white">user1</tspan> <tspan fill="#cbd5e1">mydata.txt</tspan>
+    </text>
+    <text x="350" y="30" fill="#94a3b8" font-family="sans-serif" font-size="12px">// 소유자를 user1로 바꿈</text>
+  </g>
+
+</svg>

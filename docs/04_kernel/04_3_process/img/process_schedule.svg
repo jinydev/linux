@@ -1,0 +1,99 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc; }
+    .box { rx: 12px; stroke: #cbd5e1; stroke-width: 3px; }
+    .ready { fill: #fcd34d; stroke: #f59e0b; }
+    .running { fill: #6ee7b7; stroke: #10b981; }
+    .waiting { fill: #fca5a5; stroke: #ef4444; }
+    .terminated { fill: #cbd5e1; stroke: #94a3b8; }
+    
+    .text-title { fill: #0f172a; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .text-main { fill: #1e293b; font-family: sans-serif; font-weight: bold; font-size: 18px; text-anchor: middle; alignment-baseline: middle; }
+    .text-sub { fill: #475569; font-family: sans-serif; font-size: 13px; text-anchor: middle; }
+    .text-flow { fill: #334155; font-family: sans-serif; font-size: 14px; font-weight: bold; }
+    
+    .arrow {
+      stroke: #3b82f6;
+      stroke-width: 4px;
+      fill: none;
+      stroke-dasharray: 6;
+      animation: dash 1.5s linear infinite;
+    }
+
+    @keyframes dash {
+      to { stroke-dashoffset: -12; }
+    }
+    
+    .arrow-red { stroke: #ef4444; }
+    
+    .pulse {
+      animation: pulse 2s infinite ease-in-out;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="15" />
+  <text x="400" y="40" class="text-title">프로세스 스케줄링 (Context Switching) 원리</text>
+  
+  <!-- Ready State -->
+  <g transform="translate(150, 150)" class="pulse" style="animation-delay: 0s;">
+    <rect x="-80" y="-40" width="160" height="80" class="box ready" />
+    <text x="0" y="-5" class="text-main">준비 (Ready)</text>
+    <text x="0" y="15" class="text-sub">CPU 할당 대기열</text>
+  </g>
+
+  <!-- Flow: Dispatch (Ready -> Running) -->
+  <path d="M 230 130 L 370 130" class="arrow" />
+  <polygon points="370,130 360,124 360,136" fill="#3b82f6" />
+  <text x="300" y="120" class="text-flow" text-anchor="middle">디스패치(Dispatch)</text>
+
+  <!-- Flow: Timeout (Running -> Ready) -->
+  <path d="M 370 170 L 230 170" class="arrow" style="animation-direction: reverse;" />
+  <polygon points="230,170 240,164 240,176" fill="#3b82f6" />
+  <text x="300" y="195" class="text-flow" text-anchor="middle">타임아웃(Timeout)</text>
+
+  <!-- Running State -->
+  <g transform="translate(450, 150)" class="pulse" style="animation-delay: 0.5s;">
+    <rect x="-80" y="-40" width="160" height="80" class="box running" />
+    <text x="0" y="-5" class="text-main">실행 (Running)</text>
+    <text x="0" y="15" class="text-sub">CPU로 실제 연산 중</text>
+  </g>
+
+  <!-- Flow: I/O or Event (Running -> Waiting) -->
+  <path d="M 450 190 L 450 280 L 370 280" class="arrow arrow-red" />
+  <polygon points="370,280 380,274 380,286" fill="#ef4444" />
+  <text x="530" y="245" class="text-flow" text-anchor="middle" style="fill:#ef4444;">입출력(I/O) 대기</text>
+
+  <!-- Waiting State -->
+  <g transform="translate(290, 280)" class="pulse" style="animation-delay: 1.0s;">
+    <rect x="-80" y="-40" width="160" height="80" class="box waiting" />
+    <text x="0" y="-5" class="text-main">대기 (Waiting)</text>
+    <text x="0" y="15" class="text-sub">이벤트 발생 대기</text>
+  </g>
+
+  <!-- Flow: Wakeup (Waiting -> Ready) -->
+  <path d="M 210 280 L 150 280 L 150 190" class="arrow" />
+  <polygon points="150,190 144,200 156,200" fill="#3b82f6" />
+  <text x="90" y="245" class="text-flow" text-anchor="middle">Wake Up (이벤트 종료)</text>
+
+  <!-- Terminated State -->
+  <g transform="translate(700, 150)" class="pulse" style="animation-delay: 1.5s;">
+    <rect x="-70" y="-40" width="140" height="80" class="box terminated" />
+    <text x="0" y="-5" class="text-main">종료 (Terminated)</text>
+    <text x="0" y="15" class="text-sub">자원 반환</text>
+  </g>
+
+  <!-- Flow: Exit (Running -> Terminated) -->
+  <path d="M 530 150 L 630 150" class="arrow" />
+  <polygon points="630,150 620,144 620,156" fill="#3b82f6" />
+  <text x="580" y="140" class="text-flow" text-anchor="middle">프로그램 종료</text>
+
+  <text x="400" y="400" class="text-sub" style="font-size:16px;">시간 분할(Time Sharing)을 통해 CPU는 아주 빠른 속도로 각 상태들을 전환합니다.</text>
+</svg>

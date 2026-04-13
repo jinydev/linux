@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc; }
+    .box { fill: white; stroke-width: 3px; rx: 8px; stroke: #3b82f6; }
+    
+    .head { fill: #0f172a; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .txt { fill: #1e293b; font-family: monospace; font-size: 18px; font-weight: bold; text-anchor: middle; }
+    .desc { fill: #64748b; font-family: sans-serif; font-size: 13px; text-anchor: middle; }
+    
+    .cmd-box { fill: #eff6ff; stroke: #3b82f6; }
+    .status-ok { fill: #ecfdf5; stroke: #10b981; }
+    .arrow { stroke: #94a3b8; stroke-width: 4px; fill: none; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="15" />
+  <text x="400" y="40" class="head">Systemctl (Systemd) 서비스 통제 구조도</text>
+
+  <!-- Central Manager -->
+  <g transform="translate(300, 100)">
+    <rect x="0" y="0" width="200" height="90" class="box" fill="#1e293b" stroke="#1e293b" />
+    <text x="100" y="35" class="txt" fill="white">systemd 엔진</text>
+    <text x="100" y="60" class="desc" fill="#94a3b8">(PID = 1)</text>
+    <text x="100" y="75" class="desc" fill="#94a3b8">리눅스의 심장</text>
+  </g>
+
+  <!-- Commands mapping to the center -->
+  <g transform="translate(50, 150)">
+    <rect x="0" y="-80" width="150" height="40" class="box cmd-box" />
+    <text x="75" y="-55" class="txt" fill="#1d4ed8">systemctl start</text>
+
+    <rect x="0" y="-20" width="150" height="40" class="box cmd-box" />
+    <text x="75" y="5" class="txt" fill="#1d4ed8">systemctl stop</text>
+
+    <rect x="0" y="40" width="150" height="40" class="box cmd-box" />
+    <text x="75" y="65" class="txt" fill="#1d4ed8">systemctl enable</text>
+  </g>
+
+  <!-- Arrow passing commands -->
+  <path d="M 210 145 L 290 145" class="arrow" stroke="#3b82f6" />
+  <polygon points="290,145 280,135 280,155" fill="#3b82f6" />
+
+  <!-- Target Services -->
+  <g transform="translate(600, 150)">
+    <rect x="0" y="-80" width="150" height="40" class="box status-ok" />
+    <text x="75" y="-55" class="txt" fill="#047857">nginx (웹)</text>
+
+    <rect x="0" y="-20" width="150" height="40" class="box status-ok" />
+    <text x="75" y="5" class="txt" fill="#047857">sshd (원격)</text>
+
+    <rect x="0" y="40" width="150" height="40" class="box status-ok" />
+    <text x="75" y="65" class="txt" fill="#047857">mysqld (DB)</text>
+  </g>
+
+  <!-- Arrow applying to targets -->
+  <path d="M 510 145 L 590 145" class="arrow" stroke="#10b981" />
+  <polygon points="590,145 580,135 580,155" fill="#10b981" />
+
+  <rect x="150" y="270" width="500" height="40" fill="#f1f5f9" rx="4" />
+  <text x="400" y="295" fill="#475569" font-family="sans-serif" font-weight="bold" font-size="14px" text-anchor="middle">엔지니어는 systemctl 리모콘을 쥐고 리눅스 내의 모든 데몬을 자르고 살립니다.</text>
+
+</svg>

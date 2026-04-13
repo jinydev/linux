@@ -1,0 +1,10 @@
+- title: Phase 1. 운영체제 입문
+  url: /01_intro/
+- title: Phase 2. 환경 구축 및 패키지
+  url: /02_setup/
+- title: Phase 3. 핵심 명령어 마스터
+  url: /05_command/
+- title: Phase 4. 실제 서버 구축
+  url: /10_web/
+- title: Phase 5. 클라우드 기반 구현
+  url: /15_cloud/

@@ -1,0 +1,76 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8f9fa; rx: 15; }
+    .rhel { fill: #c0392b; rx: 8; }
+    .centos { fill: #f39c12; rx: 8; stroke: #333; stroke-dasharray: 4; }
+    .rocky { fill: #10B981; rx: 8; stroke: #047857; stroke-width: 3; }
+    
+    .text-title { fill: #2c3e50; font-family: sans-serif; font-weight: bold; font-size: 22px; text-anchor: middle; }
+    .text-main { fill: white; font-family: sans-serif; font-weight: bold; font-size: 16px; text-anchor: middle; alignment-baseline: middle; }
+    .text-sub { fill: white; font-family: sans-serif; font-size: 13px; text-anchor: middle; alignment-baseline: middle; }
+    .text-desc { fill: #34495e; font-family: sans-serif; font-size: 14px; text-anchor: middle; font-weight: bold; }
+    
+    .pulse {
+      animation: pulse 2s infinite ease-in-out;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); filter: brightness(1); }
+      50% { transform: scale(1.03); filter: brightness(1.2); }
+      100% { transform: scale(1); filter: brightness(1); }
+    }
+
+    .flow {
+      stroke: #7f8c8d;
+      stroke-width: 3;
+      fill: none;
+      stroke-dasharray: 8;
+      animation: dash 1s linear infinite;
+    }
+    
+    @keyframes dash {
+      to { stroke-dashoffset: -16; }
+    }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" />
+  
+  <text x="400" y="40" class="text-title">Rocky Linux 탄생 배경 및 계보 가이드</text>
+
+  <g transform="translate(400, 100)">
+    
+    <!-- RHEL -->
+    <rect x="-100" y="0" width="200" height="60" class="rhel" />
+    <text x="0" y="25" class="text-main">RHEL (레드햇)</text>
+    <text x="0" y="45" class="text-sub">상용 유료 엔터프라이즈 OS</text>
+    
+    <!-- Arrow to CentOS -->
+    <path d="M -150 30 L -250 30 L -250 130" stroke="#7f8c8d" stroke-width="3" fill="none" />
+    <polygon points="-250,130 -256,120 -244,120" fill="#7f8c8d" />
+    
+    <!-- CentOS -->
+    <rect x="-350" y="130" width="200" height="60" class="centos" />
+    <text x="-250" y="155" class="text-main" style="fill:#333;">CentOS 8</text>
+    <text x="-250" y="175" class="text-sub" style="fill:#333;">무료 복제판 (개발 중단됨)</text>
+    <text x="-250" y="215" class="text-desc" style="fill:#c0392b;">지원 종료 (End of Life)</text>
+
+    <!-- Arrow to Rocky Linux -->
+    <path d="M 0 60 L 0 130" class="flow" />
+    <polygon points="0,130 -6,120 6,120" fill="#7f8c8d" />
+
+    <!-- Open Source code icon -->
+    <rect x="-40" y="80" width="80" height="30" fill="white" stroke="#bdc3c7" rx="4" />
+    <text x="0" y="100" class="text-desc" style="font-size:12px;">오픈소스 공개</text>
+
+    <!-- Rocky Linux -->
+    <g class="pulse" transform="translate(0, 130)">
+      <rect x="-100" y="0" width="200" height="70" class="rocky" />
+      <text x="0" y="30" class="text-main">Rocky Linux 9</text>
+      <text x="0" y="50" class="text-sub">새로운 1:1 완벽 호환 무료 대안</text>
+    </g>
+    
+    <text x="0" y="235" class="text-desc" style="fill:#10B981;">10년 기술 유지보수 보장 및 커뮤니티 주도 개발</text>
+    
+  </g>
+
+</svg>

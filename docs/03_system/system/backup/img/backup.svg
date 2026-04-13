@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc; }
+    .box { fill: white; stroke-width: 2px; rx: 8px; stroke: #94a3b8; }
+    
+    .head { fill: #0f172a; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .txt { fill: #1e293b; font-family: sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; }
+    .cmd { fill: #047857; font-family: monospace; font-size: 14px; font-weight: bold; text-anchor: middle; }
+    
+    .arrow { stroke: #64748b; stroke-width: 4px; fill: none; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="15" />
+  <text x="400" y="40" class="head">리눅스 아카이빙(묶기)과 압축(ZIP)의 2단계 구조</text>
+
+  <!-- Step 1: Tar (Archive) -->
+  <g transform="translate(150, 100)">
+    <rect x="-60" y="-30" width="120" height="60" class="box" fill="#f1f5f9" />
+    <text x="0" y="-5" class="txt">여러 파일들</text>
+    <text x="0" y="15" class="cmd" fill="#475569">file1, file2 ...</text>
+  </g>
+
+  <path d="M 230 100 L 330 100" class="arrow" stroke="#3b82f6" />
+  <polygon points="330,100 320,90 320,110" fill="#3b82f6" />
+  <text x="280" y="85" class="cmd" fill="#1d4ed8">tar (묶기)</text>
+
+  <g transform="translate(410, 100)">
+    <rect x="-60" y="-40" width="120" height="80" class="box" stroke="#3b82f6" fill="#eff6ff" />
+    <text x="0" y="0" class="txt" fill="#1e40af">아카이브 파일</text>
+    <text x="0" y="20" class="cmd" fill="#1e40af">backup.tar</text>
+  </g>
+
+  <!-- Step 2: Gzip (Compress) -->
+  <path d="M 490 100 L 590 100" class="arrow" stroke="#10b981" />
+  <polygon points="590,100 580,90 580,110" fill="#10b981" />
+  <text x="540" y="85" class="cmd" fill="#047857">gzip (압축)</text>
+
+  <g transform="translate(680, 100)">
+    <rect x="-70" y="-40" width="140" height="80" class="box" stroke="#10b981" fill="#ecfdf5" rx="20" />
+    <text x="0" y="0" class="txt" fill="#064e3b">최종 압축결과물</text>
+    <text x="0" y="20" class="cmd" fill="#064e3b">backup.tar.gz</text>
+  </g>
+
+  <!-- Bottom Command Explanation -->
+  <rect x="150" y="220" width="500" height="80" fill="#1e293b" rx="8" />
+  <text x="400" y="250" fill="#4ade80" font-family="monospace" font-weight="bold" font-size="18px" text-anchor="middle">tar -czvf backup.tar.gz /var/www/html</text>
+  <text x="400" y="275" fill="#94a3b8" font-family="sans-serif" font-weight="bold" font-size="14px" text-anchor="middle">c(생성) z(용량압축) v(과정화면출력) f(파일명지정역할)</text>
+
+</svg>

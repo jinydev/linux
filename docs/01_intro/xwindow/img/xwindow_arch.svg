@@ -1,0 +1,83 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #ecf0f1; rx: 15; }
+    .box { fill: white; stroke: #bdc3c7; stroke-width: 2; rx: 8; }
+    .server { stroke: #e74c3c; stroke-width: 3; }
+    .client { stroke: #3498db; stroke-width: 3; }
+    .hardware { fill: #2c3e50; }
+    .text-main { font-family: sans-serif; font-weight: bold; font-size: 16px; text-anchor: middle; alignment-baseline: middle; fill: #333; }
+    .text-sub { font-family: sans-serif; font-size: 12px; text-anchor: middle; fill: #7f8c8d; }
+    .title { font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; fill: #2c3e50; }
+    
+    .data-flow-down {
+      stroke: #3498db;
+      stroke-width: 3;
+      stroke-dasharray: 6;
+      animation: flow 1s linear infinite;
+    }
+    
+    .data-flow-up {
+      stroke: #e74c3c;
+      stroke-width: 3;
+      stroke-dasharray: 6;
+      animation: flow-rev 1s linear infinite;
+    }
+    
+    @keyframes flow { to { stroke-dashoffset: -12; } }
+    @keyframes flow-rev { to { stroke-dashoffset: 12; } }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" />
+  
+  <text x="400" y="40" class="title">X-Window 시스템 아키텍처</text>
+  
+  <!-- X Clients -->
+  <g transform="translate(400, 100)">
+    <rect x="-300" y="0" width="600" height="80" class="box client" />
+    <text x="-200" y="30" class="text-main">X Client 1</text>
+    <text x="-200" y="55" class="text-sub">(ex. 파이어폭스 웹브라우저)</text>
+    
+    <text x="0" y="30" class="text-main">X Client 2</text>
+    <text x="0" y="55" class="text-sub">(ex. 그놈 터미널)</text>
+    
+    <text x="200" y="30" class="text-main">X Client 3</text>
+    <text x="200" y="55" class="text-sub">(ex. 리브레 오피스)</text>
+  </g>
+
+  <!-- Network / Protocol Layer -->
+  <g transform="translate(400, 180)">
+    <!-- Graphic requests down -->
+    <path d="M -150 0 L -150 50" class="data-flow-down" />
+    <polygon points="-150,50 -155,40 -145,40" fill="#3498db" />
+    <path d="M 0 0 L 0 50" class="data-flow-down" />
+    <polygon points="0,50 -5,40 5,40" fill="#3498db" />
+    <path d="M 150 0 L 150 50" class="data-flow-down" />
+    <polygon points="150,50 145,40 155,40" fill="#3498db" />
+    
+    <!-- Input events up -->
+    <path d="M -130 50 L -130 0" class="data-flow-up" />
+    <polygon points="-130,0 -135,10 -125,10" fill="#e74c3c" />
+    <path d="M 20 50 L 20 0" class="data-flow-up" />
+    <polygon points="20,0 15,10 25,10" fill="#e74c3c" />
+    <path d="M 170 50 L 170 0" class="data-flow-up" />
+    <polygon points="170,0 165,10 175,10" fill="#e74c3c" />
+    
+    <rect x="-80" y="15" width="160" height="20" rx="4" fill="#bdc3c7" />
+    <text x="0" y="27" class="text-sub" style="color: white; font-weight: bold;">X Protocol (네트워크)</text>
+  </g>
+
+  <!-- X Server -->
+  <g transform="translate(400, 230)">
+    <rect x="-150" y="0" width="300" height="60" class="box server" />
+    <text x="0" y="25" class="text-main">X Server (디스플레이 매니저)</text>
+    <text x="0" y="45" class="text-sub">화면 출력 및 키보드/마우스 입력 수집</text>
+  </g>
+
+  <!-- Hardware -->
+  <g transform="translate(400, 310)">
+    <path d="M 0 0 L 0 50" stroke="#7f8c8d" stroke-width="4" />
+    <rect x="-200" y="40" width="400" height="50" rx="4" class="hardware" />
+    <text x="0" y="65" class="text-main" style="fill: white;">물리적 하드웨어 (모니터 디스플레이, 키보드, 마우스)</text>
+  </g>
+
+</svg>

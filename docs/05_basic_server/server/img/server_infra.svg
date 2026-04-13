@@ -1,0 +1,60 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc; }
+    .box { fill: white; stroke-width: 2px; rx: 8px; stroke: #cbd5e1; }
+    
+    .head { fill: #0f172a; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .title { fill: white; font-family: sans-serif; font-weight: bold; font-size: 16px; text-anchor: middle; }
+    .name { fill: #1e293b; font-family: monospace; font-size: 18px; font-weight: bold; text-anchor: middle; }
+    .desc { fill: #64748b; font-family: sans-serif; font-size: 13px; text-anchor: middle; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="15" />
+  <text x="400" y="40" class="head">현대 서버 인프라(Infra) 호스팅 방식의 진화 구조</text>
+
+  <!-- Physical Box -->
+  <g transform="translate(80, 100)">
+    <rect x="0" y="0" width="180" height="200" class="box" />
+    <rect x="0" y="0" width="180" height="35" rx="6" fill="#475569" />
+    <text x="90" y="23" class="title">보수적 레거시</text>
+    
+    <text x="90" y="70" class="name">물리 베어메탈 서버</text>
+    <text x="90" y="90" class="desc">(Bare-Metal)</text>
+    
+    <rect x="20" y="110" width="140" height="70" fill="#f1f5f9" rx="4" />
+    <text x="90" y="130" class="desc">고가의 무거운 고철 장비</text>
+    <text x="90" y="150" class="desc">회사 전산실 직접 구축</text>
+    <text x="90" y="170" class="desc">초기 투자비용 극대화</text>
+  </g>
+
+  <!-- Hosting Box -->
+  <g transform="translate(310, 100)">
+    <rect x="0" y="0" width="180" height="200" class="box" />
+    <rect x="0" y="0" width="180" height="35" rx="6" fill="#3b82f6" />
+    <text x="90" y="23" class="title">웹/서버 호스팅</text>
+    
+    <text x="90" y="70" class="name">서버 임대망 활용</text>
+    <text x="90" y="90" class="desc">(Web/Server Hosting)</text>
+    
+    <rect x="20" y="110" width="140" height="70" fill="#eff6ff" rx="4" />
+    <text x="90" y="130" class="desc">카페24 등 데이터센터</text>
+    <text x="90" y="150" class="desc">공간 쪼개서 빌려쓰기</text>
+    <text x="90" y="170" class="desc">유연성 다소 떨어짐</text>
+  </g>
+
+  <!-- Cloud Box -->
+  <g transform="translate(540, 100)">
+    <rect x="0" y="0" width="180" height="200" class="box" style="stroke: #8b5cf6;" />
+    <rect x="0" y="0" width="180" height="35" rx="6" fill="#8b5cf6" />
+    <text x="90" y="23" class="title">모던 하이퍼 시대</text>
+    
+    <text x="90" y="70" class="name">클라우드 인프라</text>
+    <text x="90" y="90" class="desc">(AWS, GCP, Azure)</text>
+    
+    <rect x="20" y="110" width="140" height="70" fill="#f5f3ff" rx="4" />
+    <text x="90" y="130" class="desc">클릭 3번 서버 탄생</text>
+    <text x="90" y="150" class="desc">사용한 만큼 종량제</text>
+    <text x="90" y="170" class="desc">전 세계 어디든 배포 방출</text>
+  </g>
+
+</svg>

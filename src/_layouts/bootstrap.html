@@ -293,21 +293,11 @@
           <hr class="d-lg-none text-white-50">
 
           <ul class="navbar-nav flex-column flex-lg-row bd-navbar-nav">
+            {% for item in site.data.header_nav %}
             <li class="nav-item">
-              <a class="nav-link py-2 px-0 px-lg-2" href="https://datas.jiny.dev">빅데이터</a>
+              <a class="nav-link py-2 px-0 px-lg-2" href="{{ item.url }}">{{ item.title }}</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link py-2 px-0 px-lg-2" href="https://php.jiny.dev">PHP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link py-2 px-0 px-lg-2" href="https://java.jiny.dev">자바</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link py-2 px-0 px-lg-2" href="https://git.jiny.dev">깃&깃허브</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link py-2 px-0 px-lg-2" href="https://linux.jiny.dev">리눅스</a>
-            </li>
+            {% endfor %}
           </ul>
 
           <hr class="d-lg-none text-white-50">

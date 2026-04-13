@@ -1,0 +1,65 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc; }
+    .box { fill: white; stroke: #3b82f6; stroke-width: 2px; rx: 8px; }
+    
+    .head { fill: #0f172a; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .node-text { fill: #1e293b; font-family: sans-serif; font-weight: bold; font-size: 18px; text-anchor: middle; }
+    .sub-text { fill: #64748b; font-family: sans-serif; font-size: 13px; text-anchor: middle; }
+    
+    .line { stroke: #94a3b8; stroke-width: 4px; stroke-dasharray: 6; }
+    .internet { fill: #e0f2fe; stroke: #0ea5e9; stroke-width: 2px; rx: 40px; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="15" />
+  <text x="400" y="40" class="head">리눅스 네트워크 구조 및 트래픽 흐름도</text>
+
+  <!-- Servers -->
+  <g transform="translate(100, 120)">
+    <rect x="0" y="0" width="120" height="70" class="box" />
+    <text x="60" y="30" class="node-text">Linux 서버 A</text>
+    <text x="60" y="55" class="sub-text">192.168.0.10</text>
+  </g>
+  <g transform="translate(100, 220)">
+    <rect x="0" y="0" width="120" height="70" class="box" />
+    <text x="60" y="30" class="node-text">Linux 서버 B</text>
+    <text x="60" y="55" class="sub-text">192.168.0.11</text>
+  </g>
+
+  <!-- Lines from Servers to Switch -->
+  <line x1="220" y1="155" x2="280" y2="205" class="line" />
+  <line x1="220" y1="255" x2="280" y2="205" class="line" />
+
+  <!-- Switch -->
+  <g transform="translate(280, 170)">
+    <rect x="0" y="0" width="100" height="70" class="box" stroke="#f59e0b" />
+    <text x="50" y="30" class="node-text">스위치</text>
+    <text x="50" y="55" class="sub-text">(디바이스 연결)</text>
+  </g>
+
+  <!-- Line from Switch to Router -->
+  <line x1="380" y1="205" x2="440" y2="205" class="line" />
+
+  <!-- Router/Gateway -->
+  <g transform="translate(440, 170)">
+    <rect x="0" y="0" width="120" height="70" class="box" stroke="#10b981" />
+    <text x="60" y="30" class="node-text">공유기(라우터)</text>
+    <text x="60" y="55" class="sub-text">Gateway</text>
+  </g>
+
+  <!-- Line from Router to Internet -->
+  <line x1="560" y1="205" x2="620" y2="205" class="line" style="stroke: #0ea5e9; stroke-width: 6px; stroke-dasharray: none;" />
+
+  <!-- Internet -->
+  <g transform="translate(620, 150)">
+    <rect x="0" y="0" width="130" height="110" class="internet" />
+    <text x="65" y="45" class="node-text" fill="#0369a1">Internet</text>
+    <text x="65" y="65" class="sub-text" fill="#0284c7">WAN 망</text>
+    <text x="65" y="85" class="sub-text" fill="#0284c7">(외부 네트워크)</text>
+  </g>
+
+  <!-- LAN Box Outline -->
+  <rect x="80" y="100" width="500" height="210" fill="none" stroke="#94a3b8" stroke-dasharray="8" stroke-width="2" rx="10" />
+  <text x="330" y="115" fill="#64748b" font-weight="bold" font-family="sans-serif">내부망 (LAN - Local Area Network)</text>
+
+</svg>

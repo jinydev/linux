@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc; rx: 12px; }
+    .box { fill: white; stroke: #94a3b8; stroke-width: 2px; rx: 8px; }
+    
+    .head { fill: #0f172a; font-family: sans-serif; font-weight: bold; font-size: 24px; text-anchor: middle; }
+    .editor-name { fill: #0f172a; font-weight: bold; font-family: sans-serif; font-size: 20px; text-anchor: middle; }
+    .editor-type { fill: #3b82f6; font-weight: bold; font-family: monospace; font-size: 14px; text-anchor: middle; }
+    .desc { fill: #64748b; font-family: sans-serif; font-size: 13px; text-anchor: middle; }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" />
+  <text x="400" y="40" class="head">리눅스 텍스트 문서 에디터 삼대장 비교</text>
+
+  <!-- Nano -->
+  <g transform="translate(100, 100)">
+    <rect x="0" y="0" width="180" height="150" class="box" stroke="#10b981" />
+    <text x="90" y="40" class="editor-name">Nano (나노)</text>
+    <text x="90" y="65" class="editor-type">CLI (초보자용)</text>
+    <text x="90" y="95" class="desc">가장 직관적이고 쉬움</text>
+    <text x="90" y="115" class="desc">단축키가 하단에 나열됨</text>
+    <text x="90" y="135" class="desc">윈도우 메모장 느낌</text>
+  </g>
+
+  <!-- Vim -->
+  <g transform="translate(310, 100)">
+    <rect x="0" y="0" width="180" height="150" class="box" stroke="#b91c1c" stroke-width="3px" />
+    <text x="90" y="40" class="editor-name">Vim (빔 / vi)</text>
+    <text x="90" y="65" class="editor-type">CLI (전문가용)</text>
+    <text x="90" y="95" class="desc">모든 리눅스의 표준</text>
+    <text x="90" y="115" class="desc">입력모드/명령모드 분리</text>
+    <text x="90" y="135" class="desc">마우스 없이 초고속 코딩</text>
+  </g>
+
+  <!-- VS Code -->
+  <g transform="translate(520, 100)">
+    <rect x="0" y="0" width="180" height="150" class="box" stroke="#3b82f6" />
+    <text x="90" y="40" class="editor-name">VS Code / Atom</text>
+    <text x="90" y="65" class="editor-type">GUI (데스크톱용)</text>
+    <text x="90" y="95" class="desc">X-Window / 우분투 바탕화면</text>
+    <text x="90" y="115" class="desc">마우스와 플러그인 등</text>
+    <text x="90" y="135" class="desc">화려한 그래픽 지원</text>
+  </g>
+
+  <rect x="150" y="275" width="500" height="40" fill="#f1f5f9" rx="4" />
+  <text x="400" y="300" fill="#475569" font-family="sans-serif" font-weight="bold" font-size="14px" text-anchor="middle">서버 엔지니어라면 무조건 터미널 기반의 필수 화면 편집기인 Vim(vi)에 익숙해져야 합니다.</text>
+
+</svg>

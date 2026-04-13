@@ -1,0 +1,81 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .hardware { fill: #2c3e50; }
+    .kernel { fill: #e74c3c; }
+    .shell { fill: #f39c12; }
+    .app { fill: #3498db; }
+    .user { fill: #9b59b6; }
+    .text { fill: white; font-family: sans-serif; font-weight: bold; font-size: 20px; text-anchor: middle; alignment-baseline: middle; }
+    .title { fill: #333; font-family: sans-serif; font-size: 28px; font-weight: bold; text-anchor: middle; }
+    .desc { fill: #555; font-family: sans-serif; font-size: 14px; text-anchor: middle; }
+    
+    .pulse {
+      transform-origin: center;
+      animation: pulse 3s infinite ease-in-out;
+    }
+    .flow-down {
+      stroke-dasharray: 8;
+      animation: dash 1s linear infinite;
+    }
+    .flow-up {
+      stroke-dasharray: 8;
+      animation: dash-reverse 1s linear infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.01); opacity: 0.95; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    
+    @keyframes dash {
+      to { stroke-dashoffset: -16; }
+    }
+    @keyframes dash-reverse {
+      to { stroke-dashoffset: 16; }
+    }
+  </style>
+
+  <rect width="100%" height="100%" fill="#f8f9fa" rx="15" />
+  
+  <text x="400" y="50" class="title">운영체제(OS)의 계층적 아키텍처</text>
+  <text x="400" y="80" class="desc">사용자의 명령이 하드웨어에 전달되고 응답으로 돌아오는 흐름 (Flow)</text>
+  
+  <!-- Rings representing layers -->
+  <g class="pulse" transform="translate(400, 360)">
+    <!-- Hardware -->
+    <circle r="240" class="hardware" />
+    <text y="-190" class="text" style="font-size:22px;">Hardware (CPU, Memory, Disk)</text>
+    
+    <!-- Kernel -->
+    <circle r="170" class="kernel" />
+    <text y="-120" class="text">OS Kernel (운영체제 핵심)</text>
+    
+    <!-- Shell/System Calls -->
+    <circle r="100" class="shell" />
+    <text y="-60" class="text" style="font-size:16px;">Shell &amp; System Calls</text>
+    
+    <!-- Application -->
+    <circle r="40" class="app" />
+    <text y="0" class="text" style="font-size:14px;">App</text>
+  </g>
+  
+  <!-- User Interaction -->
+  <g transform="translate(400, 360)">
+    <!-- User block -->
+    <rect x="-80" y="-320" width="160" height="40" rx="10" class="user" />
+    <text y="-298" class="text">User (사용자)</text>
+    
+    <!-- Flow arrows -->
+    <!-- Down (Request) -->
+    <path d="M -30 -280 L -30 -240" stroke="#9b59b6" stroke-width="4" fill="none" class="flow-down" />
+    <polygon points="-30,-240 -36,-248 -24,-248" fill="#9b59b6" />
+    <text x="-45" y="-255" class="user" style="font-size:12px; font-weight:bold; text-anchor:end;">명령 (Request)</text>
+    
+    <!-- Up (Response) -->
+    <path d="M 30 -240 L 30 -280" stroke="#3498db" stroke-width="4" fill="none" class="flow-up" />
+    <polygon points="30,-280 24,-272 36,-272" fill="#3498db" />
+    <text x="45" y="-255" class="app" style="font-size:12px; font-weight:bold; text-anchor:start;">응답 (Response)</text>
+  </g>
+
+</svg>
