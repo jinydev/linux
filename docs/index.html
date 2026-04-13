@@ -8,7 +8,7 @@
   <!-- 기본 메타데이터 --><meta name="description" content="리눅스 마스터를 위한 완벽 가이드"><meta name="author" content="HojinLee"><!-- 제목 설정 --><title>개발자를 위한 Linux</title>
   <meta name="title" content="개발자를 위한 Linux" /><!-- 키워드 설정 --><meta name="keywords" content="linux, guide, tutorial, developer"><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 Linux"><meta property="og:description" content="리눅스 마스터를 위한 완벽 가이드"><meta property="og:type" content="website"><meta property="og:locale" content="ko">
   <meta property="og:site_name" content="linux">
-  <meta property="og:url" content="https://linux.jiny.dev/">
+  <meta property="og:url" content="http://localhost:4000/">
 
   <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 Linux"><meta property="twitter:description" content="리눅스 마스터를 위한 완벽 가이드"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -17,14 +17,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="리눅스 마스터를 위한 완벽 가이드" />
 <meta property="og:description" content="리눅스 마스터를 위한 완벽 가이드" />
-<link rel="canonical" href="https://linux.jiny.dev/" />
-<meta property="og:url" content="https://linux.jiny.dev/" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="리눅스 구조 및 명령어" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="개발자를 위한 Linux" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Hojin"},"description":"리눅스 마스터를 위한 완벽 가이드","headline":"개발자를 위한 Linux","name":"리눅스 구조 및 명령어","url":"https://linux.jiny.dev/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Hojin"},"description":"리눅스 마스터를 위한 완벽 가이드","headline":"개발자를 위한 Linux","name":"리눅스 구조 및 명령어","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -241,23 +241,19 @@
           <ul class="navbar-nav flex-column flex-lg-row bd-navbar-nav">
             
             <li class="nav-item">
-              <a class="nav-link py-2 px-0 px-lg-2" href="/01_intro/">Phase 1. 운영체제 입문</a>
+              <a class="nav-link py-2 px-0 px-lg-2" href="/part1/">Part 1. 기초 운영체제 및 쉘</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link py-2 px-0 px-lg-2" href="/02_setup/">Phase 2. 환경 구축 및 패키지</a>
+              <a class="nav-link py-2 px-0 px-lg-2" href="/part2/">Part 2. 코어 인프라 및 네트워킹</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link py-2 px-0 px-lg-2" href="/05_command/">Phase 3. 핵심 명령어 마스터</a>
+              <a class="nav-link py-2 px-0 px-lg-2" href="/part3/">Part 3. 비즈니스 서비스</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link py-2 px-0 px-lg-2" href="/10_web/">Phase 4. 실제 서버 구축</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link py-2 px-0 px-lg-2" href="/15_cloud/">Phase 5. 클라우드 기반 구현</a>
+              <a class="nav-link py-2 px-0 px-lg-2" href="/part4/">Part 4. 실전 관제 및 재난 복구</a>
             </li>
             
           </ul>
@@ -330,7 +326,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-1"
             aria-expanded="false">
-            1. 리눅스 소개
+            1장. 리눅스 소개 및 기초
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -343,27 +339,27 @@
               
               
               <li>
-                <a href="/01_intro/prologue/"
+                <a href="/01_prologue/01_1_prologue/"
                   class="bd-links-link d-inline-block rounded ">
-                  1.1 운영체제와 리눅스
+                  01.1 Prologue
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/01_intro/prologue/linux"
+                <a href="/01_prologue/01_2_history/"
                   class="bd-links-link d-inline-block rounded ">
-                  1.2 리눅스의 역사와 철학
+                  01.2 History
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/01_intro/xwindow/"
+                <a href="/01_prologue/01_3_xwindow/"
                   class="bd-links-link d-inline-block rounded ">
-                  1.3 X-Window 소개
+                  01.3 Xwindow
                 </a>
               </li>
               
@@ -380,7 +376,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-2"
             aria-expanded="false">
-            2. 시스템 환경 구축
+            2장. 리눅스 설치 및 설정
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -393,27 +389,54 @@
               
               
               <li>
-                <a href="/02_setup/setup/virtual"
+                <a href="/02_setup/02_1_prepare/"
                   class="bd-links-link d-inline-block rounded ">
-                  2.1 리눅스 설치 및 가상화
+                  02.1 Prepare
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/02_setup/setup/ubuntu"
+                <a href="/02_setup/02_2_ubuntu/"
                   class="bd-links-link d-inline-block rounded ">
-                  2.2 우분투(Ubuntu) 환경 구축
+                  02.2 Ubuntu
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/02_setup/setup/rocky"
+                <a href="/02_setup/02_3_rocky/"
                   class="bd-links-link d-inline-block rounded ">
-                  2.3 로키(Rocky) 리눅스 세팅
+                  02.3 Rocky
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/02_setup/02_4_virtual/"
+                  class="bd-links-link d-inline-block rounded ">
+                  02.4 Virtual
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/02_setup/02_5_cloud/"
+                  class="bd-links-link d-inline-block rounded ">
+                  02.5 Cloud
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/02_setup/02_6_hosting/"
+                  class="bd-links-link d-inline-block rounded ">
+                  02.6 Hosting
                 </a>
               </li>
               
@@ -430,7 +453,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-3"
             aria-expanded="false">
-            3. 파일시스템 구조
+            3장. 리눅스 기본 사용법
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -443,18 +466,27 @@
               
               
               <li>
-                <a href="/03_system/system/file"
+                <a href="/03_start/03_1_user/"
                   class="bd-links-link d-inline-block rounded ">
-                  3.1 FHS 및 디렉터리 이해
+                  03.1 User
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/03_system/system/disk"
+                <a href="/03_start/03_2_filesystem/"
                   class="bd-links-link d-inline-block rounded ">
-                  3.2 디스크(Disk) 구조와 관리
+                  03.2 Filesystem
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/03_start/03_3_permission/"
+                  class="bd-links-link d-inline-block rounded ">
+                  03.3 Permission
                 </a>
               </li>
               
@@ -471,7 +503,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-4"
             aria-expanded="false">
-            4. 커널 동작과 프로세스
+            4장. 명령어 (Command)
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -484,27 +516,27 @@
               
               
               <li>
-                <a href="/03_system/system/boot"
+                <a href="/04_command/04_1_basic/"
                   class="bd-links-link d-inline-block rounded ">
-                  4.1 시스템 부팅 절차
+                  04.1 Basic
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/03_system/system/kernal"
+                <a href="/04_command/04_2_advanced/"
                   class="bd-links-link d-inline-block rounded ">
-                  4.2 리눅스 커널 구조
+                  04.2 Advanced
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/03_system/system/process"
+                <a href="/04_command/04_3_editor/"
                   class="bd-links-link d-inline-block rounded ">
-                  4.3 프로세스(Process) 관리
+                  04.3 Editor
                 </a>
               </li>
               
@@ -521,7 +553,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-5"
             aria-expanded="false">
-            5. 쉘(Shell) 시스템
+            5장. 쉘(Shell) 스크립트
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -534,18 +566,27 @@
               
               
               <li>
-                <a href="/03_system/shell/"
+                <a href="/05_shell/07_1_intro/"
                   class="bd-links-link d-inline-block rounded ">
-                  5.1 쉘의 이해와 종류
+                  07.1 Intro
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/04_command/command/"
+                <a href="/05_shell/07_2_control/"
                   class="bd-links-link d-inline-block rounded ">
-                  5.2 터미널 활용 명령어 기초
+                  07.2 Control
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/05_shell/07_2_terminal/"
+                  class="bd-links-link d-inline-block rounded ">
+                  07.2 Terminal
                 </a>
               </li>
               
@@ -562,7 +603,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-6"
             aria-expanded="false">
-            6. 권한 관리 기초
+            6장. 시스템 컨트롤
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -575,27 +616,45 @@
               
               
               <li>
-                <a href="/04_command/start/user"
+                <a href="/06_system/05_1_boot/"
                   class="bd-links-link d-inline-block rounded ">
-                  6.1 계정(User) 및 그룹(Group)
+                  05.1 Boot
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/03_system/system/ownership"
+                <a href="/06_system/05_2_process/"
                   class="bd-links-link d-inline-block rounded ">
-                  6.2 파일 소유권(Ownership)
+                  05.2 Process
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/03_system/system/permit"
+                <a href="/06_system/05_3_package/"
                   class="bd-links-link d-inline-block rounded ">
-                  6.3 접근 허가권(Permission)
+                  05.3 Package
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/06_system/05_4_cron/"
+                  class="bd-links-link d-inline-block rounded ">
+                  05.4 Cron
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/06_system/05_5_storage/"
+                  class="bd-links-link d-inline-block rounded ">
+                  05.5 Storage
                 </a>
               </li>
               
@@ -612,7 +671,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-7"
             aria-expanded="false">
-            7. 패키지 관리 기초
+            7장. 네트워크 라우팅
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -625,36 +684,54 @@
               
               
               <li>
-                <a href="/03_system/system/package/"
+                <a href="/07_network/06_1_basic/"
                   class="bd-links-link d-inline-block rounded ">
-                  7.1 패키지 매니저 기본 개념
+                  06.1 Basic
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/03_system/system/package/apt"
+                <a href="/07_network/06_2_structure/"
                   class="bd-links-link d-inline-block rounded ">
-                  7.2 데비안 계열 (APT) 관리
+                  06.2 Structure
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/03_system/system/package/dnf"
+                <a href="/07_network/06_3_ip/"
                   class="bd-links-link d-inline-block rounded ">
-                  7.3 레드햇 계열 (DNF) 관리
+                  06.3 Ip
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/03_system/system/compile/"
+                <a href="/07_network/06_4_remote/"
                   class="bd-links-link d-inline-block rounded ">
-                  7.4 소스 파일 컴파일 설치
+                  06.4 Remote
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/07_network/06_4_security/"
+                  class="bd-links-link d-inline-block rounded ">
+                  06.4 Security
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/07_network/06_5_system/"
+                  class="bd-links-link d-inline-block rounded ">
+                  06.5 System
                 </a>
               </li>
               
@@ -671,7 +748,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-8"
             aria-expanded="false">
-            8. 텍스트 에디터 활용
+            8장. 데몬(Daemon)
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -684,27 +761,18 @@
               
               
               <li>
-                <a href="/04_command/start/edit"
+                <a href="/08_demon/08_1_basic/"
                   class="bd-links-link d-inline-block rounded ">
-                  8.1 문서 에디터 종류 (vi/nano)
+                  08.1 Basic
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/04_command/start/pipe"
+                <a href="/08_demon/08_2_daemon/"
                   class="bd-links-link d-inline-block rounded ">
-                  8.2 파이프(Pipe)와 필터
-                </a>
-              </li>
-              
-              
-              
-              <li>
-                <a href="/04_command/start/redirection"
-                  class="bd-links-link d-inline-block rounded ">
-                  8.3 리다이렉션(Redirection)
+                  08.2 Daemon
                 </a>
               </li>
               
@@ -721,7 +789,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-9"
             aria-expanded="false">
-            9. 네트워크 개요
+            9장. 공유 서비스망
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -734,27 +802,36 @@
               
               
               <li>
-                <a href="/04_command/network/"
+                <a href="/09_service/14_1_nfs/"
                   class="bd-links-link d-inline-block rounded ">
-                  9.1 리눅스 네트워크 구조
+                  14.1 Nfs
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/03_system/system/ip"
+                <a href="/09_service/14_2_samba/"
                   class="bd-links-link d-inline-block rounded ">
-                  9.2 IP 설정 및 확인
+                  14.2 Samba
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/03_system/system/remote"
+                <a href="/09_service/14_3_mail/"
                   class="bd-links-link d-inline-block rounded ">
-                  9.3 원격 접속 환경 관리
+                  14.3 Mail
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/09_service/14_4_ftp/"
+                  class="bd-links-link d-inline-block rounded ">
+                  14.4 Ftp
                 </a>
               </li>
               
@@ -771,7 +848,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-10"
             aria-expanded="false">
-            10. 데몬과 시스템 서비스
+            10장. 웹 서버 아키텍처
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -784,27 +861,27 @@
               
               
               <li>
-                <a href="/05_basic_server/demon/"
+                <a href="/10_web/09_1_apache/"
                   class="bd-links-link d-inline-block rounded ">
-                  10.1 데몬(Daemon)의 개요
+                  09.1 Apache
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/05_basic_server/demon/systemctl"
+                <a href="/10_web/09_2_nginx/"
                   class="bd-links-link d-inline-block rounded ">
-                  10.2 시스템 서비스(systemd)
+                  09.2 Nginx
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/05_basic_server/server/"
+                <a href="/10_web/09_3_was/"
                   class="bd-links-link d-inline-block rounded ">
-                  10.3 주요 네트워크 서비스
+                  09.3 Was
                 </a>
               </li>
               
@@ -821,7 +898,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-11"
             aria-expanded="false">
-            11. 웹 서버 환경 구축
+            11장. 데이터베이스
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -834,27 +911,27 @@
               
               
               <li>
-                <a href="/06_web_server/web/"
+                <a href="/11_database/10_1_db_12/"
                   class="bd-links-link d-inline-block rounded ">
-                  11.1 웹 서버 기본 이해
+                  10.1 Db 12
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/06_web_server/web/apache"
+                <a href="/11_database/10_2_db_server/"
                   class="bd-links-link d-inline-block rounded ">
-                  11.2 Apache 서버 입문
+                  10.2 Db server
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/06_web_server/web/nginx"
+                <a href="/11_database/10_3_ext_db/"
                   class="bd-links-link d-inline-block rounded ">
-                  11.3 Nginx 환경 구성
+                  10.3 Ext db
                 </a>
               </li>
               
@@ -871,7 +948,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-12"
             aria-expanded="false">
-            12. 데이터베이스 웹/DB
+            12장. 언어 및 개발 환경
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -884,27 +961,18 @@
               
               
               <li>
-                <a href="/07_ext_server/database/"
+                <a href="/12_dev/11_1_tools/"
                   class="bd-links-link d-inline-block rounded ">
-                  12.1 데이터베이스 구조 개요
+                  11.1 Tools
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/07_ext_server/database/mysql"
+                <a href="/12_dev/11_2_ext_dev/"
                   class="bd-links-link d-inline-block rounded ">
-                  12.2 MySQL / MariaDB 구축
-                </a>
-              </li>
-              
-              
-              
-              <li>
-                <a href="/07_ext_server/dev/"
-                  class="bd-links-link d-inline-block rounded ">
-                  12.3 웹/DB 연동 (PHP/Node) 기초
+                  11.2 Ext dev
                 </a>
               </li>
               
@@ -921,7 +989,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-13"
             aria-expanded="false">
-            13. 모니터링 기초
+            13장. 오픈소스 앱 실습
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -934,18 +1002,18 @@
               
               
               <li>
-                <a href="/03_system/system/monitor"
+                <a href="/13_app/13_1_zabbix/"
                   class="bd-links-link d-inline-block rounded ">
-                  13.1 시스템 안정성 모니터링
+                  13.1 Zabbix
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/03_system/system/schedule"
+                <a href="/13_app/13_2_cloud_drive/"
                   class="bd-links-link d-inline-block rounded ">
-                  13.2 예약 및 정기구동 (cron)
+                  13.2 Cloud drive
                 </a>
               </li>
               
@@ -962,7 +1030,7 @@
             class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
             data-bs-toggle="collapse" data-bs-target="#collapse-14"
             aria-expanded="false">
-            14. 장애 복구 및 방화벽
+            14장. 자원 병목 모니터링
             <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
@@ -975,27 +1043,86 @@
               
               
               <li>
-                <a href="/03_system/system/backup"
+                <a href="/14_monitoring/12_1_monitoring/"
                   class="bd-links-link d-inline-block rounded ">
-                  14.1 유지보수 아카이빙(tar)
+                  12.1 Monitoring
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/09_troubleshoot/22_recovery/"
+                <a href="/14_monitoring/12_1_resource/"
                   class="bd-links-link d-inline-block rounded ">
-                  14.2 장애 복구 대처법
+                  12.1 Resource
                 </a>
               </li>
               
               
               
               <li>
-                <a href="/09_troubleshoot/23_security/"
+                <a href="/14_monitoring/12_2_disk/"
                   class="bd-links-link d-inline-block rounded ">
-                  14.3 보안 및 방화벽 기본
+                  12.2 Disk
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/14_monitoring/12_3_network/"
+                  class="bd-links-link d-inline-block rounded ">
+                  12.3 Network
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-15"
+            aria-expanded="false">
+            15장. 보안 및 장애복구
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-15">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/15_security_recovery/15_1_security/"
+                  class="bd-links-link d-inline-block rounded ">
+                  15.1 Security
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/15_security_recovery/15_2_log/"
+                  class="bd-links-link d-inline-block rounded ">
+                  15.2 Log
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/15_security_recovery/15_3_backup/"
+                  class="bd-links-link d-inline-block rounded ">
+                  15.3 Backup
                 </a>
               </li>
               
@@ -1024,38 +1151,80 @@
         <div class="bd-content ps-lg-2">
     <h1 id="개발자를-위한-linux">개발자를 위한 Linux</h1>
 
-<p>리눅스는 기업이나 산업현징에서 사용되는 대용량 컴퓨터의 운영체계인 유닉스 OS 와 기능이 동일한 개방형 운영체계로 시작되었지만, 현재는 많은 게발자의 자발적 참여틀 통하여 정보 시스템을 제공하기 위한서버 운영체계의 큰부분을 차지하고 있다.</p>
+<p>리눅스(Linux)는 기업이나 산업 현장에서 널리 쓰이는 대용량 컴퓨터 운영체제인 유닉스(UNIX)와 완벽히 호환되면서도, 누구나 수정하고 배포할 수 있는 자유-오픈소스 기반 운영체제로 시작되었습니다. 이 가이드는 단순한 명령어 암기를 넘어, <strong>시스템 엔지니어이자 백엔드 개발자로서 서버 인프라를 직접 설계하고 운영할 수 있는 실무 역량 배양</strong>을 목표로 새롭게 구성되었습니다. 시스템 기초부터 장애복구 보안까지의 리눅스 코어 사이클을 15단계로 압축하여 체득해 봅니다.</p>
 
-<p>더옥이 개인용 컵퓨터의 윈도우 운영체계틀 대신하는 개방형 운영체계를 비롯하여하여 모바일 스마트폰을 구성히는 운영체계에서도 리눅스가 사용되고 있다. 리눅스 운영체제에 대해서 알아보도록 한다.</p>
+<h2 id="-15주차-핵심-커리큘럼-curriculum">📚 15주차 핵심 커리큘럼 (Curriculum)</h2>
 
-<h2 id="학습-목차">학습 목차</h2>
+<p>가장 빈틈없고 완벽한 훈련을 위해, 명령어부터 시작하여 서버망 구축, 앱 배포, 운용에 이르기까지 논리적인 4부작 파트(Part 1~4)로 재설계 되었습니다.</p>
+
+<hr />
+
+<h3 id="-파트-1-기초-운영체제-및-쉘-제어"><a href="/part1/">🥉 파트 1. 기초 운영체제 및 쉘 제어</a></h3>
+<p>1~5장은 리눅스의 기본 철학과 파일 구조를 익히고, 수동으로 쳤던 명령어를 자동화하는 기반을 닦습니다.</p>
 
 <ul>
-  <li><a href="/01_intro/">01.리눅스와 소개</a></li>
-  <li><a href="/02_setup/">02.리눅스 설치</a></li>
-  <li><a href="/03_basic/">03.기초 사용법</a></li>
-  <li><a href="/04_system/">04.리눅스 시스템</a></li>
-  <li><a href="/05_command/">05.기본 명령어</a></li>
-  <li><a href="/06_network/">06.네트워크</a></li>
-  <li><a href="/07_tools/">07.도구설정</a></li>
-  <li><a href="/08_shell/">08.쉘 프로그래밍</a></li>
-  <li><a href="/09_daemon/">09.서버스와 데몬</a></li>
-  <li><a href="/10_web/">10.웹 서버스</a></li>
-  <li><a href="/11_database/">11.데이터베이스 구축하기</a></li>
-  <li><a href="/12_dev_env/">12.개발환경 및 세팅</a></li>
-  <li><a href="/13_xwindow/">13.X-Window</a></li>
-  <li><a href="/14_sys_admin/">14.시스템 관리</a></li>
-  <li><a href="/15_cloud/">15.클라우드</a></li>
-  <li><a href="/16_docker/">16.도커</a></li>
-  <li><a href="/17_microservice/">17.마이크로서비스</a></li>
-  <li><a href="/18_k8s/">18.쿠버네티스</a></li>
-  <li><a href="/19_deploy/">19.배포</a></li>
-  <li><a href="/20_web_ops/">20.웹서버 운영</a></li>
-  <li><a href="/21_db_ops/">21.데이터베이스</a></li>
-  <li><a href="/22_recovery/">22.장애복구</a></li>
-  <li><a href="/23_security/">23.보완</a></li>
-  <li><a href="/24_sys_mgmt/">24.시스템 관리</a></li>
+  <li><strong><a href="/01_prologue/">1장. 리눅스 소개 및 기초 (Prologue)</a></strong>
+리눅스의 생태계와 배포판 간의 차이 등 전반적인 가이드를 학습합니다.</li>
+  <li><strong><a href="/02_setup/">2장. 리눅스 설치 및 환경 설정 (Setup)</a></strong>
+다양한 환경(VM, Cloud 등)에서 운영체제를 최적으로 설치합니다.</li>
+  <li><strong><a href="/03_start/">3장. 리눅스 기본 사용법 (Start)</a></strong>
+가장 기초적인 파일시스템 구조와 디렉토리 이동 트리를 이해합니다.</li>
+  <li><strong><a href="/04_command/">4장. 리눅스 명령어 집중 (Command)</a></strong>
+필요한 파일을 찾거나 권한을 조작하는 핵심 명령어를 숙달합니다.</li>
+  <li><strong><a href="/05_shell/">5장. 쉘 스크립트 기반 자동화 (Shell)</a></strong>
+반복되는 명령어를 파일 하나로 묶고 논리형 제어문을 섞는 백엔드 기초를 배웁니다.</li>
 </ul>
+
+<hr />
+
+<h3 id="-파트-2-코어-인프라-및-네트워킹-아키텍처"><a href="/part2/">🥈 파트 2. 코어 인프라 및 네트워킹 아키텍처</a></h3>
+<p>6~9장은 개별 컴퓨터를 벗어나 네트워크를 개통하고 운영 환경 백그라운드 파이프라인을 다룹니다.</p>
+
+<ul>
+  <li><strong><a href="/06_system/">6장. 시스템 및 하드웨어 통제 (System)</a></strong>
+부팅 과정과 패키지, 프로세스 예약, 스토리지 파티션을 다룹니다.</li>
+  <li><strong><a href="/07_network/">7장. 네트워크 라우팅 설계 (Network)</a></strong>
+IP 체계, 방화벽 통계선망 구축 및 포워딩 등 OSI 전송 구조를 확립합니다.</li>
+  <li><strong><a href="/08_demon/">8장. 시스템 데몬 통제 (Demon)</a></strong>
+보이지 않는 백그라운드에서 동작하는 systemd 인프라를 지휘합니다.</li>
+  <li><strong><a href="/09_service/">9장. 현업 필수 네트워크 공유망 (Service)</a></strong>
+서버 간 데이터를 공유하기 위한 NFS, 윈도우용 Samba, 메일(Mail) 망을 배포합니다.</li>
+</ul>
+
+<hr />
+
+<h3 id="-파트-3-비즈니스-퍼블리싱-플랫폼-구성"><a href="/part3/">🥇 파트 3. 비즈니스 퍼블리싱 플랫폼 구성</a></h3>
+<p>10~13장은 인프라 구성을 넘어 상용 웹사이트 및 실전 애플리케이션을 구동하기 위한 플랫폼 뼈대입니다.</p>
+
+<ul>
+  <li><strong><a href="/10_web/">10장. 웹 서버 엔진 구축 (Web)</a></strong>
+가로채기가 없는 고속 웹을 구현하는 Apache 및 Nginx, 그리고 WAS 환경을 구축합니다.</li>
+  <li><strong><a href="/11_database/">11장. 데이터베이스 시스템 연동 (Database)</a></strong>
+MySQL/MariaDB 등 영속성 엔진을 설치하고 패스워드와 방어 계정을 생성합니다.</li>
+  <li><strong><a href="/12_dev/">12장. 언어 및 개발 환경 타겟팅 (Dev)</a></strong>
+Git 원격 연동, 파이썬 호환 등 리눅스 내부에서의 컴파일 환경을 조성합니다.</li>
+  <li><strong><a href="/13_app/">13장. 오픈소스 솔루션 아키텍팅 (App)</a></strong>
+학습한 LAMP 환경을 모두 쏟아부어 Zabbix나 사설 클라우드 드라이브(Nextcloud)를 실습합니다.</li>
+</ul>
+
+<hr />
+
+<h3 id="-파트-4-무중단-실전-관제-및-재난-복구"><a href="/part4/">💎 파트 4. 무중단 실전 관제 및 재난 복구</a></h3>
+<p>14~15장은 오픈된 서버가 장애를 겪지 않고 보안 위협에 버틸 수 있도록 하는 핵심 운영 역량(Ops) 단계입니다.</p>
+
+<ul>
+  <li><strong><a href="/14_monitoring/">14장. 리소스 모니터링 시스템 체계 (Monitoring)</a></strong>
+CPU 병목, RAM 누수, 디스크 용량을 예측하는 핵심 조회 툴(top, df)을 다룹니다.</li>
+  <li><strong><a href="/15_security_recovery/">15장. 서버 보안 조치 및 기밀 복구 (Security &amp; Recovery)</a></strong>
+해킹 방어(SELinux/방어벽)와 로그 흔적 추적, 그리고 디스크 소실 대비 비상 백업(Rsync) 전략을 총괄합니다.</li>
+</ul>
+
+<hr />
+
+<h2 id="-클라우드-연계-가이드">🎯 클라우드 연계 가이드</h2>
+<blockquote>
+  <p>1~15장에서 배운 온프레미스 인프라 환경 운영 지식을 바탕으로 Docker(컨테이너), K8s(오케스트레이션) 및 AWS 원격 프로비저닝을 연계하실 분들은 <strong><a href="https://cloud.jiny.dev">cloud.jiny.dev</a></strong> 도메인으로 넘어와서 추가 학습을 이어나가시기 바랍니다.</p>
+</blockquote>
 
 
     <div style="padding-top: 50px;">

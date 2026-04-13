@@ -1,0 +1,51 @@
+main:
+- title: "6장. 시스템 컨트롤"
+  url: /06_system/
+  subitems:
+  - title: "05.1 Boot"
+    url: /06_system/05_1_boot/
+  - title: "05.2 Process"
+    url: /06_system/05_2_process/
+  - title: "05.3 Package"
+    url: /06_system/05_3_package/
+  - title: "05.4 Cron"
+    url: /06_system/05_4_cron/
+  - title: "05.5 Storage"
+    url: /06_system/05_5_storage/
+
+- title: "7장. 네트워크 라우팅"
+  url: /07_network/
+  subitems:
+  - title: "06.1 Basic"
+    url: /07_network/06_1_basic/
+  - title: "06.2 Structure"
+    url: /07_network/06_2_structure/
+  - title: "06.3 Ip"
+    url: /07_network/06_3_ip/
+  - title: "06.4 Remote"
+    url: /07_network/06_4_remote/
+  - title: "06.4 Security"
+    url: /07_network/06_4_security/
+  - title: "06.5 System"
+    url: /07_network/06_5_system/
+
+- title: "8장. 데몬(Daemon)"
+  url: /08_demon/
+  subitems:
+  - title: "08.1 Basic"
+    url: /08_demon/08_1_basic/
+  - title: "08.2 Daemon"
+    url: /08_demon/08_2_daemon/
+
+- title: "9장. 공유 서비스망"
+  url: /09_service/
+  subitems:
+  - title: "14.1 Nfs"
+    url: /09_service/14_1_nfs/
+  - title: "14.2 Samba"
+    url: /09_service/14_2_samba/
+  - title: "14.3 Mail"
+    url: /09_service/14_3_mail/
+  - title: "14.4 Ftp"
+    url: /09_service/14_4_ftp/
+

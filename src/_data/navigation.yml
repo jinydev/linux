@@ -1,136 +1,165 @@
 main:
-- title: "1. 리눅스 소개"
-  url: /01_intro/
+- title: "1장. 리눅스 소개 및 기초"
+  url: /01_prologue/
   subitems:
-  - title: "1.1 운영체제와 리눅스"
-    url: /01_intro/prologue/
-  - title: "1.2 리눅스의 역사와 철학"
-    url: /01_intro/prologue/linux
-  - title: "1.3 X-Window 소개"
-    url: /01_intro/xwindow/
+  - title: "01.1 Prologue"
+    url: /01_prologue/01_1_prologue/
+  - title: "01.2 History"
+    url: /01_prologue/01_2_history/
+  - title: "01.3 Xwindow"
+    url: /01_prologue/01_3_xwindow/
 
-- title: "2. 시스템 환경 구축"
+- title: "2장. 리눅스 설치 및 설정"
   url: /02_setup/
   subitems:
-  - title: "2.1 리눅스 설치 및 가상화"
-    url: /02_setup/setup/virtual
-  - title: "2.2 우분투(Ubuntu) 환경 구축"
-    url: /02_setup/setup/ubuntu
-  - title: "2.3 로키(Rocky) 리눅스 세팅"
-    url: /02_setup/setup/rocky
+  - title: "02.1 Prepare"
+    url: /02_setup/02_1_prepare/
+  - title: "02.2 Ubuntu"
+    url: /02_setup/02_2_ubuntu/
+  - title: "02.3 Rocky"
+    url: /02_setup/02_3_rocky/
+  - title: "02.4 Virtual"
+    url: /02_setup/02_4_virtual/
+  - title: "02.5 Cloud"
+    url: /02_setup/02_5_cloud/
+  - title: "02.6 Hosting"
+    url: /02_setup/02_6_hosting/
 
-- title: "3. 파일시스템 구조"
-  url: /03_system/
+- title: "3장. 리눅스 기본 사용법"
+  url: /03_start/
   subitems:
-  - title: "3.1 FHS 및 디렉터리 이해"
-    url: /03_system/system/file
-  - title: "3.2 디스크(Disk) 구조와 관리"
-    url: /03_system/system/disk
+  - title: "03.1 User"
+    url: /03_start/03_1_user/
+  - title: "03.2 Filesystem"
+    url: /03_start/03_2_filesystem/
+  - title: "03.3 Permission"
+    url: /03_start/03_3_permission/
 
-- title: "4. 커널 동작과 프로세스"
+- title: "4장. 명령어 (Command)"
   url: /04_command/
   subitems:
-  - title: "4.1 시스템 부팅 절차"
-    url: /03_system/system/boot
-  - title: "4.2 리눅스 커널 구조"
-    url: /03_system/system/kernal
-  - title: "4.3 프로세스(Process) 관리"
-    url: /03_system/system/process
+  - title: "04.1 Basic"
+    url: /04_command/04_1_basic/
+  - title: "04.2 Advanced"
+    url: /04_command/04_2_advanced/
+  - title: "04.3 Editor"
+    url: /04_command/04_3_editor/
 
-- title: "5. 쉘(Shell) 시스템"
-  url: /05_basic_server/
+- title: "5장. 쉘(Shell) 스크립트"
+  url: /05_shell/
   subitems:
-  - title: "5.1 쉘의 이해와 종류"
-    url: /03_system/shell/
-  - title: "5.2 터미널 활용 명령어 기초"
-    url: /04_command/command/
+  - title: "07.1 Intro"
+    url: /05_shell/07_1_intro/
+  - title: "07.2 Control"
+    url: /05_shell/07_2_control/
+  - title: "07.2 Terminal"
+    url: /05_shell/07_2_terminal/
 
-- title: "6. 권한 관리 기초"
-  url: /06_web_server/
+- title: "6장. 시스템 컨트롤"
+  url: /06_system/
   subitems:
-  - title: "6.1 계정(User) 및 그룹(Group)"
-    url: /04_command/start/user
-  - title: "6.2 파일 소유권(Ownership)"
-    url: /03_system/system/ownership
-  - title: "6.3 접근 허가권(Permission)"
-    url: /03_system/system/permit
+  - title: "05.1 Boot"
+    url: /06_system/05_1_boot/
+  - title: "05.2 Process"
+    url: /06_system/05_2_process/
+  - title: "05.3 Package"
+    url: /06_system/05_3_package/
+  - title: "05.4 Cron"
+    url: /06_system/05_4_cron/
+  - title: "05.5 Storage"
+    url: /06_system/05_5_storage/
 
-- title: "7. 패키지 관리 기초"
-  url: /07_ext_server/
+- title: "7장. 네트워크 라우팅"
+  url: /07_network/
   subitems:
-  - title: "7.1 패키지 매니저 기본 개념"
-    url: /03_system/system/package/
-  - title: "7.2 데비안 계열 (APT) 관리"
-    url: /03_system/system/package/apt
-  - title: "7.3 레드햇 계열 (DNF) 관리"
-    url: /03_system/system/package/dnf
-  - title: "7.4 소스 파일 컴파일 설치"
-    url: /03_system/system/compile/
+  - title: "06.1 Basic"
+    url: /07_network/06_1_basic/
+  - title: "06.2 Structure"
+    url: /07_network/06_2_structure/
+  - title: "06.3 Ip"
+    url: /07_network/06_3_ip/
+  - title: "06.4 Remote"
+    url: /07_network/06_4_remote/
+  - title: "06.4 Security"
+    url: /07_network/06_4_security/
+  - title: "06.5 System"
+    url: /07_network/06_5_system/
 
-- title: "8. 텍스트 에디터 활용"
-  url: /08_monitoring/
+- title: "8장. 데몬(Daemon)"
+  url: /08_demon/
   subitems:
-  - title: "8.1 문서 에디터 종류 (vi/nano)"
-    url: /04_command/start/edit
-  - title: "8.2 파이프(Pipe)와 필터"
-    url: /04_command/start/pipe
-  - title: "8.3 리다이렉션(Redirection)"
-    url: /04_command/start/redirection
+  - title: "08.1 Basic"
+    url: /08_demon/08_1_basic/
+  - title: "08.2 Daemon"
+    url: /08_demon/08_2_daemon/
 
-- title: "9. 네트워크 개요"
-  url: /09_troubleshoot/
+- title: "9장. 공유 서비스망"
+  url: /09_service/
   subitems:
-  - title: "9.1 리눅스 네트워크 구조"
-    url: /04_command/network/
-  - title: "9.2 IP 설정 및 확인"
-    url: /03_system/system/ip
-  - title: "9.3 원격 접속 환경 관리"
-    url: /03_system/system/remote
+  - title: "14.1 Nfs"
+    url: /09_service/14_1_nfs/
+  - title: "14.2 Samba"
+    url: /09_service/14_2_samba/
+  - title: "14.3 Mail"
+    url: /09_service/14_3_mail/
+  - title: "14.4 Ftp"
+    url: /09_service/14_4_ftp/
 
-- title: "10. 데몬과 시스템 서비스"
-  url: /10_daemon/
+- title: "10장. 웹 서버 아키텍처"
+  url: /10_web/
   subitems:
-  - title: "10.1 데몬(Daemon)의 개요"
-    url: /05_basic_server/demon/
-  - title: "10.2 시스템 서비스(systemd)"
-    url: /05_basic_server/demon/systemctl
-  - title: "10.3 주요 네트워크 서비스"
-    url: /05_basic_server/server/
+  - title: "09.1 Apache"
+    url: /10_web/09_1_apache/
+  - title: "09.2 Nginx"
+    url: /10_web/09_2_nginx/
+  - title: "09.3 Was"
+    url: /10_web/09_3_was/
 
-- title: "11. 웹 서버 환경 구축"
-  url: /11_web_server/
+- title: "11장. 데이터베이스"
+  url: /11_database/
   subitems:
-  - title: "11.1 웹 서버 기본 이해"
-    url: /06_web_server/web/
-  - title: "11.2 Apache 서버 입문"
-    url: /06_web_server/web/apache
-  - title: "11.3 Nginx 환경 구성"
-    url: /06_web_server/web/nginx
+  - title: "10.1 Db 12"
+    url: /11_database/10_1_db_12/
+  - title: "10.2 Db server"
+    url: /11_database/10_2_db_server/
+  - title: "10.3 Ext db"
+    url: /11_database/10_3_ext_db/
 
-- title: "12. 데이터베이스 웹/DB"
-  url: /12_db_server/
+- title: "12장. 언어 및 개발 환경"
+  url: /12_dev/
   subitems:
-  - title: "12.1 데이터베이스 구조 개요"
-    url: /07_ext_server/database/
-  - title: "12.2 MySQL / MariaDB 구축"
-    url: /07_ext_server/database/mysql
-  - title: "12.3 웹/DB 연동 (PHP/Node) 기초"
-    url: /07_ext_server/dev/
+  - title: "11.1 Tools"
+    url: /12_dev/11_1_tools/
+  - title: "11.2 Ext dev"
+    url: /12_dev/11_2_ext_dev/
 
-- title: "13. 모니터링 기초"
-  url: /13_monitoring/
+- title: "13장. 오픈소스 앱 실습"
+  url: /13_app/
   subitems:
-  - title: "13.1 시스템 안정성 모니터링"
-    url: /03_system/system/monitor
-  - title: "13.2 예약 및 정기구동 (cron)"
-    url: /03_system/system/schedule
+  - title: "13.1 Zabbix"
+    url: /13_app/13_1_zabbix/
+  - title: "13.2 Cloud drive"
+    url: /13_app/13_2_cloud_drive/
 
-- title: "14. 장애 복구 및 방화벽"
-  url: /14_troubleshoot/
+- title: "14장. 자원 병목 모니터링"
+  url: /14_monitoring/
   subitems:
-  - title: "14.1 유지보수 아카이빙(tar)"
-    url: /03_system/system/backup
-  - title: "14.2 장애 복구 대처법"
-    url: /09_troubleshoot/22_recovery/
-  - title: "14.3 보안 및 방화벽 기본"
-    url: /09_troubleshoot/23_security/
+  - title: "12.1 Monitoring"
+    url: /14_monitoring/12_1_monitoring/
+  - title: "12.1 Resource"
+    url: /14_monitoring/12_1_resource/
+  - title: "12.2 Disk"
+    url: /14_monitoring/12_2_disk/
+  - title: "12.3 Network"
+    url: /14_monitoring/12_3_network/
+
+- title: "15장. 보안 및 장애복구"
+  url: /15_security_recovery/
+  subitems:
+  - title: "15.1 Security"
+    url: /15_security_recovery/15_1_security/
+  - title: "15.2 Log"
+    url: /15_security_recovery/15_2_log/
+  - title: "15.3 Backup"
+    url: /15_security_recovery/15_3_backup/
+

@@ -1,0 +1,37 @@
+main:
+- title: "10장. 웹 서버 아키텍처"
+  url: /10_web/
+  subitems:
+  - title: "09.1 Apache"
+    url: /10_web/09_1_apache/
+  - title: "09.2 Nginx"
+    url: /10_web/09_2_nginx/
+  - title: "09.3 Was"
+    url: /10_web/09_3_was/
+
+- title: "11장. 데이터베이스"
+  url: /11_database/
+  subitems:
+  - title: "10.1 Db 12"
+    url: /11_database/10_1_db_12/
+  - title: "10.2 Db server"
+    url: /11_database/10_2_db_server/
+  - title: "10.3 Ext db"
+    url: /11_database/10_3_ext_db/
+
+- title: "12장. 언어 및 개발 환경"
+  url: /12_dev/
+  subitems:
+  - title: "11.1 Tools"
+    url: /12_dev/11_1_tools/
+  - title: "11.2 Ext dev"
+    url: /12_dev/11_2_ext_dev/
+
+- title: "13장. 오픈소스 앱 실습"
+  url: /13_app/
+  subitems:
+  - title: "13.1 Zabbix"
+    url: /13_app/13_1_zabbix/
+  - title: "13.2 Cloud drive"
+    url: /13_app/13_2_cloud_drive/
+

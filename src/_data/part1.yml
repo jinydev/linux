@@ -1,0 +1,57 @@
+main:
+- title: "1장. 리눅스 소개 및 기초"
+  url: /01_prologue/
+  subitems:
+  - title: "01.1 Prologue"
+    url: /01_prologue/01_1_prologue/
+  - title: "01.2 History"
+    url: /01_prologue/01_2_history/
+  - title: "01.3 Xwindow"
+    url: /01_prologue/01_3_xwindow/
+
+- title: "2장. 리눅스 설치 및 설정"
+  url: /02_setup/
+  subitems:
+  - title: "02.1 Prepare"
+    url: /02_setup/02_1_prepare/
+  - title: "02.2 Ubuntu"
+    url: /02_setup/02_2_ubuntu/
+  - title: "02.3 Rocky"
+    url: /02_setup/02_3_rocky/
+  - title: "02.4 Virtual"
+    url: /02_setup/02_4_virtual/
+  - title: "02.5 Cloud"
+    url: /02_setup/02_5_cloud/
+  - title: "02.6 Hosting"
+    url: /02_setup/02_6_hosting/
+
+- title: "3장. 리눅스 기본 사용법"
+  url: /03_start/
+  subitems:
+  - title: "03.1 User"
+    url: /03_start/03_1_user/
+  - title: "03.2 Filesystem"
+    url: /03_start/03_2_filesystem/
+  - title: "03.3 Permission"
+    url: /03_start/03_3_permission/
+
+- title: "4장. 명령어 (Command)"
+  url: /04_command/
+  subitems:
+  - title: "04.1 Basic"
+    url: /04_command/04_1_basic/
+  - title: "04.2 Advanced"
+    url: /04_command/04_2_advanced/
+  - title: "04.3 Editor"
+    url: /04_command/04_3_editor/
+
+- title: "5장. 쉘(Shell) 스크립트"
+  url: /05_shell/
+  subitems:
+  - title: "07.1 Intro"
+    url: /05_shell/07_1_intro/
+  - title: "07.2 Control"
+    url: /05_shell/07_2_control/
+  - title: "07.2 Terminal"
+    url: /05_shell/07_2_terminal/
+

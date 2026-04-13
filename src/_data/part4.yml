@@ -1,0 +1,23 @@
+main:
+- title: "14장. 자원 병목 모니터링"
+  url: /14_monitoring/
+  subitems:
+  - title: "12.1 Monitoring"
+    url: /14_monitoring/12_1_monitoring/
+  - title: "12.1 Resource"
+    url: /14_monitoring/12_1_resource/
+  - title: "12.2 Disk"
+    url: /14_monitoring/12_2_disk/
+  - title: "12.3 Network"
+    url: /14_monitoring/12_3_network/
+
+- title: "15장. 보안 및 장애복구"
+  url: /15_security_recovery/
+  subitems:
+  - title: "15.1 Security"
+    url: /15_security_recovery/15_1_security/
+  - title: "15.2 Log"
+    url: /15_security_recovery/15_2_log/
+  - title: "15.3 Backup"
+    url: /15_security_recovery/15_3_backup/
+

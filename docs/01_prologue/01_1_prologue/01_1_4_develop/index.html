@@ -1,0 +1,1704 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 기본 메타데이터 --><meta name="description" content="리눅스는 개발자들에게 매우 추천되는 운영체제입니다. 오픈소스 특성, 다양한 개발 도구 지원, 안정성과 보안성을 알아보세요."><meta name="author" content="JinyDev"><!-- 제목 설정 --><title>개발자를 위한 리눅스 - 개발 환경과 도구</title>
+  <meta name="title" content="개발자를 위한 리눅스 - 개발 환경과 도구" /><!-- 키워드 설정 --><meta name="keywords" content="리눅스 개발, 오픈소스 개발, 개발 도구, 리눅스 프로그래밍, 개발 환경"><!-- Open Graph 메타데이터 --><meta property="og:title" content="개발자를 위한 리눅스 - 개발 환경과 도구"><meta property="og:description" content="리눅스는 개발자들에게 매우 추천되는 운영체제입니다. 오픈소스 특성과 개발 도구를 알아보세요."><meta property="og:type" content="article"><meta property="og:locale" content="ko">
+  <meta property="og:site_name" content="linux">
+  <meta property="og:url" content="http://localhost:4000/01_prologue/01_1_prologue/01_1_4_develop/">
+
+  <!-- Twitter 카드 메타데이터 --><meta name="twitter:card" content="summary"><meta property="twitter:title" content="개발자를 위한 리눅스 - 개발 환경과 도구"><meta property="twitter:description" content="리눅스는 개발자들에게 매우 추천되는 운영체제입니다. 오픈소스 특성과 개발 도구를 알아보세요."><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="개발자를 위한 리눅스 - 개발 환경과 도구" />
+<meta name="author" content="JinyDev" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="리눅스는 개발자들에게 매우 추천되는 운영체제입니다. 오픈소스 특성, 다양한 개발 도구 지원, 안정성과 보안성을 알아보세요." />
+<meta property="og:description" content="리눅스는 개발자들에게 매우 추천되는 운영체제입니다. 오픈소스 특성, 다양한 개발 도구 지원, 안정성과 보안성을 알아보세요." />
+<link rel="canonical" href="http://localhost:4000/01_prologue/01_1_prologue/01_1_4_develop/" />
+<meta property="og:url" content="http://localhost:4000/01_prologue/01_1_prologue/01_1_4_develop/" />
+<meta property="og:site_name" content="리눅스 구조 및 명령어" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-30T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="개발자를 위한 리눅스 - 개발 환경과 도구" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"JinyDev"},"dateModified":"2023-03-30T00:00:00+09:00","datePublished":"2023-03-30T00:00:00+09:00","description":"리눅스는 개발자들에게 매우 추천되는 운영체제입니다. 오픈소스 특성, 다양한 개발 도구 지원, 안정성과 보안성을 알아보세요.","headline":"개발자를 위한 리눅스 - 개발 환경과 도구","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/01_prologue/01_1_prologue/01_1_4_develop/"},"url":"http://localhost:4000/01_prologue/01_1_prologue/01_1_4_develop/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/css/docs.css" rel="stylesheet" />
+  <link href="/assets/css/highlight.css" rel="stylesheet" />
+
+  <style>
+    blockquote {
+      border-left: solid 5px #dee2e6;
+      padding: 5px 10px;
+      background-color: #f8f9fa;
+    }
+  </style>
+
+  <style>
+    h1 a {
+      text-decoration: none;
+    }
+
+    h2 a {
+      text-decoration: none;
+    }
+
+    h3 a {
+      text-decoration: none;
+    }
+
+    h4 a {
+      text-decoration: none;
+    }
+
+    h5 a {
+      text-decoration: none;
+    }
+
+    h6 a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: top
+    }
+
+    strong a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 스크롤바 커스텀 */
+    /* 임의의 영역 생성 */
+    .scrollBar {}
+
+    /* 아래의 모든 코드는 영역::코드로 사용 */
+    .scrollBar::-webkit-scrollbar {
+      width: 7px;
+      /* 스크롤바의 너비 */
+    }
+
+    .scrollBar::-webkit-scrollbar-thumb {
+      height: 30%;
+      /* 스크롤바의 길이 */
+      background: #cccccc;
+      /* 스크롤바의 색상 */
+
+      border-radius: 5px;
+    }
+
+    .scrollBar::-webkit-scrollbar-track {
+      background: rgba(33, 122, 244, .1);
+      /*스크롤바 뒷 배경 색상*/
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4VBPCT3CR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-R4VBPCT3CR');
+  </script>
+
+
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg bd-navbar sticky-top">
+    <nav class="container bd-gutter flex-wrap flex-lg-nowrap position-relative" aria-label="Main navigation">
+
+      <!-- Mobile: Left Toggle (Browse) -->
+      <div class="bd-navbar-toggle d-lg-none">
+        <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar"
+          aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+            </path>
+          </svg>
+          <span class="d-none fs-6 pe-1">Browse</span>
+        </button>
+      </div>
+
+      <!-- Brand: Desktop (Static), Mobile (Absolute Center) -->
+      <a class="navbar-brand p-0 me-0 me-lg-2 ms-lg-0 d-none d-lg-inline-block" href="/" aria-label="jinydev">
+        <svg width="32" height="26" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M24.2746 5.33377C25.8486 7.33981 25.1183 11.1792 24.3961 13.0177C24.4028 13.0199 24.4094 13.0221 24.4161 13.0243L24.4013 13.0248L22.649 12.9082C22.649 12.9053 22.6488 12.9013 22.649 12.8993C22.9902 8.93373 22.5975 7.34575 22.2147 7.07677C17.6316 10.3896 13.5379 9.33658 12.2725 9.01111C11.928 8.9225 11.7932 8.88781 11.9152 9.00988C12.2872 9.38185 13.1336 9.82821 13.7371 10.1465H13.7372L13.7376 10.1467C13.8743 10.2188 13.9985 10.2843 14.1019 10.3409C9.12673 10.3984 7.12659 8.00279 6.53855 7.29846C6.47859 7.22664 6.4333 7.1724 6.40105 7.14015C6.11408 6.85318 4.49961 5.87252 3.99256 7.74227C3.50142 9.55335 3.81246 11.6775 3.97665 12.7988C3.99089 12.896 3.99257 12.8981 3.99257 12.9298L2.37635 13.0248L2.37213 13.0247C0.223493 8.05534 1.83854 5.26971 3.29536 4.2246C3.29536 1.78444 6.27428 -0.592359 10.0455 0.263262C14.8768 1.64043 16.3468 1.18409 18.0759 0.647278C18.774 0.430562 19.5143 0.200726 20.5351 0.073124C25.2219 -0.512739 26.7993 2.56612 27 4.16122C26.2141 3.70487 24.8556 4.73165 24.2746 5.33377ZM12.3374 1.5872C11.1225 1.16466 7.99257 0.717209 6.3478 2.41116C5.98397 2.78587 5.55554 3.48864 5.55554 3.48864C5.55554 3.48864 4.82665 4.81961 4.25622 4.24919C3.68579 3.67878 5.0168 1.96749 6.06259 1.46044C7.10838 0.953388 9.70703 0.0660505 12.3374 1.5872Z"
+            fill="currentColor" />
+          <path
+            d="M10.078 13.5002H3.10601C2.2309 13.5002 1.52148 14.2097 1.52148 15.0848V18.3172C1.52148 19.1923 2.2309 19.9018 3.10601 19.9018H10.078C10.9531 19.9018 11.6625 19.1923 11.6625 18.3172V15.0848C11.6625 14.2097 10.9531 13.5002 10.078 13.5002Z"
+            stroke="currentColor" stroke-width="1.26763" />
+          <path
+            d="M0.823513 14.6094H0.379847C0.187322 14.6094 0.03125 14.7654 0.03125 14.958V15.9721C0.03125 16.1646 0.187322 16.3207 0.379847 16.3207H0.823513C1.01604 16.3207 1.17211 16.1646 1.17211 15.9721V14.958C1.17211 14.7654 1.01604 14.6094 0.823513 14.6094Z"
+            fill="currentColor" stroke="currentColor" stroke-width="0.0633813" />
+          <path
+            d="M16.7326 13.5002H23.7045C24.5796 13.5002 25.2891 14.2097 25.2891 15.0848V18.3172C25.2891 19.1923 24.5796 19.9018 23.7045 19.9018H16.7326C15.8575 19.9018 15.1481 19.1923 15.1481 18.3172V15.0848C15.1481 14.2097 15.8575 13.5002 16.7326 13.5002Z"
+            stroke="currentColor" stroke-width="1.26763" />
+          <path
+            d="M25.9861 14.6094H26.4297C26.6222 14.6094 26.7783 14.7654 26.7783 14.958V15.9721C26.7783 16.1646 26.6222 16.3207 26.4297 16.3207H25.9861C25.7935 16.3207 25.6375 16.1646 25.6375 15.9721V14.958C25.6375 14.7654 25.7935 14.6094 25.9861 14.6094Z"
+            fill="currentColor" stroke="currentColor" stroke-width="0.0633813" />
+          <path
+            d="M12.2954 15.5601H14.5137C14.7062 15.5601 14.8623 15.7161 14.8623 15.9087V16.9228C14.8623 17.1153 14.7062 17.2713 14.5137 17.2713H12.2954C12.1028 17.2713 11.9468 17.1153 11.9468 16.9228V15.9087C11.9468 15.7161 12.1028 15.5601 12.2954 15.5601Z"
+            fill="currentColor" stroke="currentColor" stroke-width="0.0633813" />
+          <path
+            d="M9.93343 16.3937C9.93343 16.7087 9.76317 16.9641 9.55314 16.9641C9.34311 16.9641 9.17285 16.7087 9.17285 16.3937C9.17285 16.0786 9.34311 15.8232 9.55314 15.8232C9.76317 15.8232 9.93343 16.0786 9.93343 16.3937Z"
+            fill="currentColor" />
+          <path
+            d="M16.9688 16.3937C16.9688 16.7087 17.139 16.9641 17.3491 16.9641C17.5591 16.9641 17.7293 16.7087 17.7293 16.3937C17.7293 16.0786 17.5591 15.8232 17.3491 15.8232C17.139 15.8232 16.9688 16.0786 16.9688 16.3937Z"
+            fill="currentColor" />
+          <path
+            d="M14.2758 20.1016C13.642 20.6086 12.7863 20.3551 12.5645 20.1016C12.6278 20.4185 12.8687 20.8622 13.4518 20.8622C14.0349 20.8622 14.2441 20.3551 14.2758 20.1016Z"
+            fill="currentColor" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12.1312 22.411C12.1575 22.2914 12.2759 22.2157 12.3956 22.2421L14.6347 22.735C14.7544 22.7614 14.83 22.8797 14.8036 22.9994C14.7773 23.119 14.659 23.1947 14.5393 23.1683L12.3002 22.6753C12.1805 22.649 12.1049 22.5307 12.1312 22.411Z"
+            fill="currentColor" />
+          <path
+            d="M13.4203 27.6754C9.00897 27.7261 5.77228 23.6613 4.70536 21.6225C4.54691 21.3197 4.42016 21.2739 4.32509 21.3373C4.17297 21.4387 4.28282 21.6437 4.32507 21.7493C4.85747 22.9916 5.58213 24.0416 5.87791 24.4113C4.83846 26.1353 4.49409 27.855 4.45183 28.4994C6.1758 26.8008 7.91668 26.8832 8.57162 27.1367C13.7055 29.7987 16.5577 27.929 18.1739 27.1367C19.4669 26.5029 21.4803 27.7388 22.3254 28.436C22.224 26.8642 21.3747 25.1402 20.9627 24.4747C21.6282 23.5873 22.1669 22.5099 22.4522 21.9711C22.6803 21.5401 22.6106 21.369 22.5472 21.3373C22.3951 21.2613 22.2092 21.4958 22.1353 21.6225C21.6599 22.4148 18.9345 27.6121 13.4203 27.6754Z"
+            fill="currentColor" />
+        </svg>
+      </a>
+      <a class="navbar-brand p-0 me-0 position-absolute top-50 start-50 translate-middle d-lg-none" href="/"
+        aria-label="jinydev">
+        <svg width="100" height="26" viewBox="0 0 112 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M24.2746 5.33377C25.8486 7.33981 25.1183 11.1792 24.3961 13.0177C24.4028 13.0199 24.4094 13.0221 24.4161 13.0243L24.4013 13.0248L22.649 12.9082C22.649 12.9053 22.6488 12.9013 22.649 12.8993C22.9902 8.93373 22.5975 7.34575 22.2147 7.07677C17.6316 10.3896 13.5379 9.33658 12.2725 9.01111C11.928 8.9225 11.7932 8.88781 11.9152 9.00988C12.2872 9.38185 13.1336 9.82821 13.7371 10.1465H13.7372L13.7376 10.1467C13.8743 10.2188 13.9985 10.2843 14.1019 10.3409C9.12673 10.3984 7.12659 8.00279 6.53855 7.29846C6.47859 7.22664 6.4333 7.1724 6.40105 7.14015C6.11408 6.85318 4.49961 5.87252 3.99256 7.74227C3.50142 9.55335 3.81246 11.6775 3.97665 12.7988C3.99089 12.896 3.99257 12.8981 3.99257 12.9298L2.37635 13.0248L2.37213 13.0247C0.223493 8.05534 1.83854 5.26971 3.29536 4.2246C3.29536 1.78444 6.27428 -0.592359 10.0455 0.263262C14.8768 1.64043 16.3468 1.18409 18.0759 0.647278C18.774 0.430562 19.5143 0.200726 20.5351 0.073124C25.2219 -0.512739 26.7993 2.56612 27 4.16122C26.2141 3.70487 24.8556 4.73165 24.2746 5.33377ZM12.3374 1.5872C11.1225 1.16466 7.99257 0.717209 6.3478 2.41116C5.98397 2.78587 5.55554 3.48864 5.55554 3.48864C5.55554 3.48864 4.82665 4.81961 4.25622 4.24919C3.68579 3.67878 5.0168 1.96749 6.06259 1.46044C7.10838 0.953388 9.70703 0.0660505 12.3374 1.5872Z"
+            fill="currentColor" />
+          <path
+            d="M10.078 13.5002H3.10601C2.2309 13.5002 1.52148 14.2097 1.52148 15.0848V18.3172C1.52148 19.1923 2.2309 19.9018 3.10601 19.9018H10.078C10.9531 19.9018 11.6625 19.1923 11.6625 18.3172V15.0848C11.6625 14.2097 10.9531 13.5002 10.078 13.5002Z"
+            stroke="currentColor" stroke-width="1.26763" />
+          <path
+            d="M0.823513 14.6094H0.379847C0.187322 14.6094 0.03125 14.7654 0.03125 14.958V15.9721C0.03125 16.1646 0.187322 16.3207 0.379847 16.3207H0.823513C1.01604 16.3207 1.17211 16.1646 1.17211 15.9721V14.958C1.17211 14.7654 1.01604 14.6094 0.823513 14.6094Z"
+            fill="currentColor" stroke="currentColor" stroke-width="0.0633813" />
+          <path
+            d="M16.7326 13.5002H23.7045C24.5796 13.5002 25.2891 14.2097 25.2891 15.0848V18.3172C25.2891 19.1923 24.5796 19.9018 23.7045 19.9018H16.7326C15.8575 19.9018 15.1481 19.1923 15.1481 18.3172V15.0848C15.1481 14.2097 15.8575 13.5002 16.7326 13.5002Z"
+            stroke="currentColor" stroke-width="1.26763" />
+          <path
+            d="M25.9861 14.6094H26.4297C26.6222 14.6094 26.7783 14.7654 26.7783 14.958V15.9721C26.7783 16.1646 26.6222 16.3207 26.4297 16.3207H25.9861C25.7935 16.3207 25.6375 16.1646 25.6375 15.9721V14.958C25.6375 14.7654 25.7935 14.6094 25.9861 14.6094Z"
+            fill="currentColor" stroke="currentColor" stroke-width="0.0633813" />
+          <path
+            d="M12.2954 15.5601H14.5137C14.7062 15.5601 14.8623 15.7161 14.8623 15.9087V16.9228C14.8623 17.1153 14.7062 17.2713 14.5137 17.2713H12.2954C12.1028 17.2713 11.9468 17.1153 11.9468 16.9228V15.9087C11.9468 15.7161 12.1028 15.5601 12.2954 15.5601Z"
+            fill="currentColor" stroke="currentColor" stroke-width="0.0633813" />
+          <path
+            d="M9.93343 16.3937C9.93343 16.7087 9.76317 16.9641 9.55314 16.9641C9.34311 16.9641 9.17285 16.7087 9.17285 16.3937C9.17285 16.0786 9.34311 15.8232 9.55314 15.8232C9.76317 15.8232 9.93343 16.0786 9.93343 16.3937Z"
+            fill="currentColor" />
+          <path
+            d="M16.9688 16.3937C16.9688 16.7087 17.139 16.9641 17.3491 16.9641C17.5591 16.9641 17.7293 16.7087 17.7293 16.3937C17.7293 16.0786 17.5591 15.8232 17.3491 15.8232C17.139 15.8232 16.9688 16.0786 16.9688 16.3937Z"
+            fill="currentColor" />
+          <path
+            d="M14.2758 20.1016C13.642 20.6086 12.7863 20.3551 12.5645 20.1016C12.6278 20.4185 12.8687 20.8622 13.4518 20.8622C14.0349 20.8622 14.2441 20.3551 14.2758 20.1016Z"
+            fill="currentColor" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12.1312 22.411C12.1575 22.2914 12.2759 22.2157 12.3956 22.2421L14.6347 22.735C14.7544 22.7614 14.83 22.8797 14.8036 22.9994C14.7773 23.119 14.659 23.1947 14.5393 23.1683L12.3002 22.6753C12.1805 22.649 12.1049 22.5307 12.1312 22.411Z"
+            fill="currentColor" />
+          <path
+            d="M13.4203 27.6754C9.00897 27.7261 5.77228 23.6613 4.70536 21.6225C4.54691 21.3197 4.42016 21.2739 4.32509 21.3373C4.17297 21.4387 4.28282 21.6437 4.32507 21.7493C4.85747 22.9916 5.58213 24.0416 5.87791 24.4113C4.83846 26.1353 4.49409 27.855 4.45183 28.4994C6.1758 26.8008 7.91668 26.8832 8.57162 27.1367C13.7055 29.7987 16.5577 27.929 18.1739 27.1367C19.4669 26.5029 21.4803 27.7388 22.3254 28.436C22.224 26.8642 21.3747 25.1402 20.9627 24.4747C21.6282 23.5873 22.1669 22.5099 22.4522 21.9711C22.6803 21.5401 22.6106 21.369 22.5472 21.3373C22.3951 21.2613 22.2092 21.4958 22.1353 21.6225C21.6599 22.4148 18.9345 27.6121 13.4203 27.6754Z"
+            fill="currentColor" />
+          <text x="32" y="21" font-family="Arial, sans-serif" font-weight="bold" font-size="22"
+            fill="currentColor">Jiny</text>
+        </svg>
+      </a>
+
+      <!-- Mobile: Right Toggle (Menu) -->
+      <div class="d-flex d-lg-none ms-auto">
+        <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar"
+          aria-controls="bdNavbar" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid"
+            viewBox="0 0 16 16">
+            <path
+              d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- OffCanvas -->
+      <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar"
+        aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+        <!-- OffCanver Header -->
+        <div class="offcanvas-header px-4 pb-0">
+          <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Jiny</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"
+            data-bs-target="#bdNavbar">
+          </button>
+        </div>
+
+        <!-- OffCanver Body -->
+        <div class="offcanvas-body p-4 pt-0 p-lg-0">
+          <hr class="d-lg-none text-white-50">
+
+          <ul class="navbar-nav flex-column flex-lg-row bd-navbar-nav">
+            
+            <li class="nav-item">
+              <a class="nav-link py-2 px-0 px-lg-2" href="/part1/">Part 1. 기초 운영체제 및 쉘</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link py-2 px-0 px-lg-2" href="/part2/">Part 2. 코어 인프라 및 네트워킹</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link py-2 px-0 px-lg-2" href="/part3/">Part 3. 비즈니스 서비스</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link py-2 px-0 px-lg-2" href="/part4/">Part 4. 실전 관제 및 재난 복구</a>
+            </li>
+            
+          </ul>
+
+          <hr class="d-lg-none text-white-50">
+
+          <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/jinydev/datas" target="_blank"
+                rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="navbar-nav-svg"
+                  viewBox="0 0 512 499.36" role="img">
+                  <title>GitHub</title>
+                  <path fill="currentColor" fill-rule="evenodd"
+                    d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                  </path>
+                </svg>
+                <small class="d-lg-none ms-2">GitHub</small>
+              </a>
+            </li>
+
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+              <hr class="d-lg-none my-2 text-white-50">
+            </li>
+
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="https://jiny.dev" aria-label="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="navbar-nav-svg"
+                  viewBox="0 0 16 16" role="img">
+                  <title>Home</title>
+                  <path fill="currentColor"
+                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+                </svg>
+                <small class="d-lg-none ms-2">Home</small>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container bd-gutter mt-3 my-md-4 bd-layout">
+    <aside class="bd-sidebar scrollBar">
+        <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar"
+            aria-labelledby="bdSidebarOffcanvasLabel">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">학습목차</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                    data-bs-target="#bdSidebar"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <!-- 네비게이션 -->
+                <nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation">
+  <ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
+    <li class="bd-links-group py-2">
+      <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold">
+        강의 목차
+      </strong>
+      <ul class="list-unstyled fw-normal pb-2 small">
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-1"
+            aria-expanded="false">
+            1장. 리눅스 소개 및 기초
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-1">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/01_prologue/01_1_prologue/"
+                  class="bd-links-link d-inline-block rounded ">
+                  01.1 Prologue
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/01_prologue/01_2_history/"
+                  class="bd-links-link d-inline-block rounded ">
+                  01.2 History
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/01_prologue/01_3_xwindow/"
+                  class="bd-links-link d-inline-block rounded ">
+                  01.3 Xwindow
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-2"
+            aria-expanded="false">
+            2장. 리눅스 설치 및 설정
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-2">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/02_setup/02_1_prepare/"
+                  class="bd-links-link d-inline-block rounded ">
+                  02.1 Prepare
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/02_setup/02_2_ubuntu/"
+                  class="bd-links-link d-inline-block rounded ">
+                  02.2 Ubuntu
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/02_setup/02_3_rocky/"
+                  class="bd-links-link d-inline-block rounded ">
+                  02.3 Rocky
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/02_setup/02_4_virtual/"
+                  class="bd-links-link d-inline-block rounded ">
+                  02.4 Virtual
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/02_setup/02_5_cloud/"
+                  class="bd-links-link d-inline-block rounded ">
+                  02.5 Cloud
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/02_setup/02_6_hosting/"
+                  class="bd-links-link d-inline-block rounded ">
+                  02.6 Hosting
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-3"
+            aria-expanded="false">
+            3장. 리눅스 기본 사용법
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-3">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/03_start/03_1_user/"
+                  class="bd-links-link d-inline-block rounded ">
+                  03.1 User
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/03_start/03_2_filesystem/"
+                  class="bd-links-link d-inline-block rounded ">
+                  03.2 Filesystem
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/03_start/03_3_permission/"
+                  class="bd-links-link d-inline-block rounded ">
+                  03.3 Permission
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-4"
+            aria-expanded="false">
+            4장. 명령어 (Command)
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-4">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/04_command/04_1_basic/"
+                  class="bd-links-link d-inline-block rounded ">
+                  04.1 Basic
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/04_command/04_2_advanced/"
+                  class="bd-links-link d-inline-block rounded ">
+                  04.2 Advanced
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/04_command/04_3_editor/"
+                  class="bd-links-link d-inline-block rounded ">
+                  04.3 Editor
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-5"
+            aria-expanded="false">
+            5장. 쉘(Shell) 스크립트
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-5">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/05_shell/07_1_intro/"
+                  class="bd-links-link d-inline-block rounded ">
+                  07.1 Intro
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/05_shell/07_2_control/"
+                  class="bd-links-link d-inline-block rounded ">
+                  07.2 Control
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/05_shell/07_2_terminal/"
+                  class="bd-links-link d-inline-block rounded ">
+                  07.2 Terminal
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-6"
+            aria-expanded="false">
+            6장. 시스템 컨트롤
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-6">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/06_system/05_1_boot/"
+                  class="bd-links-link d-inline-block rounded ">
+                  05.1 Boot
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/06_system/05_2_process/"
+                  class="bd-links-link d-inline-block rounded ">
+                  05.2 Process
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/06_system/05_3_package/"
+                  class="bd-links-link d-inline-block rounded ">
+                  05.3 Package
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/06_system/05_4_cron/"
+                  class="bd-links-link d-inline-block rounded ">
+                  05.4 Cron
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/06_system/05_5_storage/"
+                  class="bd-links-link d-inline-block rounded ">
+                  05.5 Storage
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-7"
+            aria-expanded="false">
+            7장. 네트워크 라우팅
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-7">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/07_network/06_1_basic/"
+                  class="bd-links-link d-inline-block rounded ">
+                  06.1 Basic
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/07_network/06_2_structure/"
+                  class="bd-links-link d-inline-block rounded ">
+                  06.2 Structure
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/07_network/06_3_ip/"
+                  class="bd-links-link d-inline-block rounded ">
+                  06.3 Ip
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/07_network/06_4_remote/"
+                  class="bd-links-link d-inline-block rounded ">
+                  06.4 Remote
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/07_network/06_4_security/"
+                  class="bd-links-link d-inline-block rounded ">
+                  06.4 Security
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/07_network/06_5_system/"
+                  class="bd-links-link d-inline-block rounded ">
+                  06.5 System
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-8"
+            aria-expanded="false">
+            8장. 데몬(Daemon)
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-8">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/08_demon/08_1_basic/"
+                  class="bd-links-link d-inline-block rounded ">
+                  08.1 Basic
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/08_demon/08_2_daemon/"
+                  class="bd-links-link d-inline-block rounded ">
+                  08.2 Daemon
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-9"
+            aria-expanded="false">
+            9장. 공유 서비스망
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-9">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/09_service/14_1_nfs/"
+                  class="bd-links-link d-inline-block rounded ">
+                  14.1 Nfs
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/09_service/14_2_samba/"
+                  class="bd-links-link d-inline-block rounded ">
+                  14.2 Samba
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/09_service/14_3_mail/"
+                  class="bd-links-link d-inline-block rounded ">
+                  14.3 Mail
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/09_service/14_4_ftp/"
+                  class="bd-links-link d-inline-block rounded ">
+                  14.4 Ftp
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-10"
+            aria-expanded="false">
+            10장. 웹 서버 아키텍처
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-10">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/10_web/09_1_apache/"
+                  class="bd-links-link d-inline-block rounded ">
+                  09.1 Apache
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/10_web/09_2_nginx/"
+                  class="bd-links-link d-inline-block rounded ">
+                  09.2 Nginx
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/10_web/09_3_was/"
+                  class="bd-links-link d-inline-block rounded ">
+                  09.3 Was
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-11"
+            aria-expanded="false">
+            11장. 데이터베이스
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-11">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/11_database/10_1_db_12/"
+                  class="bd-links-link d-inline-block rounded ">
+                  10.1 Db 12
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/11_database/10_2_db_server/"
+                  class="bd-links-link d-inline-block rounded ">
+                  10.2 Db server
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/11_database/10_3_ext_db/"
+                  class="bd-links-link d-inline-block rounded ">
+                  10.3 Ext db
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-12"
+            aria-expanded="false">
+            12장. 언어 및 개발 환경
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-12">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/12_dev/11_1_tools/"
+                  class="bd-links-link d-inline-block rounded ">
+                  11.1 Tools
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/12_dev/11_2_ext_dev/"
+                  class="bd-links-link d-inline-block rounded ">
+                  11.2 Ext dev
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-13"
+            aria-expanded="false">
+            13장. 오픈소스 앱 실습
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-13">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/13_app/13_1_zabbix/"
+                  class="bd-links-link d-inline-block rounded ">
+                  13.1 Zabbix
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/13_app/13_2_cloud_drive/"
+                  class="bd-links-link d-inline-block rounded ">
+                  13.2 Cloud drive
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-14"
+            aria-expanded="false">
+            14장. 자원 병목 모니터링
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-14">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/14_monitoring/12_1_monitoring/"
+                  class="bd-links-link d-inline-block rounded ">
+                  12.1 Monitoring
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/14_monitoring/12_1_resource/"
+                  class="bd-links-link d-inline-block rounded ">
+                  12.1 Resource
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/14_monitoring/12_2_disk/"
+                  class="bd-links-link d-inline-block rounded ">
+                  12.2 Disk
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/14_monitoring/12_3_network/"
+                  class="bd-links-link d-inline-block rounded ">
+                  12.3 Network
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li>
+          
+          
+          
+          <button
+            class="bd-links-link bd-links-btn btn d-inline-flex align-items-center rounded border-0 collapsed w-100"
+            data-bs-toggle="collapse" data-bs-target="#collapse-15"
+            aria-expanded="false">
+            15장. 보안 및 장애복구
+            <svg class="bi ms-auto" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+          <div class="collapse " id="collapse-15">
+            <ul class="list-unstyled fw-normal pb-1 small ms-3">
+              
+              
+              
+              <li>
+                <a href="/15_security_recovery/15_1_security/"
+                  class="bd-links-link d-inline-block rounded ">
+                  15.1 Security
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/15_security_recovery/15_2_log/"
+                  class="bd-links-link d-inline-block rounded ">
+                  15.2 Log
+                </a>
+              </li>
+              
+              
+              
+              <li>
+                <a href="/15_security_recovery/15_3_backup/"
+                  class="bd-links-link d-inline-block rounded ">
+                  15.3 Backup
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </li>
+        
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+        </div>
+    </aside>
+
+    <main class="bd-main order-1">
+        <nav aria-label="breadcrumb" class="mt-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/%20/">Home</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="breadcrumb-item"><a href="/01_prologue/">1장. 리눅스 소개 및 기초</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="breadcrumb-item"><a href="/01_prologue/01_1_prologue/">01 1 prologue</a></li>
+        
+        
+        
+        
+        
+        
+        <li class="breadcrumb-item active" aria-current="page">개발자를 위한 리눅스 - 개발 환경과 도구</li>
+        
+        
+        
+    </ol>
+</nav>
+        <div class="bd-content ps-lg-2">
+    <h1 id="개발자를-위한-리눅스-linux-for-developers">개발자를 위한 리눅스 (Linux for Developers)</h1>
+
+<h2 id="개요">개요</h2>
+
+<p>리눅스는 개발자들에게 매우 추천되는 운영체제입니다. 오픈소스 특성, 다양한 개발 도구 지원, 안정성과 보안성 등 여러 면에서 개발 환경으로서 뛰어난 장점을 제공합니다. 만약 리눅스를 사용해보지 않았다면, 한 번쯤 시도해보는 것을 강력히 권장합니다.</p>
+
+<h3 id="개발자에게-리눅스가-추천되는-이유">개발자에게 리눅스가 추천되는 이유</h3>
+
+<p><strong>핵심 장점:</strong></p>
+<ul>
+  <li><strong>오픈소스 환경</strong>: 소스 코드의 완전한 접근과 수정 가능</li>
+  <li><strong>풍부한 개발 도구</strong>: 다양한 프로그래밍 언어와 개발 환경 지원</li>
+  <li><strong>안정성과 성능</strong>: 개발 작업에 최적화된 안정적인 환경</li>
+  <li><strong>커뮤니티 지원</strong>: 활발한 개발자 커뮤니티와 풍부한 자료</li>
+  <li><strong>비용 효율성</strong>: 무료로 사용할 수 있는 고품질 개발 환경</li>
+</ul>
+
+<h2 id="오픈소스-운영체제">오픈소스 운영체제</h2>
+
+<h3 id="1-오픈소스의-의미와-장점">1. 오픈소스의 의미와 장점</h3>
+
+<p>리눅스는 오픈소스 운영체제이기 때문에, 개발자들이 소스 코드를 직접 수정하여 원하는 대로 커스터마이징할 수 있습니다.</p>
+
+<h4 id="오픈소스의-핵심-특징">오픈소스의 핵심 특징</h4>
+
+<p><strong>소스 코드 접근성:</strong></p>
+<ul>
+  <li><strong>완전한 소스 코드</strong>: 운영체제의 모든 소스 코드에 접근 가능</li>
+  <li><strong>자유로운 수정</strong>: 사용 목적에 맞게 자유롭게 수정 및 개선</li>
+  <li><strong>커스터마이징</strong>: 필요에 따른 시스템 최적화 및 기능 추가</li>
+  <li><strong>학습 기회</strong>: 운영체제 내부 구조의 학습 및 이해</li>
+</ul>
+
+<p><strong>커뮤니티 기반 개발:</strong></p>
+<ul>
+  <li><strong>전 세계 개발자 협력</strong>: 다양한 개발자들의 기여와 개선</li>
+  <li><strong>지속적인 업데이트</strong>: 빠른 버그 수정 및 기능 개선</li>
+  <li><strong>품질 향상</strong>: 많은 개발자의 검토를 통한 코드 품질 향상</li>
+  <li><strong>혁신 촉진</strong>: 새로운 아이디어와 기술의 빠른 적용</li>
+</ul>
+
+<h3 id="2-보안과-투명성">2. 보안과 투명성</h3>
+
+<p>리눅스는 오픈소스 기술을 사용하기 때문에 보안 측면에서도 뛰어난 장점을 제공합니다.</p>
+
+<h4 id="보안의-장점">보안의 장점</h4>
+
+<p><strong>투명한 보안:</strong></p>
+<ul>
+  <li><strong>소스 코드 검토</strong>: 보안 결함의 발견 및 수정 가능</li>
+  <li><strong>공개 보안 감사</strong>: 전 세계 보안 전문가들의 지속적인 검토</li>
+  <li><strong>빠른 패치</strong>: 보안 취약점 발견 시 신속한 수정</li>
+  <li><strong>커뮤니티 모니터링</strong>: 활발한 보안 커뮤니티의 지속적인 모니터링</li>
+</ul>
+
+<p><strong>보안 모델:</strong></p>
+<ul>
+  <li><strong>사용자 권한 관리</strong>: 세밀한 사용자 권한 및 접근 제어</li>
+  <li><strong>파일 시스템 보안</strong>: 강력한 파일 권한 및 암호화 지원</li>
+  <li><strong>네트워크 보안</strong>: 내장된 방화벽 및 네트워크 보안 기능</li>
+  <li><strong>SELinux/AppArmor</strong>: 강제 접근 제어를 통한 추가 보안</li>
+</ul>
+
+<h3 id="3-소스-코드의-공개와-기여">3. 소스 코드의 공개와 기여</h3>
+
+<p>리눅스는 오픈소스 소프트웨어이므로, 누구나 소스 코드를 볼 수 있고 기여할 수 있습니다.</p>
+
+<h4 id="개발자-기여의-장점">개발자 기여의 장점</h4>
+
+<p><strong>기여 기회:</strong></p>
+<ul>
+  <li><strong>버그 수정</strong>: 발견한 버그의 직접 수정 가능</li>
+  <li><strong>기능 개선</strong>: 필요한 기능의 직접 추가 및 개선</li>
+  <li><strong>성능 최적화</strong>: 시스템 성능의 직접적인 최적화</li>
+  <li><strong>문서화</strong>: 개발자 문서 및 사용자 가이드 작성</li>
+</ul>
+
+<p><strong>학습과 성장:</strong></p>
+<ul>
+  <li><strong>실제 프로젝트 경험</strong>: 대규모 오픈소스 프로젝트 참여</li>
+  <li><strong>코드 리뷰</strong>: 전문가들의 코드 리뷰를 통한 학습</li>
+  <li><strong>협업 경험</strong>: 전 세계 개발자들과의 협업 경험</li>
+  <li><strong>포트폴리오</strong>: 오픈소스 기여를 통한 개발자 포트폴리오 구축</li>
+</ul>
+
+<h3 id="4-빠른-업데이트와-발전">4. 빠른 업데이트와 발전</h3>
+
+<p>리눅스는 개발자들이 빠른 업데이트를 할 수 있도록 지원합니다.</p>
+
+<h4 id="업데이트의-장점">업데이트의 장점</h4>
+
+<p><strong>신속한 개선:</strong></p>
+<ul>
+  <li><strong>빠른 버그 수정</strong>: 보안 결함 발견 시 신속한 수정</li>
+  <li><strong>새로운 기능</strong>: 지속적인 새로운 기능 추가</li>
+  <li><strong>성능 향상</strong>: 지속적인 성능 최적화 및 개선</li>
+  <li><strong>하드웨어 지원</strong>: 새로운 하드웨어의 빠른 지원</li>
+</ul>
+
+<p><strong>개발자 친화적:</strong></p>
+<ul>
+  <li><strong>개발자 요구 반영</strong>: 개발자 커뮤니티의 요구사항 빠른 반영</li>
+  <li><strong>테스트 환경</strong>: 다양한 테스트 환경 및 도구 제공</li>
+  <li><strong>문서화</strong>: 상세한 개발자 문서 및 API 문서</li>
+  <li><strong>지원 체계</strong>: 활발한 커뮤니티 지원 및 전문가 도움</li>
+</ul>
+
+<h2 id="다양한-개발-도구-지원">다양한 개발 도구 지원</h2>
+
+<h3 id="1-프로그래밍-언어-지원">1. 프로그래밍 언어 지원</h3>
+
+<p>리눅스는 다양한 프로그래밍 언어를 지원하며, 각 언어에 최적화된 개발 환경을 제공합니다.</p>
+
+<h4 id="지원하는-주요-언어">지원하는 주요 언어</h4>
+
+<p><strong>시스템 프로그래밍:</strong></p>
+<ul>
+  <li><strong>C/C++</strong>: GCC 컴파일러와 GDB 디버거 지원</li>
+  <li><strong>Assembly</strong>: 다양한 아키텍처의 어셈블리 언어 지원</li>
+  <li><strong>Rust</strong>: 시스템 프로그래밍에 특화된 현대적 언어</li>
+  <li><strong>Go</strong>: 간단하고 효율적인 시스템 프로그래밍 언어</li>
+</ul>
+
+<p><strong>스크립팅 언어:</strong></p>
+<ul>
+  <li><strong>Python</strong>: 풍부한 라이브러리와 프레임워크 지원</li>
+  <li><strong>Ruby</strong>: 웹 개발에 특화된 동적 언어</li>
+  <li><strong>Perl</strong>: 텍스트 처리 및 시스템 관리에 강점</li>
+  <li><strong>Bash</strong>: 시스템 관리 및 자동화 스크립트</li>
+</ul>
+
+<p><strong>웹 개발 언어:</strong></p>
+<ul>
+  <li><strong>JavaScript/Node.js</strong>: 서버사이드 JavaScript 개발</li>
+  <li><strong>PHP</strong>: 웹 애플리케이션 개발</li>
+  <li><strong>Java</strong>: 엔터프라이즈 애플리케이션 개발</li>
+  <li><strong>C#/.NET</strong>: 크로스 플랫폼 .NET 개발</li>
+</ul>
+
+<h3 id="2-통합-개발-환경-ide">2. 통합 개발 환경 (IDE)</h3>
+
+<p>리눅스에서는 다양한 IDE와 편집기를 사용하여 개발할 수 있습니다.</p>
+
+<h4 id="주요-ide-및-편집기">주요 IDE 및 편집기</h4>
+
+<p><strong>통합 개발 환경:</strong></p>
+<ul>
+  <li><strong>Eclipse</strong>: Java, C/C++, Python 등 다중 언어 지원</li>
+  <li><strong>IntelliJ IDEA</strong>: Java, Kotlin, JavaScript 등 지원</li>
+  <li><strong>Visual Studio Code</strong>: 크로스 플랫폼 코드 편집기</li>
+  <li><strong>CLion</strong>: C/C++ 개발에 특화된 IDE</li>
+</ul>
+
+<p><strong>텍스트 편집기:</strong></p>
+<ul>
+  <li><strong>Vim/Neovim</strong>: 강력한 텍스트 편집기</li>
+  <li><strong>Emacs</strong>: 확장 가능한 텍스트 편집기</li>
+  <li><strong>Sublime Text</strong>: 빠르고 가벼운 코드 편집기</li>
+  <li><strong>Atom</strong>: GitHub에서 개발한 오픈소스 편집기</li>
+</ul>
+
+<p><strong>개발 도구:</strong></p>
+<ul>
+  <li><strong>Git</strong>: 버전 관리 시스템</li>
+  <li><strong>Docker</strong>: 컨테이너화 도구</li>
+  <li><strong>Kubernetes</strong>: 컨테이너 오케스트레이션</li>
+  <li><strong>Jenkins</strong>: 지속적 통합/배포 도구</li>
+</ul>
+
+<h3 id="3-개발-환경-설정">3. 개발 환경 설정</h3>
+
+<p>리눅스는 개발 환경 설정이 간편하고 효율적입니다.</p>
+
+<h4 id="개발-환경-구성">개발 환경 구성</h4>
+
+<p><strong>패키지 관리:</strong></p>
+<ul>
+  <li><strong>apt (Ubuntu/Debian)</strong>: 고급 패키지 관리 도구</li>
+  <li><strong>yum/dnf (CentOS/RHEL)</strong>: RPM 기반 패키지 관리</li>
+  <li><strong>pacman (Arch Linux)</strong>: 간단하고 빠른 패키지 관리</li>
+  <li><strong>snap/flatpak</strong>: 범용 패키지 관리 시스템</li>
+</ul>
+
+<p><strong>개발 도구 설치:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Ubuntu/Debian</span>
+<span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt <span class="nb">install </span>build-essential git python3 nodejs
+
+<span class="c"># CentOS/RHEL</span>
+<span class="nb">sudo </span>yum groupinstall <span class="s2">"Development Tools"</span>
+<span class="nb">sudo </span>yum <span class="nb">install </span>git python3 nodejs
+
+<span class="c"># Arch Linux</span>
+<span class="nb">sudo </span>pacman <span class="nt">-S</span> base-devel git python nodejs
+</code></pre></div></div>
+
+<h2 id="안정성과-보안성">안정성과 보안성</h2>
+
+<h3 id="1-시스템-안정성">1. 시스템 안정성</h3>
+
+<p>리눅스는 안정성과 보안성이 뛰어나며, 개발자들이 안정적으로 개발을 진행할 수 있도록 보장합니다.</p>
+
+<h4 id="안정성의-특징">안정성의 특징</h4>
+
+<p><strong>시스템 안정성:</strong></p>
+<ul>
+  <li><strong>장시간 운영</strong>: 서버 환경에서 수년간 안정적인 운영</li>
+  <li><strong>메모리 관리</strong>: 효율적인 메모리 관리 및 가비지 컬렉션</li>
+  <li><strong>프로세스 관리</strong>: 안정적인 프로세스 스케줄링 및 관리</li>
+  <li><strong>파일 시스템</strong>: 안정적인 파일 시스템 및 데이터 보호</li>
+</ul>
+
+<p><strong>개발 환경 안정성:</strong></p>
+<ul>
+  <li><strong>개발 도구 안정성</strong>: 안정적인 컴파일러 및 디버거</li>
+  <li><strong>라이브러리 호환성</strong>: 안정적인 라이브러리 버전 관리</li>
+  <li><strong>의존성 관리</strong>: 효율적인 패키지 의존성 해결</li>
+  <li><strong>백업 및 복구</strong>: 안정적인 백업 및 복구 시스템</li>
+</ul>
+
+<h3 id="2-보안-기능">2. 보안 기능</h3>
+
+<p>리눅스는 강력한 보안 기능을 제공하여 안전한 개발 환경을 구축할 수 있습니다.</p>
+
+<h4 id="보안-기능의-특징">보안 기능의 특징</h4>
+
+<p><strong>사용자 권한 관리:</strong></p>
+<ul>
+  <li><strong>세밀한 권한 제어</strong>: 파일 및 디렉토리별 접근 권한</li>
+  <li><strong>사용자 그룹 관리</strong>: 효율적인 사용자 및 그룹 관리</li>
+  <li><strong>sudo 권한</strong>: 관리자 권한의 안전한 위임</li>
+  <li><strong>PAM (Pluggable Authentication Modules)</strong>: 모듈화된 인증 시스템</li>
+</ul>
+
+<p><strong>네트워크 보안:</strong></p>
+<ul>
+  <li><strong>방화벽 기능</strong>: iptables, ufw 등을 통한 강력한 방화벽</li>
+  <li><strong>VPN 지원</strong>: 다양한 VPN 프로토콜 지원</li>
+  <li><strong>SSL/TLS 지원</strong>: 암호화된 통신 지원</li>
+  <li><strong>네트워크 모니터링</strong>: 네트워크 트래픽 모니터링 및 분석</li>
+</ul>
+
+<h3 id="3-보안-도구-및-모니터링">3. 보안 도구 및 모니터링</h3>
+
+<p>리눅스는 다양한 보안 도구와 모니터링 시스템을 제공합니다.</p>
+
+<h4 id="보안-도구">보안 도구</h4>
+
+<p><strong>시스템 모니터링:</strong></p>
+<ul>
+  <li><strong>top/htop</strong>: 실시간 시스템 리소스 모니터링</li>
+  <li><strong>netstat/ss</strong>: 네트워크 연결 상태 모니터링</li>
+  <li><strong>lsof</strong>: 열린 파일 및 프로세스 모니터링</li>
+  <li><strong>strace</strong>: 시스템 호출 추적 및 분석</li>
+</ul>
+
+<p><strong>보안 도구:</strong></p>
+<ul>
+  <li><strong>SELinux</strong>: 강제 접근 제어 시스템</li>
+  <li><strong>AppArmor</strong>: 응용 프로그램별 보안 정책</li>
+  <li><strong>fail2ban</strong>: 침입 탐지 및 차단 시스템</li>
+  <li><strong>clamav</strong>: 바이러스 검사 및 방지</li>
+</ul>
+
+<h2 id="높은-성능">높은 성능</h2>
+
+<h3 id="1-성능-최적화">1. 성능 최적화</h3>
+
+<p>리눅스는 높은 성능을 제공하며, 개발자들이 대용량 데이터를 다루거나 병렬 처리를 해야 할 때 매우 유용합니다.</p>
+
+<h4 id="성능-특징">성능 특징</h4>
+
+<p><strong>시스템 성능:</strong></p>
+<ul>
+  <li><strong>효율적인 리소스 사용</strong>: CPU, 메모리, 디스크의 효율적인 사용</li>
+  <li><strong>빠른 부팅 시간</strong>: 최적화된 부팅 프로세스</li>
+  <li><strong>낮은 리소스 사용량</strong>: 최소한의 시스템 리소스 사용</li>
+  <li><strong>높은 처리량</strong>: 대용량 데이터 처리에 최적화</li>
+</ul>
+
+<p><strong>개발 성능:</strong></p>
+<ul>
+  <li><strong>빠른 컴파일</strong>: 최적화된 컴파일러 및 빌드 시스템</li>
+  <li><strong>효율적인 디버깅</strong>: 강력한 디버깅 도구 및 성능 분석</li>
+  <li><strong>병렬 처리</strong>: 멀티코어 환경에서의 효율적인 병렬 처리</li>
+  <li><strong>메모리 최적화</strong>: 효율적인 메모리 할당 및 관리</li>
+</ul>
+
+<h3 id="2-모놀리딕-커널-구조">2. 모놀리딕 커널 구조</h3>
+
+<p>리눅스는 모놀리딕 커널 구조를 가지고 있어 운영체제의 핵심 부분이 하나의 프로그램으로 구성되어 있습니다.</p>
+
+<h4 id="커널-구조의-장점">커널 구조의 장점</h4>
+
+<p><strong>성능 최적화:</strong></p>
+<ul>
+  <li><strong>빠른 시스템 호출</strong>: 커널과 사용자 공간 간의 빠른 통신</li>
+  <li><strong>효율적인 메모리 사용</strong>: 커널 수준의 메모리 최적화</li>
+  <li><strong>빠른 프로세스 전환</strong>: 효율적인 프로세스 스케줄링</li>
+  <li><strong>낮은 오버헤드</strong>: 시스템 호출의 최소한의 오버헤드</li>
+</ul>
+
+<p><strong>시스템 통합:</strong></p>
+<ul>
+  <li><strong>통합된 드라이버</strong>: 하드웨어 드라이버의 통합 관리</li>
+  <li><strong>효율적인 파일 시스템</strong>: 고성능 파일 시스템 지원</li>
+  <li><strong>네트워크 최적화</strong>: 고성능 네트워크 스택</li>
+  <li><strong>보안 통합</strong>: 커널 수준의 보안 기능 통합</li>
+</ul>
+
+<h3 id="3-확장성과-유연성">3. 확장성과 유연성</h3>
+
+<p>리눅스는 여러 가지 아키텍처에서 실행될 수 있도록 설계되어 있으며, 다양한 하드웨어와 소프트웨어 환경에서 사용될 수 있습니다.</p>
+
+<h4 id="확장성의-특징">확장성의 특징</h4>
+
+<p><strong>하드웨어 확장성:</strong></p>
+<ul>
+  <li><strong>다양한 아키텍처 지원</strong>: x86, ARM, PowerPC, MIPS 등</li>
+  <li><strong>스케일링</strong>: 소규모 임베디드 시스템부터 대규모 서버까지</li>
+  <li><strong>클러스터링</strong>: 고성능 컴퓨팅 및 클러스터 환경 지원</li>
+  <li><strong>가상화</strong>: 다양한 가상화 기술 지원</li>
+</ul>
+
+<p><strong>소프트웨어 확장성:</strong></p>
+<ul>
+  <li><strong>모듈화된 구조</strong>: 필요에 따른 커널 모듈 로드/언로드</li>
+  <li><strong>플러그인 아키텍처</strong>: 다양한 플러그인 및 확장 기능</li>
+  <li><strong>API 지원</strong>: 풍부한 API 및 라이브러리 지원</li>
+  <li><strong>표준화</strong>: 다양한 표준 및 프로토콜 지원</li>
+</ul>
+
+<h2 id="다양한-배포판">다양한 배포판</h2>
+
+<h3 id="1-배포판의-다양성">1. 배포판의 다양성</h3>
+
+<p>리눅스는 다양한 배포판이 있으며, 개발자들이 자신에게 적합한 배포판을 선택하여 사용할 수 있습니다.</p>
+
+<h4 id="주요-배포판">주요 배포판</h4>
+
+<p><strong>사용자 친화적 배포판:</strong></p>
+<ul>
+  <li><strong>Ubuntu</strong>: 데스크톱 및 서버용 인기 배포판</li>
+  <li><strong>Linux Mint</strong>: Ubuntu 기반 사용자 친화적 배포판</li>
+  <li><strong>elementary OS</strong>: 아름다운 디자인에 중점을 둔 배포판</li>
+  <li><strong>Pop!_OS</strong>: 개발자 친화적 Ubuntu 기반 배포판</li>
+</ul>
+
+<p><strong>서버용 배포판:</strong></p>
+<ul>
+  <li><strong>CentOS/RHEL</strong>: 기업용 서버 환경에 특화</li>
+  <li><strong>Debian</strong>: 안정성과 보안에 중점을 둔 배포판</li>
+  <li><strong>Ubuntu Server</strong>: 클라우드 및 서버 환경에 최적화</li>
+  <li><strong>SUSE Linux Enterprise</strong>: 기업용 서버 및 클라우드 환경</li>
+</ul>
+
+<p><strong>개발자용 배포판:</strong></p>
+<ul>
+  <li><strong>Fedora</strong>: 최신 기술을 빠르게 적용하는 배포판</li>
+  <li><strong>Arch Linux</strong>: 사용자 중심의 경량 배포판</li>
+  <li><strong>Gentoo</strong>: 소스 기반 컴파일 시스템</li>
+  <li><strong>Slackware</strong>: 전통적인 Unix 스타일 배포판</li>
+</ul>
+
+<h3 id="2-배포판-선택-가이드">2. 배포판 선택 가이드</h3>
+
+<h4 id="개발-목적별-배포판-선택">개발 목적별 배포판 선택</h4>
+
+<p><strong>웹 개발:</strong></p>
+<ul>
+  <li><strong>Ubuntu</strong>: 풍부한 웹 개발 도구 및 라이브러리</li>
+  <li><strong>Fedora</strong>: 최신 웹 기술 및 프레임워크 지원</li>
+</ul>
+
+<p><strong>시스템 프로그래밍:</strong></p>
+<ul>
+  <li><strong>Arch Linux</strong>: 최신 개발 도구 및 라이브러리</li>
+  <li><strong>Gentoo</strong>: 소스 기반 최적화된 개발 환경</li>
+</ul>
+
+<p><strong>데이터 과학:</strong></p>
+<ul>
+  <li><strong>Ubuntu</strong>: 다양한 데이터 과학 도구 및 라이브러리</li>
+  <li><strong>CentOS</strong>: 안정적인 과학 컴퓨팅 환경</li>
+</ul>
+
+<p><strong>임베디드 개발:</strong></p>
+<ul>
+  <li><strong>Ubuntu</strong>: ARM 지원 및 임베디드 개발 도구</li>
+  <li><strong>Yocto Project</strong>: 임베디드 Linux 빌드 시스템</li>
+</ul>
+
+<h2 id="학습-목표">학습 목표</h2>
+
+<p>이번 학습을 통해 다음 사항들을 이해할 수 있습니다:</p>
+
+<ol>
+  <li><strong>리눅스의 오픈소스 특성과 개발자에게 주는 장점</strong></li>
+  <li><strong>리눅스에서 지원하는 다양한 개발 도구와 환경</strong></li>
+  <li><strong>리눅스의 안정성과 보안 기능</strong></li>
+  <li><strong>리눅스의 성능 특징과 최적화 방법</strong></li>
+  <li><strong>다양한 리눅스 배포판과 선택 기준</strong></li>
+</ol>
+
+<h2 id="실습-과제">실습 과제</h2>
+
+<ol>
+  <li><strong>리눅스 설치</strong>: 개발자용 리눅스 배포판 설치 및 설정</li>
+  <li><strong>개발 환경 구축</strong>: 프로그래밍 언어 및 개발 도구 설치</li>
+  <li><strong>IDE 설정</strong>: 통합 개발 환경 설정 및 사용법 학습</li>
+  <li><strong>버전 관리</strong>: Git을 이용한 버전 관리 시스템 구축</li>
+</ol>
+
+<h2 id="참고-자료">참고 자료</h2>
+
+<ul>
+  <li><a href="https://www.linuxfoundation.org/">Linux Foundation</a></li>
+  <li><a href="https://developer.ubuntu.com/">Ubuntu Developer</a></li>
+  <li><a href="https://developer.fedoraproject.org/">Fedora Developer Portal</a></li>
+  <li><a href="https://wiki.archlinux.org/">Arch Linux Wiki</a></li>
+  <li><a href="https://tldp.org/">Linux Documentation</a></li>
+</ul>
+
+
+
+    <div style="padding-top: 50px;">
+        <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3321560028329475"
+            crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fb+5w+4e-db+86"
+            data-ad-client="ca-pub-3321560028329475" data-ad-slot="6043271504"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</div>
+
+        <div class="bd-toc mt-3 mb-5 my-lg-0 ps-xl-3 mb-lg-5 text-body-secondary">
+
+  <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button"
+    data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+    서브목차
+    <svg class="bi d-md-none ms-2" aria-hidden="true">
+      <use xlink:href="#chevron-expand"></use>
+    </svg>
+  </button>
+
+  <strong class="d-none d-md-block h6 my-2">서브목차</strong>
+
+  <div class="collapse bd-toc-collapse" id="tocContents">
+    <nav id="TableOfContents">
+      <!--
+      <ul>
+        <li><a href="#quick-start">Quick start</a></li>
+        <li><a href="#cdn-links">CDN links</a></li>
+        <li><a href="#next-steps">Next steps</a></li>
+        <li><a href="#js-components">JS components</a></li>
+        <li><a href="#important-globals">Important globals</a>
+          <ul>
+            <li><a href="#html5-doctype">HTML5 doctype</a></li>
+            <li><a href="#responsive-meta-tag">Responsive meta tag</a></li>
+            <li><a href="#box-sizing">Box-sizing</a></li>
+            <li><a href="#reboot">Reboot</a></li>
+          </ul>
+        </li>
+        <li><a href="#community">Community</a></li>
+      </ul>
+      -->
+    </nav>
+  </div>
+</div>
+    </main>
+</div>
+
+  <footer class="container">
+  <hr class="mt-5 mb-3">
+  <div class="row align-items-center pb-3">
+    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+      <p class="mb-0 text-secondary">Copyright 2017~2026 JinyDev. All Rights Reserved.</p>
+    </div>
+    <div class="col-md-6 text-center text-md-end">
+      <a href="mailto:infohojin@naver.com" class="text-decoration-none text-secondary">Contact</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    window.addEventListener('load', async function () {
+      mermaid.initialize({ startOnLoad: false });
+
+      const mermaidCodes = document.querySelectorAll('pre code.language-mermaid');
+      const mermaidDivs = [];
+
+      mermaidCodes.forEach(codeBlock => {
+        const mermaidDefinition = codeBlock.textContent.trim();
+        const container = codeBlock.closest('div.highlighter-rouge');
+
+        const mermaidDiv = document.createElement('div');
+        mermaidDiv.className = 'mermaid';
+        mermaidDiv.textContent = mermaidDefinition;
+
+        if (container) {
+          container.replaceWith(mermaidDiv);
+        } else {
+          const pre = codeBlock.parentElement;
+          if (pre) pre.replaceWith(mermaidDiv);
+        }
+        mermaidDivs.push(mermaidDiv);
+      });
+
+      if (mermaidDivs.length > 0) {
+        await mermaid.run({ nodes: mermaidDivs });
+      }
+    });
+  </script>
+  <script src="/assets/js/toc.js"></script>
+
+</body>
+
+</html>
